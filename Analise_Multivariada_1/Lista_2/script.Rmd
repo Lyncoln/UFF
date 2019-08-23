@@ -1,0 +1,64 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+#Questão 1
+
+```{r}
+m = matrix(c(2, 0, 3))
+sigma = matrix(c(5, 0, 0, 0, 7, -1, 0, -1, 2), ncol = 3)
+```
+
+##a)
+```{r}
+
+##Media 
+A = matrix(c(1,1,0,2,-1,1), ncol = 3)
+exp_Z = A %*% m
+##Convariância
+
+cov_Z = A %*% sigma %*% t(A)
+
+```
+##b)
+```{r}
+#Não, pois covariância(xj,xi) = 0 não implica indepedência, somente se forem normais
+```
+
+
+#Questão 2
+```{r}
+m = matrix(c(2,1,3,0))
+sigma = matrix(c(3,0,2,0,0,5,0,0,2,0,3,2,0,0,2,4),ncol = 4)
+```
+
+
+##a)
+```{r}
+A = matrix(c(1,1,0,0,2,1,0,1,0,0,0,1),ncol =4)
+exp_Z = A %*% m
+cov_Z =  A %*% sigma %*% t(A)
+```
+
+#Questão 3
+
+```{r}
+var_X = matrix(c(2,-1,0,-1,2,-1,0,-1,2),ncol =3)
+```
+#a)
+```{r}
+A = matrix(c(1,-2,2),ncol=3)
+var_W = A %*% var_X %*% t(A)
+```
+#b)
+```{r}
+A = matrix(c(1,1,1,1,0,1),ncol=3)
+var_Z = A %*% var_X %*% t(A)
+```
+
+#c)
+```{r}
+
+```
+
