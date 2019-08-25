@@ -1,0 +1,26 @@
+UNIVERSIDADE FEDERAL FLUMINENSE (UFF)
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA (IME)
+DEPARTAMENTO DE ESTATÍSTICA (GET)
+DISCIPLINA: MODELOS LINEARES I - PROF.: DR. JOSÉ RODRIGO DE MORAES
+DATA: 15/08/2019 (6ª FEIRA)
+
+AULA PRÁTICA 1: AJUSTE DO MODELO DE REGRESSÃO LINEAR SIMPES (RLS) - n=30 bois
+
+###################################################################################
+# Em uma dada região acredita-se que o gado alimentado em determinado pasto       #  
+# tem ganho de peso maior que o normal. Estudos de laboratório detectaram uma     #
+# substância no pasto e deseja-se obter evidências de que tal substância pode     #
+# ser utilizada para melhorar o ganho de peso dos bovinos. Foram selecionados     #
+# 15 bois de mesma raça e idade, e cada animal recebeu uma determinada            #  
+# concentração da substância X (em mg/l). O ganho de peso (Y) após 30 dias(em kg) # 
+# foi medido.                                                                     #
+###################################################################################
+
+
+# Concentração da substância, em mg/L 
+Conc_subst=c(1.00,3.70,1.00,9.00,2.00,2.25,2.91,2.75,3.00,3.50,3.75,9.45,4.25,7.00,4.75,5.00,5.50,6.00,6.50,7.00,7.50,8.00,8.25,9.40,9.43,8.94,9.20,9.50,8.00,9.00)
+
+# Ganho de peso, em Kg
+Ganho_peso=c(9.40,11.40,12.00,16.00,11.00,12.50,10.40,11.50,12.50,14.00,14.50,17.00,13.25,14.80,14.00,14.10,12.50,15.20,14.20,16.50,17.00,14.50,16.00,17.00,14.90,15.00,19.00,17.50,16.00,17.50)
+
+
