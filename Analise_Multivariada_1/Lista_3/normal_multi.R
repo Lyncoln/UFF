@@ -129,5 +129,9 @@ mvShapiro.Test(as.matrix(iris[,1:4]))
 mu<-matrix(c(-3,1,4), nrow=3)     #vetor de médias
 Sigma<-matrix(c(1,-2,0,-2,5,0,0,0,2), nrow=3) 	#matriz de variâncias e covariâncias
 
+#a)
+n_3 = rmvnorm(100,mu,Sigma)
 
+#b)
+mvShapiro.Test(n_3)
 
