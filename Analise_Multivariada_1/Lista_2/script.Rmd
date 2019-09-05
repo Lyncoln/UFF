@@ -59,6 +59,7 @@ var_Z = A %*% var_X %*% t(A)
 
 #c)
 ```{r}
-
+var_tot = sum(diag(var_X))
+var_gene = det(var_X) #ou prod(eigen(var_X)$values)
 ```
 
