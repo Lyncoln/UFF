@@ -124,6 +124,6 @@ sigma2_d = A %*% sigma %*% t(A); sigma2_d
 ##[X1,X2]/[X3,X4] = (2,3) ~ N_2( mu_cond, sigma_cond )
 
 mu_cond = mu1_d + matrix(c(1,0,0,2), ncol=2,byrow = T) %*% solve(sigma2_d) %*% (c(2,3) - mu2_d); mu_cond 
-sigma_cond = sigma1_d +matrix(c(1,0,0,2), ncol=2,byrow = T) %*% solve(sigma2_d) %*% matrix(c(1,0,0,2), ncol=2,byrow = T); sigma_cond
+sigma_cond = sigma1_d - matrix(c(1,0,0,2), ncol=2,byrow = T) %*% solve(sigma2_d) %*% matrix(c(1,0,0,2), ncol=2,byrow = T); sigma_cond
 
 
