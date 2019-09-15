@@ -1,6 +1,3 @@
-bd = foreign::read.spss("internacoes.sav")
-bd = as.data.frame(bd)
-
 degree = 98
 quantile = qt(0.975, df = degree)
 b0_test_stat = -0.195
@@ -36,13 +33,7 @@ polygon(
   col = 'red',
   density = 50
 )
-polygon(
-  x = c(-quantile, ic_values, quantile),
-  y = c(0, denisty_ic_values, 0),
-  border = FALSE,
-  col = '#94eaf7',
-  density = 50
-)
+
 
 lines(
   x = c(-quantile, -quantile),
@@ -57,11 +48,9 @@ lines(
 
 lines(x=c(-4, 7), y=c(0,0))
 
-text(-1.98, 0.23, expression(T[obs * ~~ beta[0]]), cex=1.3)
-points(b0_test_stat, 0, pch=16)
-arrows(-1.98, 0.2,b0_test_stat,0)
 
-text(3.2, 0.23, expression(T[obs * ~~ beta[1]]), cex=1.3)
+
+text(3.2, 0.23, expression(t[obs]), cex=1.3)
 points(b1_test_stat, 0, pch=16)
 arrows(3.2, 0.2,b1_test_stat,0)
 
@@ -71,7 +60,7 @@ text(0, 0.15, expression(1 - alpha), cex=1.3)
 
 par(xpd=TRUE)
 text(4, -0.1, expression(alpha == 0.05))
-legend(3.7,0.35,legend = c('IC', 'RC'), 
-       fill = c('#94eaf7', 'red'), 
+legend(3.7,0.35,legend = c('Região Crítica'), box.col = "white",
+       fill = c('red'), 
        density = 50)
 par(xpd=FALSE)
