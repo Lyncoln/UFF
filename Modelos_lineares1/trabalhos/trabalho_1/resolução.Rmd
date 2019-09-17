@@ -44,7 +44,7 @@ $$\hat{Y_i} = \hat{\beta_0} + \hat{\beta_1} X_i \quad ;\quad i = 1,2 \dots, 100$
 **Modelo ajustado com suas devidas estimativas: Veja a \hyperref[tab:summary]{\underline{tabela \ref*{tab:summary}}} no apêndice.**
 $$\hat{Y_i} = -0.14848 + 0.47580 X_i \quad ;\quad i = 1,2 \dots, 100$$
 
-$\hat{Y_i}$: É o valor estimado do percentual de pacientes infectados para i i-ésimo estabelecimento de saúde;   
+$\hat{Y_i}$: É o valor estimado do percentual de pacientes infectados para o i-ésimo estabelecimento de saúde;   
 $X_i$: É o valor observado de tempo médio de internação em dias para o i-ésimo estabelecimento de saúde;  
 $\hat{\beta_0}$: É o intercepto estimado do modelo, que possui valor de $-0.14848$. Não possui interpretação prática para o problema;  
 $\hat{\beta_1}$: É o coeficiente angular estimado do modelo, que possui valor de $0.47580$. Isto é, o valor estimado do percentual de pacientes infectados é acrescentado em $0.47580$ para cada unidade do tempo médio de internação;  
@@ -67,20 +67,20 @@ Calculo da Estatística de teste sob $H_0$.
 $$T = \frac{\hat{\beta_1}}{\sqrt{\hat{Var}(\hat{\beta_1)}}} \sim T_{n-2}$$
 \begin{center} 
 onde,
-$$\hat{Var}(\beta_1) = \frac{\hat{\sigma}^2}{\sum\limits_{i=1}^{n}(X_i-\bar{X})^2};$$
+$$\hat{Var}(\hat{\beta_1}) = \frac{\hat{\sigma}^2}{\sum\limits_{i=1}^{n}(X_i-\bar{X})^2};$$
 desta forma,
 $$t_{obs} = 5.993;$$
 \end{center}
 Veja a \hyperref[tab:summary]{\underline{tabela \ref*{tab:summary}}} 
   
-**Passo 3:**  
+**Passo 3:**
 Região Crítica.
 $$RC = \{t \in R:t>t_{n-2, \frac{\alpha}{2}} = 1.984467 \quad ou \quad t<-t_{n-2,\frac{\alpha}{2}} = -1.984467\}$$
 
 **Passo 4:**
 Tomada de decisão.
 
-Como obteve-se um $t_{obs} = 5.993$, então $t_{obs} \in RC$ (verifique a \hyperref[fig:rcb1]{\underline{figura \ref*{fig:rcb1}}}), desta forma, rejeitamos a hipótese nula. Conclui-se. com base no teste $T$ que existe uma relação estatisticamente  significante entre tempo médio de internação ($X$) e percentual de pacientes infectados ($Y$).
+Como obteve-se um $t_{obs} = 5.993$, então $t_{obs} \in RC$ (verifique a \hyperref[fig:rcb1]{\underline{figura \ref*{fig:rcb1}}}), desta forma, rejeitamos a hipótese nula a um nível de significância $\alpha = 5\%$. Conclui-se. com base no teste $T$ que existe uma relação estatisticamente  significante entre tempo médio de internação ($X$) e percentual de pacientes infectados ($Y$).
 
 
 
@@ -107,14 +107,14 @@ desta forma,
 $$f_{obs} = 35.922;$$
 Veja a \hyperref[tab:anova]{\underline{tabela \ref*{tab:anova}}}  
 
-**Passo 3:**  
+**Passo 3:**
 Região Crítica.
 $$RC = \{f \in R:f>f_{1,n-2; \alpha} = 3.938111\};$$
 
 **Passo 4:**
 Tomada de decisão.
 
-Como obteve-se um $f_{obs} = 35.922$, então $f_{obs} \in RC$ (verifique a \hyperref[fig:rcf]{\underline{figura \ref*{fig:rcf}}}), desta forma, rejeitamos a hipótese nula. Conclui-se. com base no teste $F$ que existe uma relação estatisticamente  significante entre tempo médio de internação ($X$) e percentual de pacientes infectados ($Y$).
+Como obteve-se um $f_{obs} = 35.922$, então $f_{obs} \in RC$ (verifique a \hyperref[fig:rcf]{\underline{figura \ref*{fig:rcf}}}), desta forma, rejeitamos a hipótese nula a um nível de significância $\alpha = 5\%$. Conclui-se. com base no teste $F$ que existe uma relação estatisticamente  significante entre tempo médio de internação ($X$) e percentual de pacientes infectados ($Y$).
 
 ## d) Gráfico de dispersão incluindo o modelo ajustado.
 Veja a \hyperref[fig:disp]{\underline{figura \ref*{fig:disp}}}.  
@@ -141,7 +141,7 @@ Serão utilizadas as figuras \underline{\ref{fig:residuos_stud_vs_x}} e \underli
   Pela \hyperref[fig:residuos_stud_vs_x]{\underline{figura \ref*{fig:residuos_stud_vs_x}}} é possível notar uma nuvem de pontos aleatórios em torno de $0$(zero), o que indica que os erros aleatórios possuem variâncias constante.  Também é possível notar que não há presença de um padrão sistemático dos pontos, o que indica que a hipótese de lineariedade não foi violada.
   
   \item Normalidade:                       \\
-   Pela \hyperref[fig:qqplot]{\underline{figura \ref*{fig:qqplot}}}, pode-se notar que os quantis  dos resíduos studentizados se aproximam dos quantis teóricos de uma distribuição normal com média 0 e variância $\sigma^2$, o que é um bom indicativo de normalidade dos erros.
+   Pela \hyperref[fig:qqplot]{\underline{figura \ref*{fig:qqplot}}}, pode-se notar que os quantis  dos resíduos studentizados se aproximam dos quantis teóricos de uma distribuição normal, o que é um bom indicativo de normalidade dos erros.
    
   \item Outilers:                           \\
   Também pela \hyperref[fig:residuos_stud_vs_x]{\underline{figura \ref*{fig:residuos_stud_vs_x}}} é possível notar que apenas $6$ observações dos resíduos studentizados são maiores que $|2|$, o que é apenas $6\%$ de toda a amostra. Logo é uma quantidade aceitável de outilers.
@@ -149,7 +149,7 @@ Serão utilizadas as figuras \underline{\ref{fig:residuos_stud_vs_x}} e \underli
 \end{itemize}
 
 ## g) O modelo é adequando para os dados apresentados?
-Por não apresentar nenhuma violação nas hipóteses básicas , o modelo é adequado para representar os dados observados, porém seu coeficiente de determinação ($R^2$) é de apenas $26.82\%$.
+Por não apresentar nenhuma violação nas hipóteses básicas, o modelo é adequado para representar os dados observados, porém seu coeficiente de determinação ($R^2$) é de apenas $26.82\%$.
 
 
 \newpage
@@ -162,7 +162,7 @@ Por não apresentar nenhuma violação nas hipóteses básicas , o modelo é ade
    Estimadores & Estimativa & Erro padrão & Valor da estatística de teste T &  P-valor                                                       \\
     \hline
     $\hat{\beta_0}$  & -0.14848 & 0.76072 & -0.195 & 0.846    \\
-    $\hat{\beta_1}$  & 0.47580  & 0.07939 & 5.993  & 3.42e-08 \\
+    $\hat{\beta_1}$  & 0.47580  & 0.07939 & 5.993  & < 0.001   \\
     \hline
   \end{tabular}
   \label{tab:summary}
@@ -175,7 +175,7 @@ Por não apresentar nenhuma violação nas hipóteses básicas , o modelo é ade
     \hline
    Fontes de variação & Soma dos quadrados & gl & Quadrado médio & Valor da estatística de teste F & P-valor                           \\
     \hline
-    Regressão & 44.305  & 1  & 44.305 & 35.922 & 3.421e-08 \\
+    Regressão & 44.305  & 1  & 44.305 & 35.922 & < 0.001    \\
     Resíduos  & 120.871 & 98 & 1.233  &        &           \\
     Total     & 165.176 & 99 &        &        &           \\
     \hline
