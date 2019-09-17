@@ -28,7 +28,7 @@ $$Y_i = \beta_0 + \beta_1 X_i + \varepsilon_i \quad ;\quad i = 1,2 \dots, 100$$
 **Onde: **  
 $Y_i$: Percentual de pacientes infectados do i-ésimo estabelecimento de saúde;  
 $X_i$: Tempo médio de internação em dias do i-ésimo estabelecimento de saúde;  
-$\beta_0$: Intercepto do modelo;   
+$\beta_0$: É o coeficiente linear da reta, isto é, a altura em que a reta de regressão intercepta o eixo dos $Y$'s;   
 $\beta_1$: Variação de percentual de pacientes infectados para cada  unidade tempo médio de internação;  
 $\varepsilon_i$: Erro aleatório do i-ésimo estabelecimento de saúde;    
 
