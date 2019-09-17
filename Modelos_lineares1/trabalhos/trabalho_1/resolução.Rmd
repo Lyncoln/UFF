@@ -28,7 +28,7 @@ $$Y_i = \beta_0 + \beta_1 X_i + \varepsilon_i \quad ;\quad i = 1,2 \dots, 100$$
 **Onde: **  
 $Y_i$: Percentual de pacientes infectados do i-ésimo estabelecimento de saúde;  
 $X_i$: Tempo médio de internação em dias do i-ésimo estabelecimento de saúde;  
-$\beta_0$: Percentual de pacientes infectados quando não há tempo médio de internação;   
+$\beta_0$: É o coeficiente linear da reta, isto é, a altura em que a reta de regressão intercepta o eixo dos $Y$'s;   
 $\beta_1$: Variação de percentual de pacientes infectados para cada  unidade tempo médio de internação;  
 $\varepsilon_i$: Erro aleatório do i-ésimo estabelecimento de saúde;    
 
@@ -51,8 +51,8 @@ $\hat{\beta_1}$: É o coeficiente angular estimado do modelo, que possui valor d
 
 ## c) Testes de hipóteses para avaliar significância entre as variáveis do estudo. Para $\alpha = 5\%$ e $n = 100$.
 
-
 ### Teste de Hipótese para $\beta_1$
+
 **Passo 1:**
 Definição das Hipóteses.
 
@@ -143,7 +143,7 @@ Serão utilizadas as figuras \underline{\ref{fig:residuos_stud_vs_x}} e \underli
   \item Normalidade:                       \\
    Pela \hyperref[fig:qqplot]{\underline{figura \ref*{fig:qqplot}}}, pode-se notar que os quantis  dos resíduos studentizados se aproximam dos quantis teóricos de uma distribuição normal, o que é um bom indicativo de normalidade dos erros.
    
-  \item Outilers:                           \\
+  \item Outliers:                           \\
   Também pela \hyperref[fig:residuos_stud_vs_x]{\underline{figura \ref*{fig:residuos_stud_vs_x}}} é possível notar que apenas $6$ observações dos resíduos studentizados são maiores que $|2|$, o que é apenas $6\%$ de toda a amostra. Logo é uma quantidade aceitável de outilers.
   
 \end{itemize}
