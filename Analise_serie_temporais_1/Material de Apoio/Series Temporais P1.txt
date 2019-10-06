@@ -1,0 +1,377 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[brazilian]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[left=2.5cm,right=1.7cm,top=2.5cm,bottom=2cm]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\author{
+  Daniel dos Santos\\
+  \and
+  Gabriel Mizuno\\
+  \and
+  Lyncoln Souza\\
+}
+\title{Resumo de Series Temporais para P1}
+
+\begin{document}
+\maketitle
+\section{Introdução}
+
+Séries Temporais
+$Z_t = \mu(t) + \varepsilon_t$
+
+\noindent
+Onde $\varepsilon_t$ é chamado de Ruído branco  
+$\varepsilon_t \sim RB(0,\sigma^2)$  
+
+\section{Modelo Constante}
+\begin{center}
+    $\mu(t) = a_1$ (constante)      
+\end{center}
+
+
+\noindent
+\textbf{Equação do modelo}:  
+$Z_t = a_1 + \varepsilon_t$ 
+
+\noindent
+\textbf{Equação de previsão}:  
+$\hat{Z}_{t+h} = \hat{Z_t}(h) = E[Z_{t+h} |Z_t] = E[a_1 + \varepsilon_{t+h}|Z_t] = \hat{a}_1(t)$
+
+\subsection{Método NAIVE}
+\begin{enumerate}[label=\bfseries(\roman*)] 
+\item \textbf{Estimação de $a_1(t)$:} 
+$\hat{a}_1(t) = Z_t$
+\end{enumerate}
+
+\subsection{Método Médias Móveis ($MM(N)$)}
+\textbf{Hiperparâmetro}:
+\begin{itemize}
+    \item $N$: Quantidade de termos para a média 
+\end{itemize}
+
+\noindent
+\textbf{Equação de atualização}:  
+
+\begin{enumerate}[label=\bfseries(\roman*)] 
+\item \textbf{Estimação de $a_1$:} 
+$\hat{a}_1(t) = M(t)= \displaystyle\frac{Z_t + Z_{t-1} + \dots + Z_{t-N+1}}{N}$
+\end{enumerate}
+
+\subsection{Método do Amortecimento Exponencial}
+\textbf{Hiperparâmetro}:  
+\begin{itemize}
+    \item $\alpha$: Constante de amortecimento  
+\end{itemize}
+
+\noindent
+\textbf{Equação de atualização}:  
+\begin{align*}
+  \hat{a}_1(t)
+  & =  \alpha Z_t + (1-\alpha)\hat{a}_1(t-1)\\
+  & = \alpha Z_t + (1-\alpha)\alpha Z_{T-1} + \cdots + (1 - \alpha)^{T-1}\alpha Z_{1} + (1 - \alpha)^{T}\alpha Z_{0} \\
+  & = \alpha Z_t + (1-\alpha)\alpha Z_{T-1} + \cdots + (1 - \alpha)^{T-1}\alpha Z_{1} + (1 - \alpha)^{T}\alpha Z_{1} =\sum_{i = 1}^T (1-\alpha)^{T-i}\alpha Z_{i} + (1 - \alpha)^{T-1}\alpha Z_{1}
+ \end{align*}
+
+\section{Modelos Lineares}
+\begin{center}
+    $Z_t = \mu(t) + \varepsilon_t$  
+
+    \noindent
+    $\mu(t) = a_1 + a_2 t$  
+    
+    \noindent
+    $Z_t = a_1 + a_2 t + \varepsilon_t$  
+\end{center}
+
+
+\noindent
+\textbf{Onde:}  
+$a_1$ é Nível e $a_2$ é Tendência.  
+
+\subsection{Método de Holt}
+\textbf{Hiperparâmetros}  
+\begin{itemize}
+\item $\alpha$: Constante de amortecimento de Nível;
+\item $\beta$: Constante de amortecimento de Tendência
+\end{itemize}
+
+\noindent
+\textbf{Equação de atualização}:  
+
+\begin{enumerate}[label=\bfseries(\roman*)] 
+\item \textbf{Estimação de $a_1$:}  
+$\hat{a}_1(t) = \alpha Z_t + (1-\alpha)\left[\hat{a}_1(t-1) + \hat{a}_2(t-1)\right]$ 
+\item \textbf{Estimação de $a_2$:}  
+$\hat{a}_2(t) = \beta \left[\hat{a_1}(t) - \hat{a_1}(t-1)\right] + (1-\beta)\hat{a}_2(t-1)$ 
+\end{enumerate}
+
+\noindent
+\textbf{Inicialização dos parâmetros}:  
+$\hat{a}_1(0) = Z_1$ e $\hat{a}_2(0) = Z_2 - Z_1$
+
+\noindent
+\textbf{Equação de previsão}:  
+$$\hat{Z}_{t+h} = \hat{Z_t}(h) = \hat{a}_1(t) + \hat{a}_2(t)h$$  
+
+\subsection{Método de Holt dumped trend}
+\textbf{Hiperparâmetros}: 
+\begin{itemize}
+\item $\alpha$: Constante de amortecimento de Nível;  
+\item $\beta$: Constante de amortecimento de Tendência;  
+\item $\phi$: Constante de amortecimento de Crescimento;  
+\end{itemize}
+
+\noindent
+\textbf{Equação de atualização}:  
+\begin{enumerate}[label=\bfseries(\roman*)] 
+\item \textbf{Estimação de $a_1$:}  
+$\hat{a}_1(t) = \alpha Z_t + (1-\alpha)[\hat{a}_1(t-1) + \phi\hat{a}_2(t-1)]$ 
+\item \textbf{Estimação de $a_2$:}  
+$\hat{a}_2(t) = \beta [\hat{a}_{1}(t) - \hat{a}_{1}(t-1)] + (1-\beta)\phi\hat{a}_2(t-1)$
+\end{enumerate}
+
+\noindent
+\textbf{Inicialização dos parâmetros}:  
+$\hat{a}_1(0) = Z_1$ e $\hat{a}_2(0) = Z_2 - Z_1$
+
+\noindent
+\textbf{Equação de previsão}:  
+$$\hat{Z}_{t+h} = \hat{Z_t}(h) = \hat{a}_1(t) + \hat{a}_2(t)\sum\limits_{i=1}^h\phi^i$$  
+
+\section{Modelos não lineares}
+\begin{center}
+    $Z_t = \mu(t) + \varepsilon_t$ 
+
+    \noindent
+    $\mu(t) = a_1a^t_2 $  
+    
+    \noindent
+    $Z_t = a_1a^t_2 + \varepsilon_t$ 
+\end{center}
+ 
+
+\noindent
+\textbf{Onde:}  
+$a_1$ é Nível e  $a_2$ é Tendência.
+
+\subsection{Método de Pegel}
+\textbf{Hiperparâmetros}  
+\begin{itemize}
+\item $\alpha$: Constante de amortecimento de Nível;  
+\item $\beta$: Constante de amortecimento de Tendência
+\end{itemize}
+
+
+\noindent
+\textbf{Equação de atualização}:  
+\begin{enumerate}[label=\bfseries(\roman*)] 
+\item \textbf{Estimação de $a_1$:}  
+$\hat{a}_1(t) = \alpha Z_t + (1-\alpha)[\hat{a}_1(t-1) \hat{a}_2(t-1)]$  
+\item \textbf{Estimação de $a_2$:}  
+$\hat{a}_2(t) = \beta \left[\displaystyle\frac{\hat{a_1}(t)}{\hat{a}_1(t-1)}\right] + (1-\beta)\hat{a}_2(t-1)$
+\end{enumerate}
+  
+\noindent
+\textbf{Inicialização dos parâmetros}:  
+$\hat{a}_1(0) = Z_1$ e $\hat{a}_2(0) = Z_2 - Z_1$ (Fonte: Fernanda Fernandes)
+\noindent
+\textbf{Equação de previsão}:  
+$$\hat{Z}_{t+h} = \hat{Z_t}(h) = \hat{a}_1(t)\hat{a}_2(t)^h $$
+
+\subsection{Método de Pegel com Dumped Trend}
+\textbf{Hiperparâmetros}  
+\begin{itemize}
+\item $\alpha$: Constante de amortecimento de Nível; 
+\item $\beta$: Constante de amortecimento de Tendência;
+\item $\phi$: Constante de amortecimento de Crescimento;
+\end{itemize}
+
+\noindent
+\textbf{Equação de atualização}:  
+\begin{enumerate}[label=\bfseries(\roman*)] 
+\item \textbf{Estimação de $a_1$:}  
+$\hat{a}_1(t) = \alpha Z_t + (1-\alpha)[\hat{a}_1(t-1) \hat{a}_2(t-1)^\phi]$  
+
+\item \textbf{Estimação de $a_2$:}  
+$\hat{a}_2(t) = \beta \left[\displaystyle\frac{\hat{a_1}(t)}{\hat{a}_1(t-1)}\right] + (1-\beta)\hat{a}_2(t-1)^\phi$  
+\end{enumerate}
+
+\noindent
+\textbf{Inicialização dos parâmetros}:  
+$\hat{a}_1(0) = Z_1$ e $\hat{a}_2(0) = Z_2 - Z_1$ (Fonte: Fernanda Fernandes)
+
+\noindent
+\textbf{Equação de previsão}: 
+
+$$\hat{Z}_{t+h} = \hat{Z_t}(h) = \hat{a}_1(t)\hat{a}_2(t)^{\sum\limits_{i=1}^h\phi^i}$$
+
+\section{Modelos com sazonalidade}
+
+\subsection{Modelo constante}
+\textbf{Hiperparâmetros}  
+\begin{itemize}
+\item $\alpha$: Constante de amortecimento de Nível; 
+\item $\gamma$: Constante de amortecimento dos Fatores Sazonais;
+\end{itemize}
+\textbf{\textcolor{blue}{\underline{Modelo Aditivo}}}
+\begin{center}
+    $Z_t = \mu(t) + \rho(t) + \varepsilon_t$  
+
+    \noindent
+    $\mu(t) = a_1$  
+    
+    \noindent
+    $Z_t = a_1 + \rho(t) + \varepsilon_t$
+\end{center}
+
+\noindent
+\textbf{Onde:}  
+$a_1(t)$ é Nível e  $\rho$ Fator Sazonal
+
+\noindent
+\textbf{\textcolor{red}{\underline{Modelo Multiplicativo}}}
+\begin{center}
+    $Z_t = \mu(t)\rho(t) + \varepsilon_t$  
+    
+    \noindent
+    $\mu(t) = a_1$  
+    
+    \noindent
+    $Z_t = a_1\rho(t) + \varepsilon_t$
+\end{center}
+
+\noindent
+\textbf{Onde:}  
+$a_1$ é Nível e  $\rho$ Fator Sazonal
+
+\noindent
+\subsubsection{Método de Amortecimento Exponencial}
+\textbf{\textcolor{blue}{Equação de atualização para modelo aditivo}}:  
+\begin{enumerate}[label=\bfseries(\roman*)] 
+\item \textbf{Estimação de $a_1$:}  
+$\hat{a}_1(t)$ = $\alpha (Z_t - \hat{\rho}_{m(t)}(t-1)) + (1-\alpha)\hat{a}_1(t-1)$
+
+\item \textbf{Estimação de $\rho$:}  
+$\hat{\rho}_{m(t)}(t)$ = $\gamma(Z_t - \hat{a}_1(t)) + (1-\gamma)\hat{\rho}_{m(t)}(t-1)$
+\end{enumerate}
+\textbf{Equação de previsão}: 
+$$\hat{Z}_{t+h} = \hat{Z_t}(h) = \hat{a}_1(t) + \hat{\rho}_{m(t)}(t)$$
+
+\noindent
+\textbf{\textcolor{red}{Equação de atualização para modelo multiplicativo}}:  
+\begin{enumerate}[label=\bfseries(\roman*)] 
+\item \textbf{Estimação de $a_1$:}  
+$\hat{a}_1(t)$ = $\alpha \left(\displaystyle\frac{Z_t}{\hat{\rho}_{m(t)}(t-1)}\right) + (1-\alpha)\hat{a}_1(t-1)$
+
+\item \textbf{Estimação de $\rho$:}  
+$\hat{\rho}_{m(t)}(t)$ = $\gamma\left(\displaystyle\frac{Z_t}{\hat{a}_1(t)}\right) + (1-\gamma)\hat{\rho}_{m(t)}(t-1)$
+\end{enumerate}
+\textbf{Equação de previsão}: 
+$$\hat{Z}_{t+h} = \hat{Z_t}(h) = \hat{a}_1(t)\hat{\rho}_{m(t)}(t)$$
+
+\subsection{Modelo de Tendência Linear}
+\textbf{Hiperparâmetros}  
+\begin{itemize}
+\item $\alpha$: Constante de amortecimento de Nível; 
+\item $\beta$: Constante de amortecimento de Tendência;
+\item $\gamma$: Constante de amortecimento dos Fatores Sazonais;
+\end{itemize}
+
+\noindent
+\textbf{\textcolor{blue}{\underline{Modelo Aditivo}}}
+
+\noindent
+\begin{center}
+    $Z_t = \mu(t) + \rho(t) + \varepsilon_t$  
+
+    \noindent
+    $\mu(t) = a_1 + a_2t$  
+    
+    \noindent
+    $Z_t = a_1 + a_{2}t + \rho(t) + \varepsilon_t$
+\end{center}
+\textbf{Onde:}  
+$a_1$ é Nível e  $\rho$ Fator Sazonal
+
+\noindent
+\textbf{\textcolor{red}{\underline{Modelo Multiplicativo}}}
+\noindent
+\begin{center}
+    $Z_t = \mu(t) + \rho(t) + \varepsilon_t$  
+
+    \noindent
+    $\mu(t) = a_1 + a_{2}t$  
+    
+    \noindent
+    $Z_t = \left(a_1 + a_{2}t\right)\rho(t) + \varepsilon_t$
+\end{center}
+
+\noindent
+\textbf{Onde:}  
+$a_1$ é Nível e  $\rho$ Fator Sazonal
+
+\subsubsection{Método Amortecimento Exponencial de Holt-Winters}
+\textbf{\textcolor{blue}{Equação de atualização para Modelo Aditivo}}:  
+\begin{enumerate}[label=\bfseries(\roman*)] 
+\item \textbf{Estimação de $a_1$:}  
+$\hat{a}_{1}(t) = \alpha\left[Z_t - \hat{\rho}_{m(t)}(t-1)\right] + (1-\alpha)\left[\hat{a}_{1}(t-1) + \hat{a}_{2}(t-1)\right]$
+
+\item \textbf{Estimação de $a_2)$:} 
+$\hat{a}_{2}(t) = \beta \left[\hat{a}_{1}(t) - \hat{a}_{1}(t-1)\right] + (1 - \beta)\hat{a}_{2}(t-1)  $
+
+\item \textbf{Estimação de $\rho$:}
+$\hat{\rho}_{m(t)}(t) = \gamma \left[Z_t - \hat{a}_1(t)\right] + (1 - \gamma)\hat{\rho}_{m(t)}(t-1)$
+\end{enumerate}
+\textbf{Equação de previsão}: 
+$$\hat{Z}_{t+h} = \hat{Z_t}(h) = \hat{a}_1(t) + \hat{a}_{2}(t)h +  \hat{\rho}_{m(t)}(t)$$
+
+\noindent
+\textbf{\textcolor{red}{Equação de atualização para Modelo Multiplicativo}}:  
+\begin{enumerate}[label=\bfseries(\roman*)] 
+\item \textbf{Estimação de $a_1$:} 
+$\hat{a}_{1}(t) = \alpha\displaystyle\left[\frac{Z_t}{\hat{\rho}_{m(t)}(t-1)}\right] + (1-\alpha)\left[\hat{a}_{1}(t-1) + \hat{a}_{2}(t-1)\right]$
+
+\item \textbf{Estimação de $a_2$:}  
+$\hat{a}_{2}(t) = \beta \left[\hat{a}_{1}(t) - \hat{a}_{1}(t-1)\right] + (1 - \beta)\hat{a}_{2}(t-1)$
+
+\item \textbf{Estimação de $\rho$:}
+$\hat{\rho}_{m(t)}(t) =  \gamma \displaystyle\left[\frac{Z_t}{ \hat{a}_1(t)}\right] + (1 - \gamma)\hat{\rho}_{m(t)}(t-1)$
+\end{enumerate}
+\textbf{Equação de previsão}: 
+$$\hat{Z}_{t+h} = \hat{Z_t}(h) = \left[\hat{a}_1(t) + \hat{a}_{2}(t)h\right]  \hat{\rho}_{m(t)}(t)$$
+
+\subsubsection{Modelo de Amortecimento Exponencial de Holt-Winters com Douped Trend}
+\textbf{Hiperparâmetros}  
+\begin{itemize}
+\item $\alpha$: Constante de amortecimento de Nível; 
+\item $\beta$: Constante de amortecimento de Tendência;
+\item $\gamma$: Constante de amortecimento dos Fatores Sazonais;
+\item $\phi$: Constante de amortecimento de Crescimento;
+\end{itemize}
+
+\noindent
+\textbf{Equação de atualização}:  
+\begin{enumerate}[label=\bfseries(\roman*)] 
+\item \textbf{Estimação de $a_1$:} 
+$\hat{a}_{1}(t) = \alpha\displaystyle\left[\frac{Z_t}{\hat{\rho}_{m(t)}(t-1)}\right] + (1-\alpha)\left[\hat{a}_{1}(t-1) + \phi\hat{a}_{2}(t-1)\right]$
+
+\item \textbf{Estimação de $a_2$:}  
+$\hat{a}_{2}(t) = \beta \left[\hat{a}_{1}(t) - \hat{a}_{1}(t-1)\right] + (1 - \beta)\phi\hat{a}_{2}(t-1)$
+
+\item \textbf{Estimação de $\rho$:}
+$\hat{\rho}_{m(t)}(t) =  \gamma \displaystyle\left[\frac{Z_t}{ \hat{a}_1(t)}\right] + (1 - \gamma)\hat{\rho}_{m(t)}(t-1)$
+\end{enumerate}
+\textbf{Equação de previsão}: 
+$$\hat{Z}_{t+h} = \hat{Z_t}(h) = \left[\hat{a}_1(t) + \hat{a}_{2}(t)\sum\limits_{i=1}^h\phi^i\right]  \hat{\rho}_{m(t)}(t)$$
+
+
+\end{document}
