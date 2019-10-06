@@ -1,0 +1,188 @@
+---
+title: "Lista 1 Análise Multivariada"
+author: "Lyncoln Sousa"
+date: "`r Sys.Date()`"
+output:
+  prettydoc::html_pretty:
+    theme: architect
+    highlight: github
+---
+
+## Questão 1: Sejam os vetores x^T = [1, 3] e y^T > = [2,􀀀 5]:
+
+####a) plote os dois vetores;
+
+```{r}
+x = c(1, 3)
+y = c(2, -5)
+
+
+plot(x,y,xlim=c(0,7), ylim=c(4,-8), col = "white")
+arrows(0,0,x,y,col = c("red","blue"))
+
+```
+
+####b) determine o comprimento de cada vetor, o ângulo $\theta$ entre x e y e a distância entre eles.
+
+#####Comprimento:
+######__Revisão__:
+![](figuras//figura_1.png)
+```{r}
+norma = function(x) return(sqrt(sum(x^2)))
+comprX = norma(x); comprX
+comprY = norma(y); comprY
+#Ou também:
+sqrt(x%*%x) ; sqrt(y%*%y)
+
+```
+#####Ângulo:
+######__Revisão__:
+![](figuras//figura_2.png)
+![](figuras//figura_3.png)
+```{r}
+
+anguloRad = acos((x%*%y)/(sqrt(x%*%x)*sqrt(y%*%y))) # Em radianos
+anguloGraus = anguloRad * 180/pi; anguloGraus
+
+```
+#####Distância:
+######__Revisão__:
+![](figuras//figura_4.png)
+```{r}
+dist = sqrt((x-y)%*%(x-y)); dist
+```
+
+<br>
+<br>
+<br>
+
+
+## Questão 2 Sejam as matrizes:
+$$
+A=
+\left(\begin{array}{cc} 
+4 & 2 & 2\\
+2 & 2 & 0\\
+2 & 0 & 4
+\end{array}\right)
+B=
+\left(\begin{array}{cc} 
+6 & 4 & 2\\\
+4 & 4 & 0\\
+2 & 0 & 6
+\end{array}\right)
+$$
+
+####a) Determine as inversas de A e B;
+
+```{r}
+A = matrix(c(4,2,2,2,2,0,2,0,4), ncol = 3)
+B = matrix(c(6,4,2,4,4,0,2,0,6), ncol = 3)
+
+invA = solve(A); invA
+invB = solve(B); invB
+```
+
+####a) Determine AB e sua inversa;
+
+```{r}
+AB = A%*%B
+invAB = solve(AB); invAB
+
+```
+
+####a) Verifique que $(AB)^{-1}$ = $B^{-1}A^{-1}$
+
+```{r}
+invAB
+invB %*% invA
+```
+
+## Questão 3 Seja a matriz:
+$$
+A=
+\left(\begin{array}{cc} 
+4 & 2 \\
+2 & 2 
+
+\end{array}\right)
+$$
+
+
+####a) Determine seus autovalores e autovetores;
+
+```{r}
+A = matrix(c(4,2,2,2),ncol = 2)
+valores = eigen(A)
+
+```
+
+####b) construa uma matriz P com cada coluna formada pelos autovetores de A;
+```{r}
+P = valores$vectors
+```
+
+####c) Verifique se P é ortonormal;
+```{r}
+P #Matriz com autovetores
+P[,1] %*% P[,2] #ortogonais
+sqrt(P[,1] %*% P[,1]) #Autovetor1 tem norma = 1
+sqrt(P[,2] %*% P[,2]) #Autovetor2 tem norma = 1
+#Logo são ortonormais 
+
+```
+
+
+###d) Construa a matriz K = diag($\gamma$i), i = 1; 2, isto é, uma matriz em que os elementos da diagonal principal são os autovalores e os demais elementos são iguais a zero, e verifique se as igualdades valem	$A = PKP^T$ e $K = P^TAP$	
+
+```{r}
+K = matrix(c(valores$values[1],0,0,valores$values[2]),ncol=2)
+A
+P %*% K %*% t(P) # A = PKP^T
+t(P) %*% A %*% P # K = P^TAP
+```
+
+##Questão 4: Instale o pacote matrixcalc. Seja a matriz 
+$$
+A=
+\left(\begin{array}{cc} 
+4.6 & 7.2 \\
+7.2 & 0.4 
+\end{array}\right)
+$$
+###a)Obtenha o determinante de A;
+
+```{r}
+library(matrixcalc)
+A = matrix(c(4.6,7.2,7.2,0.4), ncol = 2)
+det(A)
+```
+
+###b)Verifique se A é positiva definida e se é positiva semi-definida;
+
+```{r}
+is.positive.definite(A)
+is.positive.semi.definite(A)
+```
+
+###c)Ache o posto de A;
+
+```{r}
+matrix.rank(A)
+```
+###d)Encontre o traço de A;
+```{r}
+matrix.trace(A)
+```
+###e)Verifique se A é diagonal;
+```{r}
+is.diagonal.matrix(A)
+```
+
+###f)Encontre a decomposição espectral de A;
+```{r}
+#A é simétrica
+
+eigen(A)$vectors %*% (t(eigen(A)$vectors) %*% A %*% eigen(A)$vectors) %*% t(eigen(A)$vectors)
+```
+

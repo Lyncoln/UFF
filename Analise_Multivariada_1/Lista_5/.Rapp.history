@@ -1,0 +1,645 @@
+min.f
+max.f
+min.n
+max.n
+plot(c(min.f,min.n),c(max.f,max.n),type="n",xlab="frequencia",ylab="nota")
+points(dados$frequencia[dados$genere=="M"],dados$nota[dados$genere=="M"])
+plot(c(min.f,min.n),c(max.f,max.n),type="n",xlab="frequencia",ylab="nota")
+c(min.f,min.n)
+plot(c(min.f,max.f),c(min.n,max.n),type="n",xlab="frequencia",ylab="nota")
+dados$frequencia[dados$genere=="M"]
+points(dados$frequencia[dados$genero=="M"],dados$nota[dados$genero=="M"])
+plot(c(min.f,max.f),c(min.n,max.n),type="n",xlab="frequencia",ylab="nota")#
+points(dados$frequencia[dados$genero=="M"],dados$nota[dados$genero=="M"])
+plot(c(min.f,max.f),c(min.n,max.n),type="n",xlab="frequencia",ylab="nota")#
+points(dados$frequencia[dados$genero=="M"],dados$nota[dados$genero=="M"],col="blue")#
+points(dados$frequencia[dados$genero=="F"],dados$nota[dados$genero=="F"],col="red")
+aux=c(8,7,8,5,4,8,9,6,2,7,7,7,8,2,7,5,9,2,5,10,3)
+aux=c(8,7,8,5,4,8,9,6,2,7,7,7,8,2,7,5,9,2,5,10,3)+1
+fix(aux)
+dados=data.frame(#
+genero=c("M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M"),#
+frequencia=c(.9,.8,.85,.3,.5,.76,.9,.5,.6,.7,.6,.7,.8,.2,.9,1,1,.5,.7,.3,.2,.9,.8,.85,.3,.5,.6,.8,.5,.6,.3,.6,.7,.5,.2,.9,.6,1,.5,.7,.3,.2),#
+nota=c(8,7,8,5,4,8,9,6,2,7,7,7,8,2,7,5,9,2,5,10,3,9, 8, 9, 6, 5, 9, 10, 7, 3, 8, 8, 8, 9, 3, 8, 6, 10, 3, 6, 7, 4)#
+)
+min.f=min(dados$frequencia)#
+max.f=max(dados$frequencia)#
+min.n=min(dados$nota)#
+max.n=max(dados$nota)#
+#
+plot(c(min.f,max.f),c(min.n,max.n),type="n",xlab="frequencia",ylab="nota")#
+points(dados$frequencia[dados$genero=="M"],dados$nota[dados$genero=="M"],col="blue")#
+points(dados$frequencia[dados$genero=="F"],dados$nota[dados$genero=="F"],col="red")
+dados=data.frame(#
+genero=c("M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M"),#
+frequencia=c(9,.8,.85,.6,.5,.76,.9,.5,.6,.7,.6,.7,.8,.2,.9,1,1,.5,.7,.7,.2,.9,.8,.85,.3,.5,.6,.8,.5,.6,.45,.6,.7,.5,.2,.9,.6,1,.5,.7,.1,.2),#
+nota=c(8,7,8,5,4,8,9,6,2,7,7,7,8,2,7,5,9,2,5,10,3,9, 8, 9, 6, 5, 9, 10, 7, 3, 8, 8, 8, 9, 3, 8, 6, 10, 3, 6, 7, 4)#
+)#
+#
+min.f=min(dados$frequencia)#
+max.f=max(dados$frequencia)#
+min.n=min(dados$nota)#
+max.n=max(dados$nota)#
+#
+plot(c(min.f,max.f),c(min.n,max.n),type="n",xlab="frequencia",ylab="nota")#
+points(dados$frequencia[dados$genero=="M"],dados$nota[dados$genero=="M"],col="blue")#
+points(dados$frequencia[dados$genero=="F"],dados$nota[dados$genero=="F"],col="red")
+dados=data.frame(#
+genero=c("M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M"),#
+frequencia=c(9,.8,.85,.6,.5,.76,.9,.5,.6,.7,.6,.7,.8,.2,.9,1,1,.5,.7,.7,.2,.9,.8,.85,.3,.5,.6,.8,.5,.6,.3,.6,.7,.5,.2,.9,.6,1,.5,.7,.1,.2),#
+nota=c(8,7,8,5,4,8,9,6,2,7,7,7,8,2,7,5,9,2,5,10,3,9, 8, 9, 6, 5, 9, 10, 7, 3, 8, 8, 8, 9, 3, 8, 6, 10, 3, 6, 7, 4)#
+)#
+#
+min.f=min(dados$frequencia)#
+max.f=max(dados$frequencia)#
+min.n=min(dados$nota)#
+max.n=max(dados$nota)#
+#
+plot(c(min.f,max.f),c(min.n,max.n),type="n",xlab="frequencia",ylab="nota")#
+points(dados$frequencia[dados$genero=="M"],dados$nota[dados$genero=="M"],col="blue")#
+points(dados$frequencia[dados$genero=="F"],dados$nota[dados$genero=="F"],col="red")
+dados=data.frame(#
+genero=c("M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M"),#
+frequencia=c(.9,.8,.85,.6,.5,.76,.9,.5,.6,.7,.6,.7,.8,.2,.9,1,1,.5,.7,.7,.2,.9,.8,.85,.3,.5,.6,.8,.5,.6,.3,.6,.7,.5,.2,.9,.6,1,.5,.7,.1,.2),#
+nota=c(8,7,8,5,4,8,9,6,2,7,7,7,8,2,7,5,9,2,5,10,3,9, 8, 9, 6, 5, 9, 10, 7, 3, 8, 8, 8, 9, 3, 8, 6, 10, 3, 6, 7, 4)#
+)#
+#
+min.f=min(dados$frequencia)#
+max.f=max(dados$frequencia)#
+min.n=min(dados$nota)#
+max.n=max(dados$nota)#
+#
+plot(c(min.f,max.f),c(min.n,max.n),type="n",xlab="frequencia",ylab="nota")#
+points(dados$frequencia[dados$genero=="M"],dados$nota[dados$genero=="M"],col="blue")#
+points(dados$frequencia[dados$genero=="F"],dados$nota[dados$genero=="F"],col="red")
+dados=data.frame(#
+genero=c("M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M"),#
+frequencia=c(.9,.8,.85,.6,.5,.76,.9,.5,.6,.7,.6,.7,.8,.2,.9,1,1,.5,.7,.7,.2,.9,.8,.85,.3,.85,.6,.8,.25,.6,.3,.6,.7,.5,.2,.9,.6,1,.5,.7,.1,.2),#
+nota=c(8,7,8,5,4,8,9,6,2,7,7,7,8,2,7,5,9,2,5,10,3,9, 8, 9, 6, 5, 9, 10, 7, 3, 8, 8, 8, 9, 3, 8, 6, 10, 3, 6, 7, 4)#
+)#
+#
+min.f=min(dados$frequencia)#
+max.f=max(dados$frequencia)#
+min.n=min(dados$nota)#
+max.n=max(dados$nota)#
+#
+plot(c(min.f,max.f),c(min.n,max.n),type="n",xlab="frequencia",ylab="nota")#
+points(dados$frequencia[dados$genero=="M"],dados$nota[dados$genero=="M"],col="blue")#
+points(dados$frequencia[dados$genero=="F"],dados$nota[dados$genero=="F"],col="red")
+dados=data.frame(#
+genero=c("M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M"),#
+frequencia=c(.9, .8, .85, .6,.5, .76,.9,.5,.6,.7,.6,.7,.8,.2,.9,1,1,.5,.7,.7,.2,.9,.8,.85,.3,.85,.6,.8,.25,.6,.3,.6,.7,.5,.2,.9,.6,1,.5,.7,.1,.2,.9,.8,.85,.6,.5,.76,.9,.5,.6,.7,.6,.7,.8,.2,.9,1,1,.5,.7,.7,.2,.9,.8,.85,.3,.85,.6,.8,.25,.6,.3,.6,.7,.5,.2,.9,.6,1,.5,.7,.1,.2),#
+nota=c(8,7,8,5,4,8,9,6,2,7,7,7,8,2,7,5,9,2,5,10,3,9, 8, 9, 6, 5, 9, 10, 7, 3, 8, 8, 8, 9, 3, 8, 6, 10, 3, 6, 7, 4,8,7,9,5,4,8,9,6,2,7,7,7,8,2,7,5,9,2,5,5,3,9, 8, 9, 6, 4, 9, 10, 7, 3, 8, 8, 8, 9, 3, 8, 6, 10, 3, 6, 7, 4)#
+)#
+min.f=min(dados$frequencia)#
+max.f=max(dados$frequencia)#
+min.n=min(dados$nota)#
+max.n=max(dados$nota)#
+#
+plot(c(min.f,max.f),c(min.n,max.n),type="n",xlab="frequencia",ylab="nota")#
+points(dados$frequencia[dados$genero=="M"],dados$nota[dados$genero=="M"],col="blue")#
+points(dados$frequencia[dados$genero=="F"],dados$nota[dados$genero=="F"],col="red")
+dados=data.frame(#
+genero=c("M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M"),#
+frequencia=c(.9, .8, .85, .6,.5, .76,.9,.5,.6,.7,.6,.7,.8,.2,.9,1,1,.5,.7,.7,.2,.9,.8,.85,.3,.85,.6,.8,.25,.6,.3,.6,.7,.5,.2,.9,.6,1,.5,.7,.1,.2,.9,.8,.85,.6,.5,.76,.9,.5,.6,.7,.6,.7,.8,.2,.9,1,1,.5,.7,.7,.2,.9,.8,.85,.3,.85,.6,.8,.25,.6,.3,.6,.7,.5,.2,.9,.6,1,.5,.7,.1,.2),#
+nota=c(8,7,8,5,4,8,9,6,2,7,7,7,8,2,7,5,9,2,5,10,3,9, 8, 9, 6, 5, 9, 10, 7, 3, 8, 8, 8, 9, 3, 8, 6, 10, 3, 6, 7, 4.5,8.5,7.4,9.2,5.1,4.4,8.4,9.3,6.4,2.4,7.7,7.5,7.2,8.3,2.5,7.7,5.1,9.1,2.2,5.4,5.6,3.9,9.2, 8.3, 9.5, 6.1, 4.4, 9.6, 6.8, 7.3, 3.5, 8.7, 8.8, 8.4, 9.5, 3.7, 8.2, 6.4, 10, 3.4, 6.6, 7.3, 4.5)#
+)#
+min.f=min(dados$frequencia)#
+max.f=max(dados$frequencia)#
+min.n=min(dados$nota)#
+max.n=max(dados$nota)#
+#
+plot(c(min.f,max.f),c(min.n,max.n),type="n",xlab="frequencia",ylab="nota")#
+points(dados$frequencia[dados$genero=="M"],dados$nota[dados$genero=="M"],col="blue")#
+points(dados$frequencia[dados$genero=="F"],dados$nota[dados$genero=="F"],col="red")
+dados=data.frame(#
+genero=c("M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M"),#
+frequencia=c(.9, .8, .85, .6,.5, .76,.9,.5,.6,.7,.6,.7,.8,.2,.9,1,1,.5,.7,.7,.2,.9,.8,.85,.3,.85,.6,.8,.25,.6,.3,.6,.7,.5,.2,.9,.6,1,.5,.7,.1,.2,.9,.8,.85,.6,.5,.76,.9,.5,.6,.7,.6,.7,.8,.2,.9,1,1,.5,.7,.7,.2,.9,.8,.85,.3,.85,.6,.8,.25,.6,.3,.6,.7,.5,.2,.9,.6,1,.5,.7,.1,.2),#
+nota=c(8,7,8,5,4,8,9,6,2,7,7,7,8,2,7,5,9,2,5,10,3,9, 8, 9, 6, 5, 9, 10, 7, 3, 8, 8, 8, 9, 3, 8, 6, 10, 3, 6, 7, 4.5,8.5,7.4,9.2,5.1,4.4,8.4,9.3,6.4,2.4,7.7,7.5,7.2,8.3,2.5,7.7,5.1,9.1,2.2,5.4,5.6,3.9,9.2, 8.3, 9.5, 6.1, 4.4, 9.6, 6.8, 7.3, 3.5, 8.7, 8.8, 8.4, 9.5, 3.7, 8.2, 6.4, 10, 3.4, 6.6, 7.3, 4.5)#
+)#
+min.f=min(dados$frequencia)#
+max.f=max(dados$frequencia)#
+min.n=min(dados$nota)#
+max.n=max(dados$nota)#
+#
+plot(c(min.f,max.f),c(min.n,max.n),type="n",xlab="frequencia",ylab="nota")#
+points(dados$frequencia[dados$genero=="M"],dados$nota[dados$genero=="M"],col="blue")#
+points(dados$frequencia[dados$genero=="F"],dados$nota[dados$genero=="F"],col="red")#
+legend("bottomright",names=c("M","F"),col=c("blue","red"),pch=c(1,1))
+"],col="red")#
+legend("bottomright",labels=c("M","F"),col=c("blue","red"),pch=c(1,1))
+?legend
+plot(c(min.f,max.f),c(min.n,max.n),type="n",xlab="frequencia",ylab="nota")#
+points(dados$frequencia[dados$genero=="M"],dados$nota[dados$genero=="M"],col="blue")#
+points(dados$frequencia[dados$genero=="F"],dados$nota[dados$genero=="F"],col="red")#
+legend("bottomright",legend=c("M","F"),col=c("blue","red"),pch=c(1,1))
+aux=jitter(c(.9, .8, .85, .6,.5, .76,.9,.5,.6,.7,.6,.7,.8,.2,.9,1,1,.5,.7,.7,.2,.9,.8,.85,.3,.85,.6,.8,.25,.6,.3,.6,.7,.5,.2,.9,.6,1,.5,.7,.1,.2,.9,.8,.85,.6,.5,.76,.9,.5,.6,.7,.6,.7,.8,.2,.9,1,1,.5,.7,.7,.2,.9,.8,.85,.3,.85,.6,.8,.25,.6,.3,.6,.7,.5,.2,.9,.6,1,.5,.7,.1,.2),factor=1)
+aux
+aux=jitter(c(.9, .8, .85, .6,.5, .76,.9,.5,.6,.7,.6,.7,.8,.2,.9,1,1,.5,.7,.7,.2,.9,.8,.85,.3,.85,.6,.8,.25,.6,.3,.6,.7,.5,.2,.9,.6,1,.5,.7,.1,.2,.9,.8,.85,.6,.5,.76,.9,.5,.6,.7,.6,.7,.8,.2,.9,1,1,.5,.7,.7,.2,.9,.8,.85,.3,.85,.6,.8,.25,.6,.3,.6,.7,.5,.2,.9,.6,1,.5,.7,.1,.2),factor=10)
+aux
+aux2=round(aux,2)
+fix(aux2)
+aux=jitter(c(8,7,8,5,4,8,9,6,2,7,7,7,8,2,7,5,9,2,5,10,3,9, 8, 9, 6, 5, 9, 10, 7, 3, 8, 8, 8, 9, 3, 8, 6, 10, 3, 6, 7, 4.5,8.5,7.4,9.2,5.1,4.4,8.4,9.3,6.4,2.4,7.7,7.5,7.2,8.3,2.5,7.7,5.1,9.1,2.2,5.4,5.6,3.9,9.2, 8.3, 9.5, 6.1, 4.4, 9.6, 6.8, 7.3, 3.5, 8.7, 8.8, 8.4, 9.5, 3.7, 8.2, 6.4, 10, 3.4, 6.6, 7.3, 4.5),factor=10)
+round(aux,2)
+round(aux,2)->ww
+fix(ww)
+dados=data.frame(#
+genero=c("M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M"),#
+frequencia=c(0.96, 0.79, 0.83, 0.52, 0.43, 0.71, 0.94, 0.5, 0.53, 0.74, #
+0.64, 0.64, 0.82, 0.15, 0.97, 0.94, 1.04, 0.55, 0.7, 0.67, 0.28, #
+0.86, 0.79, 0.79, 0.37, 0.89, 0.6, 0.82, 0.29, 0.59, 0.31, 0.63, #
+0.71, 0.56, 0.18, 0.85, 0.54, 0.94, 0.56, 0.66, 0.12, 0.2, 0.9, #
+0.77, 0.83, 0.53, 0.54, 0.69, 0.97, 0.58, 0.62, 0.74, 0.54, 0.62, #
+0.83, 0.12, 0.9, 0.92, 0.93, 0.57, 0.63, 0.69, 0.18, 0.87, 0.74, #
+0.88, 0.23, 0.78, 0.6, 0.75, 0.25, 0.64, 0.31, 0.57, 0.64, 0.51, #
+0.26, 0.93, 0.67, 0.97, 0.42, 0.76, 0.04, 0.13),#
+nota=c(7.96, 7.17, 7.89, 4.89, 3.9, 7.85, 8.96, 6.18, 1.8, 6.98, 7.13, #
+7.01, 7.85, 2.14, 6.91, 5.17, 8.81, 2.15, 4.94, 10.2, 3.15, 8.95, #
+7.83, 9.04, 6, 5.17, 9.19, 9.83, 7, 2.88, 8.06, 8.08, 8.01, 8.86, #
+3.07, 7.98, 5.88, 9.89, 2.93, 6.11, 7.01, 4.59, 8.42, 7.41, 9.24, #
+5.15, 4.21, 8.28, 9.18, 6.32, 2.44, 7.86, 7.34, 7, 8.48, 2.4, #
+7.7, 5.16, 9.28, 2.16, 5.2, 5.45, 3.82, 9.08, 8.2, 9.33, 6.28, #
+4.42, 9.72, 6.65, 7.37, 3.33, 8.75, 8.63, 8.45, 9.57, 3.85, 8.25, #
+6.37, 10, 3.47, 6.7, 7.28, 4.38)#
+#
+)#
+min.f=min(dados$frequencia)#
+max.f=max(dados$frequencia)#
+min.n=min(dados$nota)#
+max.n=max(dados$nota)#
+#
+plot(c(min.f,max.f),c(min.n,max.n),type="n",xlab="frequencia",ylab="nota")#
+points(dados$frequencia[dados$genero=="M"],dados$nota[dados$genero=="M"],col="blue")#
+points(dados$frequencia[dados$genero=="F"],dados$nota[dados$genero=="F"],col="red")#
+legend("bottomright",legend=c("M","F"),col=c("blue","red"),pch=c(1,1))
+x=rbeta(100,.2,.3)#
+hist(x)
+x=rgamma(100,.2,.3)#
+hist(x)
+x=rgamma(1000,.2,.3)#
+hist(x)
+x=rgamma(1000,5,.3)#
+hist(x)
+x=rgamma(1000,5,.3)#
+hist(x)#
+curve(dgamma(x,5.3))
+x=rgamma(1000,5,.3)#
+hist(x)#
+curve(dgamma(x,5.3),add=TRUE)
+x=rgamma(1000,5,.3)#
+hist(x,freq=FALSE)#
+curve(dgamma(x,5.3),add=TRUE)
+x=rgamma(1000,5,.3)#
+hist(x,freq=FALSE)#
+curve(dgamma(x,5,.3),add=TRUE)
+?arrows
+x <- stats::runif(12)
+x
+stats
+x <- runif(12)
+y <- rnorm(12)
+i <- order(x, y)
+x <- x[i]
+y <- y[i]
+plot(x,y, main = "arrows(.) and segments(.)")
+x <- stats::runif(12); y <- stats::rnorm(12)#
+i <- order(x, y); x <- x[i]; y <- y[i]#
+plot(x,y, main = "arrows(.) and segments(.)")
+val=c(3,5,2)#
+sup=c(4,7,3)#
+inf=c(2,1,0)#
+plot(1:length(val),val,,xlab="Método de ensino",ylab="Intervalo de Confiança")
+i=1:3#
+arrows(val[i],inf[i],val[i],sup[i],code=0,angle=90,length = .1)
+plot(1:length(val),val,,xlab="Método de ensino",ylab="Intervalo de Confiança")
+i=1:3
+arrows(val[i],inf[i],val[i],sup[i],code=0,angle=90,length = .1)
+c(val[i],inf[i],val[i],sup[i])
+i=1
+c(val[i],inf[i],val[i],sup[i])
+plot(1:length(val),val,type="n",xlab="Método de ensino",ylab="Intervalo de Confiança")
+val=c(3,5,2)#
+sup=c(4,7,3)#
+inf=c(2,1,0)#
+plot(1:length(val),val,type="n",xlab="Método de ensino",ylab="Intervalo de Confiança",ylim=c(min(inf),max(sup)))#
+points(1:length(val),val,col="red",pch=19)
+i=1:3#
+arrows(val[i],inf[i],val[i],sup[i],code=0,angle=90,length = .1)
+plot(1:length(val),val,type="n",xlab="Método de ensino",ylab="Intervalo de Confiança",ylim=c(min(inf),max(sup)))#
+points(1:length(val),val,col="red",pch=19)
+arrows(val[1],inf[1],val[1],sup[1],code=0,angle=90,length = .1)
+arrows(val[2],inf[2],val[2],sup[2],code=0,angle=90,length = .1)
+arrows(inf[2],sup[2],inf[2],sup[2],code=0,angle=90,length = .1)
+?arrows
+arrows(1,inf[2],1,inf[1],code=0,angle=90,length = .1)
+arrows(1,inf[1],1,inf[1],code=0,angle=90,length = .1)
+plot(1:length(val),val,type="n",xlab="Método de ensino",ylab="Intervalo de Confiança",ylim=c(min(inf),max(sup)))#
+points(1:length(val),val,col="red",pch=19)#
+arrows(1,inf[1],1,inf[1],code=0,angle=90,length = .1)
+arrows(1,inf[1],1,sup[1],code=0,angle=90,length = .1)
+plot(1:length(val),val,type="n",xlab="Método de ensino",ylab="Intervalo de Confiança",ylim=c(min(inf),max(sup)))#
+points(1:length(val),val,col="red",pch=19)#
+arrows(1,inf[1],1,sup[1],code=0,angle=90,length = .1)#
+arrows(2,inf[2],2,sup[2],code=1,angle=90,length = .1)#
+arrows(3,inf[3],3,sup[3],code=2,angle=90,length = .1)
+plot(1:length(val),val,type="n",xlab="Método de ensino",ylab="Intervalo de Confiança",ylim=c(min(inf),max(sup)))#
+points(1:length(val),val,col="red",pch=19)#
+arrows(1,inf[1],1,sup[1],code=0,angle=90,length = .1)#
+arrows(2,inf[2],2,sup[2],code=1,angle=90,length = .1)#
+arrows(3,inf[3],3,sup[3],code=3,angle=90,length = .1)
+plot(1:length(val),val,type="n",xlab="Método de ensino",ylab="Intervalo de Confiança",ylim=c(min(inf),max(sup)))#
+points(1:length(val),val,col="red",pch=19)#
+arrows(1,inf[1],1,sup[1],code=0,angle=90,length = .1)#
+arrows(2,inf[2],2,sup[2],code=5,angle=90,length = .1)#
+arrows(3,inf[3],3,sup[3],code=3,angle=90,length = .1)
+arrows(1,inf[1],1,sup[1],code=0,angle=90,length = .1)#
+arrows(2,inf[2],2,sup[2],code=1,angle=90,length = .1)#
+arrows(3,inf[3],3,sup[3],code=3,angle=90,length = .1)
+plot(1:length(val),val,type="n",xlab="Método de ensino",ylab="Intervalo de Confiança",ylim=c(min(inf),max(sup)))#
+points(1:length(val),val,col="red",pch=19)#
+arrows(1,inf[1],1,sup[1],code=0,angle=90,length = .1)#
+arrows(2,inf[2],2,sup[2],code=1,angle=90,length = .1)#
+arrows(3,inf[3],3,sup[3],code=3,angle=90,length = .1)
+plot(1:length(val),val,type="n",xlab="Método de ensino",ylab="Intervalo de Confiança",ylim=c(min(inf),max(sup)))#
+points(1:length(val),val,col="red",pch=19)#
+arrows(1,inf[1],1,sup[1],code=0,angle=90,length = .1)#
+arrows(2,inf[2],2,sup[2],code=1,angle=50,length = .1)#
+arrows(3,inf[3],3,sup[3],code=3,angle=90,length = .1)
+plot(1:length(val),val,type="n",xlab="Método de ensino",ylab="Intervalo de Confiança",ylim=c(min(inf),max(sup)))#
+points(1:length(val),val,col="red",pch=19)#
+arrows(1,inf[1],1,sup[1],code=0,angle=90,length = .1)#
+arrows(2,inf[2],2,sup[2],code=1,angle=50,length = .1)#
+arrows(3,inf[3],3,sup[3],code=3,angle=10,length = .1)
+Grafico de dispersao#
+dados=data.frame(#
+genero=c("M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M","M","M","F","F","M"),#
+frequencia=c(0.96, 0.79, 0.83, 0.52, 0.43, 0.71, 0.94, 0.5, 0.53, 0.74, #
+0.64, 0.64, 0.82, 0.15, 0.97, 0.94, 1.04, 0.55, 0.7, 0.67, 0.28, #
+0.86, 0.79, 0.79, 0.37, 0.89, 0.6, 0.82, 0.29, 0.59, 0.31, 0.63, #
+0.71, 0.56, 0.18, 0.85, 0.54, 0.94, 0.56, 0.66, 0.12, 0.2, 0.9, #
+0.77, 0.83, 0.53, 0.54, 0.69, 0.97, 0.58, 0.62, 0.74, 0.54, 0.62, #
+0.83, 0.12, 0.9, 0.92, 0.93, 0.57, 0.63, 0.69, 0.18, 0.87, 0.74, #
+0.88, 0.23, 0.78, 0.6, 0.75, 0.25, 0.64, 0.31, 0.57, 0.64, 0.51, #
+0.26, 0.93, 0.67, 0.97, 0.42, 0.76, 0.04, 0.13),#
+nota=c(7.96, 7.17, 7.89, 4.89, 3.9, 7.85, 8.96, 6.18, 1.8, 6.98, 7.13, #
+7.01, 7.85, 2.14, 6.91, 5.17, 8.81, 2.15, 4.94, 10.2, 3.15, 8.95, #
+7.83, 9.04, 6, 5.17, 9.19, 9.83, 7, 2.88, 8.06, 8.08, 8.01, 8.86, #
+3.07, 7.98, 5.88, 9.89, 2.93, 6.11, 7.01, 4.59, 8.42, 7.41, 9.24, #
+5.15, 4.21, 8.28, 9.18, 6.32, 2.44, 7.86, 7.34, 7, 8.48, 2.4, #
+7.7, 5.16, 9.28, 2.16, 5.2, 5.45, 3.82, 9.08, 8.2, 9.33, 6.28, #
+4.42, 9.72, 6.65, 7.37, 3.33, 8.75, 8.63, 8.45, 9.57, 3.85, 8.25, #
+6.37, 10, 3.47, 6.7, 7.28, 4.38)#
+#
+)
+min.f=min(dados$frequencia)#
+max.f=max(dados$frequencia)#
+min.n=min(dados$nota)#
+max.n=max(dados$nota)#
+#
+plot(c(min.f,max.f),c(min.n,max.n),type="n",xlab="Frequencia",ylab="Nota")#
+points(dados$frequencia[dados$genero=="M"],dados$nota[dados$genero=="M"],col="blue",pch=19)#
+points(dados$frequencia[dados$genero=="F"],dados$nota[dados$genero=="F"],col="red",pch=19)#
+legend("bottomright",legend=c("M","F"),col=c("blue","red"),pch=c(19,19))
+Sobreposicao de graficos#
+#
+x=rgamma(1000,5,.3)#
+hist(x)#
+curve(dgamma(x,5.3),add=TRUE)#
+#
+x=rgamma(1000,5,.3)#
+hist(x,freq=FALSE)#
+curve(dgamma(x,5,.3),add=TRUE)
+Desenhando flechas#
+#
+val=c(3,5,2)#
+sup=c(4,7,3)#
+inf=c(2,1,0)#
+#
+plot(1:length(val),val,type="n",xlab="Método de ensino",ylab="Intervalo de Confiança",ylim=c(min(inf),max(sup)))#
+points(1:length(val),val,col="red",pch=19)#
+#
+arrows(1,inf[1],1,sup[1],code=0,angle=90,length = .1)#
+arrows(2,inf[2],2,sup[2],code=1,angle=50,length = .1)#
+arrows(3,inf[3],3,sup[3],code=3,angle=10,length = .1)
+plot(1:length(val),val,type="n",xlab="Método de ensino",ylab="Intervalo de Confiança",ylim=c(min(inf),max(sup)),names=c("A","B","C"))
+plot(1:length(val),val,type="n",xlab="Método de ensino",ylab="Intervalo de Confiança",ylim=c(min(inf),max(sup)),axis(1, at = seq(1,N,1),labels=c("A","B","C"))
+)
+plot(1:length(val),val,type="n",xlab="Método de ensino",ylab="Intervalo de Confiança",ylim=c(min(inf),max(sup)),axis(1, at = c(1,2,3),labels=c("A","B","C")))
+plot(1:length(val),val,type="n",xlab="Método de ensino",ylab="Intervalo de Confiança",ylim=c(min(inf),max(sup)))#
+axis(1, at = c(1,2,3),labels=c("A","B","C"))#
+points(1:length(val),val,col="red",pch=19)
+?plot
+plot(1:length(val),val,type="n",xlab="Método de ensino",ylab="Intervalo de Confiança",ylim=c(min(inf),max(sup)),axes=FALSE)
+axis(1, at = c(1,2,3),labels=c("A","B","C"))#
+axis(2, at = min(inf):max(sup))
+points(1:length(val),val,col="red",pch=19)#
+#
+arrows(1,inf[1],1,sup[1],code=0,angle=90,length = .1)#
+arrows(2,inf[2],2,sup[2],code=1,angle=50,length = .1)#
+arrows(3,inf[3],3,sup[3],code=3,angle=10,length = .1)
+4^6
+A=matrix(c(1,3,2,2),2,2)
+A
+eigen(A)
+pnorm(.95,5,5/2)
+?pnorm
+qnorm(.95,5,5/2)
+qnorm(.05,5,5/2)
+qnorm(.05)
+5-5/2*1.65
+5-5/2*1.644854
+A=matrix(c(1,-2,-2,3),2,2)
+solve(A)
+fx2=function(x,lambda){ exp(-length(x)*lambda)*lambdaˆ{sum(x)}*prod(1/factorial(x)) }
+fx2=function(x,lambda){ #
+exp(-length(x)*lambda)*lambda^{sum(x)}*prod(1/factorial(x)) #
+}
+x=c(2,3,1,2,3,4,5,3,3,1)
+curve(fx2(c(2,3,1,2,3,4,5,3,3,1),x),0,10)
+?tapply
+require(stats)#
+groups <- as.factor(rbinom(32, n = 5, prob = 0.4))
+groups
+tapply(groups, groups, length) #- is almost the same as#
+table(groups)
+tapply(warpbreaks$breaks, warpbreaks[,-1], sum)
+warpbreaks
+tapply(warpbreaks$breaks, warpbreaks[,2], sum)
+n=10#
+normal=rnorm(n)#
+qui=rchisq(n,10)#
+#
+t=normal/sqrt(qui/10)#
+#
+hist(t,freq=FALSE)#
+curve(dt(x),add=TRUE)
+n=100#
+normal=rnorm(n)#
+qui=rchisq(n,10)#
+#
+t=normal/sqrt(qui/10)#
+#
+hist(t,freq=FALSE)#
+curve(dt(x),add=TRUE)
+n=1000#
+normal=rnorm(n)#
+qui=rchisq(n,10)#
+#
+t=normal/sqrt(qui/10)#
+#
+hist(t,freq=FALSE)#
+curve(dt(x),add=TRUE)
+?dt
+n=1000#
+normal=rnorm(n)#
+qui=rchisq(n,10)#
+#
+t=normal/sqrt(qui/10)#
+#
+hist(t,freq=FALSE)#
+curve(dt(x,10),add=TRUE)
+n=10#
+normal=rnorm(n)#
+qui=rchisq(n,10)#
+#
+t=normal/sqrt(qui/10)#
+#
+hist(t,freq=FALSE)#
+curve(dt(x,10),add=TRUE)
+n=100#
+normal=rnorm(n)#
+qui=rchisq(n,10)#
+#
+t=normal/sqrt(qui/10)#
+#
+hist(t,freq=FALSE)#
+curve(dt(x,10),add=TRUE)
+n=1000#
+normal=rnorm(n)#
+qui=rchisq(n,10)#
+#
+t=normal/sqrt(qui/10)#
+#
+hist(t,freq=FALSE)#
+curve(dt(x,10),add=TRUE)
+par(mfrow=c(2,2))#
+for(n in c(5,10,50,100)){#
+	normal=rnorm(n)#
+	qui=rchisq(n,10)#
+#
+	t=normal/sqrt(qui/10)#
+#
+	hist(t,freq=FALSE)#
+	curve(dt(x,10),add=TRUE)#
+}#
+par(mfrow=c(1,1))
+par(mfrow=c(2,2))#
+for(n in c(5,10,50,100)){#
+	normal=rnorm(n)#
+	qui=rchisq(n,10)#
+#
+	t=normal/sqrt(qui/10)#
+	titulo=paste("n =",n)#
+	hist(t,freq=FALSE,main=titulo)#
+	curve(dt(x,10),add=TRUE)#
+}#
+par(mfrow=c(1,1))
+par(mfrow=c(2,2))#
+for(n in c(5,10,50,1000)){#
+	normal=rnorm(n)#
+	qui=rchisq(n,10)#
+#
+	t=normal/sqrt(qui/10)#
+	titulo=paste("n =",n)#
+	hist(t,freq=FALSE,main=titulo)#
+	curve(dt(x,10),add=TRUE)#
+}#
+par(mfrow=c(1,1))
+require(maptools)
+?maptools
+??maptools
+mapa=readShapePoly("BRASIL.shp")
+2500*50
+?jpeg
+dad = read.table("Cont por regiao.txt",header=FALSE)#
+#
+y=array(dad$V1,c(100,10,25))#
+#
+e = 0.001#
+#
+lia=rep(0:9,10)#
+lsa=rep(1:10,10)#
+lib=rep(0:9,each=10)#
+lsb=rep(1:10,each=10)#
+#
+t=1
+?vech
+?vec
+setwd("/Users/jony/Documents/Doutorado/Tese/Ajuste Cerebrovascular espaco-tempo/Calculo das interpolacoes/F Alguem")
+100*0.01
+1/100
+?power.t.test
+a=matrix(c(10,0,-2,0,20,5,-2,5,6),3,3)
+a
+b=matrix(c(10,1,-2,1,5,5,-2,5,6),3,3)
+b
+mub=c(110,80,190)
+mua=c(120,100,140)
+x1=mvrnorm(100,mua,a)
+require(MASS)
+x1=mvrnorm(100,mua,a)
+x1=mvrnorm(120,mub,a)
+x1=mvrnorm(100,mua,a)
+xc=mvrnorm(120,mub,a)
+x1
+apply(x1,2,mean)
+apply(x2,2,mean)
+x2=mvrnorm(120,mub,a)
+apply(x2,2,mean)
+cov(x1)
+cov(x2)
+m1=matrix(apply(x1,2,mean),ncol=1)
+m2=matrix(apply(x2,2,mean),ncol=1)
+d=m1-m2
+sp=(99*cov(x1+119*cov(x2)))/218
+sp=(99*cov(x1)+119*cov(x2))/218
+T=(1/100+1/120)^(-1)*t(d)%*%solve(sp)%*%d
+T
+c=(100+120-3-1)/((100+120-2)*3)
+c*T
+qf(.95,(220-4))
+qf(.95,3,(220-4))
+prop.test(3,7,0.5)
+prop.test(5,9,0.5)
+prop.test(5,19,0.5)
+?prop.test
+prop.test(5,19,0.5,correct=FALSE)
+prop.test(5,19,0.2,correct=FALSE)
+require(mvtnorm)
+mu.normal=c(80,65,70,75)
+?mvrnorm
+require(mass)
+?mvrnorm
+?rmvnorm
+sigma=matrix(c(4,2,2,0,2,3,-1,-5,2,-1,7,0,0,-5,0,1),4,4)
+sigma
+amostra=rmvnorm(50,c(80,64,78,90),sigma)
+sigma=matrix(c(4,12,12,0,12,3,-1,-5,12,-1,7,0,0,-5,0,1),4,4)
+amostra=rmvnorm(50,c(80,64,78,90),sigma)
+require(matrixcalc)
+A=matrix(c(13,-4,2,-4,13,-2,2,-2,10),ncol=3)
+is.positive.definite(A)
+sigma=matrix(c(13,-4,2,-4,13,-2,2,-2,10),4,4)
+sigma=matrix(c(13,-4,2,-4,13,-2,2,-2,10),3,3)
+sigma
+sigma=matrix(c(13,-4,2,0,-4,13,-2,0,2,-2,10,0,0,0,0,5),4,4)
+sigma
+amostra=rmvnorm(50,c(80,64,78,90),sigma)
+amostra
+apply(amostra,2,mean)
+cov(amostra)
+sigma=matrix(c(13,4,-2,0,4,13,2,0,2,-2,10,0,0,0,0,5),4,4)
+sigma
+sigma=matrix(c(13,4,-2,0,4,13,2,0,-2,2,10,0,0,0,0,5),4,4)
+sigma
+amostra=rmvnorm(50,c(80,64,78,90),sigma)
+amostra
+apply(amostra,2,mean)
+cov(amostra)
+round(cov(amostra),0)
+round(solve(cov(amostra)),0)
+round(solve(cov(amostra)),2)
+sigma=matrix(c(13,-4,2,-4,13,-2,2,-2,10),3,3)
+sigma
+amostra=rmvnorm(50,c(80,64,88),sigma)
+apply(amostra,2,mean)
+round(solve(cov(amostra)),2)
+apply(amostra,2,mean)
+mean(60,75)
+mean(c(60,75))
+getwd()
+setwd("/Users/jony/Documents/Universidade Federal Fluminense/Disciplinas/2013_2/GET00126 - Análise Multivariada I/Aulas Práticas/Aula 05")
+dados=read.csv("avaliacoes_genero.csv")
+dadosF=dados[dados$genero==0,1:7]#
+Xbarra0 <- matrix(apply(dadosF,2,mean),ncol=1)#
+Xbarra0#
+#
+n0 <- nrow(dadosF)#
+n0#
+p0 <- ncol(dadosF)#
+p0
+S0 <- var(dadosF)#
+S0#
+# Matriz de correlacoes amostrais#
+R0=cor(dados)#
+R0
+Sexo Masculino#
+# Média amostral#
+dadosM=dados[dados$genero==1,1:7]#
+Xbarra1 <- matrix(apply(dadosM,2,mean),ncol=1)#
+Xbarra1#
+#
+n1 <- nrow(dadosM)#
+n1#
+p1 <- ncol(dadosM)#
+p1#
+#
+# Matriz de variancias e covariancias amostrais#
+S1 <- var(dadosM)#
+S1#
+#
+# Matriz de correlacoes amostrais#
+R1=cor(dadosM)#
+R1#
+#
+#vetores de médias#
+cbind(Xbarra0,Xbarra1)
+panel.cor <- function(x, y, digits=2, prefix="", cex.cor, ...)#
+{#
+    usr <- par("usr"); on.exit(par(usr))#
+    par(usr = c(0, 1, 0, 1))#
+    r <- abs(cor(x, y))#
+    txt <- format(c(r, 0.123456789), digits=digits)[1]#
+    txt <- paste(prefix, txt, sep="")#
+    if(missing(cex.cor)) cex.cor <- 0.8/strwidth(txt)#
+    text(0.5, 0.5, txt, cex = cex.cor * r)#
+}#
+pairs(dadosF, upper.panel= panel.cor, main="Dispersao e correlacao", pch=16)#
+pairs(dadosM, upper.panel= panel.cor, main="Dispersao e correlacao", pch=16)
+par(mfrow=c(1,2))#
+d<-rep(0,n0)#
+for (i in 1: n0)#
+  d[i] <- t(t(dadosF[i,]) - Xbarra0) %*% solve(S0) %*% (t(dadosF[i,]) - Xbarra0)#
+qqplot(d, qchisq(ppoints(n0), p0), pch=16, main="Grafico de quantis", xlab="quantis amostrais", ylab="quantis teoricos" )  # ExercÌcio: ?ppoints e proponha uma alternativa#
+abline(0,1)#
+d<-rep(0,n1)#
+#
+for (i in 1: n1)#
+  d[i] <- t(t(dadosM[i,]) - Xbarra1) %*% solve(S1) %*% (t(dadosM[i,]) - Xbarra1)#
+qqplot(d, qchisq(ppoints(n1), p1), pch=16, main="Grafico de quantis", xlab="quantis amostrais", ylab="quantis teoricos" )  # ExercÌcio: ?ppoints e proponha uma alternativa#
+abline(0,1)#
+par(mfrow=c(1,1))
+library(mvShapiroTest)
+mvShapiro.Test(as.matrix(dadosF))
+mvShapiro.Test(as.matrix(dadosM))
+require(Hotelling)
+analise=hotelling.stat(dadosF,dadosM)
+analise
+teste=hotelling.test(dadosF,dadosM)
+teste
+116*2
+dados=iris
+dados1=dados[dados$Species=="setosa",1:4]#
+Xbarra1 <- matrix(apply(dados1,2,mean),ncol=1)#
+Xbarra1
+dados2=dados[dados$Species=="versicolor",1:4]#
+Xbarra2 <- matrix(apply(dados2,2,mean),ncol=1)#
+Xbarra2
+dados3=dados[dados$Species=="virginica",1:4]#
+Xbarra3 <- matrix(apply(dados3,2,mean),ncol=1)#
+Xbarra3
+cbind(Xbarra1,Xbarra2,Xbarra3)
+Analise=manova(cbind(Sepal.Length,Sepal.Width,Petal.Length,Petal.Width)~Species,data=dados)
+summary(Analise)
+150-4
+146*2
