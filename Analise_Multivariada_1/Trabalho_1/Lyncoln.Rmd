@@ -1,0 +1,661 @@
+---
+title: "Trabalho de Análise Multivariada"
+date: "`r Sys.Date()`"
+author: "Lyncoln Sousa"
+output:
+  rmdformats::readthedown:
+    highlight: kate
+---
+
+
+```{r knitr_init, echo=FALSE, cache=FALSE}
+library(knitr)
+library(rmdformats)
+
+## Global options
+options(max.print="75")
+opts_chunk$set(echo=FALSE,
+	             cache=TRUE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE)
+opts_knit$set(width=75)
+```
+
+
+```{r include=FALSE}
+library(ggplot2)
+library(dplyr)
+BD = read.delim("Lyncoln.csv", sep = " ")
+BD = BD %>% 
+  select(-Detento) %>% 
+  arrange(Presidio) %>% 
+  select(Presidio,everything())
+
+```
+
+Temos 6 grupos de interesse (Presídios):
+
+1 - Bangu
+<br>
+2 - Central
+<br>
+3 - Mossoro
+<br>
+4 - Papuda
+<br>
+5 - Pedrinhas
+<br>
+6 - Pereirão
+
+Para cada presídio, temos observações das seguintes variáveis: 
+
+Escala fatorial de socialização - EFS
+<br>
+Hipótese psíquico social - HPC
+<br>
+Escala de ansiedade de beck - BAI
+<br>
+Escala de depressão de beck - BDI
+<br>
+A Escala de Maturidade Mental Colúmbia - Columbia
+<br>
+Escala Beck Ideação Suicida - BSI
+<br>
+Escala de Autenticidade, Agressividade e Inibição – EdAAI
+<br>
+
+#1) Análise descritiva dos dados;
+```{r include=FALSE}
+descritivos = BD %>% 
+  group_by(Presidio) %>% 
+  summarize(
+            Med_Columbia = mean(Columbia),
+            Var_Columbia = var(Columbia),
+            Med_EFS = mean(EFS),
+            Var_EFS = var(EFS),
+            Med_HPC = mean(HPC),
+            Var_HPC = var(HPC),
+            Med_BAI = mean(BAI),
+            Var_BAI = var(BAI),
+            Med_BDI = mean(BDI),
+            Var_BDI = var(BDI),
+            Med_BSI = mean(BSI),
+            Var_BSI = var(BSI),
+            Med_EdAAI = mean(EdAAI),
+            Var_EdAAI = var(EdAAI)
+            )
+descritivos = descritivos %>% 
+  mutate_if(is.numeric,function(x) round(x,3))
+
+#Boxplots
+box_columbia = 
+  ggplot(BD, aes(x = Presidio, y = Columbia, fill = Presidio)) +
+  geom_boxplot(show.legend = FALSE)+
+  coord_flip() + 
+  ggtitle("Variação de columbia por presídios") +
+  theme_bw()
+box_EFS = 
+  ggplot(BD, aes(x = Presidio, y = EFS, fill = Presidio)) +
+  geom_boxplot(show.legend = FALSE)+
+  coord_flip() + 
+  ggtitle("Variação de EFS por presídios") +
+  theme_bw()
+box_HPC = 
+  ggplot(BD, aes(x = Presidio, y = HPC, fill = Presidio)) +
+  geom_boxplot(show.legend = FALSE)+
+  coord_flip() + 
+  ggtitle("Variação de HPC por presídios") +
+  theme_bw()
+box_BAI = 
+  ggplot(BD, aes(x = Presidio, y = BAI, fill = Presidio)) +
+  geom_boxplot(show.legend = FALSE)+
+  coord_flip() + 
+  ggtitle("Variação de BAI por presídios") +
+  theme_bw()
+box_BDI = 
+  ggplot(BD, aes(x = Presidio, y = BDI, fill = Presidio)) +
+  geom_boxplot(show.legend = FALSE)+
+  coord_flip() + 
+  ggtitle("Variação de BDI por presídios") +
+  theme_bw()
+box_BSI = 
+  ggplot(BD, aes(x = Presidio, y = BSI, fill = Presidio)) +
+  geom_boxplot(show.legend = FALSE)+
+  coord_flip() + 
+  ggtitle("Variação de BSI por presídios") +
+  theme_bw()
+box_EdAAI = 
+  ggplot(BD, aes(x = Presidio, y = EdAAI, fill = Presidio)) +
+  geom_boxplot(show.legend = FALSE)+
+  coord_flip() + 
+  ggtitle("Variação de EdAAI por presídios") +
+  theme_bw()
+
+
+
+cor_bangu = ggcorrplot::ggcorrplot(cor(filter(BD,Presidio == "Bangu")[,-1]),
+                                   lab = TRUE,type = "lower") + 
+                                   labs(title = "Correlação Bangu")
+cor_central = ggcorrplot::ggcorrplot(cor(filter(BD,Presidio == "Central")[,-1]),
+                                   lab = TRUE,type = "lower") + 
+                                   labs(title = "Correlação Central")
+cor_mossoro = ggcorrplot::ggcorrplot(cor(filter(BD,Presidio == "Mossoro")[,-1]),
+                                   lab = TRUE,type = "lower") + 
+                                   labs(title = "Correlação Mossoro")
+cor_papuda = ggcorrplot::ggcorrplot(cor(filter(BD,Presidio == "Papuda")[,-1]),
+                                   lab = TRUE,type = "lower") + 
+                                   labs(title = "Correlação Papuda")
+cor_pedrinhas = ggcorrplot::ggcorrplot(cor(filter(BD,Presidio == "Pedrinhas")[,-1]),
+                                   lab = TRUE,type = "lower") + 
+                                   labs(title = "Correlação Pedrinhas")
+cor_pereirao = ggcorrplot::ggcorrplot(cor(filter(BD,Presidio == "Pereirao")[,-1]),
+                                   lab = TRUE,type = "lower") + 
+                                   labs(title = "Correlação Pereirao")
+                       
+
+
+freq = ggplot(BD,aes(x = Presidio,fill = Presidio))+
+  geom_bar(show.legend = FALSE)+
+  ylab("Frequência")+
+  ggtitle("Quantidade de detentos por presídios")+
+  theme_bw()
+
+
+
+```
+
+
+```{r}
+knitr::kable(descritivos)
+freq
+```
+
+<span style="color:red">Observa-se que o presídio de Papuda concentra a maior quantidade de detentos, enquanto o presídio da Central possui a menor quantidade. Os de mais possuem números parecidos.</span>
+
+```{r}
+gridExtra::grid.arrange(box_columbia,box_EFS,ncol = 2)
+gridExtra::grid.arrange(box_HPC,box_BAI, ncol = 2)
+gridExtra::grid.arrange(box_BDI,box_BSI, ncol= 2)
+box_EdAAI
+```
+
+<span style="color:red">Podemos separar os presídios em dois grupos. O primeiro grupo que possui Pereirão e Bangu e o segundo grupo que possui os de mais. O comportamento das variáveis são diferentes comparando os grupos, porém dentro de cada grupo os comportamentos são parecidos.</span>
+
+<span style="color:red">Nos boxplots, em especial, é observado que o primeiro grupo possui observações das variáveis Columbia, EFS, HPC, BAI, BDI, BSI e EdAAI altas enquanto o segundo possui observações baixas.</span>
+
+```{r}
+gridExtra::grid.arrange(cor_bangu,cor_central,ncol = 2)
+gridExtra::grid.arrange(cor_mossoro,cor_papuda,ncol = 2)
+gridExtra::grid.arrange(cor_pedrinhas,cor_pereirao,ncol = 2)
+
+
+```
+
+<span style="color:red"> Também é possível observar que as correlações entre as variáveis tendem a ser parecidas entre os elementos de cada grupo e diferente entre os grupos.</span>
+
+#2) Teste de Normalidade e Independência;
+
+Hipóteses do teste de Normalidade
+
+$H_0:$ Segue distribuição normal $\times$ $H_1:$ Não segue distribuição normal
+
+```{r echo=TRUE}
+presidios = BD %>% 
+  select(Presidio) %>% 
+  distinct() %>% 
+  pull() %>% 
+  as.character()
+
+p_valor = c()
+for(i in presidios){
+  p_valor = c(p_valor,mvShapiroTest::mvShapiro.Test(as.matrix(select(filter(BD,Presidio == i),-1)))$p.value)
+}
+normalidade = tibble(presidios,
+                     p_valor) %>% 
+  mutate(normal = if_else(p_valor > 0.05,"Sim","Não"))
+```
+
+Trabalhando a um nível de significância $\alpha$ = 5%, temos para os testes de normalidade das populações:
+```{r}
+
+knitr::kable(normalidade)
+```
+
+<span style="color:red">Pelo teste realizado, observamos que pereirão não possui normalidade confirmada. Porém para realizar futuros testes, iremos supor sua normalidade.</span>
+
+Teste de normalidade geral:
+
+```{r echo=TRUE}
+mvShapiroTest::mvShapiro.Test(as.matrix(BD[,-1]))$p.value
+```
+
+<span style="color:red">Ao nível de significância de  $\alpha$ = 5%, recusamos normalidade dos dados de maneira geral. Porém para realização dos testes futuros iremos supor que a hipótese de normalidade geral dos dados é satisfeita.</span>
+
+
+Para o teste de indepedência das variáveis:
+
+$H_0:$ $\sigma_{ij}$ = $0$, $\forall$ i $\neq$ j $\times$ $H_1:$  pelo menos um $\sigma_{ij} \neq 0$ 
+
+Vamos usar a seguinte estatística de teste:
+$$ 
+-\displaystyle\left[\left(n-1\right) \frac{\left(2p+5\right)}{6}\right]\ln{\mid R \mid} \sim \chi^2_{\frac{p(p-1)}{2}}
+$$
+
+```{r echo=TRUE}
+ind = function(data){
+  R = cor(data); p <- ncol(data)
+  n = nrow(data)
+  est = -((n-1)-(2*p+5)/6)*log(det(R))
+  return(est)
+}
+T2 = ind(BD[,-1]) 
+RC = qchisq(0.05, 6*7/2)
+```
+
+Estatística:
+
+```{r echo=TRUE}
+T2
+```
+
+Região de Confiança à um nível de significância $\alpha$ = 5% :
+
+```{r echo=TRUE}
+RC
+```
+
+P-valor:
+
+```{r echo=TRUE}
+pchisq(T2, 6*7/2, lower.tail = F)
+```
+
+
+<span style="color:red">Temos que T2 > RC, logo ao nível de significância de 5% rejeitamos a hipótese nula, ou seja, as variáveis são dependentes.</span>
+
+
+#3) Teste de média entre os grupos definidos pela variável "Presidio", 2 a 2;
+
+Primeiro iremos realizar um teste de igualdade de variâncias dois a dois utilizando o pacote MVTests
+
+$H_0:$ $\Sigma_1=\Sigma_2$ $\times$ $H_1:$ $\Sigma_1\neq\Sigma_2$
+
+
+
+```{r echo=TRUE}
+testa_var = function(base){
+  p_valor = c()
+  primeiro = c()
+  segundo = c()
+  combinacoes = combn(as.vector(unique(base[,1])),2)
+  variancias = c()
+  for(i in 1:length(combinacoes[1,])){
+    x1 = combinacoes[,i][1]
+    x2 = combinacoes[,i][2]
+    bd_aux = BD %>% filter(Presidio==x1 | Presidio ==x2)#
+    bd_aux = arrange(bd_aux, Presidio)#
+    teste = MVTests::BoxM(as.vector(bd_aux[,-1]),as.vector(bd_aux[,1]))
+    p_valor = c(p_valor, teste$p.value)
+    primeiro = c(primeiro, x1)
+    segundo = c(segundo, x2)
+    if(teste$p.value > 0.05) variancias = c(variancias, "Iguais")
+    else variancias = c(variancias, "Diferentes")
+  }
+  resultado = tibble(Presidio1 = primeiro,
+                    Presidio2 = segundo,
+                    p_valor = p_valor,
+                    "Variâncias" = variancias)
+  return(resultado)
+}
+
+teste_var_2x2 = testa_var(BD) %>% 
+  mutate_if(is.numeric, function(x) ifelse(x<0.001,"<0.001", round(x,3)))
+```
+
+Trabalhando a um nível de significância $\alpha$ = 5%, obteve-se:
+
+```{r}
+knitr::kable(teste_var_2x2)
+```
+
+Agora iremos realizar uma comparação do teste de média de 2 populações com variâncias iguais  fornecido pelo pacote com a estatística de teste vista em sala de aula. Iremos utilizar os presídios de Bangu e Central.
+
+$H_0:$ $\mu_1-\mu_2=\delta_0$ $\times$ $H_1:$ $\mu_1-\mu_2\neq\delta_0$
+
+Estatística de Teste: 
+
+$S_{p} = \displaystyle\frac{n_{1} - 1}{n - 2}S_{1} + \displaystyle\frac{n_{2} - 1}{n - 2}S_{2}$, onde $n = n_{1} + n_{2}$
+
+$S_{past} = \displaystyle\left(\frac{1}{n_{1}} + \frac{1}{n_{2}}\right)S_{p}$
+
+$T^2 = \left(\bar{x}_{1} - \bar{x}_{2} -\delta\right)^{'}S_{past}^{-1}\left(\bar{x}_{1} - \bar{x}_{2} -\delta\right)$
+
+Saída do pacote:
+
+```{r echo=TRUE}
+BD_ban_cen = BD %>% 
+  filter(Presidio %in% c("Bangu","Central")) %>% 
+  arrange(Presidio)
+qtd_ban_cen = BD_ban_cen %>%
+  group_by(Presidio) %>% 
+  summarize(n())
+
+MVTests::TwoSamplesHT2(BD_ban_cen[,-1],
+                       c(rep(1,qtd_ban_cen[1,2]),rep(2,qtd_ban_cen[2,2])))
+```
+
+Calculo da estatística de teste vista em sala de aula:
+
+```{r echo=TRUE}
+difmedia_VarIgual <- function(data, X1, X2, delta = 0){
+  X1 = filter(data, data$Presidio == X1)[, -1]
+  X2 = filter(data, data$Presidio == X2)[, -1]
+  n1 = nrow(X1)
+  n2 = nrow(X2)
+  n = n1 + n2
+  p = ncol(X1)
+  X1media = colMeans(X1)
+  S1 = var(X1)
+  X2media = colMeans(X2)
+  S2 = var(X2)
+  Sp = ((n1-1)*S1 + (n2-1)*S2)/(n -2)
+  Xd = X1media - X2media
+  Spast = (1/n1 + 1/n2)*Sp
+  T2 = t(Xd - delta)%*%solve(Spast)%*%(Xd - delta)
+  saida = list(T2 = T2)
+  return(saida)
+}
+
+difmedia_VarIgual(BD,"Bangu","Central")
+
+```
+
+As estatísticas de teste são as mesmas.
+
+Agora iremos realizar uma comparação do teste de média de 2 populações com variâncias diferentes fornecido pelo pacote com a estatística de teste vista em sala de aula. Iremos utilizar os presídios de Bangu e Mossoro.
+
+$H_0:$ $\mu_1-\mu_2=\delta_0$ $\times$ $H_1:$ $\mu_1-\mu_2\neq\delta_0$
+
+Estatística de Teste: 
+
+$S_{past} = \displaystyle\frac{S_{1}}{n_{1}} + \frac{S_{2}}{n_{2}}$
+
+$T^2 = \left(\bar{x}_{1} - \bar{x}_{2} -\delta\right)^{'}S_{past}^{-1}\left(\bar{x}_{1} - \bar{x}_{2} -\delta\right)$
+
+Saída do pacote:
+
+```{r echo=TRUE}
+BD_ban_mos = BD %>% 
+  filter(Presidio %in% c("Bangu","Mossoro")) %>% 
+  arrange(Presidio)
+qtd_ban_mos = BD_ban_mos %>%
+  group_by(Presidio) %>% 
+  summarize(n())
+
+
+MVTests::TwoSamplesHT2(BD_ban_mos[,-1],
+                       c(rep(1,qtd_ban_mos[1,2]),rep(2,qtd_ban_mos[2,2])),
+                       Homogenity = FALSE)
+```
+
+
+Calculo da estatistica de teste vista em sala de aula:
+
+```{r echo=TRUE}
+difmedia_VarDif = function(data, X1, X2, delta = 0){
+  X1 = filter(data, data$Presidio == X1)[, -1]
+  X2 = filter(data, data$Presidio == X2)[, -1]
+  n1 = nrow(X1)
+  n2 = nrow(X2)
+  n = n1 + n2
+  p = ncol(X1)
+  X1media = colMeans(X1)
+  S1 = var(X1)
+  X2media = colMeans(X2)
+  S2 = var(X2)
+  Xd = X1media - X2media
+  Spast = S1/n1 + S2/n2
+  T2 = t(Xd - delta)%*%solve(Spast)%*%(Xd - delta)
+  saida = list(T2 = T2)
+  return(saida)
+}
+
+difmedia_VarDif(BD,"Bangu","Mossoro")
+```
+
+As estatísticas de teste são as mesmas.
+
+
+Agora iremos generalizar o teste de comparação de médias 2x2 para todos os presídios.
+
+$H_0:$ $\mu_1-\mu_2=\delta_0$ $\times$ $H_1:$ $\mu_1-\mu_2\neq\delta_0$
+```{r echo=TRUE}
+testa_med = function(base){
+  p_valor = c() #P_valor do teste de variancia
+  p_valor2 = c() #P_valor do teste de média
+  variancias = c()
+  est_medias = c()
+  medias = c()
+  primeiro = c()
+  segundo = c()
+  combinacoes = combn(as.vector(unique(base[,1])),2)
+  for(i in 1:length(combinacoes[1,])){
+    x1 = combinacoes[,i][1]
+    x2 = combinacoes[,i][2]
+    bd_aux = BD %>% filter(Presidio==x1 | Presidio ==x2)#
+    bd_aux = arrange(bd_aux, Presidio)#
+    teste = MVTests::BoxM(as.vector(bd_aux[,-1]),as.vector(bd_aux[,1]))
+    p_valor = c(p_valor, teste$p.value)
+    primeiro = c(primeiro, x1)
+    segundo = c(segundo, x2)
+    
+    
+    #Agora irei testar média
+    
+    contagem = base %>%
+      filter(Presidio %in% c(x1,x2)) %>%
+      group_by(Presidio) %>% 
+      summarize(n())
+    cont_x1 = contagem[1,2]
+    cont_x2 = contagem[2,2]
+    
+    if(teste$p.value > 0.05) {
+      teste2 = MVTests::TwoSamplesHT2(bd_aux[,-1],c(rep(1,cont_x1),rep(2,cont_x2)),Homogenity = T)$p.value
+      est_media = MVTests::TwoSamplesHT2(bd_aux[,-1],c(rep(1,cont_x1),rep(2,cont_x2)),Homogenity = T)$HT2
+      p_valor2 = c(p_valor2,
+                   teste2)
+      est_medias = c(est_medias, est_media)    
+      variancias = c(variancias,"Igual")
+    }
+    else{
+      teste2 = MVTests::TwoSamplesHT2(bd_aux[,-1],c(rep(1,cont_x1),rep(2,cont_x2)),Homogenity = F)$p.value
+      est_media = MVTests::TwoSamplesHT2(bd_aux[,-1],c(rep(1,cont_x1),rep(2,cont_x2)),Homogenity = F)$HT2
+      p_valor2 = c(p_valor2, 
+                   teste2)
+      est_medias = c(est_medias, est_media)
+      variancias = c(variancias,"Diferente")
+      
+    }
+    if(teste2 > 0.05) medias = c(medias, "Igual")
+    else medias = c(medias,"Diferente")
+  }
+  resultado = tibble(Presidio1 = primeiro,
+                     Presidio2 = segundo,
+                     p_valor_var = p_valor,
+                     Variancias = variancias,
+                     p_valor_medias = p_valor2,
+                     "Estatística T2" = est_medias,
+                     Medias = medias)
+  return(resultado)
+}
+
+#Nessa função eu estou testando primeiramente a igualdade 2x2 das variâncias,
+#Se forem iguais, o argumento da função do pacote mvtest será homogenity=True,
+#Se forem diferentes, o argumento da função será homogenity = False
+#O teste irá utilizar uma estatística de acordo com o resultado da igualdade das variâncias
+
+testa_med_2x2 = testa_med(BD)
+testa_med_2x2 = testa_med_2x2 %>% 
+  mutate_if(is.numeric, function(x) ifelse(x<0.001,"<0.001", round(x,3)))
+
+knitr::kable(testa_med_2x2)
+```
+
+
+#4) Fazer um teste de média comparando a média do grupo "Mossoró" com a média geral;
+
+Primeiro temos que verificar se há ou não igualdade de variâncias.
+
+Hipóteses do teste de igualdade de variância
+
+$H_0:$ $\Sigma_1=\Sigma_2$ $\times$ $H_1:$ $\Sigma_1\neq\Sigma_2$
+
+```{r echo=TRUE}
+
+BD_mos = BD %>% 
+  filter(Presidio=="Mossoro")
+BD_geral = BD %>% 
+  filter(Presidio!="Mossoro") %>% 
+  mutate(Presidio = "Geral")
+
+MVTests::BoxM(as.matrix(rbind(BD_mos,BD_geral)[,-1]),
+              as.matrix(rbind(BD_mos,BD_geral)[,1]))
+```
+<span style="color:red">Obtemos um p-valor < 0.05, ou seja, reijeitamos H0. Conclui-se que a variância do presídio de Mossoró é diferente da variância do grupo que contém os demais presídios.</span>
+
+Hipóteses do teste de igualdade de médias
+
+$H_0:$ $\mu_1-\mu_2=\delta_0$ $\times$ $H_1:$ $\mu_1-\mu_2\neq\delta_0$
+
+Estatística de Teste: 
+
+$S_{past} = \displaystyle\frac{S_{1}}{n_{1}} + \frac{S_{2}}{n_{2}}$
+
+$T^2 = \left(\bar{x}_{1} - \bar{x}_{2} -\delta\right)^{'}S_{past}^{-1}\left(\bar{x}_{1} - \bar{x}_{2} -\delta\right)$
+
+```{r echo=TRUE}  
+MVTests::TwoSamplesHT2(as.matrix(rbind(BD_mos,BD_geral)[,-1]),c(rep(1,length(BD_mos[,1])),rep(2,length(BD_geral[,1]))),Homogenity = F)
+
+
+```
+<span style="color:red">Obtemos um p-valor < 0.05, ou seja, reijeitamos H0. Conclui-se que a média do presídio de Mossoró é diferente da média do grupo que contém os de mais presídios.</span>
+
+
+#5) Escolher o mesmo número de elementos do grupo Papuda que o número de elementos do grupo Mossoró, supôr são os mesmos elementos em situação pareada e realizar o teste de diferença de média, 
+
+Iremos realizar o teste de comparação de médias de populações pareadas fornecida pelo pacote MVTest e comparar com a estatística de teste vista em sala de aula.
+
+$H_0:$ $\mu_1-\mu_2=\delta_0$ $\times$ $H_1:$ $\mu_1-\mu_2\neq\delta_0$
+
+Saída da função:
+
+```{r echo=TRUE}
+BD_papuda = BD %>% 
+  filter(Presidio == "Papuda")
+BD_papuda = BD_papuda[1:length(BD_mos[,1]),]
+
+
+par <- MVTests::Mpaired(T1 = BD_papuda[,-1], T2 = BD_mos[,-1])
+par
+```
+
+
+Calculo da estatística de teste vista em sala de aula :
+
+```{r echo=TRUE}
+dif <- function(data, X1, X2, alfa = 0.5, delta = 0){
+  D1 = filter(data, data$Presidio == X1)[, -1]
+  D2 = filter(data, data$Presidio == X2)[, -1]
+  D = D1 - D2;
+  p = ncol(D)
+  Dmedia = colMeans(D)
+  Sd = var(D)
+  n = nrow(D)
+  T2 = n%*%t(Dmedia - delta)%*%solve(Sd)%*%(Dmedia - delta)
+  saida = list(T2 = T2, Sd = Sd )
+  return(saida)
+}
+
+dif(rbind(BD_papuda,BD_mos),"Mossoro","Papuda")
+```
+
+As estatísticas de testes são as mesmas.
+
+<span style="color:red">Obtemos p-valor > 0.05, ou seja, não rejeitamos H0. Concluísse que a média do presídio de Mossoro é igual a média dos 40 primeiros elementos do presídio de Papuda.</span>
+
+
+#6) Caso encontre grupos com a mesma matriz de variância, realizar a MANOVA destes grupos.
+
+Existem 3 presídios com variâncias iguais, elas são: Mossoro, Papuda, Pereirão. Observe o teste de igualdade de variâncias:
+
+```{r echo=TRUE}
+BD_mpp = BD %>% 
+  filter(Presidio %in% c("Mossoro","Papuda","Pereirao"))
+
+MVTests::BoxM(as.matrix(BD_mpp[,-1]),
+              as.matrix(BD_mpp[,1]))
+
+```
+
+
+<span style="color:red">Obtemos um p-valor > 0.05, ou seja, não reijeitamos H0. Conclui-se que a variância dos da 3 presídios estudados são iguais.</span>
+
+Agora aplicando a Manova:
+
+$H_{0}:$ $\mu_{1} = \mu_{2} = \mu_{3}$ $\times$ $H_{1}:$  Pelos menos uma das médias é diferente das demais.
+
+Estatística de teste:
+
+$$\Lambda = \displaystyle\frac{\mid W\mid}{\mid W + B\mid}$$
+
+Função do pacote MVTests:
+
+```{r echo=TRUE}
+
+MVTests::Manova(as.matrix(BD_mpp[,-1]),
+                as.matrix(BD_mpp[,1]))
+
+```
+
+Função criada apartir da estatística de teste vista em sala de aula:
+
+```{r echo=TRUE}
+manova <- function(data){
+  Grupos = unique(pull(data, Presidio))
+  g = length(Grupos)
+  n = nrow(data)
+  p = ncol(data) - 1
+  xbarra_total = colMeans(data[,-1])
+  xbarra = matrix(nrow = length(Grupos), ncol = p)
+  n = rep(1,length(Grupos))
+  
+  # linhas guardam os grupos
+  for (i in 1:length(Grupos)){
+    xbarra[i,] = colMeans(filter(data, data$Presidio == Grupos[i])[,-1])
+    n[i] = nrow(filter(data, data$Presidio == Grupos[i])[,-1])
+  }
+  
+  B = 0
+  for (i in 1:g){
+    B = B + n[i]*(xbarra[i,] - xbarra_total)%*%t(xbarra[i,] - xbarra_total)
+  }
+  
+  W = 0
+  for(i in 1:g){
+    W = W + (n[i]- 1)*var(filter(data, data$Presidio == Grupos[i])[,-1])
+  }
+  return(det(W)/det(W+B)) 
+}
+
+manova(BD_mpp)
+
+```
+
+
+As estatísticas de testes são iguais.
+
+
+<span style="color:red"> Obtemos um p-valor <0.05, ou seja, rejeitamos H0. Conclui-se que dentre os 3 presídios pelo menos um possui a média diferente entre eles.</span>
