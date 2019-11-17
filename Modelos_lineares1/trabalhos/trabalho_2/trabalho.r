@@ -20,8 +20,11 @@ head(data)
 
 modelo_1 = lm(ln_tempo_vida ~ idade + sexo + alcool_severo + alcool_moderado, data); summary(modelo_1)
 
+<<<<<<< HEAD
+=======
 qt(0.05/2, 54-5,lower.tail = F)
 
+>>>>>>> 976dcfc3ef5dffb34b457b798869e04a32d42966
 
 # b) ----------------------------------------------------------------------
 
@@ -50,5 +53,8 @@ shapiro.test(ris)
 
 
 # d) ----------------------------------------------------------------------
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 976dcfc3ef5dffb34b457b798869e04a32d42966
