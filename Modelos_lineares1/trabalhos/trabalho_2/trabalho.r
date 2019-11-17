@@ -20,6 +20,8 @@ head(data)
 
 modelo_1 = lm(ln_tempo_vida ~ idade + sexo + alcool_severo + alcool_moderado, data); summary(modelo_1)
 
+qt(0.05/2, 54-5,lower.tail = F)
+
 
 # b) ----------------------------------------------------------------------
 
