@@ -4,7 +4,7 @@
 #a) Regressão linear múltipla
 
 #b)
-BD1 = readr::read_table2("F:/GitHub/UFF/Modelos_lineares1/lista_4/tabela_1.tsv")
+BD1 = readr::read_table2("tabela_1.tsv")
 BD1 = BD1[,-1]
 
 pairs(BD1, pch = 19)
@@ -62,3 +62,159 @@ modelo3 = lm(data = BD1_f[,-c(4,5,6)]); summary(modelo3)
 
 #Yi_hat = 77.237 -1.048*Xi1 + 0.024304Xi2 
 summary(modelo3)$r.squared
+
+# 2) ----------------------------------------------------------------------
+#a)
+BD2 = read.csv("tabela_2.csv")[,-1]
+BD2 = BD2[,-1]
+
+BD2 =  BD2 %>% 
+  select(PCB, Idade)
+
+plot(PCB ~ Idade, BD2, pch=19)
+#Pelo gráfico parece que há uma violação na hipóteses de homocedasticidade
+#quanto maior a idade do peixe maior a varição de PCB
+cor(BD2)[2,1]
+
+#b)
+modelo1 = lm(BD2); summary(modelo1)
+ris = rstandard(modelo1)
+plot(ris ~ Idade, BD2, 
+     pch = 19, 
+     ylim = c(-3, 3))
+
+abline(h=c(-2,0,2), 
+       lty = c(2,1,2),
+       col = c('red','black','red'))
+
+#Não parece haver uma nuvem de pontos aleatorimaente distrubuidos entre
+#o zero
+
+qqnorm(ris, pch = 19); abline(0,1)
+#Existe violação de normalidade e heterocedasticidade
+
+#c)
+rbruto_squared = resid(modelo1)**2
+Idade_2 = BD2$Idade**2
+modelo_aux = lm(rbruto_squared ~ BD2$Idade + Idade_2)
+nrow(BD2) * summary(modelo_aux)$r.squared
+qchisq(0.95, 2)
+
+# Pelo teste de White a um nível de significância de 5% o modelo é heterocedástico
+
+#d)
+BD2$PCB = log(BD2$PCB)
+modelo2 = lm(BD2); summary(modelo2)
+plot(PCB ~ Idade, BD2, pch=19)
+ris = rstandard(modelo2)
+plot(ris ~ BD2$Idade, 
+     pch=19, 
+     ylim = c(-3, 3)); abline(h=c(-2,0,2))
+
+rbruto_squared = resid(modelo2)**2
+Idade_2 = BD2$Idade**2
+modelo_aux = lm(rbruto_squared ~ BD2$Idade + Idade_2)
+nrow(BD2) * summary(modelo_aux)$r.squared
+qchisq(0.95, 2)
+
+qqnorm(ris, pch = 19); abline(0,1)
+
+#os problemas foram resolvidos
+
+#e)
+summary(modelo2)$r.squared / summary(modelo1)$r.squared
+
+#Um aumento de aproximadamente 28% no poder de explicação de modelo
+
+#f)
+
+#Sim dividindo o modelo por 1/x_i
+
+# 3) ----------------------------------------------------------------------
+#a)
+BD3 = readr::read_table2("tabela_3.tsv") %>% 
+  select(nota_2, nota_1)
+modelo1 = lm(BD3); summary(modelo1)
+plot(BD3, pch = 19)
+ris = rstandard(modelo1)
+plot(ris ~ BD3$nota_1, pch=19, ylim = c(-3,3)); abline(h = c(-2,0,2))
+
+#b)
+resid_squared = resid(modelo1)**2
+nota_1_sqd = BD3$nota_1**2
+modelo_aux = lm(resid_squared ~ BD3$nota_1 + nota_1_sqd)
+# 1 - hipoteses
+# h0 homocedastico
+# h1 heterocedastico
+
+# 2 - estatistica de teste
+# W = N * R2 ~ qchisq_gl
+# gl numero de variaveis indepednentes
+nrow(BD3) * summary(modelo_aux)$r.squared
+
+# 3 - RC
+# w > chisq alpha, glq
+qchisq(0.95, 2)
+# 4 - tomada de decisão
+# Não pertece a RC o modelo é homocedastico
+
+#c)
+# Ychap_i = 18,3833 + 0,7743*x_1
+# o valor estimado da note na segunda avaliacao do aluno que tirou 0 
+# na primeira prova é de 18,3833
+
+# 0,7743 é o valor estimado de acréscimo para a nota na segunda avalição
+# para cada ponto na primeira avaliação
+
+# 4) ----------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+distancia_cook = cooks.distance(modelo1)
+plot(distancia_cook, pch=19, ylim=c(0,1))
+text(24.8, distancia_cook[24] + 0.04, 24, cex = 0.9)
+
+plot(ris ~ distancia_cook, 
+     pch = 19, 
+     ylim = c(-3,3), 
+     xlim = c(0,1.2))
+abline(h = c(-2,2), 
+       v = c(0.2), 
+       col = c("blue","blue","red","red"))
+
+id = which(distancia_cook>1);id
+distancia_cook[id]
+text(distancia_cook[id], ris[id], 
+     rownames(BD2)[id], 
+     pos = 3, 
+     cex = 0.8)
+plot(ris ~ distancia_cook, 
+     pch = 19, 
+     ylim = c(-3,3), 
+     xlim = c(0,1.2))
+abline(h = c(-2,2), 
+       v = c(0.2), 
+       col = c("blue","blue","red","red"))
+id = which(distancia_cook>0.2);id
+distancia_cook[id]
+text(distancia_cook[id], ris[id],rownames(banco)[id],pos = 3, cex = 0.8)
+
+#
