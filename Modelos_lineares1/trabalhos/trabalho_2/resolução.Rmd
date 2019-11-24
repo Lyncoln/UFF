@@ -31,10 +31,10 @@ $X_{i,2} = \begin{cases} 1, & \mbox{se o i-ésimo paciente é do sexo feminino;}
 $X_{i,3} = \begin{cases} 1, & \mbox{se o i-ésimo paciente tem histórico de  uso de alcool severo;} \\ 0, & \mbox{c.c.} \end{cases}$   
 $X_{i,4} = \begin{cases} 1, & \mbox{se o i-ésimo paciente tem histórico de  uso de alcool moderado;} \\ 0, & \mbox{c.c.} \end{cases}$    
 $\beta_0$: É intercepto do modelo, neste caso, sem interpretação prática;  
-$\beta_1$: Variação do tempo de vida em escala logarítimica para cada unidade de idade;
+$\beta_1$: Variação do tempo de vida em escala logarítimica para cada unidade de idade;  
 $\beta_2$: Efeito do tempo de vida em escala logarítimica quando o indivíduo é do sexo feminino;  
 $\beta_3$: Efeito do tempo de vida em escala logarítimica quando o indivíduo possui histórico de álcool severo;  
-$\beta_4$: Efeito do tempo de vida em escala logarítimica quando o indivíduo possui histórico de álcool moderado; 
+$\beta_4$: Efeito do tempo de vida em escala logarítimica quando o indivíduo possui histórico de álcool moderado;  
 $\varepsilon_i$: Erro aleatório do i-ésimo paciente;    
 
 **Onde as hipóteses básicas são:**  
@@ -73,7 +73,7 @@ $$RC = \{t \in R:t>t_{49; 0,025} = 2,009575 \quad ou \quad t<-t_{49;0,025} = -2,
 **Passo 4:**
 Tomada de decisão.
 
-Como obteve-se um $t_{obs} = 22.092$, então $t_{obs} \in RC$, desta forma, rejeitamos a hipótese nula a um nível de significância $\alpha = 5\%$. Conclui-se. com base no teste $T$.
+Como obteve-se um $t_{obs} = 22.092$, então $t_{obs} \in RC$, desta forma, rejeitamos a hipótese nula a um nível de significância $\alpha = 5\%$. Conclui-se. com base no teste $T$ que o intercepto é significativo.
 
 
 ### Teste de Hipótese para $\beta_1$
@@ -213,7 +213,7 @@ $Y_i$: Tempo de vida em escala logarítmica do i-ésimo paciente;
 $X_{i,1} = \begin{cases} 1, & \mbox{se o i-ésimo paciente é do sexo feminino;} \\ 0, & \mbox{c.c.} \end{cases}$  
 $X_{i,2} = \begin{cases} 1, & \mbox{se o i-ésimo paciente tem histórico de  uso de alcool severo;} \\ 0, & \mbox{c.c.} \end{cases}$   
 $X_{i,3} = \begin{cases} 1, & \mbox{se o i-ésimo paciente tem histórico de  uso de alcool moderado;} \\ 0, & \mbox{c.c.} \end{cases}$    
-$\beta_0$: É intercepto do modelo, neste caso, sem interpretação prática;  
+$\beta_0$: É intercepto do modelo, é o efeito causado no tempo de vida em escala logarítimica, quando o paciente é do sexo feminino e não possui histórico de álcool;  
 $\beta_1$: Efeito do tempo de vida em escala logarítimica quando o indivíduo é do sexo feminino;  
 $\beta_2$: Efeito do tempo de vida em escala logarítimica quando o indivíduo possui histórico de álcool severo;  
 $\beta_3$: Efeito do tempo de vida em escala logarítimica quando o indivíduo possui histórico de álcool moderado; 
@@ -299,29 +299,23 @@ Serão utilizadas as figuras \underline{\ref{fig:risy}} e \underline{\ref{fig:qq
   
 \end{itemize}
 
-## e) Coeficiente de correlação linear de Pearson e coeficiente de determinação do modelo ($R^2$).
-
-\begin{itemize}
-	\item Coeficiente de determinação do modelo ($R^2$);  \\
-	O coeficiente de determinação do modelo ($R^2$) é de $0.2682294$, isto é, o modelo ajustado explica aproximadamente $26,82\%$ da variação do percentual de pacientes infectados.
-	
-\end{itemize}
-
 # d) Modelo selecionado e coeficiente de determinação do modelo
 O modelo ajustado:
-$$\hat{Y}_i = 6,7121 + 0,2484X_{i,11} - 0,5404X_{i,2} - 0,4589X_{i,3}$$
+$$\hat{Y}_i = 6,7121 + 0,2484X_{i,1} - 0,5404X_{i,2} - 0,4589X_{i,3}$$
 **Onde: **  
 $\hat{Y}_i$: Tempo de vida estimado em escala logarítmica do i-ésimo paciente;  
 $X_{i,1} = \begin{cases} 1, & \mbox{se o i-ésimo paciente é do sexo feminino;} \\ 0, & \mbox{c.c.} \end{cases}$  
 $X_{i,2} = \begin{cases} 1, & \mbox{se o i-ésimo paciente tem histórico de  uso de alcool severo;} \\ 0, & \mbox{c.c.} \end{cases}$   
 $X_{i,3} = \begin{cases} 1, & \mbox{se o i-ésimo paciente tem histórico de  uso de alcool moderado;} \\ 0, & \mbox{c.c.} \end{cases}$    
 $\hat{\beta}_0 = 6,7121$: É o valor estimado do tempo de vida em escala logarítmica quando o paciente é do sexo masculino e nunca ingeriu bebida alcólica;  
-$\hat{\beta}_1 = 0,2484$: O valor estimado de vida em escala logarítimica para o i-ésimo indivíduo é maior quando ele é do sexo feminino comparado com o sexo masculino e esse aumento é de 0.2484;  
-$\hat{\beta}_2 = -0,5404$: O valor estimado de vida em escala logarítimica para o i-ésimo indivíduo é menor quando ele possui histórico de álcool severo comparado com quem não possui histórico de álcool, e essa redução é de -0,5404;  
-$\hat{\beta}_3 = -0,4589$: O valor estimado de vida em escala logarítimica para o i-ésimo indivíduo é menor quando ele possui histórico de álcool moderado comparado com quem não possui histórico de álcool, e essa redução é de -0,4589; 
+$\hat{\beta}_1 = 0,2484$: O valor estimado do tempo de vida em escala logarítimica para o i-ésimo indivíduo é maior quando ele é do sexo feminino comparado com o sexo masculino e esse aumento é de 0.2484;  
+$\hat{\beta}_2 = -0,5404$: O valor estimado do tempo de vida em escala logarítimica para o i-ésimo indivíduo é menor quando ele possui histórico de álcool severo comparado com quem não possui histórico de álcool, e essa redução é de -0,5404;  
+$\hat{\beta}_3 = -0,4589$: O valor estimado do tempo de vida em escala logarítimica para o i-ésimo indivíduo é menor quando ele possui histórico de álcool moderado comparado com quem não possui histórico de álcool, e essa redução é de -0,4589; 
 
-Por não apresentar nenhuma violação nas hipóteses básicas, o modelo é adequado para representar os dados observados, porém seu coeficiente de determinação ($R^2$) é de apenas $20.92\%$, ou seja, $20.92%$ da variação é explicada pelo modelo ajustado que leva em consideração as variáveis sexo e histórico de álcool.
-É importante observar que para o "Modelo A" a variável "Idade" para o teste T de significância individual apresentou P-valor > 0.05, ou seja, a um nível de signifiância de 5% a variável não apresentou uma relação estatísticamente significante. Pelo princípio da parcimônia, opta-se pelo nodelo reduzido B, que leva em conta as variáveis "Sexo" e "Histórico de álcool". Foi utilizado este modelo (B) como modelo completo para realização dos teste do exercício b).
+# Conclusões
+\quad Por não apresentar nenhuma violação nas hipóteses básicas, o modelo é adequado para representar os dados observados, porém seu coeficiente de determinação ($R^2$) é de apenas $20.92\%$, ou seja, $20.92%$ da variação é explicada pelo modelo ajustado que leva em consideração as variáveis sexo e histórico de álcool.    
+  
+\quad É importante observar que para o "Modelo A" a variável "Idade" para o teste T de significância individual apresentou P-valor > 0.05, ou seja, a um nível de signifiância de 5% a variável não apresentou uma relação estatísticamente significante. Pelo princípio da parcimônia, opta-se pelo nodelo reduzido B, que leva em conta as variáveis "Sexo" e "Histórico de álcool". Foi utilizado este modelo (B) como modelo completo para realização dos teste do exercício b).
 
 \newpage
 # Apêndice 1 - Tabelas
@@ -369,7 +363,7 @@ Por não apresentar nenhuma violação nas hipóteses básicas, o modelo é adeq
     $\hat{\beta_1}$  & 0,22653   & 0,13173  & 1,72   & 0,0915   \\
     \hline
   \end{tabular}
-  \label{tab:summary_C}
+  \label{tab:summary_c}
 \end{table}
 
 \begin{table}[htbp]
