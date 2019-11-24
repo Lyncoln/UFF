@@ -4,8 +4,8 @@ latex_engine: xelatex
 title: "Modelos Lineares I"
 author:
   - Daniel dos Santos
-  - Lyncoln Sousa Oliveira
-date: "16 de setembro de 2019"
+  - Lyncoln Sousa de Oliveira
+date: "25 de Novembro de 2019"
 header-includes:
    - \usepackage[portuguese]{babel}
    - \usepackage{caption}
@@ -21,16 +21,16 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## a) Especificando o modelo teórico.
+## a) Especificando o modelo teórico. (Modelo A ajustado veja as tabelas \hyperref[tab:summary_a]{\underline{tabela \ref*{tab:summary_a}}} e \hyperref[tab:anova_a]{\underline{tabela \ref*{tab:anova_a}}})
 
-$$Y_i = \beta_0 + \beta_1 X_{i,1} + \beta_2 X_{i,2} + \beta_3 X_{i,3} + \beta_4 X_{i,4} + \varepsilon_i \quad ;\quad i = 1,2 \dots, 100$$
+$$Y_i = \beta_0 + \beta_1 X_{i,1} + \beta_2 X_{i,2} + \beta_3 X_{i,3} + \beta_4 X_{i,4} + \varepsilon_i;\quad i = 1,2, \dots, 54$$
 **Onde: **  
 $Y_i$: Tempo de vida em escala logarítmica do i-ésimo paciente;  
 $X_{i,1}$: Idade do i-ésimo paciente;  
 $X_{i,2} = \begin{cases} 1, & \mbox{se o i-ésimo paciente é do sexo feminino;} \\ 0, & \mbox{c.c.} \end{cases}$  
 $X_{i,3} = \begin{cases} 1, & \mbox{se o i-ésimo paciente tem histórico de  uso de alcool severo;} \\ 0, & \mbox{c.c.} \end{cases}$   
 $X_{i,4} = \begin{cases} 1, & \mbox{se o i-ésimo paciente tem histórico de  uso de alcool moderado;} \\ 0, & \mbox{c.c.} \end{cases}$    
-$\beta_0$: É intercepto do modelo; PERGUNTAR DPS     
+$\beta_0$: É intercepto do modelo, neste caso, sem interpretação prática;  
 $\beta_1$: Variação do tempo de vida em escala logarítimica para cada unidade de idade;
 $\beta_2$: Efeito do tempo de vida em escala logarítimica quando o indivíduo é do sexo feminino;  
 $\beta_3$: Efeito do tempo de vida em escala logarítimica quando o indivíduo possui histórico de álcool severo;  
@@ -40,11 +40,41 @@ $\varepsilon_i$: Erro aleatório do i-ésimo paciente;
 **Onde as hipóteses básicas são:**  
 $E[\varepsilon_i] = 0;\quad i = 1,2 \dots, 54;$  
 $Var(\varepsilon_i) = \sigma^2; \quad i = 1,2 \dots, 54;$  
-$Cor(\varepsilon_i,\varepsilon_j) = 0;\quad i = 1,2 \dots, 54; \quad i \neq j;$ 
+$Cor(\varepsilon_i,\varepsilon_j) = 0;\quad i = 1,2 \dots, 54; \quad i \neq j;$   
 $\varepsilon_i \sim N(0,\sigma^2);\quad i = 1,2 \dots, 54;$
 
 
 ## Testes de hipóteses para avaliar significância entre as variáveis do estudo. Para $\alpha = 5\%$ e $n = 54$.
+
+### Teste de Hipótese para $\beta_0$
+
+**Passo 1:**
+Definição das Hipóteses.
+
+$$
+  \begin{cases}
+    H_0:\beta_0 = 0; \\ 
+    H_1:\beta_0 \neq 0;
+  \end{cases}
+$$
+**Passo 2:**
+Calculo da Estatística de teste sob $H_0$.
+$$T = \frac{\hat{\beta_0}}{\sqrt{\hat{Var}(\hat{\beta_0)}}} \sim T_{49}$$
+\begin{center} 
+desta forma,
+$$t_{obs} = 22.092;$$
+\end{center}
+Veja a \hyperref[tab:summary_a]{\underline{tabela \ref*{tab:summary_a}}} 
+  
+**Passo 3:**
+Região Crítica.
+$$RC = \{t \in R:t>t_{49; 0,025} = 2,009575 \quad ou \quad t<-t_{49;0,025} = -2,009575\}$$
+
+**Passo 4:**
+Tomada de decisão.
+
+Como obteve-se um $t_{obs} = 22.092$, então $t_{obs} \in RC$, desta forma, rejeitamos a hipótese nula a um nível de significância $\alpha = 5\%$. Conclui-se. com base no teste $T$.
+
 
 ### Teste de Hipótese para $\beta_1$
 
@@ -66,16 +96,16 @@ $$\hat{Var}(\hat{\beta_1}) = \frac{\hat{\sigma}^2}{\sum\limits_{i=1}^{54}(X_{i,1
 desta forma,
 $$t_{obs} = -0,886;$$
 \end{center}
-Veja a \hyperref[tab:summary]{\underline{tabela \ref*{tab:summary}}} 
+Veja a \hyperref[tab:summary_a]{\underline{tabela \ref*{tab:summary_a}}} 
   
 **Passo 3:**
 Região Crítica.
-$$RC = \{t \in R:t>t_{49, 0,025} = 2.009575 \quad ou \quad t<-t_{49,0,025} = -2.009575\}$$
+$$RC = \{t \in R:t>t_{49; 0,025} = 2,009575 \quad ou \quad t<-t_{49;0,025} = -2,009575\}$$
 
 **Passo 4:**
 Tomada de decisão.
 
-Como obteve-se um $t_{obs} = -0,886$, então $t_{obs} \notin RC$ (verifique a \hyperref[fig:rcb1]{\underline{figura \ref*{fig:rcb1}}}), desta forma, não rejeitamos a hipótese nula a um nível de significância $\alpha = 5\%$. Conclui-se. com base no teste $T$ que não existe uma relação estatisticamente  significante entre a idade ($X_1$) e o tempo de vida do paciente em escala logarítimica ($Y$).
+Como obteve-se um $t_{obs} = -0,886$, então $t_{obs} \notin RC$ (verifique a \hyperref[fig:rct]{\underline{figura \ref*{fig:rct}}}), desta forma, não rejeitamos a hipótese nula a um nível de significância $\alpha = 5\%$. Conclui-se. com base no teste $T$ que não existe uma relação estatisticamente  significante entre a idade ($X_1$) e o tempo de vida do paciente em escala logarítimica ($Y$).
 
 
 ### Teste de Hipótese para $\beta_2$
@@ -98,16 +128,16 @@ $$\hat{Var}(\hat{\beta_2}) = \frac{\hat{\sigma}^2}{\sum\limits_{i=1}^{54}(X_{i,2
 desta forma,
 $$t_{obs} = -2,012;$$
 \end{center}
-Veja a \hyperref[tab:summary]{\underline{tabela \ref*{tab:summary}}} 
+Veja a \hyperref[tab:summary_a]{\underline{tabela \ref*{tab:summary_a}}} 
   
 **Passo 3:**
 Região Crítica.
-$$RC = \{t \in R:t>t_{49, 0,025} = 2.009575 \quad ou \quad t<-t_{49,0,025} = -2.009575\}$$
+$$RC = \{t \in R:t>t_{49; 0,025} = 2,009575 \quad ou \quad t<-t_{49;0,025} = -2,009575\}$$
 
 **Passo 4:**
 Tomada de decisão.
 
-Como obteve-se um $t_{obs} = -2,012$, então $t_{obs} \in RC$ (verifique a \hyperref[fig:rcb1]{\underline{figura \ref*{fig:rcb1}}}), desta forma, rejeitamos a hipótese nula a um nível de significância $\alpha = 5\%$. Conclui-se. com base no teste $T$ que existe uma relação estatisticamente  significante entre o sexo do paciente ($X_2$) e o tempo de vida em escala logarítimica ($Y$).
+Como obteve-se um $t_{obs} = -2,012$, então $t_{obs} \in RC$ (verifique a \hyperref[fig:rct]{\underline{figura \ref*{fig:rct}}}), desta forma, rejeitamos a hipótese nula a um nível de significância $\alpha = 5\%$. Conclui-se. com base no teste $T$ que existe uma relação estatisticamente  significante entre o sexo do paciente ($X_2$) e o tempo de vida em escala logarítimica ($Y$).
 
 
 ### Teste de Hipótese para $\beta_3$
@@ -130,16 +160,16 @@ $$\hat{Var}(\hat{\beta_3}) = \frac{\hat{\sigma}^2}{\sum\limits_{i=1}^{54}(X_{i,3
 desta forma,
 $$t_{obs} = -2,1891;$$
 \end{center}
-Veja a \hyperref[tab:summary]{\underline{tabela \ref*{tab:summary}}} 
+Veja a \hyperref[tab:summary_a]{\underline{tabela \ref*{tab:summary_a}}} 
   
 **Passo 3:**
 Região Crítica.
-$$RC = \{t \in R:t>t_{49, 0,025} = 2.009575 \quad ou \quad t<-t_{49,0,025} = -2.009575\}$$
+$$RC = \{t \in R:t>t_{49; 0,025} = 2,009575 \quad ou \quad t<-t_{49;0,025} = -2,009575\}$$
 
 **Passo 4:**
 Tomada de decisão.
 
-Como obteve-se um $t_{obs} = -2,1891$, então $t_{obs} \in RC$ (verifique a \hyperref[fig:rcb1]{\underline{figura \ref*{fig:rcb1}}}), desta forma, rejeitamos a hipótese nula a um nível de significância $\alpha = 5\%$. Conclui-se. com base no teste $T$ que existe uma relação estatisticamente  significante entre o consumo moderado de álcool ($X_3$) e o tempo de vida em escala logarítimica ($Y$).
+Como obteve-se um $t_{obs} = -2,1891$, então $t_{obs} \in RC$ (verifique a \hyperref[fig:rct]{\underline{figura \ref*{fig:rct}}}), desta forma, rejeitamos a hipótese nula a um nível de significância $\alpha = 5\%$. Conclui-se. com base no teste $T$ que existe uma relação estatisticamente  significante entre o consumo moderado de álcool ($X_3$) e o tempo de vida em escala logarítimica ($Y$).
 
 ### Teste de Hipótese para $\beta_4$
 
@@ -161,146 +191,143 @@ $$\hat{Var}(\hat{\beta_4}) = \frac{\hat{\sigma}^2}{\sum\limits_{i=1}^{54}(X_{i,4
 desta forma,
 $$t_{obs} = -2,012;$$
 \end{center}
-Veja a \hyperref[tab:summary]{\underline{tabela \ref*{tab:summary}}} 
+Veja a \hyperref[tab:summary_a]{\underline{tabela \ref*{tab:summary_a}}} 
   
 **Passo 3:**
 Região Crítica.
-$$RC = \{t \in R:t>t_{49, 0,025} = 2.009575 \quad ou \quad t<-t_{49,0,025} = -2.009575\}$$
+$$RC = \{t \in R:t>t_{49; 0,025} = 2,009575 \quad ou \quad t<-t_{49;0,025} = -2,009575\}$$
 
 **Passo 4:**
 Tomada de decisão.
 
-Como obteve-se um $t_{obs} = -2,619$, então $t_{obs} \in RC$ (verifique a \hyperref[fig:rcb1]{\underline{figura \ref*{fig:rcb1}}}), desta forma, rejeitamos a hipótese nula a um nível de significância $\alpha = 5\%$. Conclui-se. com base no teste $T$ que existe uma relação estatisticamente  significante entre o consumo severo da álcool ($X_4$) e o tempo de vida em escala logarítimica ($Y$).
+Como obteve-se um $t_{obs} = -2,619$, então $t_{obs} \in RC$ (verifique a \hyperref[fig:rct]{\underline{figura \ref*{fig:rct}}}), desta forma, rejeitamos a hipótese nula a um nível de significância $\alpha = 5\%$. Conclui-se. com base no teste $T$ que existe uma relação estatisticamente  significante entre o consumo severo da álcool ($X_4$) e o tempo de vida em escala logarítimica ($Y$).
 
 
+**Escolha do modelo**
+Pelo teste de hipótese T de significância individual que a variável "Idade" não possui efeito estatisticamente significativo, logo prefere-se a escolha de um modelo que não leva em conta a variável Idade. Escolhe-se o modelo que leva em conta as variáveis dummy: "Sexo", "Histórico de álcool", para um nível alfa de significância de 5%, todas essas variáveis possuem efeito estatisticamente significativo.  
 
+O modelo adotado é: (Modelo B ajustado veja as tabelas \hyperref[tab:summary_b]{\underline{tabela \ref*{tab:summary_b}}} e \hyperref[tab:anova_b]{\underline{tabela \ref*{tab:anova_b}}})
+$$Y_i = \beta_0 + \beta_1 X_{i,1} + \beta_2 X_{i,2} + \beta_3 X_{i,3} + \varepsilon_i;\quad i = 1,2, \dots, 54$$
+**Onde: **  
+$Y_i$: Tempo de vida em escala logarítmica do i-ésimo paciente;  
+$X_{i,1} = \begin{cases} 1, & \mbox{se o i-ésimo paciente é do sexo feminino;} \\ 0, & \mbox{c.c.} \end{cases}$  
+$X_{i,2} = \begin{cases} 1, & \mbox{se o i-ésimo paciente tem histórico de  uso de alcool severo;} \\ 0, & \mbox{c.c.} \end{cases}$   
+$X_{i,3} = \begin{cases} 1, & \mbox{se o i-ésimo paciente tem histórico de  uso de alcool moderado;} \\ 0, & \mbox{c.c.} \end{cases}$    
+$\beta_0$: É intercepto do modelo, neste caso, sem interpretação prática;  
+$\beta_1$: Efeito do tempo de vida em escala logarítimica quando o indivíduo é do sexo feminino;  
+$\beta_2$: Efeito do tempo de vida em escala logarítimica quando o indivíduo possui histórico de álcool severo;  
+$\beta_3$: Efeito do tempo de vida em escala logarítimica quando o indivíduo possui histórico de álcool moderado; 
+$\varepsilon_i$: Erro aleatório do i-ésimo paciente;    
 
+**Onde as hipóteses básicas são:**  
+$E[\varepsilon_i] = 0;\quad i = 1,2 \dots, 54;$  
+$Var(\varepsilon_i) = \sigma^2; \quad i = 1,2 \dots, 54;$  
+$Cor(\varepsilon_i,\varepsilon_j) = 0;\quad i = 1,2 \dots, 54; \quad i \neq j;$   
+$\varepsilon_i \sim N(0,\sigma^2);\quad i = 1,2 \dots, 54;$
 
+## b) Avaliar a significância do efeito global das variáveis “Histórico de álcool” e "Sexo" usando o teste F de comparabilidade de modelos.
 
+### Teste de Hipótese para comparação do modelo reduzido que leva em conta apenas a variável "Sexo" (Modelo C ajustado veja as tabelas \hyperref[tab:summary_c]{\underline{tabela \ref*{tab:summary_c}}} e \hyperref[tab:anova_c]{\underline{tabela \ref*{tab:anova_c}}}) contra o modelo completo, que leva em conta as variáveis "Sexo" e "Histórico de álcool"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Teste F da tabela ANOVA
 **Passo 1:**
 Definição das Hipóteses.
 
 $$
   \begin{cases}
-    H_0:\beta_1 = 0; \\ 
-    H_1:\beta_1 \neq 0;
+    H_0:Y = \beta_0 + \beta_1X_{i,1} + \varepsilon_i; \\ 
+    H_1:Y = \beta_0 + \beta_1X_{i,1} + \beta_2X_{i,2} + \beta_3X_{i,3} + \varepsilon_i
   \end{cases}
+  i = 1,2 \dots, 54
 $$
 **Passo 2:**
 Calculo da Estatística de teste sob $H_0$.
-$$F = \frac{QMReg}{QMRes} \sim F_{1, n-2}$$
-\begin{center}
-onde,
-$$QMReg = \frac{\sum\limits_{i=1}^{n}(\hat{Y_i} - \bar{Y})^2}{1};$$
-$$QMRes = \frac{\sum\limits_{i=1}^{n}(Y_i - \hat{Y_i})^2}{n-2};$$
-desta forma,
-\end{center}
-$$f_{obs} = 35.922;$$
-Veja a \hyperref[tab:anova]{\underline{tabela \ref*{tab:anova}}}  
 
+$$\def\oover{\abovewithdelims...8pt} F = {{{SQres_0 - SQres_1} \over {4-2}} \oover {{SQres_1} \over {54-4}}} \sim F_{2,50}$$
+\begin{center}
+desta forma,
+$$f_{obs} = 4,9108$$
+\end{center}
 **Passo 3:**
 Região Crítica.
-$$RC = \{f \in R:f>f_{1,n-2; \alpha} = 3.938111\};$$
+$$RC = \{f \in R:f>f_{2, 50; 0.05} = 3,18261\}$$
 
 **Passo 4:**
 Tomada de decisão.
 
-Como obteve-se um $f_{obs} = 35.922$, então $f_{obs} \in RC$ (verifique a \hyperref[fig:rcf]{\underline{figura \ref*{fig:rcf}}}), desta forma, rejeitamos a hipótese nula a um nível de significância $\alpha = 5\%$. Conclui-se. com base no teste $F$ que existe uma relação estatisticamente  significante entre tempo médio de internação ($X$) e percentual de pacientes infectados ($Y$).
+Como obteve-se um $f_{obs} = 4,9108$, então $f_{obs} \in RC$ (verifique a \hyperref[fig:rcf1]{\underline{figura \ref*{fig:rcf1}}}), desta forma, rejeitamos a hipótese nula a um nível de significância $\alpha = 5\%$. Ou seja, o modelo completo que leva em conta as variáveis "Sexo" e "Histórico de álcool" é mais adequado que o modelo reduzido que leva em conta somente a variável "Sexo". Conclui-se que a variável "Histórico de Álcool" possui efeito estatisticamente significante.
 
-## d) Gráfico de dispersão incluindo o modelo ajustado.
-Veja a \hyperref[fig:disp]{\underline{figura \ref*{fig:disp}}}.  
+### Teste de Hipótese para comparação do modelo reduzido que leva em conta apenas a variável "Histórico de álcool" (Modelo D ajustado veja as tabelas \hyperref[tab:summary_d]{\underline{tabela \ref*{tab:summary_d}}} e \hyperref[tab:anova_d]{\underline{tabela \ref*{tab:anova_d}}}) contra o modelo completo, que leva em conta as variáveis "Sexo" e "Histórico de álcool"
+
+**Passo 1:**
+Definição das Hipóteses.
+
+$$
+  \begin{cases}
+    H_0:Y = \beta_0 + \beta_2X_{i,2} + \beta_3X_{i,3} + \varepsilon_i; \\ 
+    H_1:Y = \beta_0 + \beta_1X_{i,1} + \beta_2X_{i,2} + \beta_3X_{i,3} + \varepsilon_i
+  \end{cases}
+  i = 1,2 \dots, 54
+$$
+**Passo 2:**
+Calculo da Estatística de teste sob $H_0$.
+
+$$\def\oover{\abovewithdelims...8pt} F = {{{SQres_0 - SQres_1} \over {4-3}} \oover {{SQres_1} \over {54-4}}} \sim F_{1,50}$$
+\begin{center}
+desta forma,
+\end{center}
+$$f_{obs} = 4,0743$$
+
+**Passo 3:**
+Região Crítica.
+$$RC = \{f \in R:f>f_{1, 50; 0.05} = 4,03431\}$$
+
+**Passo 4:**
+Tomada de decisão.
+
+Como obteve-se um $f_{obs} = 4,0743$, então $f_{obs} \in RC$ (verifique a \hyperref[fig:rcf2]{\underline{figura \ref*{fig:rcf2}}}), desta forma, rejeitamos a hipótese nula a um nível de significância $\alpha = 5\%$. Ou seja, o modelo completo que leva em conta as variáveis "Sexo" e "Histórico de álcool" é mais adequado que o modelo reduzido que leva em conta somente a variável "Histórico de álcool". Conclui-se que a variável "Sexo" possui efeito estatisticamente significante.
+
+## c) Verificação das hipóteses básicas do modelo.
+
+Serão utilizadas as figuras \underline{\ref{fig:risy}} e \underline{\ref{fig:qqplot}} para observar se há alguma violação algumas das hipóteses básicas do modelos, que são:  Homecedasticidade e normalidade. Será suposto a independência dos erros aleatórios do modelo.
+
+\begin{itemize}
+  \item Homocedasticidade: \\
+  Pela \hyperref[fig:risy]{\underline{figura \ref*{fig:risy}}} é possível notar uma nuvem de pontos aleatórios em torno de $0$(zero), o que indica que os erros aleatórios possuem variâncias constante.  Também é possível notar que não há presença de um padrão sistemático dos pontos, o que indica que a hipótese de lineariedade não foi violada. O que foi corroborado pelo teste de Breusch-Pagan, obteve-se um $\text{P-valor} =  0.795$
   
-Observa-se uma relação estatística linear positiva entre as variáveis tempo médio de internação (em dias) e percentual de pacientes infectados, isto é, quanto maior o tempo médio de internação maior tende a ser o o percentual de pacientes infectados.
+  \item Normalidade:                       \\
+   Pela \hyperref[fig:qqplot]{\underline{figura \ref*{fig:qqplot}}}, pode-se notar que os quantis  dos resíduos studentizados se aproximam dos quantis teóricos de uma distribuição normal, o que é um bom indicativo de normalidade dos erros. Para corroborar o resutado foi realizado um teste de Shapiro-Wilk nos resíduso estudentizados e obteve-se um $\text{P-valor} =  0.8599$
+  
+\end{itemize}
 
 ## e) Coeficiente de correlação linear de Pearson e coeficiente de determinação do modelo ($R^2$).
 
 \begin{itemize}
-	\item Coeficiente de correlação linear de Pearson;    \\ 
-	Coeficiente de correlação linear é de $0.5179087$, isto é, existe uma correlação linear positiva moderada, ou seja, quanto maior o tempo médio de internação maior tende a ser o percentual de pacientes infectados.  
-	
 	\item Coeficiente de determinação do modelo ($R^2$);  \\
 	O coeficiente de determinação do modelo ($R^2$) é de $0.2682294$, isto é, o modelo ajustado explica aproximadamente $26,82\%$ da variação do percentual de pacientes infectados.
 	
 \end{itemize}
 
-## f) Verificação de das hipóteses básicas do modelo.
+# d) Modelo selecionado e coeficiente de determinação do modelo
+O modelo ajustado:
+$$\hat{Y}_i = 6,7121 + 0,2484X_{i,11} - 0,5404X_{i,2} - 0,4589X_{i,3}$$
+**Onde: **  
+$\hat{Y}_i$: Tempo de vida estimado em escala logarítmica do i-ésimo paciente;  
+$X_{i,1} = \begin{cases} 1, & \mbox{se o i-ésimo paciente é do sexo feminino;} \\ 0, & \mbox{c.c.} \end{cases}$  
+$X_{i,2} = \begin{cases} 1, & \mbox{se o i-ésimo paciente tem histórico de  uso de alcool severo;} \\ 0, & \mbox{c.c.} \end{cases}$   
+$X_{i,3} = \begin{cases} 1, & \mbox{se o i-ésimo paciente tem histórico de  uso de alcool moderado;} \\ 0, & \mbox{c.c.} \end{cases}$    
+$\hat{\beta}_0 = 6,7121$: É o valor estimado do tempo de vida em escala logarítmica quando o paciente é do sexo masculino e nunca ingeriu bebida alcólica;  
+$\hat{\beta}_1 = 0,2484$: O valor estimado de vida em escala logarítimica para o i-ésimo indivíduo é maior quando ele é do sexo feminino comparado com o sexo masculino e esse aumento é de 0.2484;  
+$\hat{\beta}_2 = -0,5404$: O valor estimado de vida em escala logarítimica para o i-ésimo indivíduo é menor quando ele possui histórico de álcool severo comparado com quem não possui histórico de álcool, e essa redução é de -0,5404;  
+$\hat{\beta}_3 = -0,4589$: O valor estimado de vida em escala logarítimica para o i-ésimo indivíduo é menor quando ele possui histórico de álcool moderado comparado com quem não possui histórico de álcool, e essa redução é de -0,4589; 
 
-Serão utilizadas as figuras \underline{\ref{fig:residuos_stud_vs_x}} e \underline{\ref{fig:qqplot}} para observar se há alguma violação nas hipóteses básicas do modelos, que são:  Homecedasticidade, lineariedade, normalidade e outliers. Será suposto a independência dos erros aleatórios do modelo.
-
-\begin{itemize}
-  \item Homocedasticidade e Lineariedade: \\
-  Pela \hyperref[fig:residuos_stud_vs_x]{\underline{figura \ref*{fig:residuos_stud_vs_x}}} é possível notar uma nuvem de pontos aleatórios em torno de $0$(zero), o que indica que os erros aleatórios possuem variâncias constante.  Também é possível notar que não há presença de um padrão sistemático dos pontos, o que indica que a hipótese de lineariedade não foi violada.
-  
-  \item Normalidade:                       \\
-   Pela \hyperref[fig:qqplot]{\underline{figura \ref*{fig:qqplot}}}, pode-se notar que os quantis  dos resíduos studentizados se aproximam dos quantis teóricos de uma distribuição normal, o que é um bom indicativo de normalidade dos erros.
-   
-  \item Outliers:                           \\
-  Também pela \hyperref[fig:residuos_stud_vs_x]{\underline{figura \ref*{fig:residuos_stud_vs_x}}} é possível notar que apenas $6$ observações dos resíduos studentizados são maiores que $|2|$, o que é apenas $6\%$ de toda a amostra. Logo é uma quantidade aceitável de outilers.
-  
-\end{itemize}
-
-## g) O modelo é adequando para os dados apresentados?
-Por não apresentar nenhuma violação nas hipóteses básicas, o modelo é adequado para representar os dados observados, porém seu coeficiente de determinação ($R^2$) é de apenas $26.82\%$.
-
-## d) Ajustando o modelo pelo métodos dos mínimos quadrados.
-**O modelo ajustado é dado por:**
-$$\hat{Y_i} = \hat{\beta_0} + \hat{\beta_1} X_i \quad ;\quad i = 1,2 \dots, 100$$
-**Modelo ajustado com suas devidas estimativas: Veja a \hyperref[tab:summary]{\underline{tabela \ref*{tab:summary}}} no apêndice.**
-$$\hat{Y_i} = -0.14848 + 0.47580 X_i \quad ;\quad i = 1,2 \dots, 100$$
-
-$\hat{Y_i}$: É o valor estimado do percentual de pacientes infectados para o i-ésimo estabelecimento de saúde;   
-$X_i$: É o valor observado de tempo médio de internação em dias para o i-ésimo estabelecimento de saúde;  
-$\hat{\beta_0}$: É o intercepto estimado do modelo, que possui valor de $-0.14848$. Não possui interpretação prática para o problema;  
-$\hat{\beta_1}$: É o coeficiente angular estimado do modelo, que possui valor de $0.47580$. Isto é, o valor estimado do percentual de pacientes infectados é acrescentado em $0.47580$ para cada unidade do tempo médio de internação;  
-
+Por não apresentar nenhuma violação nas hipóteses básicas, o modelo é adequado para representar os dados observados, porém seu coeficiente de determinação ($R^2$) é de apenas $20.92\%$, ou seja, $20.92%$ da variação é explicada pelo modelo ajustado que leva em consideração as variáveis sexo e histórico de álcool.
+É importante observar que para o "Modelo A" a variável "Idade" para o teste T de significância individual apresentou P-valor > 0.05, ou seja, a um nível de signifiância de 5% a variável não apresentou uma relação estatísticamente significante. Pelo princípio da parcimônia, opta-se pelo nodelo reduzido B, que leva em conta as variáveis "Sexo" e "Histórico de álcool". Foi utilizado este modelo (B) como modelo completo para realização dos teste do exercício b).
 
 \newpage
 # Apêndice 1 - Tabelas
 \begin{table}[htbp]
   \centering
-  \caption{Tabela resumo}
+  \caption{Tabela Modelo A}
   \begin{tabular}{ccccc}
     \hline
    Estimadores & Estimativa & Erro padrão & Valor da estatística de teste T &  P-valor                                                            \\
@@ -312,91 +339,222 @@ $\hat{\beta_1}$: É o coeficiente angular estimado do modelo, que possui valor d
     $\hat{\beta_4}$  & -0,438230  & 0,167344  & -2,619  & 0,01171  \\
     \hline
   \end{tabular}
-  \label{tab:summary}
+  \label{tab:summary_a}
 \end{table}
 
 \begin{table}[htbp]
   \centering
-  \caption{Tabela ANOVA}
+  \caption{Tabela Modelo B}
+  \begin{tabular}{ccccc}
+    \hline
+   Estimadores & Estimativa & Erro padrão & Valor da estatística de teste T &  P-valor                                                            \\
+    \hline
+    $\hat{\beta_0}$  & 6,7121    &  0,1506  & 44,574   & < 0,001  \\
+    $\hat{\beta_1}$  & 0,2484    &  0,1231  & 2,018    & 0,04892  \\
+    $\hat{\beta_2}$  & -0,5404   &  0,1839  & -2,2938  & 0,00498  \\
+    $\hat{\beta_3}$  & -0,4589   &  0.1653  & -2,775   & 0,00773  \\
+    \hline
+  \end{tabular}
+  \label{tab:summary_b}
+\end{table}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Tabela Modelo C}
+  \begin{tabular}{ccccc}
+    \hline
+   Estimadores & Estimativa & Erro padrão & Valor da estatística de teste T &  P-valor                                                            \\
+    \hline
+    $\hat{\beta_0}$  & 6,32567   & 0,08963  & 70,57  & < 0,001  \\
+    $\hat{\beta_1}$  & 0,22653   & 0,13173  & 1,72   & 0,0915   \\
+    \hline
+  \end{tabular}
+  \label{tab:summary_C}
+\end{table}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Tabela Modelo D}
+  \begin{tabular}{ccccc}
+    \hline
+   Estimadores & Estimativa & Erro padrão & Valor da estatística de teste T &  P-valor                                                            \\
+    \hline
+    $\hat{\beta_0}$  & 6,8115    & 0,1465  & 46,482   & < 0,001  \\
+    $\hat{\beta_1}$  & -0,5238   & 0,1892  & -2,769   & 0,00782  \\
+    $\hat{\beta_2}$  & -0,4384   & 0,1699  & -2,580   & 0,01282  \\
+    \hline
+  \end{tabular}
+  \label{tab:summary_d}
+\end{table}
+
+
+\begin{table}[htbp]
+  \centering
+  \caption{Tabela ANOVA Modelo A}
   \begin{tabular}{lccccc}
     \hline
    Fontes de variação & Soma dos quadrados & gl & Quadrado médio & Valor da estatística de teste F & P-valor                           \\
     \hline
-    Regressão & 44.305  & 1  & 44.305 & 35.922 & < 0.001   \\
-    Resíduos  & 120.871 & 98 & 1.233  &        &           \\
-    Total     & 165.176 & 99 &        &        &           \\
+    Idade             & 0,2694  & 1  & 0,26941 & 1,3245 & 0.25538      \\
+    Sexo              & 0,6940  & 1  & 0,69398 & 3,4118 & 0.07077      \\
+    Álcool severo     & 0,4794  & 1  & 0,47937 & 2,3567 & 0.13118      \\
+    Álcool moderado   & 1,3949  & 1  & 1,39491 & 6,8578 & 0.01171      \\
+    Resíduos          & 9,9668  & 49 & 0,20340 &        &              \\
     \hline
   \end{tabular}
-  \label{tab:anova}
+  \label{tab:anova_a}
 \end{table}
 
 
+\begin{table}[htbp]
+  \centering
+  \caption{Tabela ANOVA Modelo B}
+  \begin{tabular}{lccccc}
+    \hline
+   Fontes de variação & Soma dos quadrados & gl & Quadrado médio & Valor da estatística de teste F & P-valor                           \\
+    \hline
+    Sexo              & 0,6889   & 1  & 0,68895 & 3,4017 & 0.071056       \\
+    Álcool severo     & 0,4291   & 1  & 0,42907 & 2,1186 & 0.151774       \\
+    Álcool moderado   & 1,5601   & 1  & 1,56009 & 7,7031 & 0.007735       \\
+    Resíduos          & 10,1264  & 50 & 0,20253 &        &                \\
+    \hline
+  \end{tabular}
+  \label{tab:anova_b}
+\end{table}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Tabela ANOVA Modelo C}
+  \begin{tabular}{lccccc}
+    \hline
+   Fontes de variação & Soma dos quadrados & gl & Quadrado médio & Valor da estatística de teste F & P-valor                           \\
+    \hline
+    Sexo              & 0,6889   & 1  & 0,68895 & 2,957 & 0.09146          \\
+    Resíduos          & 12,1156  & 52 & 0,23299 &        &                 \\
+    \hline
+  \end{tabular}
+  \label{tab:anova_c}
+\end{table}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Tabela ANOVA Modelo D}
+  \begin{tabular}{lccccc}
+    \hline
+   Fontes de variação & Soma dos quadrados & gl & Quadrado médio & Valor da estatística de teste F & P-valor                           \\
+    \hline
+    Álcool severo     & 0,4241   & 1  & 0,42406 & 1,9748 & 0.16600        \\
+    Álcool moderado   & 1,4289   & 1  & 1,42888 & 6,6541 & 0.01282        \\
+    Resíduos          & 10,9516  & 51 & 0,21474 &        &                \\
+    \hline
+  \end{tabular}
+  \label{tab:anova_d}
+\end{table}
+
 \newpage
+# Apêndice 2 - Figuras
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.6\columnwidth]{rct.png}
+  \end{center}
+  \caption{Densidadade e região crítica de $T_{49}$.}
+  \label{fig:rct}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.6\columnwidth]{rcf1.png}
+  \end{center}
+  \caption{Densidadade e região crítica de $F_{2, 50}$.}
+  \label{fig:rcf1}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.6\columnwidth]{rcf2.png}
+  \end{center}
+  \caption{Densidadade e região crítica de $F_{1, 50}$.}
+  \label{fig:rcf2}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.6\columnwidth]{risy.png}
+  \end{center}
+  \caption{Dispersão dos resíduos estudentizados e valores estimados.}
+  \label{fig:risy}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.6\columnwidth]{qqnorm.png}
+  \end{center}
+  \caption{Gráfico quantil-quantil}
+  \label{fig:qqplot}
+\end{figure}
+
+
 \newpage
 # Apêndice 3 - Códigos
 Resolução das questões
 ```{r code_1, eval=F}
-#Lendo a base de dados
-BD = foreign::read.spss("internacoes.sav")
-tabela = dplyr::as_tibble(BD); tabela
+require(dplyr)
+data = foreign::read.spss("tvida.sav", to.data.frame = TRUE)
+head(data)
 
-#Questão a)
-modelo1 = lm(tabela$Percentual_infectados~tabela$Tempo_internacao)
-summary(modelo1)
+colnames(data) = tolower(colnames(data))
 
-
-#Questão b)
-modelo1
-anova(modelo1)
-
-#Questão c)
-qt(0.025, 98, lower.tail = F)
-qf(0.05, 1, 98, lower.tail = F)
-
-# Questão d)
-plot(tabela$Percentual_infectados~tabela$Tempo_internacao, pch = 19,
-     ylab = "Percentual de pacientes infectados",
-     xlab = "Tempo médio de internação (em dias)",
-     ylim = c(-1,9),
-     xlim = c(0,14))
-abline(modelo1, col = "Royalblue")
-text(2,8,expression(hat(Y[i]) == -0.14848 + 0.47580*X[i]),col = "blue")
-text(1.1,7, expression(R^2 == "26.82%"), col = "blue")
-
-# Questão e)
-R = cor(tabela$Percentual_infectados,tabela$Tempo_internacao); R
-R2 = R^2; R2
-
-# Questão f)
-yichapeu = fitted(modelo1)
-ei = rstandard(modelo1)
-plot(ei~tabela$Tempo_internacao, pch = 20, 
-     ylim = c(-3,3), ylab = "Resíduos studentizados", 
-     xlab = "Tempo médio de internação (em dias)")
-abline(h = c(-2,0,2), col = c("red","black","red"),lty = c(2,1,2))
-plot(ei~yichapeu, pch = 20, 
-     ylim = c(-3,3), ylab = "Resíduos studentizados", 
-     xlab = "Percentual de pacientes infectados estimado")
-abline(h = c(-2,0,2), col = c("red","black","red"),lty = c(2,1,2))
-qqnorm(ei, pch = 20, main="" , 
-       ylab = "Quantis teóricos normal padrão", 
-       xlab = "Quantis dos resíduos studentizados")
-abline(0,1, col = "blue")
+data = data %>% mutate(sexo = ifelse(sexo == "Mulher",1, 0),
+                       alcool_severo = ifelse(historia_alcool == "Uso severo",1, 0),
+                       alcool_moderado = ifelse(historia_alcool == "Uso moderado", 1, 0)) %>% 
+  select(-historia_alcool) %>% 
+  select(ln_tempo_vida, everything())
+head(data)
+# a) ----------------------------------------------------------------------
+modelo_1 = lm(ln_tempo_vida ~ idade + sexo + alcool_severo + alcool_moderado, data); summary(modelo_1)
+qt(0.05/2, 54-5,lower.tail = F)
+# Variável idade não se mostrou significante a um nível de 5%.
+modelo_2 = lm(ln_tempo_vida ~ sexo + alcool_severo + alcool_moderado, data)
+# b) ----------------------------------------------------------------------
+modelo_3 = lm(ln_tempo_vida ~ sexo, data); summary(modelo_3)
+anova(modelo_3, modelo_2)
+modelo_4 = lm(ln_tempo_vida ~ alcool_severo + alcool_moderado, data); summary(modelo_4)
+anova(modelo_4, modelo_2)
+# c) ----------------------------------------------------------------------
+ris = rstandard(modelo_2)
+ychapeu = fitted(modelo_2)
+plot(ris~ychapeu, 
+     pch = 19, 
+     ylim = c(-3,3),
+     ylab = "Resíduos Estudentizados",
+     xlab = latex2exp::TeX("$\\hat{Y}$"))
+abline(h = c(-2,0,2),
+       lty = c(2,1,2),
+       col = c("red","black","red"))
+lmtest::bptest(modelo_2)
+qqnorm(ris, 
+       pch = 19,
+       main = " ",
+       ylab = "Quantis amostrais",
+       xlab = 'Quantis teoricos')
+abline(0,1)
+shapiro.test(ris)
+# d) ----------------------------------------------------------------------
+summary(modelo_2)
+summary(modelo_2)$r.squared
 ```
 
 \newpage
 Gerando o gráfico da densidade da F.
 ```{r code_2, eval=F}
-degree_1 = 1
-degree_2 = 98
+degree_1 = 2
+degree_2 = 50
 quantile = qf(0.05, df1 = degree_1, df2 = degree_2, lower.tail = F)
-test_stat = 35.922
-
-rc_values = seq(quantile, 7, length = 100)
+test_stat = 4.9108
+rc_values = seq(quantile, 7, length = 54)
 denisty_rc_values = df(rc_values,df1 = degree_1, df2 = degree_2)
-ic_values = seq(0, quantile, length = 100)
+ic_values = seq(0, quantile, length = 54)
 denisty_ic_values = df(ic_values, df1 = degree_1, df2 = degree_2)
-
 plot(
   function(x)
     df(x, 
@@ -410,7 +568,6 @@ plot(
   xaxt='n'
 )
 axis(side=1, at=round(c(0,quantile, 7), 2))
-
 polygon(
   x = c(quantile, rc_values, 7),
   y = c(0, denisty_rc_values, 0),
@@ -418,19 +575,61 @@ polygon(
   col = 'red',
   density = 50
 )
-
 lines(
   x = c(quantile, quantile),
   y = c(0, denisty_rc_values[length(denisty_rc_values)]),
   lty = 2
 )
-
 lines(x=c(0, 7), y=c(0,0))
-
 text(6, 0.09, expression(alpha), cex=1.7)
 text(0.5, 0.15, expression(1 - alpha), cex=1.7)
-
 par(xpd=TRUE)
+points(test_stat, 0, pch = 19)
+text(test_stat, 0, latex2exp::TeX("$F_{obs}$"), pos = 3)
+text(2, -0.33, expression(alpha == 0.05))
+legend(4, 1,legend = c('Região Crítica'), box.col = "white",
+       fill = c('red'), 
+       density = 50)
+par(xpd=FALSE)
+degree_1 = 1
+degree_2 = 50
+quantile = qf(0.05, df1 = degree_1, df2 = degree_2, lower.tail = F)
+test_stat = 4.0743
+rc_values = seq(quantile, 7, length = 54)
+denisty_rc_values = df(rc_values,df1 = degree_1, df2 = degree_2)
+ic_values = seq(0, quantile, length = 54)
+denisty_ic_values = df(ic_values, df1 = degree_1, df2 = degree_2)
+plot(
+  function(x)
+    df(x, 
+       df1 = degree_1,
+       df2 = degree_2),
+  xlim = c(0, 7),
+  ylab = '',
+  xlab = 'Quantis',
+  bty="n",
+  yaxt='n',
+  xaxt='n'
+)
+axis(side=1, at=round(c(0,quantile, 7), 2))
+polygon(
+  x = c(quantile, rc_values, 7),
+  y = c(0, denisty_rc_values, 0),
+  border = FALSE,
+  col = 'red',
+  density = 50
+)
+lines(
+  x = c(quantile, quantile),
+  y = c(0, denisty_rc_values[length(denisty_rc_values)]),
+  lty = 2
+)
+lines(x=c(0, 7), y=c(0,0))
+text(6, 0.09, expression(alpha), cex=1.7)
+text(0.5, 0.15, expression(1 - alpha), cex=1.7)
+par(xpd=TRUE)
+points(test_stat, 0, pch = 19)
+text(test_stat, 0, latex2exp::TeX("$F_{obs}$"), pos = 3)
 text(2, -0.33, expression(alpha == 0.05))
 legend(4, 1,legend = c('Região Crítica'), box.col = "white",
        fill = c('red'), 
@@ -441,27 +640,28 @@ par(xpd=FALSE)
 \newpage
 Gerando o gráfico da densidade da T.
 ```{r code_3, eval=F}
-degree = 98
+degree = 49
 quantile = qt(0.975, df = degree)
-b0_test_stat = -0.195
-b1_test_stat = 5.993
-rc_values = seq(-4, -quantile, length = 100)
-denisty_rc_values = dt(rc_values, df = 46)
-ic_values = seq(-quantile, quantile, length = 100)
-denisty_ic_values = dt(ic_values, df = 46)
-
+b0_test_stat = 22.092
+b1_test_stat = -0.886
+b2_test_stat = 2.012
+b3_test_stat = -2.891
+b4_test_stat = -2.619
+rc_values = seq(-4, -quantile, length = 54)
+denisty_rc_values = dt(rc_values, df = 49)
+ic_values = seq(-quantile, quantile, length = 54)
+denisty_ic_values = dt(ic_values, df = 49)
 plot(
   function(x)
     dt(x, df = 46),
-  xlim = c(-4, 7),
+  xlim = c(-4, 4),
   ylab = '',
   xlab = 'Quantis',
   bty="n",
   yaxt='n',
   xaxt='n'
 )
-axis(side=1, at=round(c(-4, -quantile, 0 ,quantile, 7), 2))
-
+axis(side=1, at=round(c(-4, -quantile, 0 ,quantile, 4), 2))
 polygon(
   x = c(-4, rc_values, -quantile),
   y = c(0, denisty_rc_values, 0),
@@ -476,8 +676,6 @@ polygon(
   col = 'red',
   density = 50
 )
-
-
 lines(
   x = c(-quantile, -quantile),
   y = c(0, denisty_rc_values[length(denisty_rc_values)]),
@@ -488,23 +686,28 @@ lines(
   y = c(0, denisty_rc_values[length(denisty_rc_values)]),
   lty = 2
 )
-
 lines(x=c(-4, 7), y=c(0,0))
-
-
-
-text(3.2, 0.23, expression(t[obs]), cex=1.3)
-points(b1_test_stat, 0, pch=16)
-arrows(3.2, 0.2,b1_test_stat,0)
-
-text(-3, 0.07, expression(frac(alpha, 2)), cex=1.3)
-text(3, 0.07, expression(frac(alpha,2)), cex=1.3)
+points(b1_test_stat, 0, pch=5, cex = 1.2, col = "darkblue")
+points(b2_test_stat, 0, pch=2, cex = 1.2, col = "darkblue")
+points(b3_test_stat, 0, pch=8, cex = 1.2, col = "darkblue")
+points(b4_test_stat, 0, pch=4, cex = 1.2, col = "darkblue")
+text(-3, 0.1, expression(frac(alpha, 2)), cex=1.3)
+text(3, 0.1, expression(frac(alpha,2)), cex=1.3)
 text(0, 0.15, expression(1 - alpha), cex=1.3)
-
 par(xpd=TRUE)
-text(4, -0.1, expression(alpha == 0.05))
-legend(3.7,0.35,legend = c('Região Crítica'), box.col = "white",
-       fill = c('red'), 
-       density = 50)
+text(-3.5, 0.3, expression(alpha == 0.05))
+legend(2, 0.4,legend = c(latex2exp::TeX("$T_{obs; \\hat{\\beta}_1}$"),
+                         latex2exp::TeX("$T_{obs; \\hat{\\beta}_2}$"),
+                         latex2exp::TeX("$T_{obs; \\hat{\\beta}_3}$"),
+                         latex2exp::TeX("$T_{obs; \\hat{\\beta}_4}}$")), 
+       pch = c(5,2,8,4),
+       col = 'darkblue',
+       bty = 'n',
+       cex = 0.85)
+legend(1.93, 0.4597,legend = 'Região Crítica', 
+       fill = 'red', 
+       density = 50,
+       bty = 'n',
+       cex = 0.85)
 par(xpd=FALSE)
 ```
