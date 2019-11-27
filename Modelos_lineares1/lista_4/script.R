@@ -461,3 +461,4 @@ gasto_t = 1 / BD7$gasto_com_propaganda
 # Yi_hat' = B1_hat + BO_hat * Xi'
 # Yi_hat = B1_hat*Xi + BO_hat
 # Yi_hat = 7.9511 + 51.9267*Xi
+
