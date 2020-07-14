@@ -1,0 +1,80 @@
+---
+title: "Lista 1 Aprenziado de Máquina"
+author: "Lyncoln Sousa"
+date: "`r Sys.Date()`"
+output: 
+  pdf_document: 
+    latex_engine: lualatex
+---
+
+```{r message=FALSE, warning=FALSE}
+library(caret)
+library(dplyr)
+```
+
+
+### 1) Carregue o banco de dados Sacramento, nativo do pacote caret. Ele contém diversas infor- mações sobre imóveis na região de Sacramento-CA. Vamos tentar predizer o preço do imóvel em função das suas características.
+
+```{r}
+data("Sacramento")
+str(Sacramento)
+```
+
+### 2) Filtre apenas os imóveis localizado na cidade de SACRAMENTO.
+
+```{r}
+data = Sacramento %>% 
+  filter(city == "SACRAMENTO")
+```
+
+### 3) Altere a variável price para escala logarítmica na base 10.
+
+```{r}
+data = data %>% 
+  mutate(price = log10(price))
+```
+
+### 4) Fixe a semente no valor 100. Crie amostras treino (70%) e teste (30%).
+
+```{r}
+set.seed(100)
+treino_index = createDataPartition(data$price, p=0.7,list=F)
+treino = data[treino_index,]
+teste = data[-treino_index,]
+```
+
+### 5) Treine um regressor pelo método svmLinear (Support Vector Machine com kernel linear, aprenderemos com detalhes em breve), utilizando apenas as variáveis explicativas beds, baths, sqft, type. Obtenha RMSE, R2 e MAE da amostra teste. Dica: no train(), utilize price ∼ beds+baths+sqft+type
+
+```{r}
+#Treino
+modeloFit_svmLinear = train(price ~ beds+baths+sqft+type,
+                  data = treino,
+                  method = "svmLinear")
+modeloFit_svmLinear
+
+#Teste
+predicao_svmLinear = predict(modeloFit_svmLinear, teste)
+postResample(predicao_svmLinear, teste$price)
+
+```
+
+As estimativas dos erros out of sample e in sample foram parecidas. A qualidade de ajuste do modelo está um pouco melhor para a amostra treino. 
+
+### 6) Realize os mesmos passos acima, mas treinando o regressor pelo método lm (regressão linear). Compare os resultados com o svmLinear. O que é possível observar?
+
+```{r}
+#Treino
+modeloFit_lm = train(price ~ beds+baths+sqft+type,
+                  data = treino,
+                  method = "lm")
+modeloFit_lm
+
+#Teste
+predicao_lm = predict(modeloFit_lm, teste)
+postResample(predicao_lm, teste$price)
+
+```
+As estimativas dos erros out of sample foram um pouco maiores do que o in sample, enquanto a qualidade do ajuste do modelo foi menor.
+
+Comparando as duas modelagens, observa-se que os erros in-sample e out-of-sample foram bastante parecidos. As qualidades de ajustes ($R^2$) também foram equivalentes, porém baixas, isto indica que esses modelos explicam pouco a variação dos dados. Com base nos valores dessas estatísticas obtidas, conclui-se que os modelos criados não são adequados para representar os dados.
+
