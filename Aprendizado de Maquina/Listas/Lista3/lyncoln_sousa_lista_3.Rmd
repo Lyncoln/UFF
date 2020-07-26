@@ -1,0 +1,329 @@
+---
+title: "Lista 3"
+author: "Lyncoln Sousa"
+date: "25/07/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Carregue o banco de dados saude.csv. Lembre colocar a variável Sexo como um factor. Ele
+contém diversas informações sobre a saúde de diversos pacientes:
+
+• Sexo;
+
+• Idade em anos;
+
+• ALT: Altura em polegadas;
+
+• Peso: Peso em libras;
+
+• CINT: Circunferência da cintura em cm;
+
+• TXPUL: Taxa de pulsação em batimentos por minuto;
+
+• SIST: Pressão sanguínea sistólica em mmHg;
+
+• DIAST: Pressão sanguínea diastólica em mmHg;
+
+• DIF: Diferença da pressão sanguínea em mmHg;
+
+• COL: colesterol in mg;
+
+• IMC: ìndice de massa corporal;
+
+• Perna: comprimento da parte superior da perna em cm;
+
+• COTOV: largura do cotovelo em cm;
+
+• Pulso: largura do pulso em cm;
+
+• Braço: circunferência do braço em cm.
+
+Crédito: U.S. Department of Health and Human Services, National Center for Health Statistics,
+Third National Health and Nutrition Examination Survey.
+
+```{r message=FALSE, warning=FALSE}
+library(caret);library(dplyr);library(readr)
+data = readr::read_delim("saude.CSV", ";", 
+    col_types = cols(Sexo = col_factor(levels = c())))
+```
+
+# 1. Realize o pré processamento (fora do train()) para identicar e remover:
+
+(a) variáveis de variância zero ou quase zero;
+```{r}
+caret::nearZeroVar(data,saveMetrics = T) 
+#Não possui nenhuma variável para ser removida
+```
+
+
+(b) variáveis com correlação absoluta acima de 0.75;
+
+  Como seria muito massante observar os gráficos de dispersão para as 14 variáveis, iremos realiar a correlação pelo método de pearson e também de spearman.
+
+```{r}
+#Pearson
+
+corsP = cor(data[,2:15],method = "pearson")
+summary(corsP[upper.tri(corsP)])
+#Existem variáveis muito correlacionadas
+caret::findCorrelation(corsP,cutoff = 0.75,verbose = T)
+corAltaP = caret::findCorrelation(corsP, cutoff = 0.75, names = T)
+corAltaP
+
+```
+
+
+```{r}
+#Spearman
+
+corsS = cor(data[,2:15],method = "spearman")
+summary(corsS[upper.tri(corsS)])
+#Existem variáveis muito correlacionadas
+caret::findCorrelation(corsS,cutoff = 0.75,verbose = T)
+corAltaS = caret::findCorrelation(corsS, cutoff = 0.75, names = T)
+corAltaS
+```
+
+Por ambos os métodos as variáveis para serem removidas foram as mesmas.
+
+```{r}
+#Serão removidas as variáveis Peso, CINT, COTOV e Braco
+data = dplyr::select(data, - dplyr::all_of(corAltaP))
+```
+
+(c) variáveis com dependência linear.
+
+```{r}
+combLin = caret::findLinearCombos(data[2:11])
+combLin
+#Foi encontrado que as colunas 4 5 e 6 são combinações lineares. da base de dados 
+#sem contar a variável sexo iríamos remover a variavel 6, como temos que adicionar 
+#a coluna sexo, iremos remover a varíavel 7.
+data = data[,-(combLin$remove+1)]
+```
+
+# 2. O objetivo é predizer o Sexo em função das demais variáveis. Para realizar tal tarefa, precisamos decidir qual o melhor método de treinamento do classicador. Queremos utilizar Support Vector Machine (SVM), mas não sabemos qual o melhor kernal, linear, polinomial ou radial. Realize validação cruzada para vericar qual é o melhor entre os 3 métodos acima (svmLinear, svmPoly, svmRadial) para construir o classicador.
+
+• Utilize o banco de dados pré-processado.
+
+• Utilize a mesma metodologia que utilizamos para avaliar classicadores.
+
+• Utilize o método k-fold repetido, com k=10 e 3 repetições.
+
+• Lembre de fixar o set.seed(1903) antes de cada treinamento.
+
+• Ao final, redija um texto justicando qual método elegeu como melhor para esse pro-
+blema.
+
+
+```{r}
+
+treino_metodo = caret::trainControl(method = "repeatedcv",
+                                    number = 10,
+                                    repeats = 3)
+
+set.seed(1903)
+svmLinear = caret::train(Sexo ~ .,
+                         data = data,
+                         method = "svmLinear",
+                         trControl = treino_metodo)
+
+set.seed(1903)
+svmPoly = caret::train(Sexo ~ .,
+                         data = data,
+                         method = "svmPoly",
+                         trControl = treino_metodo)
+
+set.seed(1903)
+svmRadial = caret::train(Sexo ~ .,
+                         data = data,
+                         method = "svmRadial",
+                         trControl = treino_metodo)
+
+
+```
+
+**Resultados descritivos**
+```{r}
+resultados = caret::resamples(list(Linear = svmLinear,
+                                   Poly = svmPoly,
+                                   Radial = svmRadial))
+summary(resultados)
+```
+  Obtiveram-se resultados bastante parecidos das métricas Kappa e Acurrácia para os 3 modelos, há somente uma diferença considerável em relação a mediana, que favorece o modelo svmPoly.
+
+**Comparação de tempo de execução**
+```{r}
+library(ggplot2)
+ggplot(resultados$timings, aes(x = row.names(resultados$timings),
+y = Everything,
+fill = row.names(resultados$timings))) +
+geom_bar(stat = "identity") +
+labs(title = "Comparação de tempo de processamento entre os modelos de SVM",
+y = "Tempo em segundo",
+x = "Modelos") +
+geom_text(aes(label = sprintf("%.2f", resultados$timings$Everything),
+y= resultados$timings$Everything),vjust = -0.2)+
+theme(legend.position = "none")
+```
+  Apesar do modelo svmPoly ter apresentado melhor mediana, ele é o que mais demora para ser executado em relação aos demais. 
+
+**Comparação visual de variablidade**
+```{r}
+escalas = list(x=list(relation="free" ),
+               y=list(relation="free" ))
+
+
+gridExtra::grid.arrange(               
+                        lattice::bwplot(resultados,
+                                        scales = escalas,
+                                        pch = "O",
+                                        xlim = c(0,1.2)),
+                        lattice::densityplot(resultados,
+                                             scales = escalas,
+                                              pch = ".",
+                                              auto.key = TRUE),
+                        nrow = 2)
+```
+  Apesar de possuir boxplots bastante parecidos, como já vimos, o modelo svmPoly possui as melhores medianas para as métricas testadas. Pelo gráfico de densidade, é possível notar que o modelo svmPoly também leva vantagem com comparação aos demais, tendo em vista que se concentra mais para valores maiores das métricas. Por essas observações, pode-se concluir que o modelo svmPoly é o modelo que melhor representa os dados empiricamente.
+
+
+**Comparação 2 a 2 dos kfolds**
+```{r}
+gridExtra::grid.arrange(
+lattice::xyplot(resultados, models = c("Linear","Poly"), metric = "Accuracy"),
+lattice::xyplot(resultados, models = c("Linear","Poly"), metric = "Kappa"),
+ncol = 2,
+top = "Comparando métricas para cada fold entre svmLinear E svmPoly"
+)
+```
+
+```{r}
+gridExtra::grid.arrange(
+lattice::xyplot(resultados, models = c("Linear","Radial"), metric = "Accuracy"),
+lattice::xyplot(resultados, models = c("Linear","Radial"), metric = "Kappa"),
+ncol = 2,
+top = "Comparando métricas para cada fold entre svmLinear E svmRadial"
+)
+```
+
+```{r}
+gridExtra::grid.arrange(
+lattice::xyplot(resultados, models = c("Poly","Radial"), metric = "Accuracy"),
+lattice::xyplot(resultados, models = c("Poly","Radial"), metric = "Kappa"),
+ncol = 2,
+top = "Comparando métricas para cada fold entre svmPoly E svmRadial"
+)
+```
+  Vários folds obtiveram valores parecidos na comparação dois a dois para as estatísticas Acurácia e Kappa de todos os modelos. Por esse motivo, a interpretação desse tipo de gráfico fica imprecisa, pois vários pontos se sobrepoem e não é possível identificar visualmente qual dos modelos comparados obtiveram as melhores estatísticas por folds.
+  
+
+**Comparação 2 a 2 dos kfolds com jitter**
+```{r}
+gridExtra::grid.arrange(
+lattice::xyplot(resultados, models = c("Linear","Poly"), metric = "Accuracy",
+                jitter.x = T,jitter.y = T, amount = 0.05, factor = 0.05),
+lattice::xyplot(resultados, models = c("Linear","Poly"), metric = "Kappa",
+                jitter.x = T,jitter.y = T, amount = 0.05, factor = 0.05),
+ncol = 2,
+top = "Comparando métricas para cada fold entre svmLinear E svmPoly"
+)
+```
+
+```{r}
+gridExtra::grid.arrange(
+lattice::xyplot(resultados, models = c("Linear","Radial"), metric = "Accuracy",
+                jitter.x = T,jitter.y = T, amount = 0.05, factor = 0.05),
+lattice::xyplot(resultados, models = c("Linear","Radial"), metric = "Kappa",
+                jitter.x = T,jitter.y = T, amount = 0.05, factor = 0.05),
+ncol = 2,
+top = "Comparando métricas para cada fold entre svmLinear E svmRadial"
+)
+```
+
+```{r}
+gridExtra::grid.arrange(
+lattice::xyplot(resultados, models = c("Poly","Radial"), metric = "Accuracy",jitter.x = T,
+                jitter.y = T, amount = 0.1, factor = 0.05),
+lattice::xyplot(resultados, models = c("Poly","Radial"), metric = "Kappa",jitter.x = T,
+                jitter.y = T, amount = 0.05, factor = 0.05),
+ncol = 2,
+top = "Comparando métricas para cada fold entre svmPoly E svmRadial"
+)
+```
+
+  Foi utilizado o argumento jitter.x e jitter.y como verdadeiro para que o seja aplicado o efeito que faça os pontos "se espalharem" nos eixos x e y para que não fiquem sobrepostos, assim, é possível ter uma ideia no comportamento dos folds. O argumento amount e factor = 0.05 foi feito de forma que essa variação dos pontos sobrepostos se movimentem até 0.05 em x e y do seu ponto original.
+
+  É possível observar pelos gráficos que a comparação das métricas por folds entre os modelos 2 a 2 é bastante parecida. Aparentemente nenhum modelo se destaca.
+
+
+__Testes de hipótese para diferença das métricas dos modelos dois a dois__
+```{r}
+difs = diff(resultados)
+summary(difs)
+```
+
+  Adotando um nível de significância $\alpha = 0.05$, obteve-se que $\alpha > 0.05$ para todos os testes realizados, isso é, não rejeita-se nenhuma das hipóteses nulas $H_0$. Assim conclui-se que há evidências estatísticas que para a comparação dois a dois das métricas de todos os 3 modelos, eles possuem diferença = 0, ou seja, são iguais.
+
+  Mesmo obtendo pelos testes de hipótese que os modelos possuem métricas iguais, ira ser analisado os dados empíricos obtidos na validação cruzado com o método de treinamento executado. Mesmo com um tempo de execução maior, o modelo svmPoly obteve melhores resultados para as métricas acurácia e kappa, e por isso, será o modelo escolhido.
+
+
+# 3. Uma vez escolhido o melhor método classicador, vamos criar o classicador de fato. Fixe a semente no valor 100. Crie amostras treino (75%) e teste (25%), utilizando os dados pré- processados. Utilize o método de re-amostragem bootstrap, com 20 re-amostragens. Treine o classicador pelo método escolhido e calcule uma estimativa para o erro fora da amostra.
+
+```{r}
+set.seed(100)
+treino_index = caret::createDataPartition(data$Sexo,p = 0.75, list = F)
+metodo_treino_boot = caret::trainControl(method = "boot", number = 20)
+treino = data[treino_index,]
+teste = data[-treino_index,]
+
+set.seed(100)
+modelo_boot_svmPoly = caret::train(Sexo ~ .,
+                                   data = treino,
+                                   method = "svmPoly",
+                                   trControl = metodo_treino_boot)
+
+# Fazendo a predição
+pred_boot_svmPoly = predict(modelo_boot_svmPoly,
+                                   teste)
+# Matriz de confusão para a amostra teste
+resultado_teste = caret::confusionMatrix(pred_boot_svmPoly,
+                                   teste$Sexo)
+resultado_teste
+```
+
+# 4. Queremos entender o impacto do pré-processamento no classicador. Repita o item 3. com os dados brutos, ou seja, antes de realizar o pré-processamento. O que foi possível observar?
+
+```{r}
+data_bruto = readr::read_delim("saude.CSV", ";", 
+    escape_double = FALSE, col_types = cols(Sexo = col_factor(levels = c())), 
+    trim_ws = TRUE)
+
+set.seed(100)
+treino_index = caret::createDataPartition(data_bruto$Sexo,p = 0.75, list = F)
+metodo_treino_boot = caret::trainControl(method = "boot", number = 20)
+treino = data_bruto[treino_index,]
+teste = data_bruto[-treino_index,]
+
+set.seed(100)
+modelo_boot_svmPoly = caret::train(Sexo ~ .,
+                                   data = treino,
+                                   method = "svmPoly",
+                                   trControl = metodo_treino_boot)
+
+# Fazendo a predição
+pred_boot_svmPoly = predict(modelo_boot_svmPoly,
+                                   teste)
+# Matriz de confusão para a amostra teste
+resultado_teste = caret::confusionMatrix(pred_boot_svmPoly,
+                                   teste$Sexo)
+resultado_teste
+
+```
+
+  Observa-se que o classificador criado utilizando os dados sem realizar as técnicas de pré-pocessamento obteve métricas maiores do que o criado utilizando, o que não era esperado. 
+  A etapa de pré-processamento foi realizada com o objetivo de melhorar a qualidade dos dados, mas mesmo assim, foi visto que o classificador criado sem utiliação dessas técnicas obteve um desempenho  melhor.
