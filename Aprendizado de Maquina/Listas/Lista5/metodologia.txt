@@ -1,0 +1,54 @@
+Podemos dividir o processimento realizado em 3 passos:
+
+passo 1, criação de algoritmo genético (script algoritmo_genetico) :
+
+Foi utilizado o procedimento de algoritmo genético para achar os máximos locais da função  3*acurácia+1.5*sensibilidade+1.5*especificidade dada um par de parâmetros
+mtry e ntree, para depois realizar crossvalidation.
+
+O procedimento de algoritmo genêtico realizam passos que tentam maximizar a fitness function, que no caso é a função citada anteriormente. Para isso foram criadas e utilizadas as seguintes funções:
+
+primeira_pop(tamanho, maximo = 5000,data = data_base) => Cria uma população inicial com o tamanho desejado que contem parâmetros ntree e mtry aleatórios.
+No caso de ntree, o máximo é programdo pelo usuário com um padrão de 5000, e no mtry o máximo é o número de colunas da base - 1. A função irá retornar n modelos
+de rf com os hyper parametros aleatórios.
+
+fitness_function(modelo) => função aplica a modelagem de rf para um modelo com mtry e ntree e retorna um data_frame com o mtree e ntry executados e o resultado da função
+3*acurácia+1.5*sensibilidade+1.5*especificidade.
+
+fitness_function_all(populacao) => Essa função exige uma lista de tamanho n de modelos de randomForest. Aplica o procedimento fitness_function(modelo) para cada modelo presente na lista
+e retorna um data_frame com as colunas mtree, ntry, resultado (função 3*acurácia+1.5*sensibilidade+1.5*especificidade) e prob atribui probabilides maiores para aqueles
+pares de hyper parametros com maior resultado.
+
+selecao(data) => exige um dataframe de tamanho n com a estrutra da saída da função anterior. Utilizando a coluna probabilidade, seleciona 2 pares de hyper parametros
+e os retorna na saida.
+
+crossover(data,n) => Com os pares de hyperparametros, será realizada uma nova população de tamanho n gerada da seguinte maneira: será sorteada um valor
+entre 0 e 1 e logo em seguida será realizada uma média ponderada com esse valor nos hyperparametros de entrada n vezes. Assim no final será retornada 
+uma nova população de tamanho n com novos valores de ntree e mtry.
+
+mutacao(data) => Função criada para ser utilizada logo após o procedimento anterior. Foi atribuido uma probabilidade de 5% para ocorrencia de uma mutação para cada 
+par de  hyperparametro. Uma mutação foi planejada da forma de soma ou subtração de um valor aleatório para mtry e ntree.
+
+treino_filhos(data) => Após a mutação, será aplicada a função treino_filhos, que realiza a modelagem para os n pares de hyperparametro e retornará uma lista 
+contendo o modelo de cada aplicação do par de hyper parametros.
+
+A execução do algoritmo foi escolhida para ser executada em populações de tamanho 10 e com somente 10 gerações. Foi escolhida dessa maneira pos o procedimento de molegam de rf exige um significante tempo de processamento.
+
+Escolhi não usar o set.seed() pois queria que o procedimento fosse o mais aleatório possível. Rodei 3 vezes e obitve 3 pares de hyperparametros que utilzei no passo seguinte
+
+passo 2, comparação de modelo (script comparacao):
+
+Com os 3 pares de hyper parametros gerados pelo processo anterior, foi realizado comparação para determinar qual modelo a ser escolhido. O modelo escolhido
+foi aquele com ntree= 4331 e mtry = 7.
+
+passo 3, geração de modelo , preprocessamento e função (script treino) :
+
+Após a escolha do par de hyper parametro citado no passo anterior, foi realizado procedimento de separação de amostra treino e teste e gerado em um arquivo Rdata 
+nomeado de lyncoln.Rdata que contem o preProcessamento realizado com minha amostra treino , meu modelo final e função que aplica o modelo no teste.
+
+Obtive: Accuracy : 0.962 ; Sensitivity : 0.9667; Specificity : 0.9592
+
+###### UTILIZAÇÃO PARA USUÁRIO #########
+Como o usuário deve utilizar a função => dar 2 cliques no arquivo lyncoln.Rdata para abrir o Rstudio e carregar os procedimentos. Logo depois utilizar a função aplica_pp_modelo() e escrever sua base de dados entre os ()
+
+
+
