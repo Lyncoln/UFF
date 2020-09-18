@@ -1,0 +1,10 @@
+name: Publish Document
+title:
+username:
+account: rpubs
+server: rpubs.com
+hostUrl: rpubs.com
+appId: https://api.rpubs.com/api/v1/document/661120/cd710be1abbe4dd8b1843942ed4af786
+bundleId: https://api.rpubs.com/api/v1/document/661120/cd710be1abbe4dd8b1843942ed4af786
+url: http://rpubs.com/Lyncoln/661120/edit
+when: 1600204253.0709
