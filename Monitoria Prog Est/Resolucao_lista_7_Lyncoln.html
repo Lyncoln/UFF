@@ -10,9 +10,8 @@
 
 <meta name="author" content="Lyncoln Sousa" />
 
-<meta name="date" content="2020-10-14" />
 
-<title>Lista 2 Programação Estatística</title>
+<title>Lista 7 Programação Estatística</title>
 
 <script>/*! jQuery v1.11.3 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org/license */
 !function(a,b){"object"==typeof module&&"object"==typeof module.exports?module.exports=a.document?b(a,!0):function(a){if(!a.document)throw new Error("jQuery requires a window with a document");return b(a)}:b(a)}("undefined"!=typeof window?window:this,function(a,b){var c=[],d=c.slice,e=c.concat,f=c.push,g=c.indexOf,h={},i=h.toString,j=h.hasOwnProperty,k={},l="1.11.3",m=function(a,b){return new m.fn.init(a,b)},n=/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,o=/^-ms-/,p=/-([\da-z])/gi,q=function(a,b){return b.toUpperCase()};m.fn=m.prototype={jquery:l,constructor:m,selector:"",length:0,toArray:function(){return d.call(this)},get:function(a){return null!=a?0>a?this[a+this.length]:this[a]:d.call(this)},pushStack:function(a){var b=m.merge(this.constructor(),a);return b.prevObject=this,b.context=this.context,b},each:function(a,b){return m.each(this,a,b)},map:function(a){return this.pushStack(m.map(this,function(b,c){return a.call(b,c,b)}))},slice:function(){return this.pushStack(d.apply(this,arguments))},first:function(){return this.eq(0)},last:function(){return this.eq(-1)},eq:function(a){var b=this.length,c=+a+(0>a?b:0);return this.pushStack(c>=0&&b>c?[this[c]]:[])},end:function(){return this.prevObject||this.constructor(null)},push:f,sort:c.sort,splice:c.splice},m.extend=m.fn.extend=function(){var a,b,c,d,e,f,g=arguments[0]||{},h=1,i=arguments.length,j=!1;for("boolean"==typeof g&&(j=g,g=arguments[h]||{},h++),"object"==typeof g||m.isFunction(g)||(g={}),h===i&&(g=this,h--);i>h;h++)if(null!=(e=arguments[h]))for(d in e)a=g[d],c=e[d],g!==c&&(j&&c&&(m.isPlainObject(c)||(b=m.isArray(c)))?(b?(b=!1,f=a&&m.isArray(a)?a:[]):f=a&&m.isPlainObject(a)?a:{},g[d]=m.extend(j,f,c)):void 0!==c&&(g[d]=c));return g},m.extend({expando:"jQuery"+(l+Math.random()).replace(/\D/g,""),isReady:!0,error:function(a){throw new Error(a)},noop:function(){},isFunction:function(a){return"function"===m.type(a)},isArray:Array.isArray||function(a){return"array"===m.type(a)},isWindow:function(a){return null!=a&&a==a.window},isNumeric:function(a){return!m.isArray(a)&&a-parseFloat(a)+1>=0},isEmptyObject:function(a){var b;for(b in a)return!1;return!0},isPlainObject:function(a){var b;if(!a||"object"!==m.type(a)||a.nodeType||m.isWindow(a))return!1;try{if(a.constructor&&!j.call(a,"constructor")&&!j.call(a.constructor.prototype,"isPrototypeOf"))return!1}catch(c){return!1}if(k.ownLast)for(b in a)return j.call(a,b);for(b in a);return void 0===b||j.call(a,b)},type:function(a){return null==a?a+"":"object"==typeof a||"function"==typeof a?h[i.call(a)]||"object":typeof a},globalEval:function(b){b&&m.trim(b)&&(a.execScript||function(b){a.eval.call(a,b)})(b)},camelCase:function(a){return a.replace(o,"ms-").replace(p,q)},nodeName:function(a,b){return a.nodeName&&a.nodeName.toLowerCase()===b.toLowerCase()},each:function(a,b,c){var d,e=0,f=a.length,g=r(a);if(c){if(g){for(;f>e;e++)if(d=b.apply(a[e],c),d===!1)break}else for(e in a)if(d=b.apply(a[e],c),d===!1)break}else if(g){for(;f>e;e++)if(d=b.call(a[e],e,a[e]),d===!1)break}else for(e in a)if(d=b.call(a[e],e,a[e]),d===!1)break;return a},trim:function(a){return null==a?"":(a+"").replace(n,"")},makeArray:function(a,b){var c=b||[];return null!=a&&(r(Object(a))?m.merge(c,"string"==typeof a?[a]:a):f.call(c,a)),c},inArray:function(a,b,c){var d;if(b){if(g)return g.call(b,a,c);for(d=b.length,c=c?0>c?Math.max(0,d+c):c:0;d>c;c++)if(c in b&&b[c]===a)return c}return-1},merge:function(a,b){var c=+b.length,d=0,e=a.length;while(c>d)a[e++]=b[d++];if(c!==c)while(void 0!==b[d])a[e++]=b[d++];return a.length=e,a},grep:function(a,b,c){for(var d,e=[],f=0,g=a.length,h=!c;g>f;f++)d=!b(a[f],f),d!==h&&e.push(a[f]);return e},map:function(a,b,c){var d,f=0,g=a.length,h=r(a),i=[];if(h)for(;g>f;f++)d=b(a[f],f,c),null!=d&&i.push(d);else for(f in a)d=b(a[f],f,c),null!=d&&i.push(d);return e.apply([],i)},guid:1,proxy:function(a,b){var c,e,f;return"string"==typeof b&&(f=a[b],b=a,a=f),m.isFunction(a)?(c=d.call(arguments,2),e=function(){return a.apply(b||this,c.concat(d.call(arguments)))},e.guid=a.guid=a.guid||m.guid++,e):void 0},now:function(){return+new Date},support:k}),m.each("Boolean Number String Function Array Date RegExp Object Error".split(" "),function(a,b){h["[object "+b+"]"]=b.toLowerCase()});function r(a){var b="length"in a&&a.length,c=m.type(a);return"function"===c||m.isWindow(a)?!1:1===a.nodeType&&b?!0:"array"===c||0===b||"number"==typeof b&&b>0&&b-1 in a}var s=function(a){var b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u="sizzle"+1*new Date,v=a.document,w=0,x=0,y=ha(),z=ha(),A=ha(),B=function(a,b){return a===b&&(l=!0),0},C=1<<31,D={}.hasOwnProperty,E=[],F=E.pop,G=E.push,H=E.push,I=E.slice,J=function(a,b){for(var c=0,d=a.length;d>c;c++)if(a[c]===b)return c;return-1},K="checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped",L="[\\x20\\t\\r\\n\\f]",M="(?:\\\\.|[\\w-]|[^\\x00-\\xa0])+",N=M.replace("w","w#"),O="\\["+L+"*("+M+")(?:"+L+"*([*^$|!~]?=)"+L+"*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|("+N+"))|)"+L+"*\\]",P=":("+M+")(?:\\((('((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\")|((?:\\\\.|[^\\\\()[\\]]|"+O+")*)|.*)\\)|)",Q=new RegExp(L+"+","g"),R=new RegExp("^"+L+"+|((?:^|[^\\\\])(?:\\\\.)*)"+L+"+$","g"),S=new RegExp("^"+L+"*,"+L+"*"),T=new RegExp("^"+L+"*([>+~]|"+L+")"+L+"*"),U=new RegExp("="+L+"*([^\\]'\"]*?)"+L+"*\\]","g"),V=new RegExp(P),W=new RegExp("^"+N+"$"),X={ID:new RegExp("^#("+M+")"),CLASS:new RegExp("^\\.("+M+")"),TAG:new RegExp("^("+M.replace("w","w*")+")"),ATTR:new RegExp("^"+O),PSEUDO:new RegExp("^"+P),CHILD:new RegExp("^:(only|first|last|nth|nth-last)-(child|of-type)(?:\\("+L+"*(even|odd|(([+-]|)(\\d*)n|)"+L+"*(?:([+-]|)"+L+"*(\\d+)|))"+L+"*\\)|)","i"),bool:new RegExp("^(?:"+K+")$","i"),needsContext:new RegExp("^"+L+"*[>+~]|:(even|odd|eq|gt|lt|nth|first|last)(?:\\("+L+"*((?:-\\d)?\\d*)"+L+"*\\)|)(?=[^-]|$)","i")},Y=/^(?:input|select|textarea|button)$/i,Z=/^h\d$/i,$=/^[^{]+\{\s*\[native \w/,_=/^(?:#([\w-]+)|(\w+)|\.([\w-]+))$/,aa=/[+~]/,ba=/'|\\/g,ca=new RegExp("\\\\([\\da-f]{1,6}"+L+"?|("+L+")|.)","ig"),da=function(a,b,c){var d="0x"+b-65536;return d!==d||c?b:0>d?String.fromCharCode(d+65536):String.fromCharCode(d>>10|55296,1023&d|56320)},ea=function(){m()};try{H.apply(E=I.call(v.childNodes),v.childNodes),E[v.childNodes.length].nodeType}catch(fa){H={apply:E.length?function(a,b){G.apply(a,I.call(b))}:function(a,b){var c=a.length,d=0;while(a[c++]=b[d++]);a.length=c-1}}}function ga(a,b,d,e){var f,h,j,k,l,o,r,s,w,x;if((b?b.ownerDocument||b:v)!==n&&m(b),b=b||n,d=d||[],k=b.nodeType,"string"!=typeof a||!a||1!==k&&9!==k&&11!==k)return d;if(!e&&p){if(11!==k&&(f=_.exec(a)))if(j=f[1]){if(9===k){if(h=b.getElementById(j),!h||!h.parentNode)return d;if(h.id===j)return d.push(h),d}else if(b.ownerDocument&&(h=b.ownerDocument.getElementById(j))&&t(b,h)&&h.id===j)return d.push(h),d}else{if(f[2])return H.apply(d,b.getElementsByTagName(a)),d;if((j=f[3])&&c.getElementsByClassName)return H.apply(d,b.getElementsByClassName(j)),d}if(c.qsa&&(!q||!q.test(a))){if(s=r=u,w=b,x=1!==k&&a,1===k&&"object"!==b.nodeName.toLowerCase()){o=g(a),(r=b.getAttribute("id"))?s=r.replace(ba,"\\$&"):b.setAttribute("id",s),s="[id='"+s+"'] ",l=o.length;while(l--)o[l]=s+ra(o[l]);w=aa.test(a)&&pa(b.parentNode)||b,x=o.join(",")}if(x)try{return H.apply(d,w.querySelectorAll(x)),d}catch(y){}finally{r||b.removeAttribute("id")}}}return i(a.replace(R,"$1"),b,d,e)}function ha(){var a=[];function b(c,e){return a.push(c+" ")>d.cacheLength&&delete b[a.shift()],b[c+" "]=e}return b}function ia(a){return a[u]=!0,a}function ja(a){var b=n.createElement("div");try{return!!a(b)}catch(c){return!1}finally{b.parentNode&&b.parentNode.removeChild(b),b=null}}function ka(a,b){var c=a.split("|"),e=a.length;while(e--)d.attrHandle[c[e]]=b}function la(a,b){var c=b&&a,d=c&&1===a.nodeType&&1===b.nodeType&&(~b.sourceIndex||C)-(~a.sourceIndex||C);if(d)return d;if(c)while(c=c.nextSibling)if(c===b)return-1;return a?1:-1}function ma(a){return function(b){var c=b.nodeName.toLowerCase();return"input"===c&&b.type===a}}function na(a){return function(b){var c=b.nodeName.toLowerCase();return("input"===c||"button"===c)&&b.type===a}}function oa(a){return ia(function(b){return b=+b,ia(function(c,d){var e,f=a([],c.length,b),g=f.length;while(g--)c[e=f[g]]&&(c[e]=!(d[e]=c[e]))})})}function pa(a){return a&&"undefined"!=typeof a.getElementsByTagName&&a}c=ga.support={},f=ga.isXML=function(a){var b=a&&(a.ownerDocument||a).documentElement;return b?"HTML"!==b.nodeName:!1},m=ga.setDocument=function(a){var b,e,g=a?a.ownerDocument||a:v;return g!==n&&9===g.nodeType&&g.documentElement?(n=g,o=g.documentElement,e=g.defaultView,e&&e!==e.top&&(e.addEventListener?e.addEventListener("unload",ea,!1):e.attachEvent&&e.attachEvent("onunload",ea)),p=!f(g),c.attributes=ja(function(a){return a.className="i",!a.getAttribute("className")}),c.getElementsByTagName=ja(function(a){return a.appendChild(g.createComment("")),!a.getElementsByTagName("*").length}),c.getElementsByClassName=$.test(g.getElementsByClassName),c.getById=ja(function(a){return o.appendChild(a).id=u,!g.getElementsByName||!g.getElementsByName(u).length}),c.getById?(d.find.ID=function(a,b){if("undefined"!=typeof b.getElementById&&p){var c=b.getElementById(a);return c&&c.parentNode?[c]:[]}},d.filter.ID=function(a){var b=a.replace(ca,da);return function(a){return a.getAttribute("id")===b}}):(delete d.find.ID,d.filter.ID=function(a){var b=a.replace(ca,da);return function(a){var c="undefined"!=typeof a.getAttributeNode&&a.getAttributeNode("id");return c&&c.value===b}}),d.find.TAG=c.getElementsByTagName?function(a,b){return"undefined"!=typeof b.getElementsByTagName?b.getElementsByTagName(a):c.qsa?b.querySelectorAll(a):void 0}:function(a,b){var c,d=[],e=0,f=b.getElementsByTagName(a);if("*"===a){while(c=f[e++])1===c.nodeType&&d.push(c);return d}return f},d.find.CLASS=c.getElementsByClassName&&function(a,b){return p?b.getElementsByClassName(a):void 0},r=[],q=[],(c.qsa=$.test(g.querySelectorAll))&&(ja(function(a){o.appendChild(a).innerHTML="<a id='"+u+"'></a><select id='"+u+"-\f]' msallowcapture=''><option selected=''></option></select>",a.querySelectorAll("[msallowcapture^='']").length&&q.push("[*^$]="+L+"*(?:''|\"\")"),a.querySelectorAll("[selected]").length||q.push("\\["+L+"*(?:value|"+K+")"),a.querySelectorAll("[id~="+u+"-]").length||q.push("~="),a.querySelectorAll(":checked").length||q.push(":checked"),a.querySelectorAll("a#"+u+"+*").length||q.push(".#.+[+~]")}),ja(function(a){var b=g.createElement("input");b.setAttribute("type","hidden"),a.appendChild(b).setAttribute("name","D"),a.querySelectorAll("[name=d]").length&&q.push("name"+L+"*[*^$|!~]?="),a.querySelectorAll(":enabled").length||q.push(":enabled",":disabled"),a.querySelectorAll("*,:x"),q.push(",.*:")})),(c.matchesSelector=$.test(s=o.matches||o.webkitMatchesSelector||o.mozMatchesSelector||o.oMatchesSelector||o.msMatchesSelector))&&ja(function(a){c.disconnectedMatch=s.call(a,"div"),s.call(a,"[s!='']:x"),r.push("!=",P)}),q=q.length&&new RegExp(q.join("|")),r=r.length&&new RegExp(r.join("|")),b=$.test(o.compareDocumentPosition),t=b||$.test(o.contains)?function(a,b){var c=9===a.nodeType?a.documentElement:a,d=b&&b.parentNode;return a===d||!(!d||1!==d.nodeType||!(c.contains?c.contains(d):a.compareDocumentPosition&&16&a.compareDocumentPosition(d)))}:function(a,b){if(b)while(b=b.parentNode)if(b===a)return!0;return!1},B=b?function(a,b){if(a===b)return l=!0,0;var d=!a.compareDocumentPosition-!b.compareDocumentPosition;return d?d:(d=(a.ownerDocument||a)===(b.ownerDocument||b)?a.compareDocumentPosition(b):1,1&d||!c.sortDetached&&b.compareDocumentPosition(a)===d?a===g||a.ownerDocument===v&&t(v,a)?-1:b===g||b.ownerDocument===v&&t(v,b)?1:k?J(k,a)-J(k,b):0:4&d?-1:1)}:function(a,b){if(a===b)return l=!0,0;var c,d=0,e=a.parentNode,f=b.parentNode,h=[a],i=[b];if(!e||!f)return a===g?-1:b===g?1:e?-1:f?1:k?J(k,a)-J(k,b):0;if(e===f)return la(a,b);c=a;while(c=c.parentNode)h.unshift(c);c=b;while(c=c.parentNode)i.unshift(c);while(h[d]===i[d])d++;return d?la(h[d],i[d]):h[d]===v?-1:i[d]===v?1:0},g):n},ga.matches=function(a,b){return ga(a,null,null,b)},ga.matchesSelector=function(a,b){if((a.ownerDocument||a)!==n&&m(a),b=b.replace(U,"='$1']"),!(!c.matchesSelector||!p||r&&r.test(b)||q&&q.test(b)))try{var d=s.call(a,b);if(d||c.disconnectedMatch||a.document&&11!==a.document.nodeType)return d}catch(e){}return ga(b,n,null,[a]).length>0},ga.contains=function(a,b){return(a.ownerDocument||a)!==n&&m(a),t(a,b)},ga.attr=function(a,b){(a.ownerDocument||a)!==n&&m(a);var e=d.attrHandle[b.toLowerCase()],f=e&&D.call(d.attrHandle,b.toLowerCase())?e(a,b,!p):void 0;return void 0!==f?f:c.attributes||!p?a.getAttribute(b):(f=a.getAttributeNode(b))&&f.specified?f.value:null},ga.error=function(a){throw new Error("Syntax error, unrecognized expression: "+a)},ga.uniqueSort=function(a){var b,d=[],e=0,f=0;if(l=!c.detectDuplicates,k=!c.sortStable&&a.slice(0),a.sort(B),l){while(b=a[f++])b===a[f]&&(e=d.push(f));while(e--)a.splice(d[e],1)}return k=null,a},e=ga.getText=function(a){var b,c="",d=0,f=a.nodeType;if(f){if(1===f||9===f||11===f){if("string"==typeof a.textContent)return a.textContent;for(a=a.firstChild;a;a=a.nextSibling)c+=e(a)}else if(3===f||4===f)return a.nodeValue}else while(b=a[d++])c+=e(b);return c},d=ga.selectors={cacheLength:50,createPseudo:ia,match:X,attrHandle:{},find:{},relative:{">":{dir:"parentNode",first:!0}," ":{dir:"parentNode"},"+":{dir:"previousSibling",first:!0},"~":{dir:"previousSibling"}},preFilter:{ATTR:function(a){return a[1]=a[1].replace(ca,da),a[3]=(a[3]||a[4]||a[5]||"").replace(ca,da),"~="===a[2]&&(a[3]=" "+a[3]+" "),a.slice(0,4)},CHILD:function(a){return a[1]=a[1].toLowerCase(),"nth"===a[1].slice(0,3)?(a[3]||ga.error(a[0]),a[4]=+(a[4]?a[5]+(a[6]||1):2*("even"===a[3]||"odd"===a[3])),a[5]=+(a[7]+a[8]||"odd"===a[3])):a[3]&&ga.error(a[0]),a},PSEUDO:function(a){var b,c=!a[6]&&a[2];return X.CHILD.test(a[0])?null:(a[3]?a[2]=a[4]||a[5]||"":c&&V.test(c)&&(b=g(c,!0))&&(b=c.indexOf(")",c.length-b)-c.length)&&(a[0]=a[0].slice(0,b),a[2]=c.slice(0,b)),a.slice(0,3))}},filter:{TAG:function(a){var b=a.replace(ca,da).toLowerCase();return"*"===a?function(){return!0}:function(a){return a.nodeName&&a.nodeName.toLowerCase()===b}},CLASS:function(a){var b=y[a+" "];return b||(b=new RegExp("(^|"+L+")"+a+"("+L+"|$)"))&&y(a,function(a){return b.test("string"==typeof a.className&&a.className||"undefined"!=typeof a.getAttribute&&a.getAttribute("class")||"")})},ATTR:function(a,b,c){return function(d){var e=ga.attr(d,a);return null==e?"!="===b:b?(e+="","="===b?e===c:"!="===b?e!==c:"^="===b?c&&0===e.indexOf(c):"*="===b?c&&e.indexOf(c)>-1:"$="===b?c&&e.slice(-c.length)===c:"~="===b?(" "+e.replace(Q," ")+" ").indexOf(c)>-1:"|="===b?e===c||e.slice(0,c.length+1)===c+"-":!1):!0}},CHILD:function(a,b,c,d,e){var f="nth"!==a.slice(0,3),g="last"!==a.slice(-4),h="of-type"===b;return 1===d&&0===e?function(a){return!!a.parentNode}:function(b,c,i){var j,k,l,m,n,o,p=f!==g?"nextSibling":"previousSibling",q=b.parentNode,r=h&&b.nodeName.toLowerCase(),s=!i&&!h;if(q){if(f){while(p){l=b;while(l=l[p])if(h?l.nodeName.toLowerCase()===r:1===l.nodeType)return!1;o=p="only"===a&&!o&&"nextSibling"}return!0}if(o=[g?q.firstChild:q.lastChild],g&&s){k=q[u]||(q[u]={}),j=k[a]||[],n=j[0]===w&&j[1],m=j[0]===w&&j[2],l=n&&q.childNodes[n];while(l=++n&&l&&l[p]||(m=n=0)||o.pop())if(1===l.nodeType&&++m&&l===b){k[a]=[w,n,m];break}}else if(s&&(j=(b[u]||(b[u]={}))[a])&&j[0]===w)m=j[1];else while(l=++n&&l&&l[p]||(m=n=0)||o.pop())if((h?l.nodeName.toLowerCase()===r:1===l.nodeType)&&++m&&(s&&((l[u]||(l[u]={}))[a]=[w,m]),l===b))break;return m-=e,m===d||m%d===0&&m/d>=0}}},PSEUDO:function(a,b){var c,e=d.pseudos[a]||d.setFilters[a.toLowerCase()]||ga.error("unsupported pseudo: "+a);return e[u]?e(b):e.length>1?(c=[a,a,"",b],d.setFilters.hasOwnProperty(a.toLowerCase())?ia(function(a,c){var d,f=e(a,b),g=f.length;while(g--)d=J(a,f[g]),a[d]=!(c[d]=f[g])}):function(a){return e(a,0,c)}):e}},pseudos:{not:ia(function(a){var b=[],c=[],d=h(a.replace(R,"$1"));return d[u]?ia(function(a,b,c,e){var f,g=d(a,null,e,[]),h=a.length;while(h--)(f=g[h])&&(a[h]=!(b[h]=f))}):function(a,e,f){return b[0]=a,d(b,null,f,c),b[0]=null,!c.pop()}}),has:ia(function(a){return function(b){return ga(a,b).length>0}}),contains:ia(function(a){return a=a.replace(ca,da),function(b){return(b.textContent||b.innerText||e(b)).indexOf(a)>-1}}),lang:ia(function(a){return W.test(a||"")||ga.error("unsupported lang: "+a),a=a.replace(ca,da).toLowerCase(),function(b){var c;do if(c=p?b.lang:b.getAttribute("xml:lang")||b.getAttribute("lang"))return c=c.toLowerCase(),c===a||0===c.indexOf(a+"-");while((b=b.parentNode)&&1===b.nodeType);return!1}}),target:function(b){var c=a.location&&a.location.hash;return c&&c.slice(1)===b.id},root:function(a){return a===o},focus:function(a){return a===n.activeElement&&(!n.hasFocus||n.hasFocus())&&!!(a.type||a.href||~a.tabIndex)},enabled:function(a){return a.disabled===!1},disabled:function(a){return a.disabled===!0},checked:function(a){var b=a.nodeName.toLowerCase();return"input"===b&&!!a.checked||"option"===b&&!!a.selected},selected:function(a){return a.parentNode&&a.parentNode.selectedIndex,a.selected===!0},empty:function(a){for(a=a.firstChild;a;a=a.nextSibling)if(a.nodeType<6)return!1;return!0},parent:function(a){return!d.pseudos.empty(a)},header:function(a){return Z.test(a.nodeName)},input:function(a){return Y.test(a.nodeName)},button:function(a){var b=a.nodeName.toLowerCase();return"input"===b&&"button"===a.type||"button"===b},text:function(a){var b;return"input"===a.nodeName.toLowerCase()&&"text"===a.type&&(null==(b=a.getAttribute("type"))||"text"===b.toLowerCase())},first:oa(function(){return[0]}),last:oa(function(a,b){return[b-1]}),eq:oa(function(a,b,c){return[0>c?c+b:c]}),even:oa(function(a,b){for(var c=0;b>c;c+=2)a.push(c);return a}),odd:oa(function(a,b){for(var c=1;b>c;c+=2)a.push(c);return a}),lt:oa(function(a,b,c){for(var d=0>c?c+b:c;--d>=0;)a.push(d);return a}),gt:oa(function(a,b,c){for(var d=0>c?c+b:c;++d<b;)a.push(d);return a})}},d.pseudos.nth=d.pseudos.eq;for(b in{radio:!0,checkbox:!0,file:!0,password:!0,image:!0})d.pseudos[b]=ma(b);for(b in{submit:!0,reset:!0})d.pseudos[b]=na(b);function qa(){}qa.prototype=d.filters=d.pseudos,d.setFilters=new qa,g=ga.tokenize=function(a,b){var c,e,f,g,h,i,j,k=z[a+" "];if(k)return b?0:k.slice(0);h=a,i=[],j=d.preFilter;while(h){(!c||(e=S.exec(h)))&&(e&&(h=h.slice(e[0].length)||h),i.push(f=[])),c=!1,(e=T.exec(h))&&(c=e.shift(),f.push({value:c,type:e[0].replace(R," ")}),h=h.slice(c.length));for(g in d.filter)!(e=X[g].exec(h))||j[g]&&!(e=j[g](e))||(c=e.shift(),f.push({value:c,type:g,matches:e}),h=h.slice(c.length));if(!c)break}return b?h.length:h?ga.error(a):z(a,i).slice(0)};function ra(a){for(var b=0,c=a.length,d="";c>b;b++)d+=a[b].value;return d}function sa(a,b,c){var d=b.dir,e=c&&"parentNode"===d,f=x++;return b.first?function(b,c,f){while(b=b[d])if(1===b.nodeType||e)return a(b,c,f)}:function(b,c,g){var h,i,j=[w,f];if(g){while(b=b[d])if((1===b.nodeType||e)&&a(b,c,g))return!0}else while(b=b[d])if(1===b.nodeType||e){if(i=b[u]||(b[u]={}),(h=i[d])&&h[0]===w&&h[1]===f)return j[2]=h[2];if(i[d]=j,j[2]=a(b,c,g))return!0}}}function ta(a){return a.length>1?function(b,c,d){var e=a.length;while(e--)if(!a[e](b,c,d))return!1;return!0}:a[0]}function ua(a,b,c){for(var d=0,e=b.length;e>d;d++)ga(a,b[d],c);return c}function va(a,b,c,d,e){for(var f,g=[],h=0,i=a.length,j=null!=b;i>h;h++)(f=a[h])&&(!c||c(f,d,e))&&(g.push(f),j&&b.push(h));return g}function wa(a,b,c,d,e,f){return d&&!d[u]&&(d=wa(d)),e&&!e[u]&&(e=wa(e,f)),ia(function(f,g,h,i){var j,k,l,m=[],n=[],o=g.length,p=f||ua(b||"*",h.nodeType?[h]:h,[]),q=!a||!f&&b?p:va(p,m,a,h,i),r=c?e||(f?a:o||d)?[]:g:q;if(c&&c(q,r,h,i),d){j=va(r,n),d(j,[],h,i),k=j.length;while(k--)(l=j[k])&&(r[n[k]]=!(q[n[k]]=l))}if(f){if(e||a){if(e){j=[],k=r.length;while(k--)(l=r[k])&&j.push(q[k]=l);e(null,r=[],j,i)}k=r.length;while(k--)(l=r[k])&&(j=e?J(f,l):m[k])>-1&&(f[j]=!(g[j]=l))}}else r=va(r===g?r.splice(o,r.length):r),e?e(null,g,r,i):H.apply(g,r)})}function xa(a){for(var b,c,e,f=a.length,g=d.relative[a[0].type],h=g||d.relative[" "],i=g?1:0,k=sa(function(a){return a===b},h,!0),l=sa(function(a){return J(b,a)>-1},h,!0),m=[function(a,c,d){var e=!g&&(d||c!==j)||((b=c).nodeType?k(a,c,d):l(a,c,d));return b=null,e}];f>i;i++)if(c=d.relative[a[i].type])m=[sa(ta(m),c)];else{if(c=d.filter[a[i].type].apply(null,a[i].matches),c[u]){for(e=++i;f>e;e++)if(d.relative[a[e].type])break;return wa(i>1&&ta(m),i>1&&ra(a.slice(0,i-1).concat({value:" "===a[i-2].type?"*":""})).replace(R,"$1"),c,e>i&&xa(a.slice(i,e)),f>e&&xa(a=a.slice(e)),f>e&&ra(a))}m.push(c)}return ta(m)}function ya(a,b){var c=b.length>0,e=a.length>0,f=function(f,g,h,i,k){var l,m,o,p=0,q="0",r=f&&[],s=[],t=j,u=f||e&&d.find.TAG("*",k),v=w+=null==t?1:Math.random()||.1,x=u.length;for(k&&(j=g!==n&&g);q!==x&&null!=(l=u[q]);q++){if(e&&l){m=0;while(o=a[m++])if(o(l,g,h)){i.push(l);break}k&&(w=v)}c&&((l=!o&&l)&&p--,f&&r.push(l))}if(p+=q,c&&q!==p){m=0;while(o=b[m++])o(r,s,g,h);if(f){if(p>0)while(q--)r[q]||s[q]||(s[q]=F.call(i));s=va(s)}H.apply(i,s),k&&!f&&s.length>0&&p+b.length>1&&ga.uniqueSort(i)}return k&&(w=v,j=t),r};return c?ia(f):f}return h=ga.compile=function(a,b){var c,d=[],e=[],f=A[a+" "];if(!f){b||(b=g(a)),c=b.length;while(c--)f=xa(b[c]),f[u]?d.push(f):e.push(f);f=A(a,ya(e,d)),f.selector=a}return f},i=ga.select=function(a,b,e,f){var i,j,k,l,m,n="function"==typeof a&&a,o=!f&&g(a=n.selector||a);if(e=e||[],1===o.length){if(j=o[0]=o[0].slice(0),j.length>2&&"ID"===(k=j[0]).type&&c.getById&&9===b.nodeType&&p&&d.relative[j[1].type]){if(b=(d.find.ID(k.matches[0].replace(ca,da),b)||[])[0],!b)return e;n&&(b=b.parentNode),a=a.slice(j.shift().value.length)}i=X.needsContext.test(a)?0:j.length;while(i--){if(k=j[i],d.relative[l=k.type])break;if((m=d.find[l])&&(f=m(k.matches[0].replace(ca,da),aa.test(j[0].type)&&pa(b.parentNode)||b))){if(j.splice(i,1),a=f.length&&ra(j),!a)return H.apply(e,f),e;break}}}return(n||h(a,o))(f,b,!p,e,aa.test(a)&&pa(b.parentNode)||b),e},c.sortStable=u.split("").sort(B).join("")===u,c.detectDuplicates=!!l,m(),c.sortDetached=ja(function(a){return 1&a.compareDocumentPosition(n.createElement("div"))}),ja(function(a){return a.innerHTML="<a href='#'></a>","#"===a.firstChild.getAttribute("href")})||ka("type|href|height|width",function(a,b,c){return c?void 0:a.getAttribute(b,"type"===b.toLowerCase()?1:2)}),c.attributes&&ja(function(a){return a.innerHTML="<input/>",a.firstChild.setAttribute("value",""),""===a.firstChild.getAttribute("value")})||ka("value",function(a,b,c){return c||"input"!==a.nodeName.toLowerCase()?void 0:a.defaultValue}),ja(function(a){return null==a.getAttribute("disabled")})||ka(K,function(a,b,c){var d;return c?void 0:a[b]===!0?b.toLowerCase():(d=a.getAttributeNode(b))&&d.specified?d.value:null}),ga}(a);m.find=s,m.expr=s.selectors,m.expr[":"]=m.expr.pseudos,m.unique=s.uniqueSort,m.text=s.getText,m.isXMLDoc=s.isXML,m.contains=s.contains;var t=m.expr.match.needsContext,u=/^<(\w+)\s*\/?>(?:<\/\1>|)$/,v=/^.[^:#\[\.,]*$/;function w(a,b,c){if(m.isFunction(b))return m.grep(a,function(a,d){return!!b.call(a,d,a)!==c});if(b.nodeType)return m.grep(a,function(a){return a===b!==c});if("string"==typeof b){if(v.test(b))return m.filter(b,a,c);b=m.filter(b,a)}return m.grep(a,function(a){return m.inArray(a,b)>=0!==c})}m.filter=function(a,b,c){var d=b[0];return c&&(a=":not("+a+")"),1===b.length&&1===d.nodeType?m.find.matchesSelector(d,a)?[d]:[]:m.find.matches(a,m.grep(b,function(a){return 1===a.nodeType}))},m.fn.extend({find:function(a){var b,c=[],d=this,e=d.length;if("string"!=typeof a)return this.pushStack(m(a).filter(function(){for(b=0;e>b;b++)if(m.contains(d[b],this))return!0}));for(b=0;e>b;b++)m.find(a,d[b],c);return c=this.pushStack(e>1?m.unique(c):c),c.selector=this.selector?this.selector+" "+a:a,c},filter:function(a){return this.pushStack(w(this,a||[],!1))},not:function(a){return this.pushStack(w(this,a||[],!0))},is:function(a){return!!w(this,"string"==typeof a&&t.test(a)?m(a):a||[],!1).length}});var x,y=a.document,z=/^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]*))$/,A=m.fn.init=function(a,b){var c,d;if(!a)return this;if("string"==typeof a){if(c="<"===a.charAt(0)&&">"===a.charAt(a.length-1)&&a.length>=3?[null,a,null]:z.exec(a),!c||!c[1]&&b)return!b||b.jquery?(b||x).find(a):this.constructor(b).find(a);if(c[1]){if(b=b instanceof m?b[0]:b,m.merge(this,m.parseHTML(c[1],b&&b.nodeType?b.ownerDocument||b:y,!0)),u.test(c[1])&&m.isPlainObject(b))for(c in b)m.isFunction(this[c])?this[c](b[c]):this.attr(c,b[c]);return this}if(d=y.getElementById(c[2]),d&&d.parentNode){if(d.id!==c[2])return x.find(a);this.length=1,this[0]=d}return this.context=y,this.selector=a,this}return a.nodeType?(this.context=this[0]=a,this.length=1,this):m.isFunction(a)?"undefined"!=typeof x.ready?x.ready(a):a(m):(void 0!==a.selector&&(this.selector=a.selector,this.context=a.context),m.makeArray(a,this))};A.prototype=m.fn,x=m(y);var B=/^(?:parents|prev(?:Until|All))/,C={children:!0,contents:!0,next:!0,prev:!0};m.extend({dir:function(a,b,c){var d=[],e=a[b];while(e&&9!==e.nodeType&&(void 0===c||1!==e.nodeType||!m(e).is(c)))1===e.nodeType&&d.push(e),e=e[b];return d},sibling:function(a,b){for(var c=[];a;a=a.nextSibling)1===a.nodeType&&a!==b&&c.push(a);return c}}),m.fn.extend({has:function(a){var b,c=m(a,this),d=c.length;return this.filter(function(){for(b=0;d>b;b++)if(m.contains(this,c[b]))return!0})},closest:function(a,b){for(var c,d=0,e=this.length,f=[],g=t.test(a)||"string"!=typeof a?m(a,b||this.context):0;e>d;d++)for(c=this[d];c&&c!==b;c=c.parentNode)if(c.nodeType<11&&(g?g.index(c)>-1:1===c.nodeType&&m.find.matchesSelector(c,a))){f.push(c);break}return this.pushStack(f.length>1?m.unique(f):f)},index:function(a){return a?"string"==typeof a?m.inArray(this[0],m(a)):m.inArray(a.jquery?a[0]:a,this):this[0]&&this[0].parentNode?this.first().prevAll().length:-1},add:function(a,b){return this.pushStack(m.unique(m.merge(this.get(),m(a,b))))},addBack:function(a){return this.add(null==a?this.prevObject:this.prevObject.filter(a))}});function D(a,b){do a=a[b];while(a&&1!==a.nodeType);return a}m.each({parent:function(a){var b=a.parentNode;return b&&11!==b.nodeType?b:null},parents:function(a){return m.dir(a,"parentNode")},parentsUntil:function(a,b,c){return m.dir(a,"parentNode",c)},next:function(a){return D(a,"nextSibling")},prev:function(a){return D(a,"previousSibling")},nextAll:function(a){return m.dir(a,"nextSibling")},prevAll:function(a){return m.dir(a,"previousSibling")},nextUntil:function(a,b,c){return m.dir(a,"nextSibling",c)},prevUntil:function(a,b,c){return m.dir(a,"previousSibling",c)},siblings:function(a){return m.sibling((a.parentNode||{}).firstChild,a)},children:function(a){return m.sibling(a.firstChild)},contents:function(a){return m.nodeName(a,"iframe")?a.contentDocument||a.contentWindow.document:m.merge([],a.childNodes)}},function(a,b){m.fn[a]=function(c,d){var e=m.map(this,b,c);return"Until"!==a.slice(-5)&&(d=c),d&&"string"==typeof d&&(e=m.filter(d,e)),this.length>1&&(C[a]||(e=m.unique(e)),B.test(a)&&(e=e.reverse())),this.pushStack(e)}});var E=/\S+/g,F={};function G(a){var b=F[a]={};return m.each(a.match(E)||[],function(a,c){b[c]=!0}),b}m.Callbacks=function(a){a="string"==typeof a?F[a]||G(a):m.extend({},a);var b,c,d,e,f,g,h=[],i=!a.once&&[],j=function(l){for(c=a.memory&&l,d=!0,f=g||0,g=0,e=h.length,b=!0;h&&e>f;f++)if(h[f].apply(l[0],l[1])===!1&&a.stopOnFalse){c=!1;break}b=!1,h&&(i?i.length&&j(i.shift()):c?h=[]:k.disable())},k={add:function(){if(h){var d=h.length;!function f(b){m.each(b,function(b,c){var d=m.type(c);"function"===d?a.unique&&k.has(c)||h.push(c):c&&c.length&&"string"!==d&&f(c)})}(arguments),b?e=h.length:c&&(g=d,j(c))}return this},remove:function(){return h&&m.each(arguments,function(a,c){var d;while((d=m.inArray(c,h,d))>-1)h.splice(d,1),b&&(e>=d&&e--,f>=d&&f--)}),this},has:function(a){return a?m.inArray(a,h)>-1:!(!h||!h.length)},empty:function(){return h=[],e=0,this},disable:function(){return h=i=c=void 0,this},disabled:function(){return!h},lock:function(){return i=void 0,c||k.disable(),this},locked:function(){return!i},fireWith:function(a,c){return!h||d&&!i||(c=c||[],c=[a,c.slice?c.slice():c],b?i.push(c):j(c)),this},fire:function(){return k.fireWith(this,arguments),this},fired:function(){return!!d}};return k},m.extend({Deferred:function(a){var b=[["resolve","done",m.Callbacks("once memory"),"resolved"],["reject","fail",m.Callbacks("once memory"),"rejected"],["notify","progress",m.Callbacks("memory")]],c="pending",d={state:function(){return c},always:function(){return e.done(arguments).fail(arguments),this},then:function(){var a=arguments;return m.Deferred(function(c){m.each(b,function(b,f){var g=m.isFunction(a[b])&&a[b];e[f[1]](function(){var a=g&&g.apply(this,arguments);a&&m.isFunction(a.promise)?a.promise().done(c.resolve).fail(c.reject).progress(c.notify):c[f[0]+"With"](this===d?c.promise():this,g?[a]:arguments)})}),a=null}).promise()},promise:function(a){return null!=a?m.extend(a,d):d}},e={};return d.pipe=d.then,m.each(b,function(a,f){var g=f[2],h=f[3];d[f[1]]=g.add,h&&g.add(function(){c=h},b[1^a][2].disable,b[2][2].lock),e[f[0]]=function(){return e[f[0]+"With"](this===e?d:this,arguments),this},e[f[0]+"With"]=g.fireWith}),d.promise(e),a&&a.call(e,e),e},when:function(a){var b=0,c=d.call(arguments),e=c.length,f=1!==e||a&&m.isFunction(a.promise)?e:0,g=1===f?a:m.Deferred(),h=function(a,b,c){return function(e){b[a]=this,c[a]=arguments.length>1?d.call(arguments):e,c===i?g.notifyWith(b,c):--f||g.resolveWith(b,c)}},i,j,k;if(e>1)for(i=new Array(e),j=new Array(e),k=new Array(e);e>b;b++)c[b]&&m.isFunction(c[b].promise)?c[b].promise().done(h(b,k,c)).fail(g.reject).progress(h(b,j,i)):--f;return f||g.resolveWith(k,c),g.promise()}});var H;m.fn.ready=function(a){return m.ready.promise().done(a),this},m.extend({isReady:!1,readyWait:1,holdReady:function(a){a?m.readyWait++:m.ready(!0)},ready:function(a){if(a===!0?!--m.readyWait:!m.isReady){if(!y.body)return setTimeout(m.ready);m.isReady=!0,a!==!0&&--m.readyWait>0||(H.resolveWith(y,[m]),m.fn.triggerHandler&&(m(y).triggerHandler("ready"),m(y).off("ready")))}}});function I(){y.addEventListener?(y.removeEventListener("DOMContentLoaded",J,!1),a.removeEventListener("load",J,!1)):(y.detachEvent("onreadystatechange",J),a.detachEvent("onload",J))}function J(){(y.addEventListener||"load"===event.type||"complete"===y.readyState)&&(I(),m.ready())}m.ready.promise=function(b){if(!H)if(H=m.Deferred(),"complete"===y.readyState)setTimeout(m.ready);else if(y.addEventListener)y.addEventListener("DOMContentLoaded",J,!1),a.addEventListener("load",J,!1);else{y.attachEvent("onreadystatechange",J),a.attachEvent("onload",J);var c=!1;try{c=null==a.frameElement&&y.documentElement}catch(d){}c&&c.doScroll&&!function e(){if(!m.isReady){try{c.doScroll("left")}catch(a){return setTimeout(e,50)}I(),m.ready()}}()}return H.promise(b)};var K="undefined",L;for(L in m(k))break;k.ownLast="0"!==L,k.inlineBlockNeedsLayout=!1,m(function(){var a,b,c,d;c=y.getElementsByTagName("body")[0],c&&c.style&&(b=y.createElement("div"),d=y.createElement("div"),d.style.cssText="position:absolute;border:0;width:0;height:0;top:0;left:-9999px",c.appendChild(d).appendChild(b),typeof b.style.zoom!==K&&(b.style.cssText="display:inline;margin:0;border:0;padding:1px;width:1px;zoom:1",k.inlineBlockNeedsLayout=a=3===b.offsetWidth,a&&(c.style.zoom=1)),c.removeChild(d))}),function(){var a=y.createElement("div");if(null==k.deleteExpando){k.deleteExpando=!0;try{delete a.test}catch(b){k.deleteExpando=!1}}a=null}(),m.acceptData=function(a){var b=m.noData[(a.nodeName+" ").toLowerCase()],c=+a.nodeType||1;return 1!==c&&9!==c?!1:!b||b!==!0&&a.getAttribute("classid")===b};var M=/^(?:\{[\w\W]*\}|\[[\w\W]*\])$/,N=/([A-Z])/g;function O(a,b,c){if(void 0===c&&1===a.nodeType){var d="data-"+b.replace(N,"-$1").toLowerCase();if(c=a.getAttribute(d),"string"==typeof c){try{c="true"===c?!0:"false"===c?!1:"null"===c?null:+c+""===c?+c:M.test(c)?m.parseJSON(c):c}catch(e){}m.data(a,b,c)}else c=void 0}return c}function P(a){var b;for(b in a)if(("data"!==b||!m.isEmptyObject(a[b]))&&"toJSON"!==b)return!1;
@@ -1593,822 +1592,310 @@ $(document).ready(function () {
 
 
 <div id="header">
-<h1 class="title">Lista 2 Programação Estatística</h1>
+<h1 class="title">Lista 7 Programação Estatística</h1>
 </div>
 
 
 <div id="sidebar">
-    <h2><a href="#content">Lista 2 Programação Estatística</a></h2>
+    <h2><a href="#content">Lista 7 Programação Estatística</a></h2>
     <div id="table-of-contents">
       <ul>
       <li><a href="#section">1)</a></li>
-      <li><a href="#section-1">2)</a><ul>
+      <li><a href="#section-1">2)</a></li>
+      <li><a href="#section-2">3)</a><ul>
       <li><a href="#a">a)</a></li>
       <li><a href="#b">b)</a></li>
       <li><a href="#c">c)</a></li>
       </ul></li>
-      <li><a href="#section-2">3)</a><ul>
+      <li><a href="#section-3">4)</a></li>
+      <li><a href="#section-4">5)</a><ul>
       <li><a href="#a-1">a)</a></li>
       <li><a href="#b-1">b)</a></li>
       <li><a href="#c-1">c)</a></li>
       </ul></li>
-      <li><a href="#section-3">4)</a><ul>
+      <li><a href="#section-5">6)</a><ul>
       <li><a href="#a-2">a)</a></li>
       <li><a href="#b-2">b)</a></li>
-      <li><a href="#c-2">c)</a></li>
-      <li><a href="#d">d)</a></li>
       </ul></li>
-      <li><a href="#section-4">5)</a><ul>
+      <li><a href="#section-6">7)</a><ul>
       <li><a href="#a-3">a)</a></li>
       <li><a href="#b-3">b)</a></li>
       </ul></li>
-      <li><a href="#section-5">6)</a><ul>
+      <li><a href="#section-7">8)</a><ul>
       <li><a href="#a-4">a)</a></li>
       <li><a href="#b-4">b)</a></li>
-      <li><a href="#c-3">c)</a></li>
-      <li><a href="#d-1">d)</a></li>
-      <li><a href="#e">e)</a></li>
+      <li><a href="#c-2">c)</a></li>
       </ul></li>
-      <li><a href="#section-6">7)</a><ul>
-      <li><a href="#a-5">a)</a></li>
-      <li><a href="#b-5">b)</a></li>
-      </ul></li>
-      <li><a href="#section-7">8)</a><ul>
-      <li><a href="#a-6">a)</a></li>
-      <li><a href="#b-6">b)</a></li>
-      <li><a href="#c-4">c)</a></li>
-      </ul></li>
-      <li><a href="#section-8">9)</a><ul>
-      <li><a href="#a-7">a)</a></li>
-      <li><a href="#b-7">b)</a></li>
-      <li><a href="#c-5">c)</a></li>
-      <li><a href="#d-2">d)</a></li>
-      <li><a href="#e-1">e)</a></li>
-      <li><a href="#f">f)</a></li>
-      </ul></li>
-      <li><a href="#section-9">10)</a><ul>
-      <li><a href="#a-8">a)</a></li>
-      <li><a href="#b-8">b)</a></li>
-      <li><a href="#c-6">c)</a></li>
-      </ul></li>
+      <li><a href="#section-8">9)</a></li>
+      <li><a href="#section-9">10</a></li>
       </ul>
     </div>
     
     <div id="postamble" data-toggle="wy-nav-shift" class="status">
               <p class="author"><span class="glyphicon glyphicon-user"></span> Lyncoln Sousa</p>
-                  <p class="date"><span class="glyphicon glyphicon-calendar"></span> 2020-10-14</p>
-        </div>
+                </div>
 </div>
 
 <div id="main">
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">options</span>(<span class="dt">digits =</span> <span class="dv">21</span>)</span></code></pre></div>
 <div id="section" class="section level1">
 <h1>1)</h1>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>a =<span class="st"> </span><span class="dv">12</span> ; b =<span class="st"> </span><span class="dv">11</span> ;c =<span class="st"> </span><span class="dv">10</span> </span>
-<span id="cb1-2"><a href="#cb1-2"></a></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="cf">if</span>(a <span class="op">+</span><span class="st"> </span>b <span class="op">&gt;</span><span class="st"> </span>c <span class="op">&amp;&amp;</span><span class="st"> </span>a <span class="op">+</span><span class="st"> </span>c <span class="op">&gt;</span><span class="st"> </span>b <span class="op">&amp;&amp;</span><span class="st"> </span>c <span class="op">+</span><span class="st"> </span>b <span class="op">&gt;</span><span class="st"> </span>a){</span>
-<span id="cb1-4"><a href="#cb1-4"></a>  <span class="cf">if</span>(a <span class="op">==</span><span class="st"> </span>b <span class="op">&amp;&amp;</span><span class="st"> </span>b <span class="op">==</span><span class="st"> </span>c) {</span>
-<span id="cb1-5"><a href="#cb1-5"></a>    <span class="kw">print</span>(<span class="st">&quot;O triângulo é equilátero&quot;</span>)</span>
-<span id="cb1-6"><a href="#cb1-6"></a>  }</span>
-<span id="cb1-7"><a href="#cb1-7"></a>  <span class="cf">else</span> <span class="cf">if</span>(a <span class="op">==</span><span class="st"> </span>b <span class="op">&amp;&amp;</span><span class="st"> </span>b <span class="op">!=</span><span class="st"> </span>c <span class="op">||</span><span class="st"> </span>a <span class="op">==</span><span class="st"> </span>c <span class="op">&amp;&amp;</span><span class="st"> </span>c <span class="op">!=</span><span class="st">  </span>b<span class="op">||</span><span class="st"> </span>b <span class="op">==</span><span class="st"> </span>c <span class="op">&amp;&amp;</span><span class="st"> </span>b <span class="op">!=</span><span class="st"> </span>a){</span>
-<span id="cb1-8"><a href="#cb1-8"></a>    <span class="kw">print</span>(<span class="st">&quot;O triângulo é isósceles&quot;)</span></span>
-<span id="cb1-9"><a href="#cb1-9"></a><span class="st">  }</span></span>
-<span id="cb1-10"><a href="#cb1-10"></a><span class="st">  else{</span></span>
-<span id="cb1-11"><a href="#cb1-11"></a><span class="st">  print(&quot;</span>O triângulo é escaleno<span class="st">&quot;)</span></span>
-<span id="cb1-12"><a href="#cb1-12"></a><span class="st">  }</span></span>
-<span id="cb1-13"><a href="#cb1-13"></a><span class="st">} else{</span></span>
-<span id="cb1-14"><a href="#cb1-14"></a><span class="st">  print(&quot;</span>Não é possível formar um triângulo<span class="st">&quot;)</span></span>
-<span id="cb1-15"><a href="#cb1-15"></a><span class="st">}</span></span></code></pre></div>
-<pre><code>## [1] &quot;O triângulo é escaleno&quot;</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>soma_rec =<span class="st"> </span><span class="cf">function</span>(n){</span>
+<span id="cb2-2"><a href="#cb2-2"></a>  <span class="cf">if</span>((n<span class="op">&lt;</span><span class="dv">0</span>)<span class="op">||</span>(n<span class="op">%%</span><span class="dv">1</span> <span class="op">!=</span><span class="st"> </span><span class="dv">0</span>)) <span class="kw">stop</span>(<span class="st">&quot;n tem que ser um natural&quot;</span>)</span>
+<span id="cb2-3"><a href="#cb2-3"></a>  <span class="cf">if</span>(n<span class="op">==</span><span class="dv">0</span>) <span class="kw">return</span>(<span class="dv">0</span>)</span>
+<span id="cb2-4"><a href="#cb2-4"></a>  <span class="kw">return</span>(n<span class="op">+</span><span class="kw">soma_rec</span>(n<span class="dv">-1</span>))</span>
+<span id="cb2-5"><a href="#cb2-5"></a>}</span>
+<span id="cb2-6"><a href="#cb2-6"></a></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="kw">soma_rec</span>(<span class="dv">5</span>)</span></code></pre></div>
+<pre><code>## [1] 15</code></pre>
 </div>
 <div id="section-1" class="section level1">
 <h1>2)</h1>
-<div id="a" class="section level2">
-<h2>a)</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>mult_<span class="dv">3</span> =<span class="st"> </span><span class="kw">c</span>()</span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="cf">for</span>(passo <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">100</span>){</span>
-<span id="cb3-3"><a href="#cb3-3"></a>  mult_<span class="dv">3</span> =<span class="st"> </span><span class="kw">c</span>(mult_<span class="dv">3</span>, passo <span class="op">*</span><span class="st"> </span><span class="dv">3</span>)</span>
-<span id="cb3-4"><a href="#cb3-4"></a>}</span>
-<span id="cb3-5"><a href="#cb3-5"></a>mult_<span class="dv">3</span></span></code></pre></div>
-<pre><code>##   [1]   3   6   9  12  15  18  21  24  27  30  33  36  39  42  45  48  51  54
-##  [19]  57  60  63  66  69  72  75  78  81  84  87  90  93  96  99 102 105 108
-##  [37] 111 114 117 120 123 126 129 132 135 138 141 144 147 150 153 156 159 162
-##  [55] 165 168 171 174 177 180 183 186 189 192 195 198 201 204 207 210 213 216
-##  [73] 219 222 225 228 231 234 237 240 243 246 249 252 255 258 261 264 267 270
-##  [91] 273 276 279 282 285 288 291 294 297 300</code></pre>
-</div>
-<div id="b" class="section level2">
-<h2>b)</h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>mult_<span class="dv">3</span> =<span class="st"> </span><span class="kw">c</span>()</span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="cf">for</span>(passo <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">100</span>){</span>
-<span id="cb5-3"><a href="#cb5-3"></a>  aux =<span class="st"> </span>passo <span class="op">*</span><span class="st"> </span><span class="dv">3</span></span>
-<span id="cb5-4"><a href="#cb5-4"></a>  <span class="cf">if</span>(aux <span class="op">&lt;</span><span class="st"> </span><span class="dv">100</span>){</span>
-<span id="cb5-5"><a href="#cb5-5"></a>    mult_<span class="dv">3</span> =<span class="st"> </span><span class="kw">c</span>(mult_<span class="dv">3</span>, aux)</span>
-<span id="cb5-6"><a href="#cb5-6"></a>  }</span>
-<span id="cb5-7"><a href="#cb5-7"></a>}</span>
-<span id="cb5-8"><a href="#cb5-8"></a>mult_<span class="dv">3</span></span></code></pre></div>
-<pre><code>##  [1]  3  6  9 12 15 18 21 24 27 30 33 36 39 42 45 48 51 54 57 60 63 66 69 72 75
-## [26] 78 81 84 87 90 93 96 99</code></pre>
-</div>
-<div id="c" class="section level2">
-<h2>c)</h2>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>impares =<span class="st"> </span><span class="kw">c</span>()</span>
-<span id="cb7-2"><a href="#cb7-2"></a><span class="cf">for</span>(passo <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">200</span>){</span>
-<span id="cb7-3"><a href="#cb7-3"></a>  resto =<span class="st"> </span>passo<span class="op">%%</span><span class="dv">2</span> </span>
-<span id="cb7-4"><a href="#cb7-4"></a>  <span class="cf">if</span>(resto <span class="op">==</span><span class="st"> </span><span class="dv">1</span>){</span>
-<span id="cb7-5"><a href="#cb7-5"></a>    impares =<span class="st"> </span><span class="kw">c</span>(impares, passo)</span>
-<span id="cb7-6"><a href="#cb7-6"></a>  }</span>
-<span id="cb7-7"><a href="#cb7-7"></a>}</span>
-<span id="cb7-8"><a href="#cb7-8"></a>impares</span></code></pre></div>
-<pre><code>##   [1]   1   3   5   7   9  11  13  15  17  19  21  23  25  27  29  31  33  35
-##  [19]  37  39  41  43  45  47  49  51  53  55  57  59  61  63  65  67  69  71
-##  [37]  73  75  77  79  81  83  85  87  89  91  93  95  97  99 101 103 105 107
-##  [55] 109 111 113 115 117 119 121 123 125 127 129 131 133 135 137 139 141 143
-##  [73] 145 147 149 151 153 155 157 159 161 163 165 167 169 171 173 175 177 179
-##  [91] 181 183 185 187 189 191 193 195 197 199</code></pre>
-</div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>e_rec =<span class="st"> </span><span class="cf">function</span>(n){</span>
+<span id="cb4-2"><a href="#cb4-2"></a>  <span class="cf">if</span>((n<span class="op">&lt;</span><span class="dv">0</span>)<span class="op">||</span>(n<span class="op">%%</span><span class="dv">1</span> <span class="op">!=</span><span class="st"> </span><span class="dv">0</span>)) <span class="kw">stop</span>(<span class="st">&quot;n tem que ser um natural&quot;</span>)</span>
+<span id="cb4-3"><a href="#cb4-3"></a>  <span class="cf">if</span>(n<span class="op">==</span><span class="dv">0</span>) <span class="kw">return</span>(<span class="dv">1</span>)</span>
+<span id="cb4-4"><a href="#cb4-4"></a>  <span class="kw">return</span>(<span class="dv">1</span><span class="op">/</span><span class="kw">factorial</span>(n) <span class="op">+</span><span class="st"> </span><span class="kw">e_rec</span>(n<span class="dv">-1</span>))</span>
+<span id="cb4-5"><a href="#cb4-5"></a>}</span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="kw">e_rec</span>(<span class="dv">5</span>)</span></code></pre></div>
+<pre><code>## [1] 2.7166666666666663</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">e_rec</span>(<span class="dv">10</span>)</span></code></pre></div>
+<pre><code>## [1] 2.7182818011463845</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">e_rec</span>(<span class="dv">50</span>)</span></code></pre></div>
+<pre><code>## [1] 2.7182818284590455</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>e_ =<span class="st"> </span><span class="ot">NULL</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">100</span>){</span>
+<span id="cb10-3"><a href="#cb10-3"></a>  e_ =<span class="st"> </span><span class="kw">c</span>(e_,<span class="kw">e_rec</span>(i))</span>
+<span id="cb10-4"><a href="#cb10-4"></a>}</span>
+<span id="cb10-5"><a href="#cb10-5"></a><span class="kw">plot</span>(e_)</span>
+<span id="cb10-6"><a href="#cb10-6"></a><span class="kw">abline</span>(<span class="dt">h=</span><span class="kw">exp</span>(<span class="dv">1</span>))</span></code></pre></div>
+<p><img src="data:image/png;base64,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" width="768" /></p>
 </div>
 <div id="section-2" class="section level1">
 <h1>3)</h1>
-<div id="a-1" class="section level2">
+<div id="a" class="section level2">
 <h2>a)</h2>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>mult_<span class="dv">3</span> =<span class="st"> </span><span class="kw">c</span>()</span>
-<span id="cb9-2"><a href="#cb9-2"></a>passo =<span class="st"> </span><span class="dv">1</span></span>
-<span id="cb9-3"><a href="#cb9-3"></a><span class="cf">while</span>(<span class="kw">length</span>(mult_<span class="dv">3</span>) <span class="op">&lt;</span><span class="st"> </span><span class="dv">100</span>){</span>
-<span id="cb9-4"><a href="#cb9-4"></a>  mult_<span class="dv">3</span> =<span class="st"> </span><span class="kw">c</span>(mult_<span class="dv">3</span>, passo <span class="op">*</span><span class="st"> </span><span class="dv">3</span>)</span>
-<span id="cb9-5"><a href="#cb9-5"></a>  passo =<span class="st"> </span>passo <span class="op">+</span><span class="st"> </span><span class="dv">1</span></span>
-<span id="cb9-6"><a href="#cb9-6"></a>}</span>
-<span id="cb9-7"><a href="#cb9-7"></a>mult_<span class="dv">3</span></span></code></pre></div>
-<pre><code>##   [1]   3   6   9  12  15  18  21  24  27  30  33  36  39  42  45  48  51  54
-##  [19]  57  60  63  66  69  72  75  78  81  84  87  90  93  96  99 102 105 108
-##  [37] 111 114 117 120 123 126 129 132 135 138 141 144 147 150 153 156 159 162
-##  [55] 165 168 171 174 177 180 183 186 189 192 195 198 201 204 207 210 213 216
-##  [73] 219 222 225 228 231 234 237 240 243 246 249 252 255 258 261 264 267 270
-##  [91] 273 276 279 282 285 288 291 294 297 300</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="co"># 1. Caso n não seja natural, retorne erro.</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="co"># 2. Se n=0, retorne 4.</span></span>
+<span id="cb11-3"><a href="#cb11-3"></a><span class="co"># 3. Retorne (4*(-1)^n)/(2*n+1) + pi_rec(n-1)</span></span></code></pre></div>
 </div>
-<div id="b-1" class="section level2">
+<div id="b" class="section level2">
 <h2>b)</h2>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>mult_<span class="dv">3</span> =<span class="st"> </span><span class="kw">c</span>()</span>
-<span id="cb11-2"><a href="#cb11-2"></a>passo =<span class="st"> </span><span class="dv">1</span></span>
-<span id="cb11-3"><a href="#cb11-3"></a><span class="cf">while</span>(passo<span class="op">*</span><span class="dv">3</span> <span class="op">&lt;</span><span class="st"> </span><span class="dv">100</span>){</span>
-<span id="cb11-4"><a href="#cb11-4"></a>  mult_<span class="dv">3</span> =<span class="st"> </span><span class="kw">c</span>(mult_<span class="dv">3</span>, passo<span class="op">*</span><span class="dv">3</span>)</span>
-<span id="cb11-5"><a href="#cb11-5"></a>  passo =<span class="st"> </span>passo <span class="op">+</span><span class="st"> </span><span class="dv">1</span></span>
-<span id="cb11-6"><a href="#cb11-6"></a>}</span>
-<span id="cb11-7"><a href="#cb11-7"></a>mult_<span class="dv">3</span></span></code></pre></div>
-<pre><code>##  [1]  3  6  9 12 15 18 21 24 27 30 33 36 39 42 45 48 51 54 57 60 63 66 69 72 75
-## [26] 78 81 84 87 90 93 96 99</code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>pi_rec =<span class="st"> </span><span class="cf">function</span>(n){</span>
+<span id="cb12-2"><a href="#cb12-2"></a>  <span class="cf">if</span>(n <span class="op">==</span><span class="st"> </span><span class="dv">0</span>) <span class="kw">return</span>(<span class="dv">4</span>)</span>
+<span id="cb12-3"><a href="#cb12-3"></a>  <span class="kw">return</span>((<span class="dv">4</span><span class="op">*</span>(<span class="op">-</span><span class="dv">1</span>)<span class="op">^</span>n)<span class="op">/</span>(<span class="dv">2</span><span class="op">*</span>n<span class="op">+</span><span class="dv">1</span>) <span class="op">+</span><span class="st"> </span><span class="kw">pi_rec</span>(n<span class="dv">-1</span>))</span>
+<span id="cb12-4"><a href="#cb12-4"></a>}</span></code></pre></div>
 </div>
-<div id="c-1" class="section level2">
+<div id="c" class="section level2">
 <h2>c)</h2>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>impares =<span class="st"> </span><span class="kw">c</span>()</span>
-<span id="cb13-2"><a href="#cb13-2"></a>passo =<span class="st"> </span><span class="dv">1</span></span>
-<span id="cb13-3"><a href="#cb13-3"></a><span class="cf">while</span>(<span class="kw">length</span>(impares) <span class="op">&lt;</span><span class="st"> </span><span class="dv">100</span>){</span>
-<span id="cb13-4"><a href="#cb13-4"></a>  num =<span class="st"> </span>passo<span class="op">%%</span><span class="dv">2</span></span>
-<span id="cb13-5"><a href="#cb13-5"></a>  <span class="cf">if</span>(num <span class="op">==</span><span class="st"> </span><span class="dv">1</span>){</span>
-<span id="cb13-6"><a href="#cb13-6"></a>    impares =<span class="st"> </span><span class="kw">c</span>(impares, passo)</span>
-<span id="cb13-7"><a href="#cb13-7"></a>  }</span>
-<span id="cb13-8"><a href="#cb13-8"></a>  passo =<span class="st"> </span>passo <span class="op">+</span><span class="st"> </span><span class="dv">1</span></span>
-<span id="cb13-9"><a href="#cb13-9"></a>}</span>
-<span id="cb13-10"><a href="#cb13-10"></a>impares</span></code></pre></div>
-<pre><code>##   [1]   1   3   5   7   9  11  13  15  17  19  21  23  25  27  29  31  33  35
-##  [19]  37  39  41  43  45  47  49  51  53  55  57  59  61  63  65  67  69  71
-##  [37]  73  75  77  79  81  83  85  87  89  91  93  95  97  99 101 103 105 107
-##  [55] 109 111 113 115 117 119 121 123 125 127 129 131 133 135 137 139 141 143
-##  [73] 145 147 149 151 153 155 157 159 161 163 165 167 169 171 173 175 177 179
-##  [91] 181 183 185 187 189 191 193 195 197 199</code></pre>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="kw">pi_rec</span>(<span class="dv">10</span>)</span></code></pre></div>
+<pre><code>## [1] 3.2323158094055939</code></pre>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="kw">pi_rec</span>(<span class="dv">100</span>)</span></code></pre></div>
+<pre><code>## [1] 3.1514934010709914</code></pre>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="kw">pi_rec</span>(<span class="dv">1000</span>)</span></code></pre></div>
+<pre><code>## [1] 3.1425916543395442</code></pre>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>pi_ =<span class="st"> </span><span class="ot">NULL</span></span>
+<span id="cb19-2"><a href="#cb19-2"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">100</span>){</span>
+<span id="cb19-3"><a href="#cb19-3"></a>  pi_ =<span class="st"> </span><span class="kw">c</span>(pi_,<span class="kw">pi_rec</span>(i))</span>
+<span id="cb19-4"><a href="#cb19-4"></a>}</span>
+<span id="cb19-5"><a href="#cb19-5"></a><span class="kw">plot</span>(pi_)</span>
+<span id="cb19-6"><a href="#cb19-6"></a><span class="kw">abline</span>(<span class="dt">h=</span>pi)</span></code></pre></div>
+<p><img src="data:image/png;base64,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" width="768" /></p>
 </div>
 </div>
 <div id="section-3" class="section level1">
 <h1>4)</h1>
-<div id="a-2" class="section level2">
-<h2>a)</h2>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>matriz =<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">0</span>, <span class="dt">nrow =</span> <span class="dv">10</span>, <span class="dt">ncol =</span> <span class="dv">10</span>)</span>
-<span id="cb15-2"><a href="#cb15-2"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>){</span>
-<span id="cb15-3"><a href="#cb15-3"></a>  matriz[<span class="dv">1</span>,i] =<span class="st"> </span><span class="dv">1</span></span>
-<span id="cb15-4"><a href="#cb15-4"></a>}</span>
-<span id="cb15-5"><a href="#cb15-5"></a>matriz</span></code></pre></div>
-<pre><code>##       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
-##  [1,]    1    1    1    1    1    1    1    1    1     1
-##  [2,]    0    0    0    0    0    0    0    0    0     0
-##  [3,]    0    0    0    0    0    0    0    0    0     0
-##  [4,]    0    0    0    0    0    0    0    0    0     0
-##  [5,]    0    0    0    0    0    0    0    0    0     0
-##  [6,]    0    0    0    0    0    0    0    0    0     0
-##  [7,]    0    0    0    0    0    0    0    0    0     0
-##  [8,]    0    0    0    0    0    0    0    0    0     0
-##  [9,]    0    0    0    0    0    0    0    0    0     0
-## [10,]    0    0    0    0    0    0    0    0    0     0</code></pre>
-</div>
-<div id="b-2" class="section level2">
-<h2>b)</h2>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>matriz =<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">0</span>, <span class="dt">nrow =</span> <span class="dv">10</span>, <span class="dt">ncol =</span> <span class="dv">10</span>)</span>
-<span id="cb17-2"><a href="#cb17-2"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>){</span>
-<span id="cb17-3"><a href="#cb17-3"></a>  <span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>){</span>
-<span id="cb17-4"><a href="#cb17-4"></a>    matriz[i,j] =<span class="st"> </span>i</span>
-<span id="cb17-5"><a href="#cb17-5"></a>  }</span>
-<span id="cb17-6"><a href="#cb17-6"></a>}</span>
-<span id="cb17-7"><a href="#cb17-7"></a>matriz</span></code></pre></div>
-<pre><code>##       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
-##  [1,]    1    1    1    1    1    1    1    1    1     1
-##  [2,]    2    2    2    2    2    2    2    2    2     2
-##  [3,]    3    3    3    3    3    3    3    3    3     3
-##  [4,]    4    4    4    4    4    4    4    4    4     4
-##  [5,]    5    5    5    5    5    5    5    5    5     5
-##  [6,]    6    6    6    6    6    6    6    6    6     6
-##  [7,]    7    7    7    7    7    7    7    7    7     7
-##  [8,]    8    8    8    8    8    8    8    8    8     8
-##  [9,]    9    9    9    9    9    9    9    9    9     9
-## [10,]   10   10   10   10   10   10   10   10   10    10</code></pre>
-</div>
-<div id="c-2" class="section level2">
-<h2>c)</h2>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>matriz =<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">0</span>, <span class="dt">nrow =</span> <span class="dv">100</span>, <span class="dt">ncol =</span> <span class="dv">100</span>)</span>
-<span id="cb19-2"><a href="#cb19-2"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">100</span>){</span>
-<span id="cb19-3"><a href="#cb19-3"></a>  <span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">100</span>){</span>
-<span id="cb19-4"><a href="#cb19-4"></a>    matriz[i,j] =<span class="st"> </span>j</span>
-<span id="cb19-5"><a href="#cb19-5"></a>  }</span>
-<span id="cb19-6"><a href="#cb19-6"></a>}</span>
-<span id="cb19-7"><a href="#cb19-7"></a><span class="kw">head.matrix</span>(matriz,<span class="kw">c</span>(<span class="dv">10</span>,<span class="dv">10</span>));<span class="kw">tail.matrix</span>(matriz,<span class="kw">c</span>(<span class="dv">10</span>,<span class="dv">10</span>))</span></code></pre></div>
-<pre><code>##       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
-##  [1,]    1    2    3    4    5    6    7    8    9    10
-##  [2,]    1    2    3    4    5    6    7    8    9    10
-##  [3,]    1    2    3    4    5    6    7    8    9    10
-##  [4,]    1    2    3    4    5    6    7    8    9    10
-##  [5,]    1    2    3    4    5    6    7    8    9    10
-##  [6,]    1    2    3    4    5    6    7    8    9    10
-##  [7,]    1    2    3    4    5    6    7    8    9    10
-##  [8,]    1    2    3    4    5    6    7    8    9    10
-##  [9,]    1    2    3    4    5    6    7    8    9    10
-## [10,]    1    2    3    4    5    6    7    8    9    10</code></pre>
-<pre><code>##        [,91] [,92] [,93] [,94] [,95] [,96] [,97] [,98] [,99] [,100]
-##  [91,]    91    92    93    94    95    96    97    98    99    100
-##  [92,]    91    92    93    94    95    96    97    98    99    100
-##  [93,]    91    92    93    94    95    96    97    98    99    100
-##  [94,]    91    92    93    94    95    96    97    98    99    100
-##  [95,]    91    92    93    94    95    96    97    98    99    100
-##  [96,]    91    92    93    94    95    96    97    98    99    100
-##  [97,]    91    92    93    94    95    96    97    98    99    100
-##  [98,]    91    92    93    94    95    96    97    98    99    100
-##  [99,]    91    92    93    94    95    96    97    98    99    100
-## [100,]    91    92    93    94    95    96    97    98    99    100</code></pre>
-</div>
-<div id="d" class="section level2">
-<h2>d)</h2>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>matriz =<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">0</span>, <span class="dt">nrow =</span> <span class="dv">100</span>, <span class="dt">ncol =</span> <span class="dv">100</span>)</span>
-<span id="cb22-2"><a href="#cb22-2"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">100</span>){</span>
-<span id="cb22-3"><a href="#cb22-3"></a>  <span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">100</span>){</span>
-<span id="cb22-4"><a href="#cb22-4"></a>    <span class="cf">if</span>(i<span class="op">%%</span><span class="dv">2</span> <span class="op">==</span><span class="st"> </span><span class="dv">0</span>){</span>
-<span id="cb22-5"><a href="#cb22-5"></a>      matriz[i,j] =<span class="st"> </span><span class="dv">2</span></span>
-<span id="cb22-6"><a href="#cb22-6"></a>    }<span class="cf">else</span>{</span>
-<span id="cb22-7"><a href="#cb22-7"></a>      matriz[i,j] =<span class="st"> </span><span class="dv">1</span></span>
-<span id="cb22-8"><a href="#cb22-8"></a>    }</span>
-<span id="cb22-9"><a href="#cb22-9"></a>  }</span>
-<span id="cb22-10"><a href="#cb22-10"></a>}</span>
-<span id="cb22-11"><a href="#cb22-11"></a><span class="kw">head.matrix</span>(matriz,<span class="kw">c</span>(<span class="dv">10</span>,<span class="dv">10</span>));<span class="kw">tail.matrix</span>(matriz,<span class="kw">c</span>(<span class="dv">10</span>,<span class="dv">10</span>))</span></code></pre></div>
-<pre><code>##       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
-##  [1,]    1    1    1    1    1    1    1    1    1     1
-##  [2,]    2    2    2    2    2    2    2    2    2     2
-##  [3,]    1    1    1    1    1    1    1    1    1     1
-##  [4,]    2    2    2    2    2    2    2    2    2     2
-##  [5,]    1    1    1    1    1    1    1    1    1     1
-##  [6,]    2    2    2    2    2    2    2    2    2     2
-##  [7,]    1    1    1    1    1    1    1    1    1     1
-##  [8,]    2    2    2    2    2    2    2    2    2     2
-##  [9,]    1    1    1    1    1    1    1    1    1     1
-## [10,]    2    2    2    2    2    2    2    2    2     2</code></pre>
-<pre><code>##        [,91] [,92] [,93] [,94] [,95] [,96] [,97] [,98] [,99] [,100]
-##  [91,]     1     1     1     1     1     1     1     1     1      1
-##  [92,]     2     2     2     2     2     2     2     2     2      2
-##  [93,]     1     1     1     1     1     1     1     1     1      1
-##  [94,]     2     2     2     2     2     2     2     2     2      2
-##  [95,]     1     1     1     1     1     1     1     1     1      1
-##  [96,]     2     2     2     2     2     2     2     2     2      2
-##  [97,]     1     1     1     1     1     1     1     1     1      1
-##  [98,]     2     2     2     2     2     2     2     2     2      2
-##  [99,]     1     1     1     1     1     1     1     1     1      1
-## [100,]     2     2     2     2     2     2     2     2     2      2</code></pre>
-</div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="co"># 1. Caso n não seja natural, retorne erro.</span></span>
+<span id="cb20-2"><a href="#cb20-2"></a><span class="co"># 2. Se n=0, retorne 0.</span></span>
+<span id="cb20-3"><a href="#cb20-3"></a><span class="co"># 3. Retorne fibo_rec(n) + soma_fibo_rec(n-1)</span></span>
+<span id="cb20-4"><a href="#cb20-4"></a></span>
+<span id="cb20-5"><a href="#cb20-5"></a>fibo_rec =<span class="st"> </span><span class="cf">function</span>(n){</span>
+<span id="cb20-6"><a href="#cb20-6"></a>  <span class="cf">if</span>((n<span class="op">&lt;</span><span class="dv">0</span>)<span class="op">||</span>(n<span class="op">%%</span><span class="dv">1</span> <span class="op">!=</span><span class="st"> </span><span class="dv">0</span>)) <span class="kw">stop</span>(<span class="st">&quot;n tem que ser um natural&quot;</span>)</span>
+<span id="cb20-7"><a href="#cb20-7"></a>  <span class="cf">if</span>(n<span class="op">==</span><span class="dv">1</span> <span class="op">||</span><span class="st"> </span>n<span class="op">==</span><span class="dv">2</span>) <span class="kw">return</span>(<span class="dv">1</span>)</span>
+<span id="cb20-8"><a href="#cb20-8"></a>  <span class="kw">return</span>(<span class="kw">fibo_rec</span>(n<span class="dv">-1</span>)<span class="op">+</span><span class="kw">fibo_rec</span>(n<span class="dv">-2</span>))</span>
+<span id="cb20-9"><a href="#cb20-9"></a>}</span>
+<span id="cb20-10"><a href="#cb20-10"></a></span>
+<span id="cb20-11"><a href="#cb20-11"></a>soma_fibo_rec =<span class="st"> </span><span class="cf">function</span>(n){</span>
+<span id="cb20-12"><a href="#cb20-12"></a>  <span class="cf">if</span>((n<span class="op">&lt;</span><span class="dv">0</span>)<span class="op">||</span>(n<span class="op">%%</span><span class="dv">1</span> <span class="op">!=</span><span class="st"> </span><span class="dv">0</span>)) <span class="kw">stop</span>(<span class="st">&quot;n tem que ser um natural&quot;</span>)</span>
+<span id="cb20-13"><a href="#cb20-13"></a>  <span class="cf">if</span>(n<span class="op">==</span><span class="dv">0</span>) <span class="kw">return</span>(<span class="dv">0</span>)</span>
+<span id="cb20-14"><a href="#cb20-14"></a>  <span class="kw">return</span>(<span class="kw">fibo_rec</span>(n)<span class="op">+</span><span class="kw">soma_fibo_rec</span>(n<span class="dv">-1</span>))</span>
+<span id="cb20-15"><a href="#cb20-15"></a>}</span>
+<span id="cb20-16"><a href="#cb20-16"></a><span class="kw">soma_fibo_rec</span>(<span class="dv">5</span>)</span></code></pre></div>
+<pre><code>## [1] 12</code></pre>
 </div>
 <div id="section-4" class="section level1">
 <h1>5)</h1>
-<div id="a-3" class="section level2">
+<div id="a-1" class="section level2">
 <h2>a)</h2>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a>matriz =<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">0</span>, <span class="dt">nrow =</span> <span class="dv">100</span>, <span class="dt">ncol =</span> <span class="dv">100</span>)</span>
-<span id="cb25-2"><a href="#cb25-2"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">100</span>){</span>
-<span id="cb25-3"><a href="#cb25-3"></a>  matriz[i,i] =<span class="st"> </span>i</span>
-<span id="cb25-4"><a href="#cb25-4"></a>}</span>
-<span id="cb25-5"><a href="#cb25-5"></a><span class="kw">head.matrix</span>(matriz,<span class="kw">c</span>(<span class="dv">10</span>,<span class="dv">10</span>));<span class="kw">tail.matrix</span>(matriz,<span class="kw">c</span>(<span class="dv">10</span>,<span class="dv">10</span>))</span></code></pre></div>
-<pre><code>##       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
-##  [1,]    1    0    0    0    0    0    0    0    0     0
-##  [2,]    0    2    0    0    0    0    0    0    0     0
-##  [3,]    0    0    3    0    0    0    0    0    0     0
-##  [4,]    0    0    0    4    0    0    0    0    0     0
-##  [5,]    0    0    0    0    5    0    0    0    0     0
-##  [6,]    0    0    0    0    0    6    0    0    0     0
-##  [7,]    0    0    0    0    0    0    7    0    0     0
-##  [8,]    0    0    0    0    0    0    0    8    0     0
-##  [9,]    0    0    0    0    0    0    0    0    9     0
-## [10,]    0    0    0    0    0    0    0    0    0    10</code></pre>
-<pre><code>##        [,91] [,92] [,93] [,94] [,95] [,96] [,97] [,98] [,99] [,100]
-##  [91,]    91     0     0     0     0     0     0     0     0      0
-##  [92,]     0    92     0     0     0     0     0     0     0      0
-##  [93,]     0     0    93     0     0     0     0     0     0      0
-##  [94,]     0     0     0    94     0     0     0     0     0      0
-##  [95,]     0     0     0     0    95     0     0     0     0      0
-##  [96,]     0     0     0     0     0    96     0     0     0      0
-##  [97,]     0     0     0     0     0     0    97     0     0      0
-##  [98,]     0     0     0     0     0     0     0    98     0      0
-##  [99,]     0     0     0     0     0     0     0     0    99      0
-## [100,]     0     0     0     0     0     0     0     0     0    100</code></pre>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="co"># 1. Caso n não seja natural, retorne erro.</span></span>
+<span id="cb22-2"><a href="#cb22-2"></a><span class="co"># 2. Se n=0, retorne 1.</span></span>
+<span id="cb22-3"><a href="#cb22-3"></a><span class="co"># 3. Retorne 1/3^n + serie_rec(n-1)</span></span></code></pre></div>
 </div>
-<div id="b-3" class="section level2">
+<div id="b-1" class="section level2">
 <h2>b)</h2>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a>matriz =<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">0</span>, <span class="dt">nrow =</span> <span class="dv">100</span>, <span class="dt">ncol =</span> <span class="dv">100</span>)</span>
-<span id="cb28-2"><a href="#cb28-2"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">100</span>){</span>
-<span id="cb28-3"><a href="#cb28-3"></a>  matriz[i,i] =<span class="st"> </span><span class="dv">101</span> <span class="op">-</span><span class="st"> </span>i</span>
-<span id="cb28-4"><a href="#cb28-4"></a>}</span>
-<span id="cb28-5"><a href="#cb28-5"></a><span class="kw">head.matrix</span>(matriz,<span class="kw">c</span>(<span class="dv">10</span>,<span class="dv">10</span>));<span class="kw">tail.matrix</span>(matriz,<span class="kw">c</span>(<span class="dv">10</span>,<span class="dv">10</span>))</span></code></pre></div>
-<pre><code>##       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
-##  [1,]  100    0    0    0    0    0    0    0    0     0
-##  [2,]    0   99    0    0    0    0    0    0    0     0
-##  [3,]    0    0   98    0    0    0    0    0    0     0
-##  [4,]    0    0    0   97    0    0    0    0    0     0
-##  [5,]    0    0    0    0   96    0    0    0    0     0
-##  [6,]    0    0    0    0    0   95    0    0    0     0
-##  [7,]    0    0    0    0    0    0   94    0    0     0
-##  [8,]    0    0    0    0    0    0    0   93    0     0
-##  [9,]    0    0    0    0    0    0    0    0   92     0
-## [10,]    0    0    0    0    0    0    0    0    0    91</code></pre>
-<pre><code>##        [,91] [,92] [,93] [,94] [,95] [,96] [,97] [,98] [,99] [,100]
-##  [91,]    10     0     0     0     0     0     0     0     0      0
-##  [92,]     0     9     0     0     0     0     0     0     0      0
-##  [93,]     0     0     8     0     0     0     0     0     0      0
-##  [94,]     0     0     0     7     0     0     0     0     0      0
-##  [95,]     0     0     0     0     6     0     0     0     0      0
-##  [96,]     0     0     0     0     0     5     0     0     0      0
-##  [97,]     0     0     0     0     0     0     4     0     0      0
-##  [98,]     0     0     0     0     0     0     0     3     0      0
-##  [99,]     0     0     0     0     0     0     0     0     2      0
-## [100,]     0     0     0     0     0     0     0     0     0      1</code></pre>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>serie_rec =<span class="st"> </span><span class="cf">function</span>(n){</span>
+<span id="cb23-2"><a href="#cb23-2"></a>  <span class="cf">if</span>((n<span class="op">&lt;</span><span class="dv">0</span>)<span class="op">||</span>(n<span class="op">%%</span><span class="dv">1</span> <span class="op">!=</span><span class="st"> </span><span class="dv">0</span>)) <span class="kw">stop</span>(<span class="st">&quot;n tem que ser um natural&quot;</span>)</span>
+<span id="cb23-3"><a href="#cb23-3"></a>  <span class="cf">if</span>(n <span class="op">==</span><span class="st"> </span><span class="dv">0</span>) <span class="kw">return</span>(<span class="dv">1</span>)</span>
+<span id="cb23-4"><a href="#cb23-4"></a>  <span class="kw">return</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">3</span><span class="op">^</span>n <span class="op">+</span><span class="st"> </span><span class="kw">serie_rec</span>(n<span class="dv">-1</span>))</span>
+<span id="cb23-5"><a href="#cb23-5"></a>}</span>
+<span id="cb23-6"><a href="#cb23-6"></a><span class="kw">serie_rec</span>(<span class="dv">100</span>)</span></code></pre></div>
+<pre><code>## [1] 1.5</code></pre>
+</div>
+<div id="c-1" class="section level2">
+<h2>c)</h2>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a>soma =<span class="st"> </span><span class="cf">function</span>(a,b){</span>
+<span id="cb25-2"><a href="#cb25-2"></a>  <span class="cf">if</span>((a<span class="op">&lt;</span><span class="dv">0</span>)<span class="op">||</span>(a<span class="op">%%</span><span class="dv">1</span> <span class="op">!=</span><span class="st"> </span><span class="dv">0</span>)) <span class="kw">stop</span>(<span class="st">&quot;a tem que ser um natural&quot;</span>)</span>
+<span id="cb25-3"><a href="#cb25-3"></a>  <span class="cf">if</span>((b<span class="op">&lt;</span><span class="dv">0</span>)<span class="op">||</span>(b<span class="op">%%</span><span class="dv">1</span> <span class="op">!=</span><span class="st"> </span><span class="dv">0</span>)) <span class="kw">stop</span>(<span class="st">&quot;b tem que ser um natural&quot;</span>)</span>
+<span id="cb25-4"><a href="#cb25-4"></a>  <span class="cf">if</span>(a<span class="op">&gt;</span>b) <span class="kw">stop</span>(<span class="st">&quot;a tem que ser maior que b&quot;</span>)</span>
+<span id="cb25-5"><a href="#cb25-5"></a>  <span class="cf">if</span>(a <span class="op">==</span><span class="st"> </span>b) <span class="kw">return</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">3</span><span class="op">^</span>b)</span>
+<span id="cb25-6"><a href="#cb25-6"></a>  <span class="kw">return</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">3</span><span class="op">^</span>a <span class="op">+</span><span class="st"> </span><span class="kw">soma</span>(a<span class="op">+</span><span class="dv">1</span>,b))</span>
+<span id="cb25-7"><a href="#cb25-7"></a>}</span>
+<span id="cb25-8"><a href="#cb25-8"></a></span>
+<span id="cb25-9"><a href="#cb25-9"></a><span class="kw">soma</span>(<span class="dv">4</span>,<span class="dv">100</span>)</span></code></pre></div>
+<pre><code>## [1] 0.018518518518518517</code></pre>
 </div>
 </div>
 <div id="section-5" class="section level1">
 <h1>6)</h1>
-<div id="a-4" class="section level2">
+<div id="a-2" class="section level2">
 <h2>a)</h2>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a>L1 =<span class="st"> </span><span class="kw">list</span>()</span>
-<span id="cb31-2"><a href="#cb31-2"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>){</span>
-<span id="cb31-3"><a href="#cb31-3"></a>  L1[[i]] =<span class="st"> </span>i</span>
-<span id="cb31-4"><a href="#cb31-4"></a>}</span>
-<span id="cb31-5"><a href="#cb31-5"></a>L1</span></code></pre></div>
-<pre><code>## [[1]]
-## [1] 1
-## 
-## [[2]]
-## [1] 2
-## 
-## [[3]]
-## [1] 3
-## 
-## [[4]]
-## [1] 4
-## 
-## [[5]]
-## [1] 5
-## 
-## [[6]]
-## [1] 6
-## 
-## [[7]]
-## [1] 7
-## 
-## [[8]]
-## [1] 8
-## 
-## [[9]]
-## [1] 9
-## 
-## [[10]]
-## [1] 10</code></pre>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a>investimento_rec =<span class="st"> </span><span class="cf">function</span>(i,j,n){</span>
+<span id="cb27-2"><a href="#cb27-2"></a>  <span class="cf">if</span>((i<span class="op">&lt;</span><span class="dv">0</span>)) <span class="kw">stop</span>(<span class="st">&quot;i tem que ser positivo&quot;</span>)</span>
+<span id="cb27-3"><a href="#cb27-3"></a>  <span class="cf">if</span>((n<span class="op">&lt;</span><span class="dv">0</span>)<span class="op">||</span>(n<span class="op">%%</span><span class="dv">1</span> <span class="op">!=</span><span class="st"> </span><span class="dv">0</span>)) <span class="kw">stop</span>(<span class="st">&quot;n tem que ser um natural&quot;</span>)</span>
+<span id="cb27-4"><a href="#cb27-4"></a>  <span class="cf">if</span>(j<span class="op">&gt;</span><span class="dv">1</span> <span class="op">||</span><span class="st"> </span>j <span class="op">&lt;</span><span class="st"> </span><span class="dv">0</span>) <span class="kw">stop</span>(<span class="st">&quot;j é um número entre 0 e 1&quot;</span>)</span>
+<span id="cb27-5"><a href="#cb27-5"></a>  </span>
+<span id="cb27-6"><a href="#cb27-6"></a>  <span class="cf">if</span>(n<span class="op">==</span><span class="dv">0</span>) <span class="kw">return</span>(i)</span>
+<span id="cb27-7"><a href="#cb27-7"></a>  </span>
+<span id="cb27-8"><a href="#cb27-8"></a>  <span class="kw">return</span>(<span class="kw">investimento_rec</span>(i,j,n<span class="dv">-1</span>)<span class="op">*</span>(<span class="dv">1</span><span class="op">+</span>j))</span>
+<span id="cb27-9"><a href="#cb27-9"></a>}</span></code></pre></div>
 </div>
-<div id="b-4" class="section level2">
+<div id="b-2" class="section level2">
 <h2>b)</h2>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a>L2 =<span class="st"> </span><span class="kw">list</span>()</span>
-<span id="cb33-2"><a href="#cb33-2"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>){</span>
-<span id="cb33-3"><a href="#cb33-3"></a>  aux =<span class="st"> </span><span class="kw">c</span>()</span>
-<span id="cb33-4"><a href="#cb33-4"></a>  <span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>i){</span>
-<span id="cb33-5"><a href="#cb33-5"></a>    aux =<span class="st"> </span><span class="kw">c</span>(aux,<span class="dv">1</span>)</span>
-<span id="cb33-6"><a href="#cb33-6"></a>  }</span>
-<span id="cb33-7"><a href="#cb33-7"></a>  L2[[i]] =<span class="st"> </span>aux</span>
-<span id="cb33-8"><a href="#cb33-8"></a>}</span>
-<span id="cb33-9"><a href="#cb33-9"></a>L2</span></code></pre></div>
-<pre><code>## [[1]]
-## [1] 1
-## 
-## [[2]]
-## [1] 1 1
-## 
-## [[3]]
-## [1] 1 1 1
-## 
-## [[4]]
-## [1] 1 1 1 1
-## 
-## [[5]]
-## [1] 1 1 1 1 1
-## 
-## [[6]]
-## [1] 1 1 1 1 1 1
-## 
-## [[7]]
-## [1] 1 1 1 1 1 1 1
-## 
-## [[8]]
-## [1] 1 1 1 1 1 1 1 1
-## 
-## [[9]]
-## [1] 1 1 1 1 1 1 1 1 1
-## 
-## [[10]]
-##  [1] 1 1 1 1 1 1 1 1 1 1</code></pre>
-</div>
-<div id="c-3" class="section level2">
-<h2>c)</h2>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a>L3 =<span class="st"> </span><span class="kw">list</span>()</span>
-<span id="cb35-2"><a href="#cb35-2"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>){</span>
-<span id="cb35-3"><a href="#cb35-3"></a>  aux =<span class="st"> </span><span class="kw">c</span>()</span>
-<span id="cb35-4"><a href="#cb35-4"></a>  <span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>){</span>
-<span id="cb35-5"><a href="#cb35-5"></a>    aux =<span class="st"> </span><span class="kw">c</span>(aux,i<span class="op">*</span>j)</span>
-<span id="cb35-6"><a href="#cb35-6"></a>  }</span>
-<span id="cb35-7"><a href="#cb35-7"></a>  L3[[i]] =<span class="st"> </span>aux</span>
-<span id="cb35-8"><a href="#cb35-8"></a>}</span>
-<span id="cb35-9"><a href="#cb35-9"></a>L3</span></code></pre></div>
-<pre><code>## [[1]]
-##  [1]  1  2  3  4  5  6  7  8  9 10
-## 
-## [[2]]
-##  [1]  2  4  6  8 10 12 14 16 18 20
-## 
-## [[3]]
-##  [1]  3  6  9 12 15 18 21 24 27 30
-## 
-## [[4]]
-##  [1]  4  8 12 16 20 24 28 32 36 40
-## 
-## [[5]]
-##  [1]  5 10 15 20 25 30 35 40 45 50
-## 
-## [[6]]
-##  [1]  6 12 18 24 30 36 42 48 54 60
-## 
-## [[7]]
-##  [1]  7 14 21 28 35 42 49 56 63 70
-## 
-## [[8]]
-##  [1]  8 16 24 32 40 48 56 64 72 80
-## 
-## [[9]]
-##  [1]  9 18 27 36 45 54 63 72 81 90
-## 
-## [[10]]
-##  [1]  10  20  30  40  50  60  70  80  90 100</code></pre>
-</div>
-<div id="d-1" class="section level2">
-<h2>d)</h2>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a>L4 =<span class="st"> </span><span class="kw">list</span>()</span>
-<span id="cb37-2"><a href="#cb37-2"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>){</span>
-<span id="cb37-3"><a href="#cb37-3"></a>  aux =<span class="st"> </span><span class="kw">c</span>()</span>
-<span id="cb37-4"><a href="#cb37-4"></a>  <span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>i){</span>
-<span id="cb37-5"><a href="#cb37-5"></a>    aux =<span class="st"> </span><span class="kw">c</span>(aux,j<span class="op">*</span><span class="dv">2</span>)</span>
-<span id="cb37-6"><a href="#cb37-6"></a>  }</span>
-<span id="cb37-7"><a href="#cb37-7"></a>  L4[[i]] =<span class="st"> </span>aux</span>
-<span id="cb37-8"><a href="#cb37-8"></a>}</span>
-<span id="cb37-9"><a href="#cb37-9"></a>L4</span></code></pre></div>
-<pre><code>## [[1]]
-## [1] 2
-## 
-## [[2]]
-## [1] 2 4
-## 
-## [[3]]
-## [1] 2 4 6
-## 
-## [[4]]
-## [1] 2 4 6 8
-## 
-## [[5]]
-## [1]  2  4  6  8 10
-## 
-## [[6]]
-## [1]  2  4  6  8 10 12
-## 
-## [[7]]
-## [1]  2  4  6  8 10 12 14
-## 
-## [[8]]
-## [1]  2  4  6  8 10 12 14 16
-## 
-## [[9]]
-## [1]  2  4  6  8 10 12 14 16 18
-## 
-## [[10]]
-##  [1]  2  4  6  8 10 12 14 16 18 20</code></pre>
-</div>
-<div id="e" class="section level2">
-<h2>e)</h2>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a>L5 =<span class="st"> </span><span class="kw">list</span>()</span>
-<span id="cb39-2"><a href="#cb39-2"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>){</span>
-<span id="cb39-3"><a href="#cb39-3"></a>  matriz =<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">0</span>, <span class="dt">nrow =</span> i, <span class="dt">ncol =</span> i)</span>
-<span id="cb39-4"><a href="#cb39-4"></a>  <span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>i){</span>
-<span id="cb39-5"><a href="#cb39-5"></a>    matriz[j,j] =<span class="st"> </span><span class="dv">1</span></span>
-<span id="cb39-6"><a href="#cb39-6"></a>  }</span>
-<span id="cb39-7"><a href="#cb39-7"></a>  L5[[i]] =<span class="st"> </span>matriz</span>
-<span id="cb39-8"><a href="#cb39-8"></a>}</span>
-<span id="cb39-9"><a href="#cb39-9"></a>L5</span></code></pre></div>
-<pre><code>## [[1]]
-##      [,1]
-## [1,]    1
-## 
-## [[2]]
-##      [,1] [,2]
-## [1,]    1    0
-## [2,]    0    1
-## 
-## [[3]]
-##      [,1] [,2] [,3]
-## [1,]    1    0    0
-## [2,]    0    1    0
-## [3,]    0    0    1
-## 
-## [[4]]
-##      [,1] [,2] [,3] [,4]
-## [1,]    1    0    0    0
-## [2,]    0    1    0    0
-## [3,]    0    0    1    0
-## [4,]    0    0    0    1
-## 
-## [[5]]
-##      [,1] [,2] [,3] [,4] [,5]
-## [1,]    1    0    0    0    0
-## [2,]    0    1    0    0    0
-## [3,]    0    0    1    0    0
-## [4,]    0    0    0    1    0
-## [5,]    0    0    0    0    1
-## 
-## [[6]]
-##      [,1] [,2] [,3] [,4] [,5] [,6]
-## [1,]    1    0    0    0    0    0
-## [2,]    0    1    0    0    0    0
-## [3,]    0    0    1    0    0    0
-## [4,]    0    0    0    1    0    0
-## [5,]    0    0    0    0    1    0
-## [6,]    0    0    0    0    0    1
-## 
-## [[7]]
-##      [,1] [,2] [,3] [,4] [,5] [,6] [,7]
-## [1,]    1    0    0    0    0    0    0
-## [2,]    0    1    0    0    0    0    0
-## [3,]    0    0    1    0    0    0    0
-## [4,]    0    0    0    1    0    0    0
-## [5,]    0    0    0    0    1    0    0
-## [6,]    0    0    0    0    0    1    0
-## [7,]    0    0    0    0    0    0    1
-## 
-## [[8]]
-##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]
-## [1,]    1    0    0    0    0    0    0    0
-## [2,]    0    1    0    0    0    0    0    0
-## [3,]    0    0    1    0    0    0    0    0
-## [4,]    0    0    0    1    0    0    0    0
-## [5,]    0    0    0    0    1    0    0    0
-## [6,]    0    0    0    0    0    1    0    0
-## [7,]    0    0    0    0    0    0    1    0
-## [8,]    0    0    0    0    0    0    0    1
-## 
-## [[9]]
-##       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9]
-##  [1,]    1    0    0    0    0    0    0    0    0
-##  [2,]    0    1    0    0    0    0    0    0    0
-##  [3,]    0    0    1    0    0    0    0    0    0
-##  [4,]    0    0    0    1    0    0    0    0    0
-##  [5,]    0    0    0    0    1    0    0    0    0
-##  [6,]    0    0    0    0    0    1    0    0    0
-##  [7,]    0    0    0    0    0    0    1    0    0
-##  [8,]    0    0    0    0    0    0    0    1    0
-##  [9,]    0    0    0    0    0    0    0    0    1
-## 
-## [[10]]
-##       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
-##  [1,]    1    0    0    0    0    0    0    0    0     0
-##  [2,]    0    1    0    0    0    0    0    0    0     0
-##  [3,]    0    0    1    0    0    0    0    0    0     0
-##  [4,]    0    0    0    1    0    0    0    0    0     0
-##  [5,]    0    0    0    0    1    0    0    0    0     0
-##  [6,]    0    0    0    0    0    1    0    0    0     0
-##  [7,]    0    0    0    0    0    0    1    0    0     0
-##  [8,]    0    0    0    0    0    0    0    1    0     0
-##  [9,]    0    0    0    0    0    0    0    0    1     0
-## [10,]    0    0    0    0    0    0    0    0    0     1</code></pre>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="kw">investimento_rec</span>(<span class="dv">1000</span>,<span class="fl">7.5</span><span class="op">/</span><span class="dv">100</span>,<span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## [1] 1155.625</code></pre>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="kw">paste0</span>(<span class="st">&quot;Com investimento de 1000 reais com juros de 7.5% ao ano em 2 anos temos R$:&quot;</span>,<span class="kw">investimento_rec</span>(<span class="dv">1000</span>,<span class="fl">7.5</span><span class="op">/</span><span class="dv">100</span>,<span class="dv">2</span>),<span class="st">&quot; Já com 10% ao ano temos R$:&quot;</span>,<span class="kw">investimento_rec</span>(<span class="dv">1000</span>,<span class="dv">10</span><span class="op">/</span><span class="dv">100</span>,<span class="dv">2</span>),<span class="st">&quot; Uma diferença de R$:&quot;</span>,<span class="kw">investimento_rec</span>(<span class="dv">1000</span>,<span class="dv">10</span><span class="op">/</span><span class="dv">100</span>,<span class="dv">2</span>) <span class="op">-</span><span class="kw">investimento_rec</span>(<span class="dv">1000</span>,<span class="fl">7.5</span><span class="op">/</span><span class="dv">100</span>,<span class="dv">2</span>) )</span></code></pre></div>
+<pre><code>## [1] &quot;Com investimento de 1000 reais com juros de 7.5% ao ano em 2 anos temos R$:1155.625 Já com 10% ao ano temos R$:1210 Uma diferença de R$:54.375&quot;</code></pre>
 </div>
 </div>
 <div id="section-6" class="section level1">
 <h1>7)</h1>
-<div id="a-5" class="section level2">
+<div id="a-3" class="section level2">
 <h2>a)</h2>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a>soma =<span class="st"> </span><span class="dv">0</span></span>
-<span id="cb41-2"><a href="#cb41-2"></a><span class="cf">for</span>(elemento <span class="cf">in</span> L1){</span>
-<span id="cb41-3"><a href="#cb41-3"></a>  soma =<span class="st"> </span>soma <span class="op">+</span><span class="st"> </span>elemento</span>
-<span id="cb41-4"><a href="#cb41-4"></a>}</span>
-<span id="cb41-5"><a href="#cb41-5"></a>soma</span></code></pre></div>
-<pre><code>## [1] 55</code></pre>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a>pagamento_rec =<span class="st"> </span><span class="cf">function</span>(v,j,k,n){</span>
+<span id="cb32-2"><a href="#cb32-2"></a>  <span class="cf">if</span>((v<span class="op">&lt;</span><span class="dv">0</span>)) <span class="kw">stop</span>(<span class="st">&quot;v tem que ser positivo&quot;</span>)</span>
+<span id="cb32-3"><a href="#cb32-3"></a>  <span class="cf">if</span>(j<span class="op">&gt;</span><span class="dv">1</span> <span class="op">||</span><span class="st"> </span>j <span class="op">&lt;</span><span class="st"> </span><span class="dv">0</span>) <span class="kw">stop</span>(<span class="st">&quot;j é um número entre 0 e 1&quot;</span>)</span>
+<span id="cb32-4"><a href="#cb32-4"></a>  <span class="cf">if</span>((k<span class="op">&lt;</span><span class="dv">0</span>)) <span class="kw">stop</span>(<span class="st">&quot;k tem que ser positivo&quot;</span>)</span>
+<span id="cb32-5"><a href="#cb32-5"></a>  <span class="cf">if</span>((n<span class="op">&lt;</span><span class="dv">0</span>)<span class="op">||</span>(n<span class="op">%%</span><span class="dv">1</span> <span class="op">!=</span><span class="st"> </span><span class="dv">0</span>)) <span class="kw">stop</span>(<span class="st">&quot;n tem que ser um natural&quot;</span>)</span>
+<span id="cb32-6"><a href="#cb32-6"></a>  </span>
+<span id="cb32-7"><a href="#cb32-7"></a>  <span class="cf">if</span>(n<span class="op">==</span><span class="dv">0</span>) <span class="kw">return</span>(v)</span>
+<span id="cb32-8"><a href="#cb32-8"></a>  d =<span class="st"> </span><span class="kw">pagamento_rec</span>(v,j,k,n<span class="dv">-1</span>)<span class="op">*</span>(<span class="dv">1</span><span class="op">+</span>j) <span class="op">-</span><span class="st"> </span>k</span>
+<span id="cb32-9"><a href="#cb32-9"></a>  <span class="cf">if</span>(d <span class="op">&lt;</span><span class="st"> </span><span class="dv">0</span>) <span class="kw">return</span>(<span class="dv">0</span>)</span>
+<span id="cb32-10"><a href="#cb32-10"></a>  <span class="cf">else</span> <span class="kw">return</span>(d)</span>
+<span id="cb32-11"><a href="#cb32-11"></a>}</span></code></pre></div>
 </div>
-<div id="b-5" class="section level2">
+<div id="b-3" class="section level2">
 <h2>b)</h2>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1"></a>soma  =<span class="st"> </span><span class="kw">c</span>()</span>
-<span id="cb43-2"><a href="#cb43-2"></a><span class="cf">for</span>(elemento <span class="cf">in</span> L3){</span>
-<span id="cb43-3"><a href="#cb43-3"></a>  aux =<span class="st"> </span><span class="dv">0</span></span>
-<span id="cb43-4"><a href="#cb43-4"></a>  <span class="cf">for</span>(numero <span class="cf">in</span> elemento){</span>
-<span id="cb43-5"><a href="#cb43-5"></a>    aux =<span class="st"> </span>aux <span class="op">+</span><span class="st"> </span>numero</span>
-<span id="cb43-6"><a href="#cb43-6"></a>  }</span>
-<span id="cb43-7"><a href="#cb43-7"></a>  soma =<span class="st"> </span><span class="kw">c</span>(soma, aux)</span>
-<span id="cb43-8"><a href="#cb43-8"></a>}</span>
-<span id="cb43-9"><a href="#cb43-9"></a>soma</span></code></pre></div>
-<pre><code>##  [1]  55 110 165 220 275 330 385 440 495 550</code></pre>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="kw">pagamento_rec</span>(<span class="dv">1200</span>,<span class="dv">2</span><span class="op">/</span><span class="dv">100</span>,<span class="dv">150</span>,<span class="dv">10</span>)</span></code></pre></div>
+<pre><code>## [1] 0</code></pre>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a><span class="kw">pagamento_rec</span>(<span class="dv">1200</span>,<span class="dv">2</span><span class="op">/</span><span class="dv">100</span>,<span class="dv">120</span>,<span class="dv">10</span>)</span></code></pre></div>
+<pre><code>## [1] 148.82678402516581</code></pre>
 </div>
 </div>
 <div id="section-7" class="section level1">
 <h1>8)</h1>
-<div id="a-6" class="section level2">
+<div id="a-4" class="section level2">
 <h2>a)</h2>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a>soma  =<span class="st"> </span><span class="kw">c</span>()</span>
-<span id="cb45-2"><a href="#cb45-2"></a><span class="cf">for</span>(elemento <span class="cf">in</span> L4){</span>
-<span id="cb45-3"><a href="#cb45-3"></a>  aux =<span class="st"> </span><span class="dv">0</span></span>
-<span id="cb45-4"><a href="#cb45-4"></a>  <span class="cf">for</span>(numero <span class="cf">in</span> elemento){</span>
-<span id="cb45-5"><a href="#cb45-5"></a>    aux =<span class="st"> </span>aux <span class="op">+</span><span class="st"> </span>numero</span>
-<span id="cb45-6"><a href="#cb45-6"></a>  }</span>
-<span id="cb45-7"><a href="#cb45-7"></a>  soma =<span class="st"> </span><span class="kw">c</span>(soma, aux)</span>
-<span id="cb45-8"><a href="#cb45-8"></a>}</span>
-<span id="cb45-9"><a href="#cb45-9"></a>soma</span></code></pre></div>
-<pre><code>##  [1]   2   6  12  20  30  42  56  72  90 110</code></pre>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="co"># 1. Caso j não esteja entre 0 e 1, retorne erro.</span></span>
+<span id="cb37-2"><a href="#cb37-2"></a><span class="co"># 1. Caso k não seja positivo, retorne erro.</span></span>
+<span id="cb37-3"><a href="#cb37-3"></a><span class="co"># 2. Se v&lt;=0, retorne 0.</span></span>
+<span id="cb37-4"><a href="#cb37-4"></a><span class="co"># 3. Retorne 1 + quitamento(v*(1+j)-k,j,k)</span></span></code></pre></div>
 </div>
-<div id="b-6" class="section level2">
+<div id="b-4" class="section level2">
 <h2>b)</h2>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a>v  =<span class="st"> </span><span class="kw">c</span>()</span>
-<span id="cb47-2"><a href="#cb47-2"></a><span class="cf">for</span>(elemento <span class="cf">in</span> L4){</span>
-<span id="cb47-3"><a href="#cb47-3"></a>  soma_pos =<span class="st"> </span><span class="dv">0</span></span>
-<span id="cb47-4"><a href="#cb47-4"></a>  <span class="cf">for</span>(numero <span class="cf">in</span> elemento){</span>
-<span id="cb47-5"><a href="#cb47-5"></a>    soma_pos =<span class="st"> </span>soma_pos <span class="op">+</span><span class="st"> </span>numero</span>
-<span id="cb47-6"><a href="#cb47-6"></a>  }</span>
-<span id="cb47-7"><a href="#cb47-7"></a>  <span class="cf">if</span>(soma_pos<span class="op">%%</span><span class="dv">5</span> <span class="op">==</span><span class="st"> </span><span class="dv">0</span>){</span>
-<span id="cb47-8"><a href="#cb47-8"></a>    v =<span class="st"> </span><span class="kw">c</span>(v, <span class="kw">paste</span>(soma_pos,<span class="st">&quot;é múltiplo de 5&quot;</span>))</span>
-<span id="cb47-9"><a href="#cb47-9"></a>  }<span class="cf">else</span>{</span>
-<span id="cb47-10"><a href="#cb47-10"></a>    v =<span class="st"> </span><span class="kw">c</span>(v, <span class="kw">paste</span>(soma_pos,<span class="st">&quot;não é múltiplo de 5&quot;</span>))</span>
-<span id="cb47-11"><a href="#cb47-11"></a>  }</span>
-<span id="cb47-12"><a href="#cb47-12"></a>}</span>
-<span id="cb47-13"><a href="#cb47-13"></a>v</span></code></pre></div>
-<pre><code>##  [1] &quot;2 não é múltiplo de 5&quot;  &quot;6 não é múltiplo de 5&quot;  &quot;12 não é múltiplo de 5&quot;
-##  [4] &quot;20 é múltiplo de 5&quot;     &quot;30 é múltiplo de 5&quot;     &quot;42 não é múltiplo de 5&quot;
-##  [7] &quot;56 não é múltiplo de 5&quot; &quot;72 não é múltiplo de 5&quot; &quot;90 é múltiplo de 5&quot;    
-## [10] &quot;110 é múltiplo de 5&quot;</code></pre>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a>quitamento =<span class="st"> </span><span class="cf">function</span>(v,j,k){</span>
+<span id="cb38-2"><a href="#cb38-2"></a>  <span class="cf">if</span>(j<span class="op">&gt;</span><span class="dv">1</span> <span class="op">||</span><span class="st"> </span>j <span class="op">&lt;</span><span class="st"> </span><span class="dv">0</span>) <span class="kw">stop</span>(<span class="st">&quot;j é um número entre 0 e 1&quot;</span>)</span>
+<span id="cb38-3"><a href="#cb38-3"></a>  <span class="cf">if</span>((k<span class="op">&lt;</span><span class="dv">0</span>)) <span class="kw">stop</span>(<span class="st">&quot;k tem que ser positivo&quot;</span>)</span>
+<span id="cb38-4"><a href="#cb38-4"></a>  </span>
+<span id="cb38-5"><a href="#cb38-5"></a>  <span class="cf">if</span>(v<span class="op">&lt;=</span><span class="dv">0</span>) <span class="kw">return</span>(<span class="dv">0</span>)</span>
+<span id="cb38-6"><a href="#cb38-6"></a>  </span>
+<span id="cb38-7"><a href="#cb38-7"></a>  <span class="kw">return</span>(<span class="dv">1</span> <span class="op">+</span><span class="st"> </span><span class="kw">quitamento</span>(v<span class="op">*</span>(<span class="dv">1</span><span class="op">+</span>j)<span class="op">-</span>k,j,k))</span>
+<span id="cb38-8"><a href="#cb38-8"></a>}</span></code></pre></div>
 </div>
-<div id="c-4" class="section level2">
+<div id="c-2" class="section level2">
 <h2>c)</h2>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1"></a>qtd_m5 =<span class="st"> </span><span class="dv">0</span></span>
-<span id="cb49-2"><a href="#cb49-2"></a><span class="cf">for</span>(elemento <span class="cf">in</span> soma){</span>
-<span id="cb49-3"><a href="#cb49-3"></a>  <span class="cf">if</span>(elemento<span class="op">%%</span><span class="dv">5</span> <span class="op">==</span><span class="st"> </span><span class="dv">0</span>){</span>
-<span id="cb49-4"><a href="#cb49-4"></a>    qtd_m5 =<span class="st"> </span>qtd_m5 <span class="op">+</span><span class="st"> </span><span class="dv">1</span></span>
-<span id="cb49-5"><a href="#cb49-5"></a>  }</span>
-<span id="cb49-6"><a href="#cb49-6"></a>}</span>
-<span id="cb49-7"><a href="#cb49-7"></a>qtd_m5</span></code></pre></div>
-<pre><code>## [1] 4</code></pre>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a><span class="kw">quitamento</span>(<span class="dv">1200</span>,<span class="dv">2</span><span class="op">/</span><span class="dv">100</span>,<span class="dv">120</span>)</span></code></pre></div>
+<pre><code>## [1] 12</code></pre>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a><span class="kw">quitamento</span>(<span class="dv">1200</span>,<span class="dv">2</span><span class="op">/</span><span class="dv">100</span>,<span class="dv">150</span>)</span></code></pre></div>
+<pre><code>## [1] 9</code></pre>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1"></a><span class="kw">quitamento</span>(<span class="dv">1200</span>,<span class="dv">2</span><span class="op">/</span><span class="dv">100</span>,<span class="dv">200</span>)</span></code></pre></div>
+<pre><code>## [1] 7</code></pre>
 </div>
 </div>
 <div id="section-8" class="section level1">
 <h1>9)</h1>
-<div id="a-7" class="section level2">
-<h2>a)</h2>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1"></a>x0 =<span class="st"> </span><span class="dv">2</span></span>
-<span id="cb51-2"><a href="#cb51-2"></a>r =<span class="st"> </span><span class="dv">3</span></span>
-<span id="cb51-3"><a href="#cb51-3"></a>y =<span class="st"> </span><span class="kw">c</span>(x0)</span>
-<span id="cb51-4"><a href="#cb51-4"></a><span class="cf">for</span>(passo <span class="cf">in</span> <span class="dv">2</span><span class="op">:</span><span class="dv">100</span>){</span>
-<span id="cb51-5"><a href="#cb51-5"></a>  y =<span class="st"> </span><span class="kw">c</span>(y, y[passo<span class="dv">-1</span>] <span class="op">+</span><span class="st"> </span>r)</span>
-<span id="cb51-6"><a href="#cb51-6"></a>}</span>
-<span id="cb51-7"><a href="#cb51-7"></a>y</span></code></pre></div>
-<pre><code>##   [1]   2   5   8  11  14  17  20  23  26  29  32  35  38  41  44  47  50  53
-##  [19]  56  59  62  65  68  71  74  77  80  83  86  89  92  95  98 101 104 107
-##  [37] 110 113 116 119 122 125 128 131 134 137 140 143 146 149 152 155 158 161
-##  [55] 164 167 170 173 176 179 182 185 188 191 194 197 200 203 206 209 212 215
-##  [73] 218 221 224 227 230 233 236 239 242 245 248 251 254 257 260 263 266 269
-##  [91] 272 275 278 281 284 287 290 293 296 299</code></pre>
-</div>
-<div id="b-7" class="section level2">
-<h2>b)</h2>
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1"></a>formula_soma_pa =<span class="st"> </span>(y[<span class="dv">1</span>] <span class="op">+</span><span class="st"> </span>y[<span class="dv">35</span>])<span class="op">*</span><span class="dv">35</span><span class="op">/</span><span class="dv">2</span></span>
-<span id="cb53-2"><a href="#cb53-2"></a>soma_r =<span class="st"> </span><span class="dv">0</span> </span>
-<span id="cb53-3"><a href="#cb53-3"></a><span class="cf">for</span>(numero <span class="cf">in</span> y[<span class="dv">1</span><span class="op">:</span><span class="dv">35</span>]){</span>
-<span id="cb53-4"><a href="#cb53-4"></a>  soma_r =<span class="st"> </span>soma_r <span class="op">+</span><span class="st"> </span>numero</span>
-<span id="cb53-5"><a href="#cb53-5"></a>}</span>
-<span id="cb53-6"><a href="#cb53-6"></a>soma_r</span></code></pre></div>
-<pre><code>## [1] 1855</code></pre>
-<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1"></a>soma_r <span class="op">==</span><span class="st"> </span>formula_soma_pa</span></code></pre></div>
-<pre><code>## [1] TRUE</code></pre>
-</div>
-<div id="c-5" class="section level2">
-<h2>c)</h2>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1"></a>qtd_mult_<span class="dv">4</span> =<span class="st"> </span><span class="dv">0</span></span>
-<span id="cb57-2"><a href="#cb57-2"></a><span class="cf">for</span>(elemento <span class="cf">in</span> y){</span>
-<span id="cb57-3"><a href="#cb57-3"></a>  <span class="cf">if</span>(elemento<span class="op">%%</span><span class="dv">4</span> <span class="op">==</span><span class="st"> </span><span class="dv">0</span>){</span>
-<span id="cb57-4"><a href="#cb57-4"></a>    qtd_mult_<span class="dv">4</span> =<span class="st"> </span>qtd_mult_<span class="dv">4</span> <span class="op">+</span><span class="st"> </span><span class="dv">1</span></span>
-<span id="cb57-5"><a href="#cb57-5"></a>  }</span>
-<span id="cb57-6"><a href="#cb57-6"></a>}</span>
-<span id="cb57-7"><a href="#cb57-7"></a>qtd_mult_<span class="dv">4</span></span></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a>mdc_rec =<span class="st"> </span><span class="cf">function</span>(n,m){</span>
+<span id="cb45-2"><a href="#cb45-2"></a>  <span class="cf">if</span>((n<span class="op">&lt;</span><span class="dv">0</span>)<span class="op">||</span>(n<span class="op">%%</span><span class="dv">1</span> <span class="op">!=</span><span class="st"> </span><span class="dv">0</span>)) <span class="kw">stop</span>(<span class="st">&quot;n tem que ser um natural&quot;</span>)</span>
+<span id="cb45-3"><a href="#cb45-3"></a>  <span class="cf">if</span>((m<span class="op">&lt;</span><span class="dv">0</span>)<span class="op">||</span>(m<span class="op">%%</span><span class="dv">1</span> <span class="op">!=</span><span class="st"> </span><span class="dv">0</span>)) <span class="kw">stop</span>(<span class="st">&quot;m tem que ser um natural&quot;</span>)</span>
+<span id="cb45-4"><a href="#cb45-4"></a>  </span>
+<span id="cb45-5"><a href="#cb45-5"></a>  <span class="cf">if</span>(m<span class="op">&lt;</span>n) {</span>
+<span id="cb45-6"><a href="#cb45-6"></a>    maior =<span class="st"> </span>n</span>
+<span id="cb45-7"><a href="#cb45-7"></a>    menor =<span class="st"> </span>m</span>
+<span id="cb45-8"><a href="#cb45-8"></a>  }</span>
+<span id="cb45-9"><a href="#cb45-9"></a>  <span class="cf">else</span>{ </span>
+<span id="cb45-10"><a href="#cb45-10"></a>    maior =<span class="st"> </span>m</span>
+<span id="cb45-11"><a href="#cb45-11"></a>    menor =<span class="st"> </span>n</span>
+<span id="cb45-12"><a href="#cb45-12"></a>  }</span>
+<span id="cb45-13"><a href="#cb45-13"></a>  </span>
+<span id="cb45-14"><a href="#cb45-14"></a>  <span class="cf">if</span>(menor <span class="op">==</span><span class="st"> </span><span class="dv">0</span>) <span class="kw">return</span>(maior)</span>
+<span id="cb45-15"><a href="#cb45-15"></a>  </span>
+<span id="cb45-16"><a href="#cb45-16"></a>  <span class="kw">return</span>(<span class="kw">mdc_rec</span>(menor,maior<span class="op">%%</span>menor))</span>
+<span id="cb45-17"><a href="#cb45-17"></a>  </span>
+<span id="cb45-18"><a href="#cb45-18"></a>}</span>
+<span id="cb45-19"><a href="#cb45-19"></a></span>
+<span id="cb45-20"><a href="#cb45-20"></a><span class="kw">mdc_rec</span>(<span class="dv">125</span>,<span class="dv">325</span>)</span></code></pre></div>
 <pre><code>## [1] 25</code></pre>
-</div>
-<div id="d-2" class="section level2">
-<h2>d)</h2>
-<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1"></a>qtd_mult_<span class="dv">4</span>_<span class="dv">5</span> =<span class="st"> </span><span class="dv">0</span></span>
-<span id="cb59-2"><a href="#cb59-2"></a><span class="cf">for</span>(elemento <span class="cf">in</span> y){</span>
-<span id="cb59-3"><a href="#cb59-3"></a>  <span class="cf">if</span>(elemento<span class="op">%%</span><span class="dv">4</span> <span class="op">==</span><span class="st"> </span><span class="dv">0</span> <span class="op">&amp;&amp;</span><span class="st"> </span>elemento<span class="op">%%</span><span class="dv">5</span> <span class="op">==</span><span class="st"> </span><span class="dv">0</span>){</span>
-<span id="cb59-4"><a href="#cb59-4"></a>    qtd_mult_<span class="dv">4</span>_<span class="dv">5</span> =<span class="st"> </span>qtd_mult_<span class="dv">4</span>_<span class="dv">5</span> <span class="op">+</span><span class="st"> </span><span class="dv">1</span></span>
-<span id="cb59-5"><a href="#cb59-5"></a>  }</span>
-<span id="cb59-6"><a href="#cb59-6"></a>}</span>
-<span id="cb59-7"><a href="#cb59-7"></a>qtd_mult_<span class="dv">4</span>_<span class="dv">5</span></span></code></pre></div>
-<pre><code>## [1] 5</code></pre>
-</div>
-<div id="e-1" class="section level2">
-<h2>e)</h2>
-<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1"></a>qtd_mult_<span class="dv">4</span>_ou_<span class="dv">5</span> =<span class="st"> </span><span class="dv">0</span></span>
-<span id="cb61-2"><a href="#cb61-2"></a><span class="cf">for</span>(elemento <span class="cf">in</span> y){</span>
-<span id="cb61-3"><a href="#cb61-3"></a>  <span class="cf">if</span>(elemento<span class="op">%%</span><span class="dv">4</span> <span class="op">==</span><span class="st"> </span><span class="dv">0</span> <span class="op">||</span><span class="st"> </span>elemento<span class="op">%%</span><span class="dv">5</span> <span class="op">==</span><span class="st"> </span><span class="dv">0</span>){</span>
-<span id="cb61-4"><a href="#cb61-4"></a>    qtd_mult_<span class="dv">4</span>_ou_<span class="dv">5</span> =<span class="st"> </span>qtd_mult_<span class="dv">4</span>_ou_<span class="dv">5</span> <span class="op">+</span><span class="st"> </span><span class="dv">1</span></span>
-<span id="cb61-5"><a href="#cb61-5"></a>  }</span>
-<span id="cb61-6"><a href="#cb61-6"></a>}</span>
-<span id="cb61-7"><a href="#cb61-7"></a>qtd_mult_<span class="dv">4</span>_ou_<span class="dv">5</span></span></code></pre></div>
-<pre><code>## [1] 40</code></pre>
-</div>
-<div id="f" class="section level2">
-<h2>f)</h2>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1"></a>x =<span class="st"> </span><span class="kw">c</span>()</span>
-<span id="cb63-2"><a href="#cb63-2"></a><span class="cf">for</span>(elemento <span class="cf">in</span> y){</span>
-<span id="cb63-3"><a href="#cb63-3"></a>  <span class="cf">if</span>(elemento<span class="op">%%</span><span class="dv">2</span> <span class="op">==</span><span class="st"> </span><span class="dv">0</span>){</span>
-<span id="cb63-4"><a href="#cb63-4"></a>    x =<span class="st"> </span><span class="kw">c</span>(x, elemento)</span>
-<span id="cb63-5"><a href="#cb63-5"></a>  }</span>
-<span id="cb63-6"><a href="#cb63-6"></a>  <span class="cf">else</span>{</span>
-<span id="cb63-7"><a href="#cb63-7"></a>    x =<span class="st"> </span><span class="kw">c</span>(x,<span class="dv">0</span>)</span>
-<span id="cb63-8"><a href="#cb63-8"></a>  }</span>
-<span id="cb63-9"><a href="#cb63-9"></a>}</span>
-<span id="cb63-10"><a href="#cb63-10"></a>x</span></code></pre></div>
-<pre><code>##   [1]   2   0   8   0  14   0  20   0  26   0  32   0  38   0  44   0  50   0
-##  [19]  56   0  62   0  68   0  74   0  80   0  86   0  92   0  98   0 104   0
-##  [37] 110   0 116   0 122   0 128   0 134   0 140   0 146   0 152   0 158   0
-##  [55] 164   0 170   0 176   0 182   0 188   0 194   0 200   0 206   0 212   0
-##  [73] 218   0 224   0 230   0 236   0 242   0 248   0 254   0 260   0 266   0
-##  [91] 272   0 278   0 284   0 290   0 296   0</code></pre>
-</div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a><span class="kw">mdc_rec</span>(<span class="dv">2829</span>,<span class="dv">861</span>)</span></code></pre></div>
+<pre><code>## [1] 123</code></pre>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1"></a><span class="kw">mdc_rec</span>(<span class="dv">299</span>,<span class="dv">217</span>)</span></code></pre></div>
+<pre><code>## [1] 1</code></pre>
 </div>
 <div id="section-9" class="section level1">
-<h1>10)</h1>
-<div id="a-8" class="section level2">
-<h2>a)</h2>
-<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1"></a>fib_<span class="dv">12</span> =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>)</span>
-<span id="cb65-2"><a href="#cb65-2"></a><span class="cf">while</span>(<span class="kw">length</span>(fib_<span class="dv">12</span>) <span class="op">&lt;</span><span class="st"> </span><span class="dv">12</span>){</span>
-<span id="cb65-3"><a href="#cb65-3"></a>  qtd_elementos =<span class="st"> </span><span class="kw">length</span>(fib_<span class="dv">12</span>)</span>
-<span id="cb65-4"><a href="#cb65-4"></a>  fib_<span class="dv">12</span> =<span class="st"> </span><span class="kw">c</span>(fib_<span class="dv">12</span>, fib_<span class="dv">12</span>[qtd_elementos] <span class="op">+</span><span class="st"> </span>fib_<span class="dv">12</span>[qtd_elementos<span class="dv">-1</span>])</span>
-<span id="cb65-5"><a href="#cb65-5"></a>}</span>
-<span id="cb65-6"><a href="#cb65-6"></a>fib_<span class="dv">12</span></span></code></pre></div>
-<pre><code>##  [1]   1   1   2   3   5   8  13  21  34  55  89 144</code></pre>
-</div>
-<div id="b-8" class="section level2">
-<h2>b)</h2>
-<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1"></a>fib_<span class="dv">300</span> =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>)</span>
-<span id="cb67-2"><a href="#cb67-2"></a>qtd_elementos =<span class="st"> </span><span class="kw">length</span>(fib_<span class="dv">300</span>)</span>
-<span id="cb67-3"><a href="#cb67-3"></a>soma =<span class="st"> </span>fib_<span class="dv">300</span>[qtd_elementos] <span class="op">+</span><span class="st"> </span>fib_<span class="dv">300</span>[qtd_elementos<span class="dv">-1</span>]</span>
-<span id="cb67-4"><a href="#cb67-4"></a></span>
-<span id="cb67-5"><a href="#cb67-5"></a><span class="cf">while</span>(soma <span class="op">&lt;</span><span class="st"> </span><span class="dv">300</span>){</span>
-<span id="cb67-6"><a href="#cb67-6"></a>  fib_<span class="dv">300</span> =<span class="st"> </span><span class="kw">c</span>(fib_<span class="dv">300</span>, soma)</span>
-<span id="cb67-7"><a href="#cb67-7"></a>  qtd_elementos =<span class="st"> </span><span class="kw">length</span>(fib_<span class="dv">300</span>)</span>
-<span id="cb67-8"><a href="#cb67-8"></a>  soma =<span class="st"> </span>fib_<span class="dv">300</span>[qtd_elementos] <span class="op">+</span><span class="st"> </span>fib_<span class="dv">300</span>[qtd_elementos<span class="dv">-1</span>]</span>
-<span id="cb67-9"><a href="#cb67-9"></a>}</span>
-<span id="cb67-10"><a href="#cb67-10"></a>fib_<span class="dv">300</span></span></code></pre></div>
-<pre><code>##  [1]   1   1   2   3   5   8  13  21  34  55  89 144 233</code></pre>
-</div>
-<div id="c-6" class="section level2">
-<h2>c)</h2>
-<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1"></a>fib =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>)</span>
-<span id="cb69-2"><a href="#cb69-2"></a>soma =<span class="st"> </span><span class="dv">2</span></span>
-<span id="cb69-3"><a href="#cb69-3"></a>qtd =<span class="st"> </span><span class="dv">2</span></span>
-<span id="cb69-4"><a href="#cb69-4"></a></span>
-<span id="cb69-5"><a href="#cb69-5"></a><span class="cf">while</span>(soma <span class="op">&lt;</span><span class="st"> </span><span class="dv">1000000</span>){</span>
-<span id="cb69-6"><a href="#cb69-6"></a>  qtd =<span class="st"> </span>qtd <span class="op">+</span><span class="st"> </span><span class="dv">1</span></span>
-<span id="cb69-7"><a href="#cb69-7"></a>  fib =<span class="st"> </span><span class="kw">c</span>(fib[<span class="dv">2</span>], soma)</span>
-<span id="cb69-8"><a href="#cb69-8"></a>  qtd_elementos =<span class="st"> </span><span class="kw">length</span>(fib)</span>
-<span id="cb69-9"><a href="#cb69-9"></a>  soma =<span class="st"> </span><span class="dv">0</span></span>
-<span id="cb69-10"><a href="#cb69-10"></a>  <span class="cf">for</span>(numero <span class="cf">in</span> fib){</span>
-<span id="cb69-11"><a href="#cb69-11"></a>    soma =<span class="st"> </span>soma <span class="op">+</span><span class="st"> </span>numero</span>
-<span id="cb69-12"><a href="#cb69-12"></a>  }</span>
-<span id="cb69-13"><a href="#cb69-13"></a>}</span>
-<span id="cb69-14"><a href="#cb69-14"></a>qtd</span></code></pre></div>
-<pre><code>## [1] 30</code></pre>
-</div>
+<h1>10</h1>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1"></a>permuta_rec =<span class="st"> </span><span class="cf">function</span>(vetor){</span>
+<span id="cb51-2"><a href="#cb51-2"></a>  <span class="cf">if</span>(<span class="kw">length</span>(vetor) <span class="op">==</span><span class="st"> </span><span class="dv">1</span>){</span>
+<span id="cb51-3"><a href="#cb51-3"></a>    <span class="kw">return</span>(vetor)</span>
+<span id="cb51-4"><a href="#cb51-4"></a>  } <span class="cf">else</span> {</span>
+<span id="cb51-5"><a href="#cb51-5"></a>    permutacoes =<span class="st"> </span><span class="kw">c</span>()</span>
+<span id="cb51-6"><a href="#cb51-6"></a>    <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(vetor)){</span>
+<span id="cb51-7"><a href="#cb51-7"></a>      letra =<span class="st"> </span>vetor[i]</span>
+<span id="cb51-8"><a href="#cb51-8"></a>      letras =<span class="st"> </span>vetor[<span class="op">-</span>i]</span>
+<span id="cb51-9"><a href="#cb51-9"></a>      <span class="cf">for</span>(elemento <span class="cf">in</span> <span class="kw">permuta_rec</span>(letras)){</span>
+<span id="cb51-10"><a href="#cb51-10"></a>        frase =<span class="st"> </span><span class="kw">c</span>(letra, elemento)</span>
+<span id="cb51-11"><a href="#cb51-11"></a>        permutacoes[[<span class="kw">length</span>(permutacoes)<span class="op">+</span><span class="dv">1</span>]] =<span class="st"> </span>frase</span>
+<span id="cb51-12"><a href="#cb51-12"></a>      }</span>
+<span id="cb51-13"><a href="#cb51-13"></a>    }</span>
+<span id="cb51-14"><a href="#cb51-14"></a>    <span class="kw">return</span>(permutacoes)</span>
+<span id="cb51-15"><a href="#cb51-15"></a>  }</span>
+<span id="cb51-16"><a href="#cb51-16"></a>}</span>
+<span id="cb51-17"><a href="#cb51-17"></a></span>
+<span id="cb51-18"><a href="#cb51-18"></a></span>
+<span id="cb51-19"><a href="#cb51-19"></a><span class="kw">permuta_rec</span>(<span class="kw">c</span>(<span class="st">&quot;a&quot;</span>,<span class="st">&quot;b&quot;</span>,<span class="st">&quot;c&quot;</span>))</span></code></pre></div>
+<pre><code>## [[1]]
+## [1] &quot;a&quot; &quot;b&quot; &quot;c&quot;
+## 
+## [[2]]
+## [1] &quot;a&quot; &quot;c&quot; &quot;b&quot;
+## 
+## [[3]]
+## [1] &quot;b&quot; &quot;a&quot; &quot;c&quot;
+## 
+## [[4]]
+## [1] &quot;b&quot; &quot;c&quot; &quot;a&quot;
+## 
+## [[5]]
+## [1] &quot;c&quot; &quot;a&quot; &quot;b&quot;
+## 
+## [[6]]
+## [1] &quot;c&quot; &quot;b&quot; &quot;a&quot;</code></pre>
 </div>
 </div>
 

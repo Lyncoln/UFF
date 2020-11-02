@@ -1,0 +1,258 @@
+---
+title: "Lista 7 Programação Estatística"
+author: "Lyncoln Sousa"
+output:
+  rmdformats::readthedown:
+    highlight: kate
+---
+
+
+```{r setup, echo=TRUE, cache=FALSE, error = TRUE}
+options(digits = 21)
+```
+
+# 1)
+
+```{r}
+soma_rec = function(n){
+  if((n<0)||(n%%1 != 0)) stop("n tem que ser um natural")
+  if(n==0) return(0)
+  return(n+soma_rec(n-1))
+}
+
+soma_rec(5)
+```
+
+
+# 2)
+
+```{r}
+e_rec = function(n){
+  if((n<0)||(n%%1 != 0)) stop("n tem que ser um natural")
+  if(n==0) return(1)
+  return(1/factorial(n) + e_rec(n-1))
+}
+e_rec(5)
+e_rec(10)
+e_rec(50)
+e_ = NULL
+for(i in 1:100){
+  e_ = c(e_,e_rec(i))
+}
+plot(e_)
+abline(h=exp(1))
+```
+
+
+# 3)
+
+## a)
+```{r}
+# 1. Caso n não seja natural, retorne erro.
+# 2. Se n=0, retorne 4.
+# 3. Retorne (4*(-1)^n)/(2*n+1) + pi_rec(n-1)
+```
+
+## b)
+```{r}
+pi_rec = function(n){
+  if(n == 0) return(4)
+  return((4*(-1)^n)/(2*n+1) + pi_rec(n-1))
+}
+```
+## c)
+```{r}
+pi_rec(10)
+pi_rec(100)
+pi_rec(1000)
+
+pi_ = NULL
+for(i in 1:100){
+  pi_ = c(pi_,pi_rec(i))
+}
+plot(pi_)
+abline(h=pi)
+```
+
+# 4)
+
+```{r}
+# 1. Caso n não seja natural, retorne erro.
+# 2. Se n=0, retorne 0.
+# 3. Retorne fibo_rec(n) + soma_fibo_rec(n-1)
+
+fibo_rec = function(n){
+  if((n<0)||(n%%1 != 0)) stop("n tem que ser um natural")
+  if(n==1 || n==2) return(1)
+  return(fibo_rec(n-1)+fibo_rec(n-2))
+}
+
+soma_fibo_rec = function(n){
+  if((n<0)||(n%%1 != 0)) stop("n tem que ser um natural")
+  if(n==0) return(0)
+  return(fibo_rec(n)+soma_fibo_rec(n-1))
+}
+soma_fibo_rec(5)
+```
+
+
+# 5)
+
+## a)
+```{r}
+# 1. Caso n não seja natural, retorne erro.
+# 2. Se n=0, retorne 1.
+# 3. Retorne 1/3^n + serie_rec(n-1)
+```
+
+## b)
+
+```{r}
+serie_rec = function(n){
+  if((n<0)||(n%%1 != 0)) stop("n tem que ser um natural")
+  if(n == 0) return(1)
+  return(1/3^n + serie_rec(n-1))
+}
+serie_rec(100)
+```
+
+## c)
+```{r}
+soma = function(a,b){
+  if((a<0)||(a%%1 != 0)) stop("a tem que ser um natural")
+  if((b<0)||(b%%1 != 0)) stop("b tem que ser um natural")
+  if(a>b) stop("a tem que ser maior que b")
+  if(a == b) return(1/3^b)
+  return(1/3^a + soma(a+1,b))
+}
+
+soma(4,100)
+```
+
+# 6)
+
+## a)
+```{r}
+
+investimento_rec = function(i,j,n){
+  if((i<0)) stop("i tem que ser positivo")
+  if((n<0)||(n%%1 != 0)) stop("n tem que ser um natural")
+  if(j>1 || j < 0) stop("j é um número entre 0 e 1")
+  
+  if(n==0) return(i)
+  
+  return(investimento_rec(i,j,n-1)*(1+j))
+}
+```
+
+## b)
+
+```{r}
+investimento_rec(1000,7.5/100,2)
+paste0("Com investimento de 1000 reais com juros de 7.5% ao ano em 2 anos temos R$:",investimento_rec(1000,7.5/100,2)," Já com 10% ao ano temos R$:",investimento_rec(1000,10/100,2)," Uma diferença de R$:",investimento_rec(1000,10/100,2) -investimento_rec(1000,7.5/100,2) )
+```
+
+# 7)
+## a)
+```{r}
+pagamento_rec = function(v,j,k,n){
+  if((v<0)) stop("v tem que ser positivo")
+  if(j>1 || j < 0) stop("j é um número entre 0 e 1")
+  if((k<0)) stop("k tem que ser positivo")
+  if((n<0)||(n%%1 != 0)) stop("n tem que ser um natural")
+  
+  if(n==0) return(v)
+  d = pagamento_rec(v,j,k,n-1)*(1+j) - k
+  if(d < 0) return(0)
+  else return(d)
+}
+
+```
+
+## b)
+```{r}
+pagamento_rec(1200,2/100,150,10)
+pagamento_rec(1200,2/100,120,10)
+```
+
+# 8)
+
+## a)
+```{r}
+# 1. Caso j não esteja entre 0 e 1, retorne erro.
+# 1. Caso k não seja positivo, retorne erro.
+# 2. Se v<=0, retorne 0.
+# 3. Retorne 1 + quitamento(v*(1+j)-k,j,k)
+```
+## b)
+```{r}
+quitamento = function(v,j,k){
+  if(j>1 || j < 0) stop("j é um número entre 0 e 1")
+  if((k<0)) stop("k tem que ser positivo")
+  
+  if(v<=0) return(0)
+  
+  return(1 + quitamento(v*(1+j)-k,j,k))
+}
+```
+
+## c)
+
+```{r}
+quitamento(1200,2/100,120)
+quitamento(1200,2/100,150)
+quitamento(1200,2/100,200)
+```
+
+# 9)
+
+```{r}
+mdc_rec = function(n,m){
+  if((n<0)||(n%%1 != 0)) stop("n tem que ser um natural")
+  if((m<0)||(m%%1 != 0)) stop("m tem que ser um natural")
+  
+  if(m<n) {
+    maior = n
+    menor = m
+  }
+  else{ 
+    maior = m
+    menor = n
+  }
+  
+  if(menor == 0) return(maior)
+  
+  return(mdc_rec(menor,maior%%menor))
+  
+}
+
+mdc_rec(125,325)
+mdc_rec(2829,861)
+mdc_rec(299,217)
+
+```
+
+# 10
+
+```{r}
+permuta_rec = function(vetor){
+  if(length(vetor) == 1){
+    return(vetor)
+  } else {
+    permutacoes = c()
+    for(i in 1:length(vetor)){
+      letra = vetor[i]
+      letras = vetor[-i]
+      for(elemento in permuta_rec(letras)){
+        frase = c(letra, elemento)
+        permutacoes[[length(permutacoes)+1]] = frase
+      }
+    }
+    return(permutacoes)
+  }
+}
+
+
+permuta_rec(c("a","b","c"))
+```
+

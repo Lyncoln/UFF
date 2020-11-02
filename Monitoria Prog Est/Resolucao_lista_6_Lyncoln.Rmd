@@ -1,0 +1,257 @@
+---
+title: "Lista 6 Programação Estatística"
+author: "Lyncoln Sousa"
+output:
+  rmdformats::readthedown:
+    highlight: kate
+---
+
+
+```{r setup, echo=TRUE, cache=FALSE, error = TRUE}
+```
+
+# 1)
+
+```{r}
+
+fat_rec = function(n){
+  if((n<0)||(n%%1 != 0)){
+    stop("n tem que ser um natural")
+  }
+  if(n == 0) return(1)
+  return(n*fat_rec(n-1))
+}
+
+fat_rec(5)
+```
+
+# 2)
+
+```{r}
+maior_rec = function(v){
+  n = length(v)
+  if(n == 1) return(v[1])
+  w = v[2:n]
+  max_w = maior_rec(w)
+  if(v[1] > max_w){
+    return(v[1])
+  }
+  return(max_w)
+}
+
+maior_rec(c(1,2,5,3,2,5,1,11,2,7))
+```
+
+# 3)
+
+```{r}
+# 1. Defina n como o tamanho do vetor v;
+# 2. Se n = 1, retorne v[1];
+# 3. Retorne v[1] + soma_rec(v[2:n])
+
+
+soma_rec = function(v){
+  n = length(v)
+  if(n==1) return(v[1])
+  return(v[1]+soma_rec(v[2:n]))
+}
+
+soma_rec(c(1,2,4,3))
+```
+
+# 4)
+
+```{r}
+
+# 1. Defina n como o tamanho do vetor v;
+# 2. Se n = 1, retorne 1;
+# 3. Defina w = v[1:(n-1)];
+# 4. max_pos_w = maior_pos_rec(w);
+# 5. Se v[n] > w[max_pos_w], retorne n.
+# 6. Retorne max_pos__w.
+
+maior_pos_rec = function(v){
+  n = length(v)
+  if(n == 1) return(n)
+  w = v[1:(n-1)]
+  max_pos_w = maior_pos_rec(w)
+  if(v[n] > w[max_pos_w]){
+    return(n)
+  }
+  return(max_pos_w)
+}
+maior_pos_rec(c(73,77,22,44))
+```
+
+# 5)
+
+## a)
+
+```{r}
+valor = 500
+juros = 0.075
+for(i in 1:3){
+  valor = valor*(1+juros)
+  print(paste0("Em ",i," ano(s) teremos ",valor))
+}
+```
+
+
+## b)
+
+```{r}
+# f(n) = f(n-1)*(1+juros)
+```
+
+## c)
+
+```{r}
+# 1. Caso n não seja natural, retorne erro.
+# 2. Se n=0, retorne 500;
+# 3. Retorne investimento_rec(n-1)*(1+0.075)
+```
+
+## d)
+
+```{r}
+investimento_rec = function(n){
+  if((n<0)||(n%%1 != 0)){
+    stop("n tem que ser um natural")
+  }
+  if(n == 0) return(500)
+  return(investimento_rec(n-1)*(1+0.075))
+}
+investimento_rec(3)
+```
+
+# 6)
+
+## a)
+
+```{r}
+valor = 1200
+juros = 0.02
+pagamento = 150
+for(i in 1:3){
+  valor = valor*(1+juros) - pagamento
+  print(paste0("Em ",i," ano(s) teremos ",valor))
+}
+```
+
+## b)
+
+```{r}
+# f(n) = f(n-1)*(1+juros) - pagamento
+```
+
+## c)
+
+```{r}
+# 1. Caso n não seja natural, retorne erro.
+# 2. Se n=0 retorne 1200;
+# 3. Faça d = pagamento_rec(n-1)*(1+0.02) - 150;
+# 4. Se d<0, retorne 0. Senão, retorne d.
+```
+
+## e)
+
+```{r}
+pagamento_rec = function(n){
+  if((n<0)||(n%%1 != 0)){
+    stop("n tem que ser um natural")
+  }
+  if(n==0) return(1200)
+  d = pagamento_rec(n-1)*(1+0.02) - 150
+  if(d < 0) return(0)
+  else return(d)
+}
+
+pagamento_rec(3)
+pagamento_rec(8)
+pagamento_rec(9)
+```
+
+# 7)
+
+```{r}
+fibo_rec = function(n){
+  if((n<0)||(n%%1 != 0)){
+    stop("n tem que ser um natural")
+  }
+  if(n==1 || n==2) return(1)
+  return(fibo_rec(n-1)+fibo_rec(n-2))
+}
+
+fibo_rec(8)
+```
+
+# 8)
+
+## a)
+
+```{r}
+# 1. Caso n não seja natural, retorne erro.
+# 2. Se n=1 ou n=2 retorne 0;
+# 3. Retorne dif_2_rec(n-1) + dif_2_rec(n-2) + n
+```
+
+## b)
+
+```{r}
+dif_2_rec = function(n){
+  if(n == 1 || n == 2) return(0)
+  return(2*dif_2_rec(n-1) + dif_2_rec(n-2) + n)
+}
+
+dif_2_rec(3)
+```
+
+# 9)
+
+```{r}
+# 1. Caso v não for numérico, retorne erro.
+# 2. Defina n = tamanho de v.
+# 3. Se n = 0, retorne 0.
+# 4. Se v[n] = 0, faça aux = 1, caso contrário, aux = 0.
+# 5. Defina w = v[-n]
+# 6. Retorne aux + conta_nulo_rec(w)
+
+
+conta_nulo_rec = function(v){
+  if(!is.numeric(v)) stop("V precisa ser  um vetor numérico")
+  n = length(v)
+  if(n == 0) return(0)
+  if(v[n]==0){
+    aux = 1
+  }else{
+    aux = 0
+  }
+  w = v[-n]
+  return(aux + conta_nulo_rec(w))
+}
+
+conta_nulo_rec(c(0,2,3,0,0,4,0,0))
+
+```
+
+
+# 10)
+
+```{r}
+# 1. Defina n = tamanho de v.
+# 2. Se n = 1, retorne v[1]
+# 3. Defina w = v[1:(n-1)]
+# 4. Retorne c(v[n],invert_rec(w))
+
+
+invert_rec = function(v){
+  n = length(v)
+  if(n==1) return(v[1])
+  w = v[1:(n-1)]
+  return(c(v[n],invert_rec(w)))
+}
+
+vet = 1:5 ; vet
+invert_rec(vet)
+```
+

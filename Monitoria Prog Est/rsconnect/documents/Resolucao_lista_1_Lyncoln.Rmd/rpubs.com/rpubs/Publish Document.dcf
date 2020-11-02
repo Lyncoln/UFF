@@ -4,7 +4,7 @@ username:
 account: rpubs
 server: rpubs.com
 hostUrl: rpubs.com
-appId: https://api.rpubs.com/api/v1/document/661120/cd710be1abbe4dd8b1843942ed4af786
-bundleId: https://api.rpubs.com/api/v1/document/661120/cd710be1abbe4dd8b1843942ed4af786
-url: http://rpubs.com/Lyncoln/661120/edit
-when: 1600204253.0709
+appId: https://api.rpubs.com/api/v1/document/663945/e5c93a6632f04f109fead5ac79e95f6d
+bundleId: https://api.rpubs.com/api/v1/document/663945/e5c93a6632f04f109fead5ac79e95f6d
+url: http://rpubs.com/publish/claim/663945/6d252ec63852494e9056124bb3b9697a
+when: 1600715385.97389

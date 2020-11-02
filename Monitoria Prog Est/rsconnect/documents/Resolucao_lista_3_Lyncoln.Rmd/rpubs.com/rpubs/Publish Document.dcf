@@ -1,0 +1,10 @@
+name: Publish Document
+title:
+username:
+account: rpubs
+server: rpubs.com
+hostUrl: rpubs.com
+appId: https://api.rpubs.com/api/v1/document/670984/1f7c268b8d8a4303a38389f92de092ca
+bundleId: https://api.rpubs.com/api/v1/document/670984/1f7c268b8d8a4303a38389f92de092ca
+url: http://rpubs.com/Lyncoln/670984
+when: 1602652512.74464

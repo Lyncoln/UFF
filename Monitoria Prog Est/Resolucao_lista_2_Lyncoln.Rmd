@@ -22,7 +22,7 @@ if(a + b > c && a + c > b && c + b > a){
   if(a == b && b == c) {
     print("O triângulo é equilátero")
   }
-  else if(a == b && b != c || a == c && c != a || b == c && b != a){
+  else if(a == b && b != c || a == c && c !=  b|| b == c && b != a){
     print("O triângulo é isósceles")
   }
   else{
@@ -139,7 +139,7 @@ for(i in 1:100){
     matriz[i,j] = j
   }
 }
-matriz
+head.matrix(matriz,c(10,10));tail.matrix(matriz,c(10,10))
 ```
 
 ## d)
@@ -154,7 +154,7 @@ for(i in 1:100){
     }
   }
 }
-matriz
+head.matrix(matriz,c(10,10));tail.matrix(matriz,c(10,10))
 ```
 
 # 5)
@@ -165,7 +165,7 @@ matriz = matrix(0, nrow = 100, ncol = 100)
 for(i in 1:100){
   matriz[i,i] = i
 }
-matriz
+head.matrix(matriz,c(10,10));tail.matrix(matriz,c(10,10))
 ```
 
 ## b)
@@ -174,7 +174,7 @@ matriz = matrix(0, nrow = 100, ncol = 100)
 for(i in 1:100){
   matriz[i,i] = 101 - i
 }
-matriz
+head.matrix(matriz,c(10,10));tail.matrix(matriz,c(10,10))
 ```
 
 # 6)
@@ -192,7 +192,11 @@ L1
 ```{r}
 L2 = list()
 for(i in 1:10){
-  L2[[i]] = rep(1,i)
+  aux = c()
+  for(j in 1:i){
+    aux = c(aux,1)
+  }
+  L2[[i]] = aux
 }
 L2
 ```
@@ -201,7 +205,11 @@ L2
 ```{r}
 L3 = list()
 for(i in 1:10){
-  L3[[i]] = i*seq(1,10) 
+  aux = c()
+  for(j in 1:10){
+    aux = c(aux,i*j)
+  }
+  L3[[i]] = aux
 }
 L3
 ```
@@ -210,7 +218,11 @@ L3
 ```{r}
 L4 = list()
 for(i in 1:10){
-  L4[[i]] = seq(1,i)*2
+  aux = c()
+  for(j in 1:i){
+    aux = c(aux,j*2)
+  }
+  L4[[i]] = aux
 }
 L4
 ```
@@ -226,14 +238,8 @@ for(i in 1:10){
   L5[[i]] = matriz
 }
 L5
-#Ou 
-L5_2 = list()
-for(i in 1:10){
-  matriz = matrix(0, nrow = i, ncol = i)
-  diag(matriz) = 1
-  L5_2[[i]] = matriz
-}
-L5_2
+
+
 ```
 
 # 7)
@@ -251,7 +257,11 @@ soma
 ```{r}
 soma  = c()
 for(elemento in L3){
-  soma = c(soma, sum(elemento))
+  aux = 0
+  for(numero in elemento){
+    aux = aux + numero
+  }
+  soma = c(soma, aux)
 }
 soma
 ```
@@ -262,16 +272,23 @@ soma
 ```{r}
 soma  = c()
 for(elemento in L4){
-  soma = c(soma, sum(elemento))
+  aux = 0
+  for(numero in elemento){
+    aux = aux + numero
+  }
+  soma = c(soma, aux)
 }
 soma
 ```
 
-##b)
+## b)
 ```{r}
 v  = c()
 for(elemento in L4){
-  soma_pos = sum(elemento)
+  soma_pos = 0
+  for(numero in elemento){
+    soma_pos = soma_pos + numero
+  }
   if(soma_pos%%5 == 0){
     v = c(v, paste(soma_pos,"é múltiplo de 5"))
   }else{
@@ -282,7 +299,7 @@ v
 ```
 
 
-##c)
+## c)
 ```{r}
 qtd_m5 = 0
 for(elemento in soma){
@@ -305,17 +322,16 @@ for(passo in 2:100){
   y = c(y, y[passo-1] + r)
 }
 y
-
-x0 = 2
-r = 3
-y = seq(from = 2, by = 3, length.out = 100)
-y
 ```
 
 ## b)
 ```{r}
-formula_soma_pa = (y[1] + y[30])*30/2
-soma_r = sum(y[1:30])
+formula_soma_pa = (y[1] + y[35])*35/2
+soma_r = 0 
+for(numero in y[1:35]){
+  soma_r = soma_r + numero
+}
+soma_r
 soma_r == formula_soma_pa
 ```
 
@@ -399,14 +415,17 @@ fib_300
 
 ```{r}
 fib = c(1,1)
-soma = sum(fib)
+soma = 2
 qtd = 2
 
 while(soma < 1000000){
   qtd = qtd + 1
   fib = c(fib[2], soma)
   qtd_elementos = length(fib)
-  soma = sum(fib)
+  soma = 0
+  for(numero in fib){
+    soma = soma + numero
+  }
 }
 qtd
 

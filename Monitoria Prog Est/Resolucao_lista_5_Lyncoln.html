@@ -10,9 +10,8 @@
 
 <meta name="author" content="Lyncoln Sousa" />
 
-<meta name="date" content="2020-10-14" />
 
-<title>Lista 2 Programação Estatística</title>
+<title>Lista 5 Programação Estatística</title>
 
 <script>/*! jQuery v1.11.3 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org/license */
 !function(a,b){"object"==typeof module&&"object"==typeof module.exports?module.exports=a.document?b(a,!0):function(a){if(!a.document)throw new Error("jQuery requires a window with a document");return b(a)}:b(a)}("undefined"!=typeof window?window:this,function(a,b){var c=[],d=c.slice,e=c.concat,f=c.push,g=c.indexOf,h={},i=h.toString,j=h.hasOwnProperty,k={},l="1.11.3",m=function(a,b){return new m.fn.init(a,b)},n=/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,o=/^-ms-/,p=/-([\da-z])/gi,q=function(a,b){return b.toUpperCase()};m.fn=m.prototype={jquery:l,constructor:m,selector:"",length:0,toArray:function(){return d.call(this)},get:function(a){return null!=a?0>a?this[a+this.length]:this[a]:d.call(this)},pushStack:function(a){var b=m.merge(this.constructor(),a);return b.prevObject=this,b.context=this.context,b},each:function(a,b){return m.each(this,a,b)},map:function(a){return this.pushStack(m.map(this,function(b,c){return a.call(b,c,b)}))},slice:function(){return this.pushStack(d.apply(this,arguments))},first:function(){return this.eq(0)},last:function(){return this.eq(-1)},eq:function(a){var b=this.length,c=+a+(0>a?b:0);return this.pushStack(c>=0&&b>c?[this[c]]:[])},end:function(){return this.prevObject||this.constructor(null)},push:f,sort:c.sort,splice:c.splice},m.extend=m.fn.extend=function(){var a,b,c,d,e,f,g=arguments[0]||{},h=1,i=arguments.length,j=!1;for("boolean"==typeof g&&(j=g,g=arguments[h]||{},h++),"object"==typeof g||m.isFunction(g)||(g={}),h===i&&(g=this,h--);i>h;h++)if(null!=(e=arguments[h]))for(d in e)a=g[d],c=e[d],g!==c&&(j&&c&&(m.isPlainObject(c)||(b=m.isArray(c)))?(b?(b=!1,f=a&&m.isArray(a)?a:[]):f=a&&m.isPlainObject(a)?a:{},g[d]=m.extend(j,f,c)):void 0!==c&&(g[d]=c));return g},m.extend({expando:"jQuery"+(l+Math.random()).replace(/\D/g,""),isReady:!0,error:function(a){throw new Error(a)},noop:function(){},isFunction:function(a){return"function"===m.type(a)},isArray:Array.isArray||function(a){return"array"===m.type(a)},isWindow:function(a){return null!=a&&a==a.window},isNumeric:function(a){return!m.isArray(a)&&a-parseFloat(a)+1>=0},isEmptyObject:function(a){var b;for(b in a)return!1;return!0},isPlainObject:function(a){var b;if(!a||"object"!==m.type(a)||a.nodeType||m.isWindow(a))return!1;try{if(a.constructor&&!j.call(a,"constructor")&&!j.call(a.constructor.prototype,"isPrototypeOf"))return!1}catch(c){return!1}if(k.ownLast)for(b in a)return j.call(a,b);for(b in a);return void 0===b||j.call(a,b)},type:function(a){return null==a?a+"":"object"==typeof a||"function"==typeof a?h[i.call(a)]||"object":typeof a},globalEval:function(b){b&&m.trim(b)&&(a.execScript||function(b){a.eval.call(a,b)})(b)},camelCase:function(a){return a.replace(o,"ms-").replace(p,q)},nodeName:function(a,b){return a.nodeName&&a.nodeName.toLowerCase()===b.toLowerCase()},each:function(a,b,c){var d,e=0,f=a.length,g=r(a);if(c){if(g){for(;f>e;e++)if(d=b.apply(a[e],c),d===!1)break}else for(e in a)if(d=b.apply(a[e],c),d===!1)break}else if(g){for(;f>e;e++)if(d=b.call(a[e],e,a[e]),d===!1)break}else for(e in a)if(d=b.call(a[e],e,a[e]),d===!1)break;return a},trim:function(a){return null==a?"":(a+"").replace(n,"")},makeArray:function(a,b){var c=b||[];return null!=a&&(r(Object(a))?m.merge(c,"string"==typeof a?[a]:a):f.call(c,a)),c},inArray:function(a,b,c){var d;if(b){if(g)return g.call(b,a,c);for(d=b.length,c=c?0>c?Math.max(0,d+c):c:0;d>c;c++)if(c in b&&b[c]===a)return c}return-1},merge:function(a,b){var c=+b.length,d=0,e=a.length;while(c>d)a[e++]=b[d++];if(c!==c)while(void 0!==b[d])a[e++]=b[d++];return a.length=e,a},grep:function(a,b,c){for(var d,e=[],f=0,g=a.length,h=!c;g>f;f++)d=!b(a[f],f),d!==h&&e.push(a[f]);return e},map:function(a,b,c){var d,f=0,g=a.length,h=r(a),i=[];if(h)for(;g>f;f++)d=b(a[f],f,c),null!=d&&i.push(d);else for(f in a)d=b(a[f],f,c),null!=d&&i.push(d);return e.apply([],i)},guid:1,proxy:function(a,b){var c,e,f;return"string"==typeof b&&(f=a[b],b=a,a=f),m.isFunction(a)?(c=d.call(arguments,2),e=function(){return a.apply(b||this,c.concat(d.call(arguments)))},e.guid=a.guid=a.guid||m.guid++,e):void 0},now:function(){return+new Date},support:k}),m.each("Boolean Number String Function Array Date RegExp Object Error".split(" "),function(a,b){h["[object "+b+"]"]=b.toLowerCase()});function r(a){var b="length"in a&&a.length,c=m.type(a);return"function"===c||m.isWindow(a)?!1:1===a.nodeType&&b?!0:"array"===c||0===b||"number"==typeof b&&b>0&&b-1 in a}var s=function(a){var b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u="sizzle"+1*new Date,v=a.document,w=0,x=0,y=ha(),z=ha(),A=ha(),B=function(a,b){return a===b&&(l=!0),0},C=1<<31,D={}.hasOwnProperty,E=[],F=E.pop,G=E.push,H=E.push,I=E.slice,J=function(a,b){for(var c=0,d=a.length;d>c;c++)if(a[c]===b)return c;return-1},K="checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped",L="[\\x20\\t\\r\\n\\f]",M="(?:\\\\.|[\\w-]|[^\\x00-\\xa0])+",N=M.replace("w","w#"),O="\\["+L+"*("+M+")(?:"+L+"*([*^$|!~]?=)"+L+"*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|("+N+"))|)"+L+"*\\]",P=":("+M+")(?:\\((('((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\")|((?:\\\\.|[^\\\\()[\\]]|"+O+")*)|.*)\\)|)",Q=new RegExp(L+"+","g"),R=new RegExp("^"+L+"+|((?:^|[^\\\\])(?:\\\\.)*)"+L+"+$","g"),S=new RegExp("^"+L+"*,"+L+"*"),T=new RegExp("^"+L+"*([>+~]|"+L+")"+L+"*"),U=new RegExp("="+L+"*([^\\]'\"]*?)"+L+"*\\]","g"),V=new RegExp(P),W=new RegExp("^"+N+"$"),X={ID:new RegExp("^#("+M+")"),CLASS:new RegExp("^\\.("+M+")"),TAG:new RegExp("^("+M.replace("w","w*")+")"),ATTR:new RegExp("^"+O),PSEUDO:new RegExp("^"+P),CHILD:new RegExp("^:(only|first|last|nth|nth-last)-(child|of-type)(?:\\("+L+"*(even|odd|(([+-]|)(\\d*)n|)"+L+"*(?:([+-]|)"+L+"*(\\d+)|))"+L+"*\\)|)","i"),bool:new RegExp("^(?:"+K+")$","i"),needsContext:new RegExp("^"+L+"*[>+~]|:(even|odd|eq|gt|lt|nth|first|last)(?:\\("+L+"*((?:-\\d)?\\d*)"+L+"*\\)|)(?=[^-]|$)","i")},Y=/^(?:input|select|textarea|button)$/i,Z=/^h\d$/i,$=/^[^{]+\{\s*\[native \w/,_=/^(?:#([\w-]+)|(\w+)|\.([\w-]+))$/,aa=/[+~]/,ba=/'|\\/g,ca=new RegExp("\\\\([\\da-f]{1,6}"+L+"?|("+L+")|.)","ig"),da=function(a,b,c){var d="0x"+b-65536;return d!==d||c?b:0>d?String.fromCharCode(d+65536):String.fromCharCode(d>>10|55296,1023&d|56320)},ea=function(){m()};try{H.apply(E=I.call(v.childNodes),v.childNodes),E[v.childNodes.length].nodeType}catch(fa){H={apply:E.length?function(a,b){G.apply(a,I.call(b))}:function(a,b){var c=a.length,d=0;while(a[c++]=b[d++]);a.length=c-1}}}function ga(a,b,d,e){var f,h,j,k,l,o,r,s,w,x;if((b?b.ownerDocument||b:v)!==n&&m(b),b=b||n,d=d||[],k=b.nodeType,"string"!=typeof a||!a||1!==k&&9!==k&&11!==k)return d;if(!e&&p){if(11!==k&&(f=_.exec(a)))if(j=f[1]){if(9===k){if(h=b.getElementById(j),!h||!h.parentNode)return d;if(h.id===j)return d.push(h),d}else if(b.ownerDocument&&(h=b.ownerDocument.getElementById(j))&&t(b,h)&&h.id===j)return d.push(h),d}else{if(f[2])return H.apply(d,b.getElementsByTagName(a)),d;if((j=f[3])&&c.getElementsByClassName)return H.apply(d,b.getElementsByClassName(j)),d}if(c.qsa&&(!q||!q.test(a))){if(s=r=u,w=b,x=1!==k&&a,1===k&&"object"!==b.nodeName.toLowerCase()){o=g(a),(r=b.getAttribute("id"))?s=r.replace(ba,"\\$&"):b.setAttribute("id",s),s="[id='"+s+"'] ",l=o.length;while(l--)o[l]=s+ra(o[l]);w=aa.test(a)&&pa(b.parentNode)||b,x=o.join(",")}if(x)try{return H.apply(d,w.querySelectorAll(x)),d}catch(y){}finally{r||b.removeAttribute("id")}}}return i(a.replace(R,"$1"),b,d,e)}function ha(){var a=[];function b(c,e){return a.push(c+" ")>d.cacheLength&&delete b[a.shift()],b[c+" "]=e}return b}function ia(a){return a[u]=!0,a}function ja(a){var b=n.createElement("div");try{return!!a(b)}catch(c){return!1}finally{b.parentNode&&b.parentNode.removeChild(b),b=null}}function ka(a,b){var c=a.split("|"),e=a.length;while(e--)d.attrHandle[c[e]]=b}function la(a,b){var c=b&&a,d=c&&1===a.nodeType&&1===b.nodeType&&(~b.sourceIndex||C)-(~a.sourceIndex||C);if(d)return d;if(c)while(c=c.nextSibling)if(c===b)return-1;return a?1:-1}function ma(a){return function(b){var c=b.nodeName.toLowerCase();return"input"===c&&b.type===a}}function na(a){return function(b){var c=b.nodeName.toLowerCase();return("input"===c||"button"===c)&&b.type===a}}function oa(a){return ia(function(b){return b=+b,ia(function(c,d){var e,f=a([],c.length,b),g=f.length;while(g--)c[e=f[g]]&&(c[e]=!(d[e]=c[e]))})})}function pa(a){return a&&"undefined"!=typeof a.getElementsByTagName&&a}c=ga.support={},f=ga.isXML=function(a){var b=a&&(a.ownerDocument||a).documentElement;return b?"HTML"!==b.nodeName:!1},m=ga.setDocument=function(a){var b,e,g=a?a.ownerDocument||a:v;return g!==n&&9===g.nodeType&&g.documentElement?(n=g,o=g.documentElement,e=g.defaultView,e&&e!==e.top&&(e.addEventListener?e.addEventListener("unload",ea,!1):e.attachEvent&&e.attachEvent("onunload",ea)),p=!f(g),c.attributes=ja(function(a){return a.className="i",!a.getAttribute("className")}),c.getElementsByTagName=ja(function(a){return a.appendChild(g.createComment("")),!a.getElementsByTagName("*").length}),c.getElementsByClassName=$.test(g.getElementsByClassName),c.getById=ja(function(a){return o.appendChild(a).id=u,!g.getElementsByName||!g.getElementsByName(u).length}),c.getById?(d.find.ID=function(a,b){if("undefined"!=typeof b.getElementById&&p){var c=b.getElementById(a);return c&&c.parentNode?[c]:[]}},d.filter.ID=function(a){var b=a.replace(ca,da);return function(a){return a.getAttribute("id")===b}}):(delete d.find.ID,d.filter.ID=function(a){var b=a.replace(ca,da);return function(a){var c="undefined"!=typeof a.getAttributeNode&&a.getAttributeNode("id");return c&&c.value===b}}),d.find.TAG=c.getElementsByTagName?function(a,b){return"undefined"!=typeof b.getElementsByTagName?b.getElementsByTagName(a):c.qsa?b.querySelectorAll(a):void 0}:function(a,b){var c,d=[],e=0,f=b.getElementsByTagName(a);if("*"===a){while(c=f[e++])1===c.nodeType&&d.push(c);return d}return f},d.find.CLASS=c.getElementsByClassName&&function(a,b){return p?b.getElementsByClassName(a):void 0},r=[],q=[],(c.qsa=$.test(g.querySelectorAll))&&(ja(function(a){o.appendChild(a).innerHTML="<a id='"+u+"'></a><select id='"+u+"-\f]' msallowcapture=''><option selected=''></option></select>",a.querySelectorAll("[msallowcapture^='']").length&&q.push("[*^$]="+L+"*(?:''|\"\")"),a.querySelectorAll("[selected]").length||q.push("\\["+L+"*(?:value|"+K+")"),a.querySelectorAll("[id~="+u+"-]").length||q.push("~="),a.querySelectorAll(":checked").length||q.push(":checked"),a.querySelectorAll("a#"+u+"+*").length||q.push(".#.+[+~]")}),ja(function(a){var b=g.createElement("input");b.setAttribute("type","hidden"),a.appendChild(b).setAttribute("name","D"),a.querySelectorAll("[name=d]").length&&q.push("name"+L+"*[*^$|!~]?="),a.querySelectorAll(":enabled").length||q.push(":enabled",":disabled"),a.querySelectorAll("*,:x"),q.push(",.*:")})),(c.matchesSelector=$.test(s=o.matches||o.webkitMatchesSelector||o.mozMatchesSelector||o.oMatchesSelector||o.msMatchesSelector))&&ja(function(a){c.disconnectedMatch=s.call(a,"div"),s.call(a,"[s!='']:x"),r.push("!=",P)}),q=q.length&&new RegExp(q.join("|")),r=r.length&&new RegExp(r.join("|")),b=$.test(o.compareDocumentPosition),t=b||$.test(o.contains)?function(a,b){var c=9===a.nodeType?a.documentElement:a,d=b&&b.parentNode;return a===d||!(!d||1!==d.nodeType||!(c.contains?c.contains(d):a.compareDocumentPosition&&16&a.compareDocumentPosition(d)))}:function(a,b){if(b)while(b=b.parentNode)if(b===a)return!0;return!1},B=b?function(a,b){if(a===b)return l=!0,0;var d=!a.compareDocumentPosition-!b.compareDocumentPosition;return d?d:(d=(a.ownerDocument||a)===(b.ownerDocument||b)?a.compareDocumentPosition(b):1,1&d||!c.sortDetached&&b.compareDocumentPosition(a)===d?a===g||a.ownerDocument===v&&t(v,a)?-1:b===g||b.ownerDocument===v&&t(v,b)?1:k?J(k,a)-J(k,b):0:4&d?-1:1)}:function(a,b){if(a===b)return l=!0,0;var c,d=0,e=a.parentNode,f=b.parentNode,h=[a],i=[b];if(!e||!f)return a===g?-1:b===g?1:e?-1:f?1:k?J(k,a)-J(k,b):0;if(e===f)return la(a,b);c=a;while(c=c.parentNode)h.unshift(c);c=b;while(c=c.parentNode)i.unshift(c);while(h[d]===i[d])d++;return d?la(h[d],i[d]):h[d]===v?-1:i[d]===v?1:0},g):n},ga.matches=function(a,b){return ga(a,null,null,b)},ga.matchesSelector=function(a,b){if((a.ownerDocument||a)!==n&&m(a),b=b.replace(U,"='$1']"),!(!c.matchesSelector||!p||r&&r.test(b)||q&&q.test(b)))try{var d=s.call(a,b);if(d||c.disconnectedMatch||a.document&&11!==a.document.nodeType)return d}catch(e){}return ga(b,n,null,[a]).length>0},ga.contains=function(a,b){return(a.ownerDocument||a)!==n&&m(a),t(a,b)},ga.attr=function(a,b){(a.ownerDocument||a)!==n&&m(a);var e=d.attrHandle[b.toLowerCase()],f=e&&D.call(d.attrHandle,b.toLowerCase())?e(a,b,!p):void 0;return void 0!==f?f:c.attributes||!p?a.getAttribute(b):(f=a.getAttributeNode(b))&&f.specified?f.value:null},ga.error=function(a){throw new Error("Syntax error, unrecognized expression: "+a)},ga.uniqueSort=function(a){var b,d=[],e=0,f=0;if(l=!c.detectDuplicates,k=!c.sortStable&&a.slice(0),a.sort(B),l){while(b=a[f++])b===a[f]&&(e=d.push(f));while(e--)a.splice(d[e],1)}return k=null,a},e=ga.getText=function(a){var b,c="",d=0,f=a.nodeType;if(f){if(1===f||9===f||11===f){if("string"==typeof a.textContent)return a.textContent;for(a=a.firstChild;a;a=a.nextSibling)c+=e(a)}else if(3===f||4===f)return a.nodeValue}else while(b=a[d++])c+=e(b);return c},d=ga.selectors={cacheLength:50,createPseudo:ia,match:X,attrHandle:{},find:{},relative:{">":{dir:"parentNode",first:!0}," ":{dir:"parentNode"},"+":{dir:"previousSibling",first:!0},"~":{dir:"previousSibling"}},preFilter:{ATTR:function(a){return a[1]=a[1].replace(ca,da),a[3]=(a[3]||a[4]||a[5]||"").replace(ca,da),"~="===a[2]&&(a[3]=" "+a[3]+" "),a.slice(0,4)},CHILD:function(a){return a[1]=a[1].toLowerCase(),"nth"===a[1].slice(0,3)?(a[3]||ga.error(a[0]),a[4]=+(a[4]?a[5]+(a[6]||1):2*("even"===a[3]||"odd"===a[3])),a[5]=+(a[7]+a[8]||"odd"===a[3])):a[3]&&ga.error(a[0]),a},PSEUDO:function(a){var b,c=!a[6]&&a[2];return X.CHILD.test(a[0])?null:(a[3]?a[2]=a[4]||a[5]||"":c&&V.test(c)&&(b=g(c,!0))&&(b=c.indexOf(")",c.length-b)-c.length)&&(a[0]=a[0].slice(0,b),a[2]=c.slice(0,b)),a.slice(0,3))}},filter:{TAG:function(a){var b=a.replace(ca,da).toLowerCase();return"*"===a?function(){return!0}:function(a){return a.nodeName&&a.nodeName.toLowerCase()===b}},CLASS:function(a){var b=y[a+" "];return b||(b=new RegExp("(^|"+L+")"+a+"("+L+"|$)"))&&y(a,function(a){return b.test("string"==typeof a.className&&a.className||"undefined"!=typeof a.getAttribute&&a.getAttribute("class")||"")})},ATTR:function(a,b,c){return function(d){var e=ga.attr(d,a);return null==e?"!="===b:b?(e+="","="===b?e===c:"!="===b?e!==c:"^="===b?c&&0===e.indexOf(c):"*="===b?c&&e.indexOf(c)>-1:"$="===b?c&&e.slice(-c.length)===c:"~="===b?(" "+e.replace(Q," ")+" ").indexOf(c)>-1:"|="===b?e===c||e.slice(0,c.length+1)===c+"-":!1):!0}},CHILD:function(a,b,c,d,e){var f="nth"!==a.slice(0,3),g="last"!==a.slice(-4),h="of-type"===b;return 1===d&&0===e?function(a){return!!a.parentNode}:function(b,c,i){var j,k,l,m,n,o,p=f!==g?"nextSibling":"previousSibling",q=b.parentNode,r=h&&b.nodeName.toLowerCase(),s=!i&&!h;if(q){if(f){while(p){l=b;while(l=l[p])if(h?l.nodeName.toLowerCase()===r:1===l.nodeType)return!1;o=p="only"===a&&!o&&"nextSibling"}return!0}if(o=[g?q.firstChild:q.lastChild],g&&s){k=q[u]||(q[u]={}),j=k[a]||[],n=j[0]===w&&j[1],m=j[0]===w&&j[2],l=n&&q.childNodes[n];while(l=++n&&l&&l[p]||(m=n=0)||o.pop())if(1===l.nodeType&&++m&&l===b){k[a]=[w,n,m];break}}else if(s&&(j=(b[u]||(b[u]={}))[a])&&j[0]===w)m=j[1];else while(l=++n&&l&&l[p]||(m=n=0)||o.pop())if((h?l.nodeName.toLowerCase()===r:1===l.nodeType)&&++m&&(s&&((l[u]||(l[u]={}))[a]=[w,m]),l===b))break;return m-=e,m===d||m%d===0&&m/d>=0}}},PSEUDO:function(a,b){var c,e=d.pseudos[a]||d.setFilters[a.toLowerCase()]||ga.error("unsupported pseudo: "+a);return e[u]?e(b):e.length>1?(c=[a,a,"",b],d.setFilters.hasOwnProperty(a.toLowerCase())?ia(function(a,c){var d,f=e(a,b),g=f.length;while(g--)d=J(a,f[g]),a[d]=!(c[d]=f[g])}):function(a){return e(a,0,c)}):e}},pseudos:{not:ia(function(a){var b=[],c=[],d=h(a.replace(R,"$1"));return d[u]?ia(function(a,b,c,e){var f,g=d(a,null,e,[]),h=a.length;while(h--)(f=g[h])&&(a[h]=!(b[h]=f))}):function(a,e,f){return b[0]=a,d(b,null,f,c),b[0]=null,!c.pop()}}),has:ia(function(a){return function(b){return ga(a,b).length>0}}),contains:ia(function(a){return a=a.replace(ca,da),function(b){return(b.textContent||b.innerText||e(b)).indexOf(a)>-1}}),lang:ia(function(a){return W.test(a||"")||ga.error("unsupported lang: "+a),a=a.replace(ca,da).toLowerCase(),function(b){var c;do if(c=p?b.lang:b.getAttribute("xml:lang")||b.getAttribute("lang"))return c=c.toLowerCase(),c===a||0===c.indexOf(a+"-");while((b=b.parentNode)&&1===b.nodeType);return!1}}),target:function(b){var c=a.location&&a.location.hash;return c&&c.slice(1)===b.id},root:function(a){return a===o},focus:function(a){return a===n.activeElement&&(!n.hasFocus||n.hasFocus())&&!!(a.type||a.href||~a.tabIndex)},enabled:function(a){return a.disabled===!1},disabled:function(a){return a.disabled===!0},checked:function(a){var b=a.nodeName.toLowerCase();return"input"===b&&!!a.checked||"option"===b&&!!a.selected},selected:function(a){return a.parentNode&&a.parentNode.selectedIndex,a.selected===!0},empty:function(a){for(a=a.firstChild;a;a=a.nextSibling)if(a.nodeType<6)return!1;return!0},parent:function(a){return!d.pseudos.empty(a)},header:function(a){return Z.test(a.nodeName)},input:function(a){return Y.test(a.nodeName)},button:function(a){var b=a.nodeName.toLowerCase();return"input"===b&&"button"===a.type||"button"===b},text:function(a){var b;return"input"===a.nodeName.toLowerCase()&&"text"===a.type&&(null==(b=a.getAttribute("type"))||"text"===b.toLowerCase())},first:oa(function(){return[0]}),last:oa(function(a,b){return[b-1]}),eq:oa(function(a,b,c){return[0>c?c+b:c]}),even:oa(function(a,b){for(var c=0;b>c;c+=2)a.push(c);return a}),odd:oa(function(a,b){for(var c=1;b>c;c+=2)a.push(c);return a}),lt:oa(function(a,b,c){for(var d=0>c?c+b:c;--d>=0;)a.push(d);return a}),gt:oa(function(a,b,c){for(var d=0>c?c+b:c;++d<b;)a.push(d);return a})}},d.pseudos.nth=d.pseudos.eq;for(b in{radio:!0,checkbox:!0,file:!0,password:!0,image:!0})d.pseudos[b]=ma(b);for(b in{submit:!0,reset:!0})d.pseudos[b]=na(b);function qa(){}qa.prototype=d.filters=d.pseudos,d.setFilters=new qa,g=ga.tokenize=function(a,b){var c,e,f,g,h,i,j,k=z[a+" "];if(k)return b?0:k.slice(0);h=a,i=[],j=d.preFilter;while(h){(!c||(e=S.exec(h)))&&(e&&(h=h.slice(e[0].length)||h),i.push(f=[])),c=!1,(e=T.exec(h))&&(c=e.shift(),f.push({value:c,type:e[0].replace(R," ")}),h=h.slice(c.length));for(g in d.filter)!(e=X[g].exec(h))||j[g]&&!(e=j[g](e))||(c=e.shift(),f.push({value:c,type:g,matches:e}),h=h.slice(c.length));if(!c)break}return b?h.length:h?ga.error(a):z(a,i).slice(0)};function ra(a){for(var b=0,c=a.length,d="";c>b;b++)d+=a[b].value;return d}function sa(a,b,c){var d=b.dir,e=c&&"parentNode"===d,f=x++;return b.first?function(b,c,f){while(b=b[d])if(1===b.nodeType||e)return a(b,c,f)}:function(b,c,g){var h,i,j=[w,f];if(g){while(b=b[d])if((1===b.nodeType||e)&&a(b,c,g))return!0}else while(b=b[d])if(1===b.nodeType||e){if(i=b[u]||(b[u]={}),(h=i[d])&&h[0]===w&&h[1]===f)return j[2]=h[2];if(i[d]=j,j[2]=a(b,c,g))return!0}}}function ta(a){return a.length>1?function(b,c,d){var e=a.length;while(e--)if(!a[e](b,c,d))return!1;return!0}:a[0]}function ua(a,b,c){for(var d=0,e=b.length;e>d;d++)ga(a,b[d],c);return c}function va(a,b,c,d,e){for(var f,g=[],h=0,i=a.length,j=null!=b;i>h;h++)(f=a[h])&&(!c||c(f,d,e))&&(g.push(f),j&&b.push(h));return g}function wa(a,b,c,d,e,f){return d&&!d[u]&&(d=wa(d)),e&&!e[u]&&(e=wa(e,f)),ia(function(f,g,h,i){var j,k,l,m=[],n=[],o=g.length,p=f||ua(b||"*",h.nodeType?[h]:h,[]),q=!a||!f&&b?p:va(p,m,a,h,i),r=c?e||(f?a:o||d)?[]:g:q;if(c&&c(q,r,h,i),d){j=va(r,n),d(j,[],h,i),k=j.length;while(k--)(l=j[k])&&(r[n[k]]=!(q[n[k]]=l))}if(f){if(e||a){if(e){j=[],k=r.length;while(k--)(l=r[k])&&j.push(q[k]=l);e(null,r=[],j,i)}k=r.length;while(k--)(l=r[k])&&(j=e?J(f,l):m[k])>-1&&(f[j]=!(g[j]=l))}}else r=va(r===g?r.splice(o,r.length):r),e?e(null,g,r,i):H.apply(g,r)})}function xa(a){for(var b,c,e,f=a.length,g=d.relative[a[0].type],h=g||d.relative[" "],i=g?1:0,k=sa(function(a){return a===b},h,!0),l=sa(function(a){return J(b,a)>-1},h,!0),m=[function(a,c,d){var e=!g&&(d||c!==j)||((b=c).nodeType?k(a,c,d):l(a,c,d));return b=null,e}];f>i;i++)if(c=d.relative[a[i].type])m=[sa(ta(m),c)];else{if(c=d.filter[a[i].type].apply(null,a[i].matches),c[u]){for(e=++i;f>e;e++)if(d.relative[a[e].type])break;return wa(i>1&&ta(m),i>1&&ra(a.slice(0,i-1).concat({value:" "===a[i-2].type?"*":""})).replace(R,"$1"),c,e>i&&xa(a.slice(i,e)),f>e&&xa(a=a.slice(e)),f>e&&ra(a))}m.push(c)}return ta(m)}function ya(a,b){var c=b.length>0,e=a.length>0,f=function(f,g,h,i,k){var l,m,o,p=0,q="0",r=f&&[],s=[],t=j,u=f||e&&d.find.TAG("*",k),v=w+=null==t?1:Math.random()||.1,x=u.length;for(k&&(j=g!==n&&g);q!==x&&null!=(l=u[q]);q++){if(e&&l){m=0;while(o=a[m++])if(o(l,g,h)){i.push(l);break}k&&(w=v)}c&&((l=!o&&l)&&p--,f&&r.push(l))}if(p+=q,c&&q!==p){m=0;while(o=b[m++])o(r,s,g,h);if(f){if(p>0)while(q--)r[q]||s[q]||(s[q]=F.call(i));s=va(s)}H.apply(i,s),k&&!f&&s.length>0&&p+b.length>1&&ga.uniqueSort(i)}return k&&(w=v,j=t),r};return c?ia(f):f}return h=ga.compile=function(a,b){var c,d=[],e=[],f=A[a+" "];if(!f){b||(b=g(a)),c=b.length;while(c--)f=xa(b[c]),f[u]?d.push(f):e.push(f);f=A(a,ya(e,d)),f.selector=a}return f},i=ga.select=function(a,b,e,f){var i,j,k,l,m,n="function"==typeof a&&a,o=!f&&g(a=n.selector||a);if(e=e||[],1===o.length){if(j=o[0]=o[0].slice(0),j.length>2&&"ID"===(k=j[0]).type&&c.getById&&9===b.nodeType&&p&&d.relative[j[1].type]){if(b=(d.find.ID(k.matches[0].replace(ca,da),b)||[])[0],!b)return e;n&&(b=b.parentNode),a=a.slice(j.shift().value.length)}i=X.needsContext.test(a)?0:j.length;while(i--){if(k=j[i],d.relative[l=k.type])break;if((m=d.find[l])&&(f=m(k.matches[0].replace(ca,da),aa.test(j[0].type)&&pa(b.parentNode)||b))){if(j.splice(i,1),a=f.length&&ra(j),!a)return H.apply(e,f),e;break}}}return(n||h(a,o))(f,b,!p,e,aa.test(a)&&pa(b.parentNode)||b),e},c.sortStable=u.split("").sort(B).join("")===u,c.detectDuplicates=!!l,m(),c.sortDetached=ja(function(a){return 1&a.compareDocumentPosition(n.createElement("div"))}),ja(function(a){return a.innerHTML="<a href='#'></a>","#"===a.firstChild.getAttribute("href")})||ka("type|href|height|width",function(a,b,c){return c?void 0:a.getAttribute(b,"type"===b.toLowerCase()?1:2)}),c.attributes&&ja(function(a){return a.innerHTML="<input/>",a.firstChild.setAttribute("value",""),""===a.firstChild.getAttribute("value")})||ka("value",function(a,b,c){return c||"input"!==a.nodeName.toLowerCase()?void 0:a.defaultValue}),ja(function(a){return null==a.getAttribute("disabled")})||ka(K,function(a,b,c){var d;return c?void 0:a[b]===!0?b.toLowerCase():(d=a.getAttributeNode(b))&&d.specified?d.value:null}),ga}(a);m.find=s,m.expr=s.selectors,m.expr[":"]=m.expr.pseudos,m.unique=s.uniqueSort,m.text=s.getText,m.isXMLDoc=s.isXML,m.contains=s.contains;var t=m.expr.match.needsContext,u=/^<(\w+)\s*\/?>(?:<\/\1>|)$/,v=/^.[^:#\[\.,]*$/;function w(a,b,c){if(m.isFunction(b))return m.grep(a,function(a,d){return!!b.call(a,d,a)!==c});if(b.nodeType)return m.grep(a,function(a){return a===b!==c});if("string"==typeof b){if(v.test(b))return m.filter(b,a,c);b=m.filter(b,a)}return m.grep(a,function(a){return m.inArray(a,b)>=0!==c})}m.filter=function(a,b,c){var d=b[0];return c&&(a=":not("+a+")"),1===b.length&&1===d.nodeType?m.find.matchesSelector(d,a)?[d]:[]:m.find.matches(a,m.grep(b,function(a){return 1===a.nodeType}))},m.fn.extend({find:function(a){var b,c=[],d=this,e=d.length;if("string"!=typeof a)return this.pushStack(m(a).filter(function(){for(b=0;e>b;b++)if(m.contains(d[b],this))return!0}));for(b=0;e>b;b++)m.find(a,d[b],c);return c=this.pushStack(e>1?m.unique(c):c),c.selector=this.selector?this.selector+" "+a:a,c},filter:function(a){return this.pushStack(w(this,a||[],!1))},not:function(a){return this.pushStack(w(this,a||[],!0))},is:function(a){return!!w(this,"string"==typeof a&&t.test(a)?m(a):a||[],!1).length}});var x,y=a.document,z=/^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]*))$/,A=m.fn.init=function(a,b){var c,d;if(!a)return this;if("string"==typeof a){if(c="<"===a.charAt(0)&&">"===a.charAt(a.length-1)&&a.length>=3?[null,a,null]:z.exec(a),!c||!c[1]&&b)return!b||b.jquery?(b||x).find(a):this.constructor(b).find(a);if(c[1]){if(b=b instanceof m?b[0]:b,m.merge(this,m.parseHTML(c[1],b&&b.nodeType?b.ownerDocument||b:y,!0)),u.test(c[1])&&m.isPlainObject(b))for(c in b)m.isFunction(this[c])?this[c](b[c]):this.attr(c,b[c]);return this}if(d=y.getElementById(c[2]),d&&d.parentNode){if(d.id!==c[2])return x.find(a);this.length=1,this[0]=d}return this.context=y,this.selector=a,this}return a.nodeType?(this.context=this[0]=a,this.length=1,this):m.isFunction(a)?"undefined"!=typeof x.ready?x.ready(a):a(m):(void 0!==a.selector&&(this.selector=a.selector,this.context=a.context),m.makeArray(a,this))};A.prototype=m.fn,x=m(y);var B=/^(?:parents|prev(?:Until|All))/,C={children:!0,contents:!0,next:!0,prev:!0};m.extend({dir:function(a,b,c){var d=[],e=a[b];while(e&&9!==e.nodeType&&(void 0===c||1!==e.nodeType||!m(e).is(c)))1===e.nodeType&&d.push(e),e=e[b];return d},sibling:function(a,b){for(var c=[];a;a=a.nextSibling)1===a.nodeType&&a!==b&&c.push(a);return c}}),m.fn.extend({has:function(a){var b,c=m(a,this),d=c.length;return this.filter(function(){for(b=0;d>b;b++)if(m.contains(this,c[b]))return!0})},closest:function(a,b){for(var c,d=0,e=this.length,f=[],g=t.test(a)||"string"!=typeof a?m(a,b||this.context):0;e>d;d++)for(c=this[d];c&&c!==b;c=c.parentNode)if(c.nodeType<11&&(g?g.index(c)>-1:1===c.nodeType&&m.find.matchesSelector(c,a))){f.push(c);break}return this.pushStack(f.length>1?m.unique(f):f)},index:function(a){return a?"string"==typeof a?m.inArray(this[0],m(a)):m.inArray(a.jquery?a[0]:a,this):this[0]&&this[0].parentNode?this.first().prevAll().length:-1},add:function(a,b){return this.pushStack(m.unique(m.merge(this.get(),m(a,b))))},addBack:function(a){return this.add(null==a?this.prevObject:this.prevObject.filter(a))}});function D(a,b){do a=a[b];while(a&&1!==a.nodeType);return a}m.each({parent:function(a){var b=a.parentNode;return b&&11!==b.nodeType?b:null},parents:function(a){return m.dir(a,"parentNode")},parentsUntil:function(a,b,c){return m.dir(a,"parentNode",c)},next:function(a){return D(a,"nextSibling")},prev:function(a){return D(a,"previousSibling")},nextAll:function(a){return m.dir(a,"nextSibling")},prevAll:function(a){return m.dir(a,"previousSibling")},nextUntil:function(a,b,c){return m.dir(a,"nextSibling",c)},prevUntil:function(a,b,c){return m.dir(a,"previousSibling",c)},siblings:function(a){return m.sibling((a.parentNode||{}).firstChild,a)},children:function(a){return m.sibling(a.firstChild)},contents:function(a){return m.nodeName(a,"iframe")?a.contentDocument||a.contentWindow.document:m.merge([],a.childNodes)}},function(a,b){m.fn[a]=function(c,d){var e=m.map(this,b,c);return"Until"!==a.slice(-5)&&(d=c),d&&"string"==typeof d&&(e=m.filter(d,e)),this.length>1&&(C[a]||(e=m.unique(e)),B.test(a)&&(e=e.reverse())),this.pushStack(e)}});var E=/\S+/g,F={};function G(a){var b=F[a]={};return m.each(a.match(E)||[],function(a,c){b[c]=!0}),b}m.Callbacks=function(a){a="string"==typeof a?F[a]||G(a):m.extend({},a);var b,c,d,e,f,g,h=[],i=!a.once&&[],j=function(l){for(c=a.memory&&l,d=!0,f=g||0,g=0,e=h.length,b=!0;h&&e>f;f++)if(h[f].apply(l[0],l[1])===!1&&a.stopOnFalse){c=!1;break}b=!1,h&&(i?i.length&&j(i.shift()):c?h=[]:k.disable())},k={add:function(){if(h){var d=h.length;!function f(b){m.each(b,function(b,c){var d=m.type(c);"function"===d?a.unique&&k.has(c)||h.push(c):c&&c.length&&"string"!==d&&f(c)})}(arguments),b?e=h.length:c&&(g=d,j(c))}return this},remove:function(){return h&&m.each(arguments,function(a,c){var d;while((d=m.inArray(c,h,d))>-1)h.splice(d,1),b&&(e>=d&&e--,f>=d&&f--)}),this},has:function(a){return a?m.inArray(a,h)>-1:!(!h||!h.length)},empty:function(){return h=[],e=0,this},disable:function(){return h=i=c=void 0,this},disabled:function(){return!h},lock:function(){return i=void 0,c||k.disable(),this},locked:function(){return!i},fireWith:function(a,c){return!h||d&&!i||(c=c||[],c=[a,c.slice?c.slice():c],b?i.push(c):j(c)),this},fire:function(){return k.fireWith(this,arguments),this},fired:function(){return!!d}};return k},m.extend({Deferred:function(a){var b=[["resolve","done",m.Callbacks("once memory"),"resolved"],["reject","fail",m.Callbacks("once memory"),"rejected"],["notify","progress",m.Callbacks("memory")]],c="pending",d={state:function(){return c},always:function(){return e.done(arguments).fail(arguments),this},then:function(){var a=arguments;return m.Deferred(function(c){m.each(b,function(b,f){var g=m.isFunction(a[b])&&a[b];e[f[1]](function(){var a=g&&g.apply(this,arguments);a&&m.isFunction(a.promise)?a.promise().done(c.resolve).fail(c.reject).progress(c.notify):c[f[0]+"With"](this===d?c.promise():this,g?[a]:arguments)})}),a=null}).promise()},promise:function(a){return null!=a?m.extend(a,d):d}},e={};return d.pipe=d.then,m.each(b,function(a,f){var g=f[2],h=f[3];d[f[1]]=g.add,h&&g.add(function(){c=h},b[1^a][2].disable,b[2][2].lock),e[f[0]]=function(){return e[f[0]+"With"](this===e?d:this,arguments),this},e[f[0]+"With"]=g.fireWith}),d.promise(e),a&&a.call(e,e),e},when:function(a){var b=0,c=d.call(arguments),e=c.length,f=1!==e||a&&m.isFunction(a.promise)?e:0,g=1===f?a:m.Deferred(),h=function(a,b,c){return function(e){b[a]=this,c[a]=arguments.length>1?d.call(arguments):e,c===i?g.notifyWith(b,c):--f||g.resolveWith(b,c)}},i,j,k;if(e>1)for(i=new Array(e),j=new Array(e),k=new Array(e);e>b;b++)c[b]&&m.isFunction(c[b].promise)?c[b].promise().done(h(b,k,c)).fail(g.reject).progress(h(b,j,i)):--f;return f||g.resolveWith(k,c),g.promise()}});var H;m.fn.ready=function(a){return m.ready.promise().done(a),this},m.extend({isReady:!1,readyWait:1,holdReady:function(a){a?m.readyWait++:m.ready(!0)},ready:function(a){if(a===!0?!--m.readyWait:!m.isReady){if(!y.body)return setTimeout(m.ready);m.isReady=!0,a!==!0&&--m.readyWait>0||(H.resolveWith(y,[m]),m.fn.triggerHandler&&(m(y).triggerHandler("ready"),m(y).off("ready")))}}});function I(){y.addEventListener?(y.removeEventListener("DOMContentLoaded",J,!1),a.removeEventListener("load",J,!1)):(y.detachEvent("onreadystatechange",J),a.detachEvent("onload",J))}function J(){(y.addEventListener||"load"===event.type||"complete"===y.readyState)&&(I(),m.ready())}m.ready.promise=function(b){if(!H)if(H=m.Deferred(),"complete"===y.readyState)setTimeout(m.ready);else if(y.addEventListener)y.addEventListener("DOMContentLoaded",J,!1),a.addEventListener("load",J,!1);else{y.attachEvent("onreadystatechange",J),a.attachEvent("onload",J);var c=!1;try{c=null==a.frameElement&&y.documentElement}catch(d){}c&&c.doScroll&&!function e(){if(!m.isReady){try{c.doScroll("left")}catch(a){return setTimeout(e,50)}I(),m.ready()}}()}return H.promise(b)};var K="undefined",L;for(L in m(k))break;k.ownLast="0"!==L,k.inlineBlockNeedsLayout=!1,m(function(){var a,b,c,d;c=y.getElementsByTagName("body")[0],c&&c.style&&(b=y.createElement("div"),d=y.createElement("div"),d.style.cssText="position:absolute;border:0;width:0;height:0;top:0;left:-9999px",c.appendChild(d).appendChild(b),typeof b.style.zoom!==K&&(b.style.cssText="display:inline;margin:0;border:0;padding:1px;width:1px;zoom:1",k.inlineBlockNeedsLayout=a=3===b.offsetWidth,a&&(c.style.zoom=1)),c.removeChild(d))}),function(){var a=y.createElement("div");if(null==k.deleteExpando){k.deleteExpando=!0;try{delete a.test}catch(b){k.deleteExpando=!1}}a=null}(),m.acceptData=function(a){var b=m.noData[(a.nodeName+" ").toLowerCase()],c=+a.nodeType||1;return 1!==c&&9!==c?!1:!b||b!==!0&&a.getAttribute("classid")===b};var M=/^(?:\{[\w\W]*\}|\[[\w\W]*\])$/,N=/([A-Z])/g;function O(a,b,c){if(void 0===c&&1===a.nodeType){var d="data-"+b.replace(N,"-$1").toLowerCase();if(c=a.getAttribute(d),"string"==typeof c){try{c="true"===c?!0:"false"===c?!1:"null"===c?null:+c+""===c?+c:M.test(c)?m.parseJSON(c):c}catch(e){}m.data(a,b,c)}else c=void 0}return c}function P(a){var b;for(b in a)if(("data"!==b||!m.isEmptyObject(a[b]))&&"toJSON"!==b)return!1;
@@ -1593,821 +1592,469 @@ $(document).ready(function () {
 
 
 <div id="header">
-<h1 class="title">Lista 2 Programação Estatística</h1>
+<h1 class="title">Lista 5 Programação Estatística</h1>
 </div>
 
 
 <div id="sidebar">
-    <h2><a href="#content">Lista 2 Programação Estatística</a></h2>
+    <h2><a href="#content">Lista 5 Programação Estatística</a></h2>
     <div id="table-of-contents">
       <ul>
       <li><a href="#section">1)</a></li>
-      <li><a href="#section-1">2)</a><ul>
+      <li><a href="#section-1">2)</a></li>
+      <li><a href="#section-2">3)</a></li>
+      <li><a href="#section-3">4)</a></li>
+      <li><a href="#section-4">5)</a></li>
+      <li><a href="#section-5">6)</a></li>
+      <li><a href="#section-6">7)</a></li>
+      <li><a href="#section-7">8)</a></li>
+      <li><a href="#section-8">9)</a></li>
+      <li><a href="#section-9">10)</a></li>
+      <li><a href="#section-10">11)</a></li>
+      <li><a href="#section-11">12)</a></li>
+      <li><a href="#section-12">13)</a><ul>
       <li><a href="#a">a)</a></li>
       <li><a href="#b">b)</a></li>
       <li><a href="#c">c)</a></li>
-      </ul></li>
-      <li><a href="#section-2">3)</a><ul>
-      <li><a href="#a-1">a)</a></li>
-      <li><a href="#b-1">b)</a></li>
-      <li><a href="#c-1">c)</a></li>
-      </ul></li>
-      <li><a href="#section-3">4)</a><ul>
-      <li><a href="#a-2">a)</a></li>
-      <li><a href="#b-2">b)</a></li>
-      <li><a href="#c-2">c)</a></li>
       <li><a href="#d">d)</a></li>
-      </ul></li>
-      <li><a href="#section-4">5)</a><ul>
-      <li><a href="#a-3">a)</a></li>
-      <li><a href="#b-3">b)</a></li>
-      </ul></li>
-      <li><a href="#section-5">6)</a><ul>
-      <li><a href="#a-4">a)</a></li>
-      <li><a href="#b-4">b)</a></li>
-      <li><a href="#c-3">c)</a></li>
-      <li><a href="#d-1">d)</a></li>
       <li><a href="#e">e)</a></li>
-      </ul></li>
-      <li><a href="#section-6">7)</a><ul>
-      <li><a href="#a-5">a)</a></li>
-      <li><a href="#b-5">b)</a></li>
-      </ul></li>
-      <li><a href="#section-7">8)</a><ul>
-      <li><a href="#a-6">a)</a></li>
-      <li><a href="#b-6">b)</a></li>
-      <li><a href="#c-4">c)</a></li>
-      </ul></li>
-      <li><a href="#section-8">9)</a><ul>
-      <li><a href="#a-7">a)</a></li>
-      <li><a href="#b-7">b)</a></li>
-      <li><a href="#c-5">c)</a></li>
-      <li><a href="#d-2">d)</a></li>
-      <li><a href="#e-1">e)</a></li>
       <li><a href="#f">f)</a></li>
-      </ul></li>
-      <li><a href="#section-9">10)</a><ul>
-      <li><a href="#a-8">a)</a></li>
-      <li><a href="#b-8">b)</a></li>
-      <li><a href="#c-6">c)</a></li>
+      <li><a href="#g">g)</a></li>
+      <li><a href="#h">h)</a></li>
+      <li><a href="#i">i)</a></li>
+      <li><a href="#j">j)</a></li>
+      <li><a href="#k">k)</a></li>
+      <li><a href="#l">l)</a></li>
+      <li><a href="#m">m)</a></li>
+      <li><a href="#n">n)</a></li>
+      <li><a href="#o">o)</a></li>
+      <li><a href="#p">p)</a></li>
+      <li><a href="#q">q)</a></li>
+      <li><a href="#r">r)</a></li>
       </ul></li>
       </ul>
     </div>
     
     <div id="postamble" data-toggle="wy-nav-shift" class="status">
               <p class="author"><span class="glyphicon glyphicon-user"></span> Lyncoln Sousa</p>
-                  <p class="date"><span class="glyphicon glyphicon-calendar"></span> 2020-10-14</p>
-        </div>
+                </div>
 </div>
 
 <div id="main">
 <div id="section" class="section level1">
 <h1>1)</h1>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>a =<span class="st"> </span><span class="dv">12</span> ; b =<span class="st"> </span><span class="dv">11</span> ;c =<span class="st"> </span><span class="dv">10</span> </span>
-<span id="cb1-2"><a href="#cb1-2"></a></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="cf">if</span>(a <span class="op">+</span><span class="st"> </span>b <span class="op">&gt;</span><span class="st"> </span>c <span class="op">&amp;&amp;</span><span class="st"> </span>a <span class="op">+</span><span class="st"> </span>c <span class="op">&gt;</span><span class="st"> </span>b <span class="op">&amp;&amp;</span><span class="st"> </span>c <span class="op">+</span><span class="st"> </span>b <span class="op">&gt;</span><span class="st"> </span>a){</span>
-<span id="cb1-4"><a href="#cb1-4"></a>  <span class="cf">if</span>(a <span class="op">==</span><span class="st"> </span>b <span class="op">&amp;&amp;</span><span class="st"> </span>b <span class="op">==</span><span class="st"> </span>c) {</span>
-<span id="cb1-5"><a href="#cb1-5"></a>    <span class="kw">print</span>(<span class="st">&quot;O triângulo é equilátero&quot;</span>)</span>
-<span id="cb1-6"><a href="#cb1-6"></a>  }</span>
-<span id="cb1-7"><a href="#cb1-7"></a>  <span class="cf">else</span> <span class="cf">if</span>(a <span class="op">==</span><span class="st"> </span>b <span class="op">&amp;&amp;</span><span class="st"> </span>b <span class="op">!=</span><span class="st"> </span>c <span class="op">||</span><span class="st"> </span>a <span class="op">==</span><span class="st"> </span>c <span class="op">&amp;&amp;</span><span class="st"> </span>c <span class="op">!=</span><span class="st">  </span>b<span class="op">||</span><span class="st"> </span>b <span class="op">==</span><span class="st"> </span>c <span class="op">&amp;&amp;</span><span class="st"> </span>b <span class="op">!=</span><span class="st"> </span>a){</span>
-<span id="cb1-8"><a href="#cb1-8"></a>    <span class="kw">print</span>(<span class="st">&quot;O triângulo é isósceles&quot;)</span></span>
-<span id="cb1-9"><a href="#cb1-9"></a><span class="st">  }</span></span>
-<span id="cb1-10"><a href="#cb1-10"></a><span class="st">  else{</span></span>
-<span id="cb1-11"><a href="#cb1-11"></a><span class="st">  print(&quot;</span>O triângulo é escaleno<span class="st">&quot;)</span></span>
-<span id="cb1-12"><a href="#cb1-12"></a><span class="st">  }</span></span>
-<span id="cb1-13"><a href="#cb1-13"></a><span class="st">} else{</span></span>
-<span id="cb1-14"><a href="#cb1-14"></a><span class="st">  print(&quot;</span>Não é possível formar um triângulo<span class="st">&quot;)</span></span>
-<span id="cb1-15"><a href="#cb1-15"></a><span class="st">}</span></span></code></pre></div>
-<pre><code>## [1] &quot;O triângulo é escaleno&quot;</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>multiplica_vet =<span class="st"> </span><span class="cf">function</span>(v,a){</span>
+<span id="cb1-2"><a href="#cb1-2"></a>  <span class="cf">if</span>(<span class="op">!</span><span class="kw">is.numeric</span>(v)) <span class="kw">stop</span>(<span class="st">&quot;Vetor v precisa ser numérico!&quot;</span>)</span>
+<span id="cb1-3"><a href="#cb1-3"></a>  <span class="cf">if</span>(<span class="op">!</span><span class="kw">is.numeric</span>(a)) <span class="kw">stop</span>(<span class="st">&quot;Escalar a precisa ser numérica!&quot;</span>)</span>
+<span id="cb1-4"><a href="#cb1-4"></a>  <span class="cf">if</span>(<span class="kw">length</span>(a)<span class="op">!=</span><span class="dv">1</span>) <span class="kw">stop</span>(<span class="st">&quot;Escalar a deve ser um valor único!&quot;</span>)</span>
+<span id="cb1-5"><a href="#cb1-5"></a>  n =<span class="st"> </span><span class="kw">length</span>(v)</span>
+<span id="cb1-6"><a href="#cb1-6"></a>  w =<span class="st"> </span><span class="kw">c</span>()</span>
+<span id="cb1-7"><a href="#cb1-7"></a>  <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>n){</span>
+<span id="cb1-8"><a href="#cb1-8"></a>    w[i] =<span class="st"> </span>v[i]<span class="op">*</span>a</span>
+<span id="cb1-9"><a href="#cb1-9"></a>  }</span>
+<span id="cb1-10"><a href="#cb1-10"></a>  <span class="kw">return</span>(w)</span>
+<span id="cb1-11"><a href="#cb1-11"></a>}</span>
+<span id="cb1-12"><a href="#cb1-12"></a></span>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="kw">multiplica_vet</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>,<span class="dv">3</span>)</span></code></pre></div>
+<pre><code>##  [1]  3  6  9 12 15 18 21 24 27 30</code></pre>
 </div>
 <div id="section-1" class="section level1">
 <h1>2)</h1>
-<div id="a" class="section level2">
-<h2>a)</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>mult_<span class="dv">3</span> =<span class="st"> </span><span class="kw">c</span>()</span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="cf">for</span>(passo <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">100</span>){</span>
-<span id="cb3-3"><a href="#cb3-3"></a>  mult_<span class="dv">3</span> =<span class="st"> </span><span class="kw">c</span>(mult_<span class="dv">3</span>, passo <span class="op">*</span><span class="st"> </span><span class="dv">3</span>)</span>
-<span id="cb3-4"><a href="#cb3-4"></a>}</span>
-<span id="cb3-5"><a href="#cb3-5"></a>mult_<span class="dv">3</span></span></code></pre></div>
-<pre><code>##   [1]   3   6   9  12  15  18  21  24  27  30  33  36  39  42  45  48  51  54
-##  [19]  57  60  63  66  69  72  75  78  81  84  87  90  93  96  99 102 105 108
-##  [37] 111 114 117 120 123 126 129 132 135 138 141 144 147 150 153 156 159 162
-##  [55] 165 168 171 174 177 180 183 186 189 192 195 198 201 204 207 210 213 216
-##  [73] 219 222 225 228 231 234 237 240 243 246 249 252 255 258 261 264 267 270
-##  [91] 273 276 279 282 285 288 291 294 297 300</code></pre>
-</div>
-<div id="b" class="section level2">
-<h2>b)</h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>mult_<span class="dv">3</span> =<span class="st"> </span><span class="kw">c</span>()</span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="cf">for</span>(passo <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">100</span>){</span>
-<span id="cb5-3"><a href="#cb5-3"></a>  aux =<span class="st"> </span>passo <span class="op">*</span><span class="st"> </span><span class="dv">3</span></span>
-<span id="cb5-4"><a href="#cb5-4"></a>  <span class="cf">if</span>(aux <span class="op">&lt;</span><span class="st"> </span><span class="dv">100</span>){</span>
-<span id="cb5-5"><a href="#cb5-5"></a>    mult_<span class="dv">3</span> =<span class="st"> </span><span class="kw">c</span>(mult_<span class="dv">3</span>, aux)</span>
-<span id="cb5-6"><a href="#cb5-6"></a>  }</span>
-<span id="cb5-7"><a href="#cb5-7"></a>}</span>
-<span id="cb5-8"><a href="#cb5-8"></a>mult_<span class="dv">3</span></span></code></pre></div>
-<pre><code>##  [1]  3  6  9 12 15 18 21 24 27 30 33 36 39 42 45 48 51 54 57 60 63 66 69 72 75
-## [26] 78 81 84 87 90 93 96 99</code></pre>
-</div>
-<div id="c" class="section level2">
-<h2>c)</h2>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>impares =<span class="st"> </span><span class="kw">c</span>()</span>
-<span id="cb7-2"><a href="#cb7-2"></a><span class="cf">for</span>(passo <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">200</span>){</span>
-<span id="cb7-3"><a href="#cb7-3"></a>  resto =<span class="st"> </span>passo<span class="op">%%</span><span class="dv">2</span> </span>
-<span id="cb7-4"><a href="#cb7-4"></a>  <span class="cf">if</span>(resto <span class="op">==</span><span class="st"> </span><span class="dv">1</span>){</span>
-<span id="cb7-5"><a href="#cb7-5"></a>    impares =<span class="st"> </span><span class="kw">c</span>(impares, passo)</span>
-<span id="cb7-6"><a href="#cb7-6"></a>  }</span>
-<span id="cb7-7"><a href="#cb7-7"></a>}</span>
-<span id="cb7-8"><a href="#cb7-8"></a>impares</span></code></pre></div>
-<pre><code>##   [1]   1   3   5   7   9  11  13  15  17  19  21  23  25  27  29  31  33  35
-##  [19]  37  39  41  43  45  47  49  51  53  55  57  59  61  63  65  67  69  71
-##  [37]  73  75  77  79  81  83  85  87  89  91  93  95  97  99 101 103 105 107
-##  [55] 109 111 113 115 117 119 121 123 125 127 129 131 133 135 137 139 141 143
-##  [73] 145 147 149 151 153 155 157 159 161 163 165 167 169 171 173 175 177 179
-##  [91] 181 183 185 187 189 191 193 195 197 199</code></pre>
-</div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>soma_vetor =<span class="st"> </span><span class="cf">function</span>(v,u){</span>
+<span id="cb3-2"><a href="#cb3-2"></a>  <span class="cf">if</span>(<span class="op">!</span><span class="kw">is.numeric</span>(v)) <span class="kw">stop</span>(<span class="st">&quot;Vetor v precisa ser numérico!&quot;</span>)</span>
+<span id="cb3-3"><a href="#cb3-3"></a>  <span class="cf">if</span>(<span class="op">!</span><span class="kw">is.numeric</span>(u)) <span class="kw">stop</span>(<span class="st">&quot;Vetor u precisa ser numérico!&quot;</span>)</span>
+<span id="cb3-4"><a href="#cb3-4"></a>  n =<span class="st"> </span><span class="kw">length</span>(v)</span>
+<span id="cb3-5"><a href="#cb3-5"></a>  k =<span class="st"> </span><span class="kw">length</span>(u)</span>
+<span id="cb3-6"><a href="#cb3-6"></a>  <span class="cf">if</span>(n<span class="op">!=</span>k) <span class="kw">stop</span>(<span class="st">&quot;Vetores com dimensões diferentes!&quot;</span>)</span>
+<span id="cb3-7"><a href="#cb3-7"></a>  w =<span class="st"> </span><span class="kw">c</span>()</span>
+<span id="cb3-8"><a href="#cb3-8"></a>  <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>n){</span>
+<span id="cb3-9"><a href="#cb3-9"></a>    w[i] =<span class="st"> </span>v[i] <span class="op">+</span><span class="st"> </span>u[i]</span>
+<span id="cb3-10"><a href="#cb3-10"></a>  }</span>
+<span id="cb3-11"><a href="#cb3-11"></a>  <span class="kw">return</span>(w)</span>
+<span id="cb3-12"><a href="#cb3-12"></a>}</span>
+<span id="cb3-13"><a href="#cb3-13"></a><span class="kw">soma_vetor</span>(<span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>),<span class="kw">c</span>(<span class="dv">4</span>,<span class="dv">3</span>,<span class="dv">2</span>))</span></code></pre></div>
+<pre><code>## [1] 6 6 6</code></pre>
 </div>
 <div id="section-2" class="section level1">
 <h1>3)</h1>
-<div id="a-1" class="section level2">
-<h2>a)</h2>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>mult_<span class="dv">3</span> =<span class="st"> </span><span class="kw">c</span>()</span>
-<span id="cb9-2"><a href="#cb9-2"></a>passo =<span class="st"> </span><span class="dv">1</span></span>
-<span id="cb9-3"><a href="#cb9-3"></a><span class="cf">while</span>(<span class="kw">length</span>(mult_<span class="dv">3</span>) <span class="op">&lt;</span><span class="st"> </span><span class="dv">100</span>){</span>
-<span id="cb9-4"><a href="#cb9-4"></a>  mult_<span class="dv">3</span> =<span class="st"> </span><span class="kw">c</span>(mult_<span class="dv">3</span>, passo <span class="op">*</span><span class="st"> </span><span class="dv">3</span>)</span>
-<span id="cb9-5"><a href="#cb9-5"></a>  passo =<span class="st"> </span>passo <span class="op">+</span><span class="st"> </span><span class="dv">1</span></span>
-<span id="cb9-6"><a href="#cb9-6"></a>}</span>
-<span id="cb9-7"><a href="#cb9-7"></a>mult_<span class="dv">3</span></span></code></pre></div>
-<pre><code>##   [1]   3   6   9  12  15  18  21  24  27  30  33  36  39  42  45  48  51  54
-##  [19]  57  60  63  66  69  72  75  78  81  84  87  90  93  96  99 102 105 108
-##  [37] 111 114 117 120 123 126 129 132 135 138 141 144 147 150 153 156 159 162
-##  [55] 165 168 171 174 177 180 183 186 189 192 195 198 201 204 207 210 213 216
-##  [73] 219 222 225 228 231 234 237 240 243 246 249 252 255 258 261 264 267 270
-##  [91] 273 276 279 282 285 288 291 294 297 300</code></pre>
-</div>
-<div id="b-1" class="section level2">
-<h2>b)</h2>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>mult_<span class="dv">3</span> =<span class="st"> </span><span class="kw">c</span>()</span>
-<span id="cb11-2"><a href="#cb11-2"></a>passo =<span class="st"> </span><span class="dv">1</span></span>
-<span id="cb11-3"><a href="#cb11-3"></a><span class="cf">while</span>(passo<span class="op">*</span><span class="dv">3</span> <span class="op">&lt;</span><span class="st"> </span><span class="dv">100</span>){</span>
-<span id="cb11-4"><a href="#cb11-4"></a>  mult_<span class="dv">3</span> =<span class="st"> </span><span class="kw">c</span>(mult_<span class="dv">3</span>, passo<span class="op">*</span><span class="dv">3</span>)</span>
-<span id="cb11-5"><a href="#cb11-5"></a>  passo =<span class="st"> </span>passo <span class="op">+</span><span class="st"> </span><span class="dv">1</span></span>
-<span id="cb11-6"><a href="#cb11-6"></a>}</span>
-<span id="cb11-7"><a href="#cb11-7"></a>mult_<span class="dv">3</span></span></code></pre></div>
-<pre><code>##  [1]  3  6  9 12 15 18 21 24 27 30 33 36 39 42 45 48 51 54 57 60 63 66 69 72 75
-## [26] 78 81 84 87 90 93 96 99</code></pre>
-</div>
-<div id="c-1" class="section level2">
-<h2>c)</h2>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>impares =<span class="st"> </span><span class="kw">c</span>()</span>
-<span id="cb13-2"><a href="#cb13-2"></a>passo =<span class="st"> </span><span class="dv">1</span></span>
-<span id="cb13-3"><a href="#cb13-3"></a><span class="cf">while</span>(<span class="kw">length</span>(impares) <span class="op">&lt;</span><span class="st"> </span><span class="dv">100</span>){</span>
-<span id="cb13-4"><a href="#cb13-4"></a>  num =<span class="st"> </span>passo<span class="op">%%</span><span class="dv">2</span></span>
-<span id="cb13-5"><a href="#cb13-5"></a>  <span class="cf">if</span>(num <span class="op">==</span><span class="st"> </span><span class="dv">1</span>){</span>
-<span id="cb13-6"><a href="#cb13-6"></a>    impares =<span class="st"> </span><span class="kw">c</span>(impares, passo)</span>
-<span id="cb13-7"><a href="#cb13-7"></a>  }</span>
-<span id="cb13-8"><a href="#cb13-8"></a>  passo =<span class="st"> </span>passo <span class="op">+</span><span class="st"> </span><span class="dv">1</span></span>
-<span id="cb13-9"><a href="#cb13-9"></a>}</span>
-<span id="cb13-10"><a href="#cb13-10"></a>impares</span></code></pre></div>
-<pre><code>##   [1]   1   3   5   7   9  11  13  15  17  19  21  23  25  27  29  31  33  35
-##  [19]  37  39  41  43  45  47  49  51  53  55  57  59  61  63  65  67  69  71
-##  [37]  73  75  77  79  81  83  85  87  89  91  93  95  97  99 101 103 105 107
-##  [55] 109 111 113 115 117 119 121 123 125 127 129 131 133 135 137 139 141 143
-##  [73] 145 147 149 151 153 155 157 159 161 163 165 167 169 171 173 175 177 179
-##  [91] 181 183 185 187 189 191 193 195 197 199</code></pre>
-</div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># 1. Defina n como o tamanho do vetor v;</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="co"># 2. Defina k como o tamanho do vetor u;</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="co"># 3. Se n for diferente de k retorne erro e FIM;</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="co"># 4. Crie um vetor w vazio;</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="co"># 5. Inicie i = 1;</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="co"># 6. w[i] = v[i] - u[i]</span></span>
+<span id="cb5-7"><a href="#cb5-7"></a><span class="co"># 7. Incremente i: i = i + 1;</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="co"># 8. Se i &lt;= n, volta para a linha 6;</span></span>
+<span id="cb5-9"><a href="#cb5-9"></a><span class="co"># 9. Retorne w.</span></span>
+<span id="cb5-10"><a href="#cb5-10"></a></span>
+<span id="cb5-11"><a href="#cb5-11"></a>subtrai_vetor =<span class="st"> </span><span class="cf">function</span>(v,u){</span>
+<span id="cb5-12"><a href="#cb5-12"></a>  <span class="cf">if</span>(<span class="op">!</span><span class="kw">is.numeric</span>(v)) <span class="kw">stop</span>(<span class="st">&quot;Vetor v precisa ser numérico!&quot;</span>)</span>
+<span id="cb5-13"><a href="#cb5-13"></a>  <span class="cf">if</span>(<span class="op">!</span><span class="kw">is.numeric</span>(u)) <span class="kw">stop</span>(<span class="st">&quot;Vetor u precisa ser numérico!&quot;</span>)</span>
+<span id="cb5-14"><a href="#cb5-14"></a>  n =<span class="st"> </span><span class="kw">length</span>(v)</span>
+<span id="cb5-15"><a href="#cb5-15"></a>  k =<span class="st"> </span><span class="kw">length</span>(u)</span>
+<span id="cb5-16"><a href="#cb5-16"></a>  <span class="cf">if</span>(n<span class="op">!=</span>k) <span class="kw">stop</span>(<span class="st">&quot;Vetores com dimensões diferentes!&quot;</span>)</span>
+<span id="cb5-17"><a href="#cb5-17"></a>  w =<span class="st"> </span><span class="kw">c</span>()</span>
+<span id="cb5-18"><a href="#cb5-18"></a>  <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>n){</span>
+<span id="cb5-19"><a href="#cb5-19"></a>    w[i] =<span class="st"> </span>v[i] <span class="op">-</span><span class="st"> </span>u[i]</span>
+<span id="cb5-20"><a href="#cb5-20"></a>  }</span>
+<span id="cb5-21"><a href="#cb5-21"></a>  <span class="kw">return</span>(w)</span>
+<span id="cb5-22"><a href="#cb5-22"></a>}</span>
+<span id="cb5-23"><a href="#cb5-23"></a><span class="kw">subtrai_vetor</span>(<span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>),<span class="kw">c</span>(<span class="dv">4</span>,<span class="dv">3</span>,<span class="dv">2</span>))</span></code></pre></div>
+<pre><code>## [1] -2  0  2</code></pre>
 </div>
 <div id="section-3" class="section level1">
 <h1>4)</h1>
-<div id="a-2" class="section level2">
-<h2>a)</h2>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>matriz =<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">0</span>, <span class="dt">nrow =</span> <span class="dv">10</span>, <span class="dt">ncol =</span> <span class="dv">10</span>)</span>
-<span id="cb15-2"><a href="#cb15-2"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>){</span>
-<span id="cb15-3"><a href="#cb15-3"></a>  matriz[<span class="dv">1</span>,i] =<span class="st"> </span><span class="dv">1</span></span>
-<span id="cb15-4"><a href="#cb15-4"></a>}</span>
-<span id="cb15-5"><a href="#cb15-5"></a>matriz</span></code></pre></div>
-<pre><code>##       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
-##  [1,]    1    1    1    1    1    1    1    1    1     1
-##  [2,]    0    0    0    0    0    0    0    0    0     0
-##  [3,]    0    0    0    0    0    0    0    0    0     0
-##  [4,]    0    0    0    0    0    0    0    0    0     0
-##  [5,]    0    0    0    0    0    0    0    0    0     0
-##  [6,]    0    0    0    0    0    0    0    0    0     0
-##  [7,]    0    0    0    0    0    0    0    0    0     0
-##  [8,]    0    0    0    0    0    0    0    0    0     0
-##  [9,]    0    0    0    0    0    0    0    0    0     0
-## [10,]    0    0    0    0    0    0    0    0    0     0</code></pre>
-</div>
-<div id="b-2" class="section level2">
-<h2>b)</h2>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>matriz =<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">0</span>, <span class="dt">nrow =</span> <span class="dv">10</span>, <span class="dt">ncol =</span> <span class="dv">10</span>)</span>
-<span id="cb17-2"><a href="#cb17-2"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>){</span>
-<span id="cb17-3"><a href="#cb17-3"></a>  <span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>){</span>
-<span id="cb17-4"><a href="#cb17-4"></a>    matriz[i,j] =<span class="st"> </span>i</span>
-<span id="cb17-5"><a href="#cb17-5"></a>  }</span>
-<span id="cb17-6"><a href="#cb17-6"></a>}</span>
-<span id="cb17-7"><a href="#cb17-7"></a>matriz</span></code></pre></div>
-<pre><code>##       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
-##  [1,]    1    1    1    1    1    1    1    1    1     1
-##  [2,]    2    2    2    2    2    2    2    2    2     2
-##  [3,]    3    3    3    3    3    3    3    3    3     3
-##  [4,]    4    4    4    4    4    4    4    4    4     4
-##  [5,]    5    5    5    5    5    5    5    5    5     5
-##  [6,]    6    6    6    6    6    6    6    6    6     6
-##  [7,]    7    7    7    7    7    7    7    7    7     7
-##  [8,]    8    8    8    8    8    8    8    8    8     8
-##  [9,]    9    9    9    9    9    9    9    9    9     9
-## [10,]   10   10   10   10   10   10   10   10   10    10</code></pre>
-</div>
-<div id="c-2" class="section level2">
-<h2>c)</h2>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>matriz =<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">0</span>, <span class="dt">nrow =</span> <span class="dv">100</span>, <span class="dt">ncol =</span> <span class="dv">100</span>)</span>
-<span id="cb19-2"><a href="#cb19-2"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">100</span>){</span>
-<span id="cb19-3"><a href="#cb19-3"></a>  <span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">100</span>){</span>
-<span id="cb19-4"><a href="#cb19-4"></a>    matriz[i,j] =<span class="st"> </span>j</span>
-<span id="cb19-5"><a href="#cb19-5"></a>  }</span>
-<span id="cb19-6"><a href="#cb19-6"></a>}</span>
-<span id="cb19-7"><a href="#cb19-7"></a><span class="kw">head.matrix</span>(matriz,<span class="kw">c</span>(<span class="dv">10</span>,<span class="dv">10</span>));<span class="kw">tail.matrix</span>(matriz,<span class="kw">c</span>(<span class="dv">10</span>,<span class="dv">10</span>))</span></code></pre></div>
-<pre><code>##       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
-##  [1,]    1    2    3    4    5    6    7    8    9    10
-##  [2,]    1    2    3    4    5    6    7    8    9    10
-##  [3,]    1    2    3    4    5    6    7    8    9    10
-##  [4,]    1    2    3    4    5    6    7    8    9    10
-##  [5,]    1    2    3    4    5    6    7    8    9    10
-##  [6,]    1    2    3    4    5    6    7    8    9    10
-##  [7,]    1    2    3    4    5    6    7    8    9    10
-##  [8,]    1    2    3    4    5    6    7    8    9    10
-##  [9,]    1    2    3    4    5    6    7    8    9    10
-## [10,]    1    2    3    4    5    6    7    8    9    10</code></pre>
-<pre><code>##        [,91] [,92] [,93] [,94] [,95] [,96] [,97] [,98] [,99] [,100]
-##  [91,]    91    92    93    94    95    96    97    98    99    100
-##  [92,]    91    92    93    94    95    96    97    98    99    100
-##  [93,]    91    92    93    94    95    96    97    98    99    100
-##  [94,]    91    92    93    94    95    96    97    98    99    100
-##  [95,]    91    92    93    94    95    96    97    98    99    100
-##  [96,]    91    92    93    94    95    96    97    98    99    100
-##  [97,]    91    92    93    94    95    96    97    98    99    100
-##  [98,]    91    92    93    94    95    96    97    98    99    100
-##  [99,]    91    92    93    94    95    96    97    98    99    100
-## [100,]    91    92    93    94    95    96    97    98    99    100</code></pre>
-</div>
-<div id="d" class="section level2">
-<h2>d)</h2>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>matriz =<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">0</span>, <span class="dt">nrow =</span> <span class="dv">100</span>, <span class="dt">ncol =</span> <span class="dv">100</span>)</span>
-<span id="cb22-2"><a href="#cb22-2"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">100</span>){</span>
-<span id="cb22-3"><a href="#cb22-3"></a>  <span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">100</span>){</span>
-<span id="cb22-4"><a href="#cb22-4"></a>    <span class="cf">if</span>(i<span class="op">%%</span><span class="dv">2</span> <span class="op">==</span><span class="st"> </span><span class="dv">0</span>){</span>
-<span id="cb22-5"><a href="#cb22-5"></a>      matriz[i,j] =<span class="st"> </span><span class="dv">2</span></span>
-<span id="cb22-6"><a href="#cb22-6"></a>    }<span class="cf">else</span>{</span>
-<span id="cb22-7"><a href="#cb22-7"></a>      matriz[i,j] =<span class="st"> </span><span class="dv">1</span></span>
-<span id="cb22-8"><a href="#cb22-8"></a>    }</span>
-<span id="cb22-9"><a href="#cb22-9"></a>  }</span>
-<span id="cb22-10"><a href="#cb22-10"></a>}</span>
-<span id="cb22-11"><a href="#cb22-11"></a><span class="kw">head.matrix</span>(matriz,<span class="kw">c</span>(<span class="dv">10</span>,<span class="dv">10</span>));<span class="kw">tail.matrix</span>(matriz,<span class="kw">c</span>(<span class="dv">10</span>,<span class="dv">10</span>))</span></code></pre></div>
-<pre><code>##       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
-##  [1,]    1    1    1    1    1    1    1    1    1     1
-##  [2,]    2    2    2    2    2    2    2    2    2     2
-##  [3,]    1    1    1    1    1    1    1    1    1     1
-##  [4,]    2    2    2    2    2    2    2    2    2     2
-##  [5,]    1    1    1    1    1    1    1    1    1     1
-##  [6,]    2    2    2    2    2    2    2    2    2     2
-##  [7,]    1    1    1    1    1    1    1    1    1     1
-##  [8,]    2    2    2    2    2    2    2    2    2     2
-##  [9,]    1    1    1    1    1    1    1    1    1     1
-## [10,]    2    2    2    2    2    2    2    2    2     2</code></pre>
-<pre><code>##        [,91] [,92] [,93] [,94] [,95] [,96] [,97] [,98] [,99] [,100]
-##  [91,]     1     1     1     1     1     1     1     1     1      1
-##  [92,]     2     2     2     2     2     2     2     2     2      2
-##  [93,]     1     1     1     1     1     1     1     1     1      1
-##  [94,]     2     2     2     2     2     2     2     2     2      2
-##  [95,]     1     1     1     1     1     1     1     1     1      1
-##  [96,]     2     2     2     2     2     2     2     2     2      2
-##  [97,]     1     1     1     1     1     1     1     1     1      1
-##  [98,]     2     2     2     2     2     2     2     2     2      2
-##  [99,]     1     1     1     1     1     1     1     1     1      1
-## [100,]     2     2     2     2     2     2     2     2     2      2</code></pre>
-</div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>prod_interno =<span class="st"> </span><span class="cf">function</span>(u,v){</span>
+<span id="cb7-2"><a href="#cb7-2"></a>  <span class="cf">if</span>(<span class="op">!</span><span class="kw">is.numeric</span>(v)) <span class="kw">stop</span>(<span class="st">&quot;Vetor v precisa ser numérico!&quot;</span>)</span>
+<span id="cb7-3"><a href="#cb7-3"></a>  <span class="cf">if</span>(<span class="op">!</span><span class="kw">is.numeric</span>(u)) <span class="kw">stop</span>(<span class="st">&quot;Vetor u precisa ser numérico!&quot;</span>)</span>
+<span id="cb7-4"><a href="#cb7-4"></a>  n =<span class="st"> </span><span class="kw">length</span>(v)</span>
+<span id="cb7-5"><a href="#cb7-5"></a>  k =<span class="st"> </span><span class="kw">length</span>(u)</span>
+<span id="cb7-6"><a href="#cb7-6"></a>  <span class="cf">if</span>(n<span class="op">!=</span>k) <span class="kw">stop</span>(<span class="st">&quot;Vetores com dimensões diferentes!&quot;</span>)</span>
+<span id="cb7-7"><a href="#cb7-7"></a>  p =<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb7-8"><a href="#cb7-8"></a>  <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>n){</span>
+<span id="cb7-9"><a href="#cb7-9"></a>    p =<span class="st"> </span>p <span class="op">+</span><span class="st"> </span>u[i]<span class="op">*</span>v[i]</span>
+<span id="cb7-10"><a href="#cb7-10"></a>  }</span>
+<span id="cb7-11"><a href="#cb7-11"></a>  <span class="kw">return</span>(p)</span>
+<span id="cb7-12"><a href="#cb7-12"></a>}</span>
+<span id="cb7-13"><a href="#cb7-13"></a><span class="kw">prod_interno</span>(<span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">2</span>),<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">2</span>))</span></code></pre></div>
+<pre><code>## [1] 18</code></pre>
 </div>
 <div id="section-4" class="section level1">
 <h1>5)</h1>
-<div id="a-3" class="section level2">
-<h2>a)</h2>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a>matriz =<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">0</span>, <span class="dt">nrow =</span> <span class="dv">100</span>, <span class="dt">ncol =</span> <span class="dv">100</span>)</span>
-<span id="cb25-2"><a href="#cb25-2"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">100</span>){</span>
-<span id="cb25-3"><a href="#cb25-3"></a>  matriz[i,i] =<span class="st"> </span>i</span>
-<span id="cb25-4"><a href="#cb25-4"></a>}</span>
-<span id="cb25-5"><a href="#cb25-5"></a><span class="kw">head.matrix</span>(matriz,<span class="kw">c</span>(<span class="dv">10</span>,<span class="dv">10</span>));<span class="kw">tail.matrix</span>(matriz,<span class="kw">c</span>(<span class="dv">10</span>,<span class="dv">10</span>))</span></code></pre></div>
-<pre><code>##       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
-##  [1,]    1    0    0    0    0    0    0    0    0     0
-##  [2,]    0    2    0    0    0    0    0    0    0     0
-##  [3,]    0    0    3    0    0    0    0    0    0     0
-##  [4,]    0    0    0    4    0    0    0    0    0     0
-##  [5,]    0    0    0    0    5    0    0    0    0     0
-##  [6,]    0    0    0    0    0    6    0    0    0     0
-##  [7,]    0    0    0    0    0    0    7    0    0     0
-##  [8,]    0    0    0    0    0    0    0    8    0     0
-##  [9,]    0    0    0    0    0    0    0    0    9     0
-## [10,]    0    0    0    0    0    0    0    0    0    10</code></pre>
-<pre><code>##        [,91] [,92] [,93] [,94] [,95] [,96] [,97] [,98] [,99] [,100]
-##  [91,]    91     0     0     0     0     0     0     0     0      0
-##  [92,]     0    92     0     0     0     0     0     0     0      0
-##  [93,]     0     0    93     0     0     0     0     0     0      0
-##  [94,]     0     0     0    94     0     0     0     0     0      0
-##  [95,]     0     0     0     0    95     0     0     0     0      0
-##  [96,]     0     0     0     0     0    96     0     0     0      0
-##  [97,]     0     0     0     0     0     0    97     0     0      0
-##  [98,]     0     0     0     0     0     0     0    98     0      0
-##  [99,]     0     0     0     0     0     0     0     0    99      0
-## [100,]     0     0     0     0     0     0     0     0     0    100</code></pre>
-</div>
-<div id="b-3" class="section level2">
-<h2>b)</h2>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a>matriz =<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">0</span>, <span class="dt">nrow =</span> <span class="dv">100</span>, <span class="dt">ncol =</span> <span class="dv">100</span>)</span>
-<span id="cb28-2"><a href="#cb28-2"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">100</span>){</span>
-<span id="cb28-3"><a href="#cb28-3"></a>  matriz[i,i] =<span class="st"> </span><span class="dv">101</span> <span class="op">-</span><span class="st"> </span>i</span>
-<span id="cb28-4"><a href="#cb28-4"></a>}</span>
-<span id="cb28-5"><a href="#cb28-5"></a><span class="kw">head.matrix</span>(matriz,<span class="kw">c</span>(<span class="dv">10</span>,<span class="dv">10</span>));<span class="kw">tail.matrix</span>(matriz,<span class="kw">c</span>(<span class="dv">10</span>,<span class="dv">10</span>))</span></code></pre></div>
-<pre><code>##       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
-##  [1,]  100    0    0    0    0    0    0    0    0     0
-##  [2,]    0   99    0    0    0    0    0    0    0     0
-##  [3,]    0    0   98    0    0    0    0    0    0     0
-##  [4,]    0    0    0   97    0    0    0    0    0     0
-##  [5,]    0    0    0    0   96    0    0    0    0     0
-##  [6,]    0    0    0    0    0   95    0    0    0     0
-##  [7,]    0    0    0    0    0    0   94    0    0     0
-##  [8,]    0    0    0    0    0    0    0   93    0     0
-##  [9,]    0    0    0    0    0    0    0    0   92     0
-## [10,]    0    0    0    0    0    0    0    0    0    91</code></pre>
-<pre><code>##        [,91] [,92] [,93] [,94] [,95] [,96] [,97] [,98] [,99] [,100]
-##  [91,]    10     0     0     0     0     0     0     0     0      0
-##  [92,]     0     9     0     0     0     0     0     0     0      0
-##  [93,]     0     0     8     0     0     0     0     0     0      0
-##  [94,]     0     0     0     7     0     0     0     0     0      0
-##  [95,]     0     0     0     0     6     0     0     0     0      0
-##  [96,]     0     0     0     0     0     5     0     0     0      0
-##  [97,]     0     0     0     0     0     0     4     0     0      0
-##  [98,]     0     0     0     0     0     0     0     3     0      0
-##  [99,]     0     0     0     0     0     0     0     0     2      0
-## [100,]     0     0     0     0     0     0     0     0     0      1</code></pre>
-</div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>ortogonais_vet =<span class="st"> </span><span class="cf">function</span>(u,v){</span>
+<span id="cb9-2"><a href="#cb9-2"></a>  p =<span class="st"> </span><span class="kw">prod_interno</span>(u,v)</span>
+<span id="cb9-3"><a href="#cb9-3"></a>  <span class="cf">if</span>(p <span class="op">==</span><span class="st"> </span><span class="dv">0</span>) <span class="kw">return</span>(<span class="ot">TRUE</span>)</span>
+<span id="cb9-4"><a href="#cb9-4"></a>  <span class="cf">else</span> <span class="kw">return</span>(<span class="ot">FALSE</span>)</span>
+<span id="cb9-5"><a href="#cb9-5"></a>}</span>
+<span id="cb9-6"><a href="#cb9-6"></a></span>
+<span id="cb9-7"><a href="#cb9-7"></a><span class="kw">ortogonais_vet</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">2</span>),<span class="kw">c</span>(<span class="dv">3</span>,<span class="op">-</span><span class="dv">1</span>,<span class="dv">0</span>))</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="kw">ortogonais_vet</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">2</span>),<span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">0</span>))</span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
 </div>
 <div id="section-5" class="section level1">
 <h1>6)</h1>
-<div id="a-4" class="section level2">
-<h2>a)</h2>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a>L1 =<span class="st"> </span><span class="kw">list</span>()</span>
-<span id="cb31-2"><a href="#cb31-2"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>){</span>
-<span id="cb31-3"><a href="#cb31-3"></a>  L1[[i]] =<span class="st"> </span>i</span>
-<span id="cb31-4"><a href="#cb31-4"></a>}</span>
-<span id="cb31-5"><a href="#cb31-5"></a>L1</span></code></pre></div>
-<pre><code>## [[1]]
-## [1] 1
-## 
-## [[2]]
-## [1] 2
-## 
-## [[3]]
-## [1] 3
-## 
-## [[4]]
-## [1] 4
-## 
-## [[5]]
-## [1] 5
-## 
-## [[6]]
-## [1] 6
-## 
-## [[7]]
-## [1] 7
-## 
-## [[8]]
-## [1] 8
-## 
-## [[9]]
-## [1] 9
-## 
-## [[10]]
-## [1] 10</code></pre>
-</div>
-<div id="b-4" class="section level2">
-<h2>b)</h2>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a>L2 =<span class="st"> </span><span class="kw">list</span>()</span>
-<span id="cb33-2"><a href="#cb33-2"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>){</span>
-<span id="cb33-3"><a href="#cb33-3"></a>  aux =<span class="st"> </span><span class="kw">c</span>()</span>
-<span id="cb33-4"><a href="#cb33-4"></a>  <span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>i){</span>
-<span id="cb33-5"><a href="#cb33-5"></a>    aux =<span class="st"> </span><span class="kw">c</span>(aux,<span class="dv">1</span>)</span>
-<span id="cb33-6"><a href="#cb33-6"></a>  }</span>
-<span id="cb33-7"><a href="#cb33-7"></a>  L2[[i]] =<span class="st"> </span>aux</span>
-<span id="cb33-8"><a href="#cb33-8"></a>}</span>
-<span id="cb33-9"><a href="#cb33-9"></a>L2</span></code></pre></div>
-<pre><code>## [[1]]
-## [1] 1
-## 
-## [[2]]
-## [1] 1 1
-## 
-## [[3]]
-## [1] 1 1 1
-## 
-## [[4]]
-## [1] 1 1 1 1
-## 
-## [[5]]
-## [1] 1 1 1 1 1
-## 
-## [[6]]
-## [1] 1 1 1 1 1 1
-## 
-## [[7]]
-## [1] 1 1 1 1 1 1 1
-## 
-## [[8]]
-## [1] 1 1 1 1 1 1 1 1
-## 
-## [[9]]
-## [1] 1 1 1 1 1 1 1 1 1
-## 
-## [[10]]
-##  [1] 1 1 1 1 1 1 1 1 1 1</code></pre>
-</div>
-<div id="c-3" class="section level2">
-<h2>c)</h2>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a>L3 =<span class="st"> </span><span class="kw">list</span>()</span>
-<span id="cb35-2"><a href="#cb35-2"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>){</span>
-<span id="cb35-3"><a href="#cb35-3"></a>  aux =<span class="st"> </span><span class="kw">c</span>()</span>
-<span id="cb35-4"><a href="#cb35-4"></a>  <span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>){</span>
-<span id="cb35-5"><a href="#cb35-5"></a>    aux =<span class="st"> </span><span class="kw">c</span>(aux,i<span class="op">*</span>j)</span>
-<span id="cb35-6"><a href="#cb35-6"></a>  }</span>
-<span id="cb35-7"><a href="#cb35-7"></a>  L3[[i]] =<span class="st"> </span>aux</span>
-<span id="cb35-8"><a href="#cb35-8"></a>}</span>
-<span id="cb35-9"><a href="#cb35-9"></a>L3</span></code></pre></div>
-<pre><code>## [[1]]
-##  [1]  1  2  3  4  5  6  7  8  9 10
-## 
-## [[2]]
-##  [1]  2  4  6  8 10 12 14 16 18 20
-## 
-## [[3]]
-##  [1]  3  6  9 12 15 18 21 24 27 30
-## 
-## [[4]]
-##  [1]  4  8 12 16 20 24 28 32 36 40
-## 
-## [[5]]
-##  [1]  5 10 15 20 25 30 35 40 45 50
-## 
-## [[6]]
-##  [1]  6 12 18 24 30 36 42 48 54 60
-## 
-## [[7]]
-##  [1]  7 14 21 28 35 42 49 56 63 70
-## 
-## [[8]]
-##  [1]  8 16 24 32 40 48 56 64 72 80
-## 
-## [[9]]
-##  [1]  9 18 27 36 45 54 63 72 81 90
-## 
-## [[10]]
-##  [1]  10  20  30  40  50  60  70  80  90 100</code></pre>
-</div>
-<div id="d-1" class="section level2">
-<h2>d)</h2>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a>L4 =<span class="st"> </span><span class="kw">list</span>()</span>
-<span id="cb37-2"><a href="#cb37-2"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>){</span>
-<span id="cb37-3"><a href="#cb37-3"></a>  aux =<span class="st"> </span><span class="kw">c</span>()</span>
-<span id="cb37-4"><a href="#cb37-4"></a>  <span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>i){</span>
-<span id="cb37-5"><a href="#cb37-5"></a>    aux =<span class="st"> </span><span class="kw">c</span>(aux,j<span class="op">*</span><span class="dv">2</span>)</span>
-<span id="cb37-6"><a href="#cb37-6"></a>  }</span>
-<span id="cb37-7"><a href="#cb37-7"></a>  L4[[i]] =<span class="st"> </span>aux</span>
-<span id="cb37-8"><a href="#cb37-8"></a>}</span>
-<span id="cb37-9"><a href="#cb37-9"></a>L4</span></code></pre></div>
-<pre><code>## [[1]]
-## [1] 2
-## 
-## [[2]]
-## [1] 2 4
-## 
-## [[3]]
-## [1] 2 4 6
-## 
-## [[4]]
-## [1] 2 4 6 8
-## 
-## [[5]]
-## [1]  2  4  6  8 10
-## 
-## [[6]]
-## [1]  2  4  6  8 10 12
-## 
-## [[7]]
-## [1]  2  4  6  8 10 12 14
-## 
-## [[8]]
-## [1]  2  4  6  8 10 12 14 16
-## 
-## [[9]]
-## [1]  2  4  6  8 10 12 14 16 18
-## 
-## [[10]]
-##  [1]  2  4  6  8 10 12 14 16 18 20</code></pre>
-</div>
-<div id="e" class="section level2">
-<h2>e)</h2>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a>L5 =<span class="st"> </span><span class="kw">list</span>()</span>
-<span id="cb39-2"><a href="#cb39-2"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>){</span>
-<span id="cb39-3"><a href="#cb39-3"></a>  matriz =<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">0</span>, <span class="dt">nrow =</span> i, <span class="dt">ncol =</span> i)</span>
-<span id="cb39-4"><a href="#cb39-4"></a>  <span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>i){</span>
-<span id="cb39-5"><a href="#cb39-5"></a>    matriz[j,j] =<span class="st"> </span><span class="dv">1</span></span>
-<span id="cb39-6"><a href="#cb39-6"></a>  }</span>
-<span id="cb39-7"><a href="#cb39-7"></a>  L5[[i]] =<span class="st"> </span>matriz</span>
-<span id="cb39-8"><a href="#cb39-8"></a>}</span>
-<span id="cb39-9"><a href="#cb39-9"></a>L5</span></code></pre></div>
-<pre><code>## [[1]]
-##      [,1]
-## [1,]    1
-## 
-## [[2]]
-##      [,1] [,2]
-## [1,]    1    0
-## [2,]    0    1
-## 
-## [[3]]
-##      [,1] [,2] [,3]
-## [1,]    1    0    0
-## [2,]    0    1    0
-## [3,]    0    0    1
-## 
-## [[4]]
-##      [,1] [,2] [,3] [,4]
-## [1,]    1    0    0    0
-## [2,]    0    1    0    0
-## [3,]    0    0    1    0
-## [4,]    0    0    0    1
-## 
-## [[5]]
-##      [,1] [,2] [,3] [,4] [,5]
-## [1,]    1    0    0    0    0
-## [2,]    0    1    0    0    0
-## [3,]    0    0    1    0    0
-## [4,]    0    0    0    1    0
-## [5,]    0    0    0    0    1
-## 
-## [[6]]
-##      [,1] [,2] [,3] [,4] [,5] [,6]
-## [1,]    1    0    0    0    0    0
-## [2,]    0    1    0    0    0    0
-## [3,]    0    0    1    0    0    0
-## [4,]    0    0    0    1    0    0
-## [5,]    0    0    0    0    1    0
-## [6,]    0    0    0    0    0    1
-## 
-## [[7]]
-##      [,1] [,2] [,3] [,4] [,5] [,6] [,7]
-## [1,]    1    0    0    0    0    0    0
-## [2,]    0    1    0    0    0    0    0
-## [3,]    0    0    1    0    0    0    0
-## [4,]    0    0    0    1    0    0    0
-## [5,]    0    0    0    0    1    0    0
-## [6,]    0    0    0    0    0    1    0
-## [7,]    0    0    0    0    0    0    1
-## 
-## [[8]]
-##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]
-## [1,]    1    0    0    0    0    0    0    0
-## [2,]    0    1    0    0    0    0    0    0
-## [3,]    0    0    1    0    0    0    0    0
-## [4,]    0    0    0    1    0    0    0    0
-## [5,]    0    0    0    0    1    0    0    0
-## [6,]    0    0    0    0    0    1    0    0
-## [7,]    0    0    0    0    0    0    1    0
-## [8,]    0    0    0    0    0    0    0    1
-## 
-## [[9]]
-##       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9]
-##  [1,]    1    0    0    0    0    0    0    0    0
-##  [2,]    0    1    0    0    0    0    0    0    0
-##  [3,]    0    0    1    0    0    0    0    0    0
-##  [4,]    0    0    0    1    0    0    0    0    0
-##  [5,]    0    0    0    0    1    0    0    0    0
-##  [6,]    0    0    0    0    0    1    0    0    0
-##  [7,]    0    0    0    0    0    0    1    0    0
-##  [8,]    0    0    0    0    0    0    0    1    0
-##  [9,]    0    0    0    0    0    0    0    0    1
-## 
-## [[10]]
-##       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
-##  [1,]    1    0    0    0    0    0    0    0    0     0
-##  [2,]    0    1    0    0    0    0    0    0    0     0
-##  [3,]    0    0    1    0    0    0    0    0    0     0
-##  [4,]    0    0    0    1    0    0    0    0    0     0
-##  [5,]    0    0    0    0    1    0    0    0    0     0
-##  [6,]    0    0    0    0    0    1    0    0    0     0
-##  [7,]    0    0    0    0    0    0    1    0    0     0
-##  [8,]    0    0    0    0    0    0    0    1    0     0
-##  [9,]    0    0    0    0    0    0    0    0    1     0
-## [10,]    0    0    0    0    0    0    0    0    0     1</code></pre>
-</div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>prod_matriz =<span class="st"> </span><span class="cf">function</span>(A,r){</span>
+<span id="cb13-2"><a href="#cb13-2"></a>  <span class="cf">if</span>(<span class="op">!</span><span class="kw">is.matrix</span>(A)) <span class="kw">return</span>(<span class="st">&quot;A precisa ser uma matriz!&quot;</span>)</span>
+<span id="cb13-3"><a href="#cb13-3"></a>  <span class="cf">if</span>(<span class="op">!</span><span class="kw">is.numeric</span>(r)) <span class="kw">stop</span>(<span class="st">&quot;Escalar r precisa ser numérico!&quot;</span>)</span>
+<span id="cb13-4"><a href="#cb13-4"></a>  n_col =<span class="st"> </span><span class="kw">ncol</span>(A)</span>
+<span id="cb13-5"><a href="#cb13-5"></a>  n_row =<span class="st"> </span><span class="kw">nrow</span>(A)</span>
+<span id="cb13-6"><a href="#cb13-6"></a>  M =<span class="st"> </span><span class="kw">matrix</span>(<span class="dt">ncol =</span> n_col, <span class="dt">nrow =</span> n_row)</span>
+<span id="cb13-7"><a href="#cb13-7"></a>  <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>n_row){</span>
+<span id="cb13-8"><a href="#cb13-8"></a>    <span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>n_col){</span>
+<span id="cb13-9"><a href="#cb13-9"></a>      M[i,j] =<span class="st"> </span>A[i,j]<span class="op">*</span>r</span>
+<span id="cb13-10"><a href="#cb13-10"></a>    }</span>
+<span id="cb13-11"><a href="#cb13-11"></a>  }</span>
+<span id="cb13-12"><a href="#cb13-12"></a>  <span class="kw">return</span>(M)</span>
+<span id="cb13-13"><a href="#cb13-13"></a>}</span>
+<span id="cb13-14"><a href="#cb13-14"></a></span>
+<span id="cb13-15"><a href="#cb13-15"></a>A =<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>),<span class="dt">nrow =</span> <span class="dv">3</span>,<span class="dt">ncol =</span> <span class="dv">3</span>)</span>
+<span id="cb13-16"><a href="#cb13-16"></a>A</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    4    1
+## [2,]    2    5    2
+## [3,]    3    6    3</code></pre>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="kw">prod_matriz</span>(A,<span class="dv">3</span>)</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    3   12    3
+## [2,]    6   15    6
+## [3,]    9   18    9</code></pre>
 </div>
 <div id="section-6" class="section level1">
 <h1>7)</h1>
-<div id="a-5" class="section level2">
-<h2>a)</h2>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a>soma =<span class="st"> </span><span class="dv">0</span></span>
-<span id="cb41-2"><a href="#cb41-2"></a><span class="cf">for</span>(elemento <span class="cf">in</span> L1){</span>
-<span id="cb41-3"><a href="#cb41-3"></a>  soma =<span class="st"> </span>soma <span class="op">+</span><span class="st"> </span>elemento</span>
-<span id="cb41-4"><a href="#cb41-4"></a>}</span>
-<span id="cb41-5"><a href="#cb41-5"></a>soma</span></code></pre></div>
-<pre><code>## [1] 55</code></pre>
-</div>
-<div id="b-5" class="section level2">
-<h2>b)</h2>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1"></a>soma  =<span class="st"> </span><span class="kw">c</span>()</span>
-<span id="cb43-2"><a href="#cb43-2"></a><span class="cf">for</span>(elemento <span class="cf">in</span> L3){</span>
-<span id="cb43-3"><a href="#cb43-3"></a>  aux =<span class="st"> </span><span class="dv">0</span></span>
-<span id="cb43-4"><a href="#cb43-4"></a>  <span class="cf">for</span>(numero <span class="cf">in</span> elemento){</span>
-<span id="cb43-5"><a href="#cb43-5"></a>    aux =<span class="st"> </span>aux <span class="op">+</span><span class="st"> </span>numero</span>
-<span id="cb43-6"><a href="#cb43-6"></a>  }</span>
-<span id="cb43-7"><a href="#cb43-7"></a>  soma =<span class="st"> </span><span class="kw">c</span>(soma, aux)</span>
-<span id="cb43-8"><a href="#cb43-8"></a>}</span>
-<span id="cb43-9"><a href="#cb43-9"></a>soma</span></code></pre></div>
-<pre><code>##  [1]  55 110 165 220 275 330 385 440 495 550</code></pre>
-</div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>soma_matriz =<span class="st"> </span><span class="cf">function</span>(A,B){</span>
+<span id="cb17-2"><a href="#cb17-2"></a>  <span class="cf">if</span>(<span class="op">!</span><span class="kw">is.matrix</span>(A)) <span class="kw">return</span>(<span class="st">&quot;A precisa ser uma matriz!&quot;</span>)</span>
+<span id="cb17-3"><a href="#cb17-3"></a>  <span class="cf">if</span>(<span class="op">!</span><span class="kw">is.matrix</span>(B)) <span class="kw">return</span>(<span class="st">&quot;B precisa ser uma matriz!&quot;</span>)</span>
+<span id="cb17-4"><a href="#cb17-4"></a>  n_colA =<span class="st"> </span><span class="kw">ncol</span>(A)</span>
+<span id="cb17-5"><a href="#cb17-5"></a>  n_rowA =<span class="st"> </span><span class="kw">nrow</span>(A)</span>
+<span id="cb17-6"><a href="#cb17-6"></a>  n_colB =<span class="st"> </span><span class="kw">ncol</span>(B)</span>
+<span id="cb17-7"><a href="#cb17-7"></a>  n_rowB =<span class="st"> </span><span class="kw">nrow</span>(B)</span>
+<span id="cb17-8"><a href="#cb17-8"></a>  <span class="cf">if</span>(n_colA <span class="op">!=</span><span class="st"> </span>n_colB <span class="op">||</span><span class="st"> </span>n_rowA <span class="op">!=</span><span class="st"> </span>n_rowB) <span class="kw">stop</span>(<span class="st">&quot;Dimensões das matrizes devem ser iguais!&quot;</span>)</span>
+<span id="cb17-9"><a href="#cb17-9"></a>  M =<span class="st"> </span><span class="kw">matrix</span>(<span class="dt">ncol =</span> n_colA, <span class="dt">nrow =</span> n_rowA)</span>
+<span id="cb17-10"><a href="#cb17-10"></a>  <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>n_rowA){</span>
+<span id="cb17-11"><a href="#cb17-11"></a>    <span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>n_colA){</span>
+<span id="cb17-12"><a href="#cb17-12"></a>      M[i,j] =<span class="st"> </span>A[i,j] <span class="op">+</span><span class="st"> </span>B[i,j]</span>
+<span id="cb17-13"><a href="#cb17-13"></a>    }</span>
+<span id="cb17-14"><a href="#cb17-14"></a>  }</span>
+<span id="cb17-15"><a href="#cb17-15"></a>  <span class="kw">return</span>(M)</span>
+<span id="cb17-16"><a href="#cb17-16"></a>}</span>
+<span id="cb17-17"><a href="#cb17-17"></a></span>
+<span id="cb17-18"><a href="#cb17-18"></a>A =<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>),<span class="dt">nrow =</span> <span class="dv">3</span>,<span class="dt">ncol =</span> <span class="dv">3</span>)</span>
+<span id="cb17-19"><a href="#cb17-19"></a>B =<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">6</span>,<span class="dv">5</span>,<span class="dv">4</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">1</span>),<span class="dt">nrow =</span> <span class="dv">3</span>,<span class="dt">ncol =</span> <span class="dv">3</span>)</span>
+<span id="cb17-20"><a href="#cb17-20"></a><span class="kw">soma_matriz</span>(A,B)</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    7    7    7
+## [2,]    7    7    7
+## [3,]    7    7    7</code></pre>
 </div>
 <div id="section-7" class="section level1">
 <h1>8)</h1>
-<div id="a-6" class="section level2">
-<h2>a)</h2>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a>soma  =<span class="st"> </span><span class="kw">c</span>()</span>
-<span id="cb45-2"><a href="#cb45-2"></a><span class="cf">for</span>(elemento <span class="cf">in</span> L4){</span>
-<span id="cb45-3"><a href="#cb45-3"></a>  aux =<span class="st"> </span><span class="dv">0</span></span>
-<span id="cb45-4"><a href="#cb45-4"></a>  <span class="cf">for</span>(numero <span class="cf">in</span> elemento){</span>
-<span id="cb45-5"><a href="#cb45-5"></a>    aux =<span class="st"> </span>aux <span class="op">+</span><span class="st"> </span>numero</span>
-<span id="cb45-6"><a href="#cb45-6"></a>  }</span>
-<span id="cb45-7"><a href="#cb45-7"></a>  soma =<span class="st"> </span><span class="kw">c</span>(soma, aux)</span>
-<span id="cb45-8"><a href="#cb45-8"></a>}</span>
-<span id="cb45-9"><a href="#cb45-9"></a>soma</span></code></pre></div>
-<pre><code>##  [1]   2   6  12  20  30  42  56  72  90 110</code></pre>
-</div>
-<div id="b-6" class="section level2">
-<h2>b)</h2>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a>v  =<span class="st"> </span><span class="kw">c</span>()</span>
-<span id="cb47-2"><a href="#cb47-2"></a><span class="cf">for</span>(elemento <span class="cf">in</span> L4){</span>
-<span id="cb47-3"><a href="#cb47-3"></a>  soma_pos =<span class="st"> </span><span class="dv">0</span></span>
-<span id="cb47-4"><a href="#cb47-4"></a>  <span class="cf">for</span>(numero <span class="cf">in</span> elemento){</span>
-<span id="cb47-5"><a href="#cb47-5"></a>    soma_pos =<span class="st"> </span>soma_pos <span class="op">+</span><span class="st"> </span>numero</span>
-<span id="cb47-6"><a href="#cb47-6"></a>  }</span>
-<span id="cb47-7"><a href="#cb47-7"></a>  <span class="cf">if</span>(soma_pos<span class="op">%%</span><span class="dv">5</span> <span class="op">==</span><span class="st"> </span><span class="dv">0</span>){</span>
-<span id="cb47-8"><a href="#cb47-8"></a>    v =<span class="st"> </span><span class="kw">c</span>(v, <span class="kw">paste</span>(soma_pos,<span class="st">&quot;é múltiplo de 5&quot;</span>))</span>
-<span id="cb47-9"><a href="#cb47-9"></a>  }<span class="cf">else</span>{</span>
-<span id="cb47-10"><a href="#cb47-10"></a>    v =<span class="st"> </span><span class="kw">c</span>(v, <span class="kw">paste</span>(soma_pos,<span class="st">&quot;não é múltiplo de 5&quot;</span>))</span>
-<span id="cb47-11"><a href="#cb47-11"></a>  }</span>
-<span id="cb47-12"><a href="#cb47-12"></a>}</span>
-<span id="cb47-13"><a href="#cb47-13"></a>v</span></code></pre></div>
-<pre><code>##  [1] &quot;2 não é múltiplo de 5&quot;  &quot;6 não é múltiplo de 5&quot;  &quot;12 não é múltiplo de 5&quot;
-##  [4] &quot;20 é múltiplo de 5&quot;     &quot;30 é múltiplo de 5&quot;     &quot;42 não é múltiplo de 5&quot;
-##  [7] &quot;56 não é múltiplo de 5&quot; &quot;72 não é múltiplo de 5&quot; &quot;90 é múltiplo de 5&quot;    
-## [10] &quot;110 é múltiplo de 5&quot;</code></pre>
-</div>
-<div id="c-4" class="section level2">
-<h2>c)</h2>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1"></a>qtd_m5 =<span class="st"> </span><span class="dv">0</span></span>
-<span id="cb49-2"><a href="#cb49-2"></a><span class="cf">for</span>(elemento <span class="cf">in</span> soma){</span>
-<span id="cb49-3"><a href="#cb49-3"></a>  <span class="cf">if</span>(elemento<span class="op">%%</span><span class="dv">5</span> <span class="op">==</span><span class="st"> </span><span class="dv">0</span>){</span>
-<span id="cb49-4"><a href="#cb49-4"></a>    qtd_m5 =<span class="st"> </span>qtd_m5 <span class="op">+</span><span class="st"> </span><span class="dv">1</span></span>
-<span id="cb49-5"><a href="#cb49-5"></a>  }</span>
-<span id="cb49-6"><a href="#cb49-6"></a>}</span>
-<span id="cb49-7"><a href="#cb49-7"></a>qtd_m5</span></code></pre></div>
-<pre><code>## [1] 4</code></pre>
-</div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="co"># 1. Defina n_rowA número de linhas da matriz A;</span></span>
+<span id="cb19-2"><a href="#cb19-2"></a><span class="co"># 2. Defina n_colA número de colunas da matriz A;</span></span>
+<span id="cb19-3"><a href="#cb19-3"></a><span class="co"># 3. Defina n_rowB número de linhas da matriz B;</span></span>
+<span id="cb19-4"><a href="#cb19-4"></a><span class="co"># 4. Defina n_colB número de colunas da matriz B;</span></span>
+<span id="cb19-5"><a href="#cb19-5"></a><span class="co"># 5. Se n_rowA é diferente de n_rowB, retorne uma mensagem de erro e FIM.</span></span>
+<span id="cb19-6"><a href="#cb19-6"></a><span class="co"># 6. Se n_colA é diferente de n_colB, retorne uma mensagem de erro e FIM.</span></span>
+<span id="cb19-7"><a href="#cb19-7"></a><span class="co"># 7. Inicie uma matriz M de dimensão n x m. </span></span>
+<span id="cb19-8"><a href="#cb19-8"></a><span class="co"># 8. Inicie i = 1;</span></span>
+<span id="cb19-9"><a href="#cb19-9"></a><span class="co"># 9. Inicie j = 1;</span></span>
+<span id="cb19-10"><a href="#cb19-10"></a><span class="co"># 10. Faça M[i,j] = A[i,j] - B[i,j];</span></span>
+<span id="cb19-11"><a href="#cb19-11"></a><span class="co"># 11. Incremente j: j = j + 1;</span></span>
+<span id="cb19-12"><a href="#cb19-12"></a><span class="co"># 12. Se j &lt; = n_rowA volte para a linha 10;</span></span>
+<span id="cb19-13"><a href="#cb19-13"></a><span class="co"># 13. Incremente i: i = i + 1;</span></span>
+<span id="cb19-14"><a href="#cb19-14"></a><span class="co"># 14. Se i &lt; = n_colA volte para a linha 9;</span></span>
+<span id="cb19-15"><a href="#cb19-15"></a><span class="co"># 15. Retorne M.</span></span>
+<span id="cb19-16"><a href="#cb19-16"></a></span>
+<span id="cb19-17"><a href="#cb19-17"></a>subtrai_matriz =<span class="st"> </span><span class="cf">function</span>(A,B){</span>
+<span id="cb19-18"><a href="#cb19-18"></a>  <span class="cf">if</span>(<span class="op">!</span><span class="kw">is.matrix</span>(A)) <span class="kw">return</span>(<span class="st">&quot;A precisa ser uma matriz!&quot;</span>)</span>
+<span id="cb19-19"><a href="#cb19-19"></a>  <span class="cf">if</span>(<span class="op">!</span><span class="kw">is.matrix</span>(B)) <span class="kw">return</span>(<span class="st">&quot;B precisa ser uma matriz!&quot;</span>)</span>
+<span id="cb19-20"><a href="#cb19-20"></a>  n_colA =<span class="st"> </span><span class="kw">ncol</span>(A)</span>
+<span id="cb19-21"><a href="#cb19-21"></a>  n_rowA =<span class="st"> </span><span class="kw">nrow</span>(A)</span>
+<span id="cb19-22"><a href="#cb19-22"></a>  n_colB =<span class="st"> </span><span class="kw">ncol</span>(B)</span>
+<span id="cb19-23"><a href="#cb19-23"></a>  n_rowB =<span class="st"> </span><span class="kw">nrow</span>(B)</span>
+<span id="cb19-24"><a href="#cb19-24"></a>  <span class="cf">if</span>(n_colA <span class="op">!=</span><span class="st"> </span>n_colB <span class="op">||</span><span class="st"> </span>n_rowA <span class="op">!=</span><span class="st"> </span>n_rowB) <span class="kw">stop</span>(<span class="st">&quot;Dimensões das matrizes devem ser iguais!&quot;</span>)</span>
+<span id="cb19-25"><a href="#cb19-25"></a>  M =<span class="st"> </span><span class="kw">matrix</span>(<span class="dt">ncol =</span> n_colA, <span class="dt">nrow =</span> n_rowA)</span>
+<span id="cb19-26"><a href="#cb19-26"></a>  <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>n_rowA){</span>
+<span id="cb19-27"><a href="#cb19-27"></a>    <span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>n_colA){</span>
+<span id="cb19-28"><a href="#cb19-28"></a>      M[i,j] =<span class="st"> </span>A[i,j] <span class="op">-</span><span class="st"> </span>B[i,j]</span>
+<span id="cb19-29"><a href="#cb19-29"></a>    }</span>
+<span id="cb19-30"><a href="#cb19-30"></a>  }</span>
+<span id="cb19-31"><a href="#cb19-31"></a>  <span class="kw">return</span>(M)</span>
+<span id="cb19-32"><a href="#cb19-32"></a>}</span>
+<span id="cb19-33"><a href="#cb19-33"></a></span>
+<span id="cb19-34"><a href="#cb19-34"></a>A =<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>),<span class="dt">nrow =</span> <span class="dv">3</span>,<span class="dt">ncol =</span> <span class="dv">3</span>)</span>
+<span id="cb19-35"><a href="#cb19-35"></a>B =<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">6</span>,<span class="dv">5</span>,<span class="dv">4</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">1</span>),<span class="dt">nrow =</span> <span class="dv">3</span>,<span class="dt">ncol =</span> <span class="dv">3</span>)</span>
+<span id="cb19-36"><a href="#cb19-36"></a><span class="kw">subtrai_matriz</span>(A,B)</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]   -5    1   -5
+## [2,]   -3    3   -3
+## [3,]   -1    5   -1</code></pre>
 </div>
 <div id="section-8" class="section level1">
 <h1>9)</h1>
-<div id="a-7" class="section level2">
-<h2>a)</h2>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1"></a>x0 =<span class="st"> </span><span class="dv">2</span></span>
-<span id="cb51-2"><a href="#cb51-2"></a>r =<span class="st"> </span><span class="dv">3</span></span>
-<span id="cb51-3"><a href="#cb51-3"></a>y =<span class="st"> </span><span class="kw">c</span>(x0)</span>
-<span id="cb51-4"><a href="#cb51-4"></a><span class="cf">for</span>(passo <span class="cf">in</span> <span class="dv">2</span><span class="op">:</span><span class="dv">100</span>){</span>
-<span id="cb51-5"><a href="#cb51-5"></a>  y =<span class="st"> </span><span class="kw">c</span>(y, y[passo<span class="dv">-1</span>] <span class="op">+</span><span class="st"> </span>r)</span>
-<span id="cb51-6"><a href="#cb51-6"></a>}</span>
-<span id="cb51-7"><a href="#cb51-7"></a>y</span></code></pre></div>
-<pre><code>##   [1]   2   5   8  11  14  17  20  23  26  29  32  35  38  41  44  47  50  53
-##  [19]  56  59  62  65  68  71  74  77  80  83  86  89  92  95  98 101 104 107
-##  [37] 110 113 116 119 122 125 128 131 134 137 140 143 146 149 152 155 158 161
-##  [55] 164 167 170 173 176 179 182 185 188 191 194 197 200 203 206 209 212 215
-##  [73] 218 221 224 227 230 233 236 239 242 245 248 251 254 257 260 263 266 269
-##  [91] 272 275 278 281 284 287 290 293 296 299</code></pre>
-</div>
-<div id="b-7" class="section level2">
-<h2>b)</h2>
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1"></a>formula_soma_pa =<span class="st"> </span>(y[<span class="dv">1</span>] <span class="op">+</span><span class="st"> </span>y[<span class="dv">35</span>])<span class="op">*</span><span class="dv">35</span><span class="op">/</span><span class="dv">2</span></span>
-<span id="cb53-2"><a href="#cb53-2"></a>soma_r =<span class="st"> </span><span class="dv">0</span> </span>
-<span id="cb53-3"><a href="#cb53-3"></a><span class="cf">for</span>(numero <span class="cf">in</span> y[<span class="dv">1</span><span class="op">:</span><span class="dv">35</span>]){</span>
-<span id="cb53-4"><a href="#cb53-4"></a>  soma_r =<span class="st"> </span>soma_r <span class="op">+</span><span class="st"> </span>numero</span>
-<span id="cb53-5"><a href="#cb53-5"></a>}</span>
-<span id="cb53-6"><a href="#cb53-6"></a>soma_r</span></code></pre></div>
-<pre><code>## [1] 1855</code></pre>
-<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1"></a>soma_r <span class="op">==</span><span class="st"> </span>formula_soma_pa</span></code></pre></div>
-<pre><code>## [1] TRUE</code></pre>
-</div>
-<div id="c-5" class="section level2">
-<h2>c)</h2>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1"></a>qtd_mult_<span class="dv">4</span> =<span class="st"> </span><span class="dv">0</span></span>
-<span id="cb57-2"><a href="#cb57-2"></a><span class="cf">for</span>(elemento <span class="cf">in</span> y){</span>
-<span id="cb57-3"><a href="#cb57-3"></a>  <span class="cf">if</span>(elemento<span class="op">%%</span><span class="dv">4</span> <span class="op">==</span><span class="st"> </span><span class="dv">0</span>){</span>
-<span id="cb57-4"><a href="#cb57-4"></a>    qtd_mult_<span class="dv">4</span> =<span class="st"> </span>qtd_mult_<span class="dv">4</span> <span class="op">+</span><span class="st"> </span><span class="dv">1</span></span>
-<span id="cb57-5"><a href="#cb57-5"></a>  }</span>
-<span id="cb57-6"><a href="#cb57-6"></a>}</span>
-<span id="cb57-7"><a href="#cb57-7"></a>qtd_mult_<span class="dv">4</span></span></code></pre></div>
-<pre><code>## [1] 25</code></pre>
-</div>
-<div id="d-2" class="section level2">
-<h2>d)</h2>
-<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1"></a>qtd_mult_<span class="dv">4</span>_<span class="dv">5</span> =<span class="st"> </span><span class="dv">0</span></span>
-<span id="cb59-2"><a href="#cb59-2"></a><span class="cf">for</span>(elemento <span class="cf">in</span> y){</span>
-<span id="cb59-3"><a href="#cb59-3"></a>  <span class="cf">if</span>(elemento<span class="op">%%</span><span class="dv">4</span> <span class="op">==</span><span class="st"> </span><span class="dv">0</span> <span class="op">&amp;&amp;</span><span class="st"> </span>elemento<span class="op">%%</span><span class="dv">5</span> <span class="op">==</span><span class="st"> </span><span class="dv">0</span>){</span>
-<span id="cb59-4"><a href="#cb59-4"></a>    qtd_mult_<span class="dv">4</span>_<span class="dv">5</span> =<span class="st"> </span>qtd_mult_<span class="dv">4</span>_<span class="dv">5</span> <span class="op">+</span><span class="st"> </span><span class="dv">1</span></span>
-<span id="cb59-5"><a href="#cb59-5"></a>  }</span>
-<span id="cb59-6"><a href="#cb59-6"></a>}</span>
-<span id="cb59-7"><a href="#cb59-7"></a>qtd_mult_<span class="dv">4</span>_<span class="dv">5</span></span></code></pre></div>
-<pre><code>## [1] 5</code></pre>
-</div>
-<div id="e-1" class="section level2">
-<h2>e)</h2>
-<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1"></a>qtd_mult_<span class="dv">4</span>_ou_<span class="dv">5</span> =<span class="st"> </span><span class="dv">0</span></span>
-<span id="cb61-2"><a href="#cb61-2"></a><span class="cf">for</span>(elemento <span class="cf">in</span> y){</span>
-<span id="cb61-3"><a href="#cb61-3"></a>  <span class="cf">if</span>(elemento<span class="op">%%</span><span class="dv">4</span> <span class="op">==</span><span class="st"> </span><span class="dv">0</span> <span class="op">||</span><span class="st"> </span>elemento<span class="op">%%</span><span class="dv">5</span> <span class="op">==</span><span class="st"> </span><span class="dv">0</span>){</span>
-<span id="cb61-4"><a href="#cb61-4"></a>    qtd_mult_<span class="dv">4</span>_ou_<span class="dv">5</span> =<span class="st"> </span>qtd_mult_<span class="dv">4</span>_ou_<span class="dv">5</span> <span class="op">+</span><span class="st"> </span><span class="dv">1</span></span>
-<span id="cb61-5"><a href="#cb61-5"></a>  }</span>
-<span id="cb61-6"><a href="#cb61-6"></a>}</span>
-<span id="cb61-7"><a href="#cb61-7"></a>qtd_mult_<span class="dv">4</span>_ou_<span class="dv">5</span></span></code></pre></div>
-<pre><code>## [1] 40</code></pre>
-</div>
-<div id="f" class="section level2">
-<h2>f)</h2>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1"></a>x =<span class="st"> </span><span class="kw">c</span>()</span>
-<span id="cb63-2"><a href="#cb63-2"></a><span class="cf">for</span>(elemento <span class="cf">in</span> y){</span>
-<span id="cb63-3"><a href="#cb63-3"></a>  <span class="cf">if</span>(elemento<span class="op">%%</span><span class="dv">2</span> <span class="op">==</span><span class="st"> </span><span class="dv">0</span>){</span>
-<span id="cb63-4"><a href="#cb63-4"></a>    x =<span class="st"> </span><span class="kw">c</span>(x, elemento)</span>
-<span id="cb63-5"><a href="#cb63-5"></a>  }</span>
-<span id="cb63-6"><a href="#cb63-6"></a>  <span class="cf">else</span>{</span>
-<span id="cb63-7"><a href="#cb63-7"></a>    x =<span class="st"> </span><span class="kw">c</span>(x,<span class="dv">0</span>)</span>
-<span id="cb63-8"><a href="#cb63-8"></a>  }</span>
-<span id="cb63-9"><a href="#cb63-9"></a>}</span>
-<span id="cb63-10"><a href="#cb63-10"></a>x</span></code></pre></div>
-<pre><code>##   [1]   2   0   8   0  14   0  20   0  26   0  32   0  38   0  44   0  50   0
-##  [19]  56   0  62   0  68   0  74   0  80   0  86   0  92   0  98   0 104   0
-##  [37] 110   0 116   0 122   0 128   0 134   0 140   0 146   0 152   0 158   0
-##  [55] 164   0 170   0 176   0 182   0 188   0 194   0 200   0 206   0 212   0
-##  [73] 218   0 224   0 230   0 236   0 242   0 248   0 254   0 260   0 266   0
-##  [91] 272   0 278   0 284   0 290   0 296   0</code></pre>
-</div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a>transposta =<span class="st"> </span><span class="cf">function</span>(A){</span>
+<span id="cb21-2"><a href="#cb21-2"></a>  <span class="cf">if</span>(<span class="op">!</span><span class="kw">is.matrix</span>(A)) <span class="kw">return</span>(<span class="st">&quot;A precisa ser uma matriz!&quot;</span>)</span>
+<span id="cb21-3"><a href="#cb21-3"></a>  n_colA =<span class="st"> </span><span class="kw">ncol</span>(A)</span>
+<span id="cb21-4"><a href="#cb21-4"></a>  n_rowA =<span class="st"> </span><span class="kw">nrow</span>(A)</span>
+<span id="cb21-5"><a href="#cb21-5"></a>  M =<span class="st"> </span><span class="kw">matrix</span>(<span class="dt">ncol =</span> n_rowA, <span class="dt">nrow =</span> n_colA)</span>
+<span id="cb21-6"><a href="#cb21-6"></a>  <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>n_rowA){</span>
+<span id="cb21-7"><a href="#cb21-7"></a>    <span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>n_colA){</span>
+<span id="cb21-8"><a href="#cb21-8"></a>      M[j,i] =<span class="st"> </span>A[i,j]</span>
+<span id="cb21-9"><a href="#cb21-9"></a>    }</span>
+<span id="cb21-10"><a href="#cb21-10"></a>  }</span>
+<span id="cb21-11"><a href="#cb21-11"></a>  <span class="kw">return</span>(M)</span>
+<span id="cb21-12"><a href="#cb21-12"></a>}</span>
+<span id="cb21-13"><a href="#cb21-13"></a></span>
+<span id="cb21-14"><a href="#cb21-14"></a>A =<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>),<span class="dt">ncol =</span> <span class="dv">3</span>,<span class="dt">nrow =</span> <span class="dv">3</span>)</span>
+<span id="cb21-15"><a href="#cb21-15"></a><span class="kw">transposta</span>(A)</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    2    3
+## [2,]    4    5    6
+## [3,]    7    8    9</code></pre>
 </div>
 <div id="section-9" class="section level1">
 <h1>10)</h1>
-<div id="a-8" class="section level2">
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="co"># 1. Defina n_rowA número de linhas da matriz A;</span></span>
+<span id="cb23-2"><a href="#cb23-2"></a><span class="co"># 2. Defina n_colA número de colunas da matriz A;</span></span>
+<span id="cb23-3"><a href="#cb23-3"></a><span class="co"># 3. Se n_rowA for diferente de n_colA, retorna erro e FIM;</span></span>
+<span id="cb23-4"><a href="#cb23-4"></a><span class="co"># 5. Defina a tranposta de A como t_A;</span></span>
+<span id="cb23-5"><a href="#cb23-5"></a><span class="co"># 6. t_A recebe transposta(A);</span></span>
+<span id="cb23-6"><a href="#cb23-6"></a><span class="co"># 7. Inicie i = 1;</span></span>
+<span id="cb23-7"><a href="#cb23-7"></a><span class="co"># 8. Inicie j = 1;</span></span>
+<span id="cb23-8"><a href="#cb23-8"></a><span class="co"># 9. Se t_A[i,j] != A[i,j], retorne FALSE</span></span>
+<span id="cb23-9"><a href="#cb23-9"></a><span class="co"># 10. Incremente j: j = j + 1;</span></span>
+<span id="cb23-10"><a href="#cb23-10"></a><span class="co"># 11. Se j &lt; = n_rowA volte para a linha 9;</span></span>
+<span id="cb23-11"><a href="#cb23-11"></a><span class="co"># 12. Incremente i: i = i + 1;</span></span>
+<span id="cb23-12"><a href="#cb23-12"></a><span class="co"># 13. Se i &lt; = n_colA volte para a linha 8;</span></span>
+<span id="cb23-13"><a href="#cb23-13"></a><span class="co"># 14. Retorne TRUE.</span></span>
+<span id="cb23-14"><a href="#cb23-14"></a></span>
+<span id="cb23-15"><a href="#cb23-15"></a>simetrica =<span class="st"> </span><span class="cf">function</span>(A){</span>
+<span id="cb23-16"><a href="#cb23-16"></a>  <span class="cf">if</span>(<span class="op">!</span><span class="kw">is.matrix</span>(A)) <span class="kw">return</span>(<span class="st">&quot;A precisa ser uma matriz!&quot;</span>)</span>
+<span id="cb23-17"><a href="#cb23-17"></a>  n_colA =<span class="st"> </span><span class="kw">ncol</span>(A)</span>
+<span id="cb23-18"><a href="#cb23-18"></a>  n_rowA =<span class="st"> </span><span class="kw">nrow</span>(A)</span>
+<span id="cb23-19"><a href="#cb23-19"></a>  <span class="cf">if</span>(n_colA <span class="op">!=</span><span class="st"> </span>n_rowA) <span class="kw">return</span>(<span class="st">&quot;A matriz A deve ser quadrada!&quot;</span>)</span>
+<span id="cb23-20"><a href="#cb23-20"></a>  t_A =<span class="st"> </span><span class="kw">transposta</span>(A)</span>
+<span id="cb23-21"><a href="#cb23-21"></a>  <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>n_rowA){</span>
+<span id="cb23-22"><a href="#cb23-22"></a>    <span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>n_colA){</span>
+<span id="cb23-23"><a href="#cb23-23"></a>      <span class="cf">if</span>(A[i,j] <span class="op">!=</span><span class="st"> </span>t_A[i,j]) <span class="kw">return</span>(<span class="ot">FALSE</span>)</span>
+<span id="cb23-24"><a href="#cb23-24"></a>    }</span>
+<span id="cb23-25"><a href="#cb23-25"></a>  }</span>
+<span id="cb23-26"><a href="#cb23-26"></a>  <span class="kw">return</span>(<span class="ot">TRUE</span>)</span>
+<span id="cb23-27"><a href="#cb23-27"></a>}</span>
+<span id="cb23-28"><a href="#cb23-28"></a></span>
+<span id="cb23-29"><a href="#cb23-29"></a>A =<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">0</span>,<span class="dt">nrow =</span> <span class="dv">3</span>,<span class="dt">ncol =</span> <span class="dv">3</span>)</span>
+<span id="cb23-30"><a href="#cb23-30"></a><span class="kw">simetrica</span>(A)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a>A =<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">4</span>,<span class="dt">ncol =</span> <span class="dv">2</span>)</span>
+<span id="cb25-2"><a href="#cb25-2"></a><span class="kw">simetrica</span>(A)</span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+</div>
+<div id="section-10" class="section level1">
+<h1>11)</h1>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a>mult_matriz_vet =<span class="st"> </span><span class="cf">function</span>(A,v){</span>
+<span id="cb27-2"><a href="#cb27-2"></a>  <span class="cf">if</span>(<span class="op">!</span><span class="kw">is.matrix</span>(A)) <span class="kw">return</span>(<span class="st">&quot;A precisa ser uma matriz!&quot;</span>)</span>
+<span id="cb27-3"><a href="#cb27-3"></a>  <span class="cf">if</span>(<span class="op">!</span><span class="kw">is.numeric</span>(v)) <span class="kw">stop</span>(<span class="st">&quot;Vetor v precisa ser numérico!&quot;</span>)</span>
+<span id="cb27-4"><a href="#cb27-4"></a>  n_rowA =<span class="st"> </span><span class="kw">nrow</span>(A)</span>
+<span id="cb27-5"><a href="#cb27-5"></a>  n_colA =<span class="st"> </span><span class="kw">ncol</span>(A)</span>
+<span id="cb27-6"><a href="#cb27-6"></a>  k =<span class="st"> </span><span class="kw">length</span>(v)</span>
+<span id="cb27-7"><a href="#cb27-7"></a>  <span class="cf">if</span>(n_colA <span class="op">!=</span><span class="st"> </span>k) <span class="kw">stop</span>(<span class="st">&quot;Dimensões incompatíveis!&quot;</span>)</span>
+<span id="cb27-8"><a href="#cb27-8"></a>  w =<span class="st"> </span><span class="kw">c</span>()</span>
+<span id="cb27-9"><a href="#cb27-9"></a>  <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>n_rowA){</span>
+<span id="cb27-10"><a href="#cb27-10"></a>    w[i] =<span class="st"> </span><span class="kw">prod_interno</span>(A[i,],v)</span>
+<span id="cb27-11"><a href="#cb27-11"></a>  }</span>
+<span id="cb27-12"><a href="#cb27-12"></a>  <span class="kw">return</span>(w)</span>
+<span id="cb27-13"><a href="#cb27-13"></a>}</span>
+<span id="cb27-14"><a href="#cb27-14"></a></span>
+<span id="cb27-15"><a href="#cb27-15"></a>A =<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>),<span class="dt">ncol =</span> <span class="dv">3</span>)</span>
+<span id="cb27-16"><a href="#cb27-16"></a>v =<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">2</span>)</span>
+<span id="cb27-17"><a href="#cb27-17"></a></span>
+<span id="cb27-18"><a href="#cb27-18"></a><span class="kw">mult_matriz_vet</span>(A,v)</span></code></pre></div>
+<pre><code>## [1] 24 30 36</code></pre>
+</div>
+<div id="section-11" class="section level1">
+<h1>12)</h1>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a>mult_matriz =<span class="st"> </span><span class="cf">function</span>(A,B){</span>
+<span id="cb29-2"><a href="#cb29-2"></a>  <span class="cf">if</span>(<span class="op">!</span><span class="kw">is.matrix</span>(A)) <span class="kw">return</span>(<span class="st">&quot;A precisa ser uma matriz!&quot;</span>)</span>
+<span id="cb29-3"><a href="#cb29-3"></a>  <span class="cf">if</span>(<span class="op">!</span><span class="kw">is.matrix</span>(B)) <span class="kw">return</span>(<span class="st">&quot;B precisa ser uma matriz!&quot;</span>)</span>
+<span id="cb29-4"><a href="#cb29-4"></a>  n_colA =<span class="st"> </span><span class="kw">ncol</span>(A)</span>
+<span id="cb29-5"><a href="#cb29-5"></a>  n_rowA =<span class="st"> </span><span class="kw">nrow</span>(A)</span>
+<span id="cb29-6"><a href="#cb29-6"></a>  n_colB =<span class="st"> </span><span class="kw">ncol</span>(B)</span>
+<span id="cb29-7"><a href="#cb29-7"></a>  n_rowB =<span class="st"> </span><span class="kw">nrow</span>(B)</span>
+<span id="cb29-8"><a href="#cb29-8"></a>  <span class="cf">if</span>(n_colA <span class="op">!=</span><span class="st"> </span>n_rowB) <span class="kw">return</span>(<span class="st">&quot;Dimensões incompatíveis!&quot;</span>)</span>
+<span id="cb29-9"><a href="#cb29-9"></a>  M =<span class="st"> </span><span class="kw">matrix</span>(<span class="dt">nrow =</span> n_rowA,<span class="dt">ncol =</span> n_colB)</span>
+<span id="cb29-10"><a href="#cb29-10"></a>  <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>n_rowA){</span>
+<span id="cb29-11"><a href="#cb29-11"></a>    <span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>n_colB){</span>
+<span id="cb29-12"><a href="#cb29-12"></a>      M[i,j] =<span class="st"> </span><span class="kw">prod_interno</span>(A[i,],B[,j])</span>
+<span id="cb29-13"><a href="#cb29-13"></a>    }</span>
+<span id="cb29-14"><a href="#cb29-14"></a>  }</span>
+<span id="cb29-15"><a href="#cb29-15"></a>  <span class="kw">return</span>(M)</span>
+<span id="cb29-16"><a href="#cb29-16"></a>}</span>
+<span id="cb29-17"><a href="#cb29-17"></a></span>
+<span id="cb29-18"><a href="#cb29-18"></a>A =<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>),<span class="dt">nrow =</span> <span class="dv">3</span>)</span>
+<span id="cb29-19"><a href="#cb29-19"></a>B =<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">4</span>,<span class="dv">3</span>), <span class="dt">ncol =</span> <span class="dv">3</span>)</span>
+<span id="cb29-20"><a href="#cb29-20"></a></span>
+<span id="cb29-21"><a href="#cb29-21"></a><span class="kw">mult_matriz</span>(A,B)</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    5    4    3
+## [2,]   10    8    6
+## [3,]   15   12    9</code></pre>
+</div>
+<div id="section-12" class="section level1">
+<h1>13)</h1>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a>alfa=<span class="dv">4</span>; beta=<span class="st"> </span><span class="dv">-3</span>; v1=<span class="kw">c</span>(<span class="dv">2</span>,<span class="op">-</span><span class="dv">3</span>,<span class="op">-</span><span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">0</span>,<span class="op">-</span><span class="dv">2</span>); v2=<span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">4</span>,<span class="op">-</span><span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>); v3=<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>); v4=<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>)</span>
+<span id="cb31-2"><a href="#cb31-2"></a>M1 =<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="op">-</span><span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>),<span class="dt">ncol =</span> <span class="dv">3</span>, <span class="dt">byrow =</span> T)</span>
+<span id="cb31-3"><a href="#cb31-3"></a>M2 =<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">0</span>,<span class="op">-</span><span class="dv">5</span>,<span class="dv">3</span>,<span class="op">-</span><span class="dv">1</span>,<span class="dv">1</span>,<span class="op">-</span><span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">4</span>,<span class="dv">0</span>), <span class="dt">ncol =</span> <span class="dv">3</span>, <span class="dt">byrow =</span> T)</span>
+<span id="cb31-4"><a href="#cb31-4"></a>M3 =<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">1</span>,<span class="op">-</span><span class="dv">2</span>,<span class="dv">10</span>,<span class="dv">3</span>,<span class="op">-</span><span class="dv">1</span>), <span class="dt">ncol =</span> <span class="dv">2</span>, <span class="dt">byrow =</span> T)</span>
+<span id="cb31-5"><a href="#cb31-5"></a>M4 =<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>), <span class="dt">ncol =</span> <span class="dv">2</span> , <span class="dt">byrow =</span> T)</span>
+<span id="cb31-6"><a href="#cb31-6"></a>M5 =<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">0</span>,<span class="dv">3</span>,<span class="op">-</span><span class="dv">5</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">0</span>,<span class="dv">0</span>), <span class="dt">ncol =</span> <span class="dv">4</span>, <span class="dt">byrow =</span> T)</span></code></pre></div>
+<div id="a" class="section level2">
 <h2>a)</h2>
-<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1"></a>fib_<span class="dv">12</span> =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>)</span>
-<span id="cb65-2"><a href="#cb65-2"></a><span class="cf">while</span>(<span class="kw">length</span>(fib_<span class="dv">12</span>) <span class="op">&lt;</span><span class="st"> </span><span class="dv">12</span>){</span>
-<span id="cb65-3"><a href="#cb65-3"></a>  qtd_elementos =<span class="st"> </span><span class="kw">length</span>(fib_<span class="dv">12</span>)</span>
-<span id="cb65-4"><a href="#cb65-4"></a>  fib_<span class="dv">12</span> =<span class="st"> </span><span class="kw">c</span>(fib_<span class="dv">12</span>, fib_<span class="dv">12</span>[qtd_elementos] <span class="op">+</span><span class="st"> </span>fib_<span class="dv">12</span>[qtd_elementos<span class="dv">-1</span>])</span>
-<span id="cb65-5"><a href="#cb65-5"></a>}</span>
-<span id="cb65-6"><a href="#cb65-6"></a>fib_<span class="dv">12</span></span></code></pre></div>
-<pre><code>##  [1]   1   1   2   3   5   8  13  21  34  55  89 144</code></pre>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="kw">multiplica_vet</span>(v3,alfa)</span></code></pre></div>
+<pre><code>## [1]  4  8 12 16 20</code></pre>
 </div>
-<div id="b-8" class="section level2">
+<div id="b" class="section level2">
 <h2>b)</h2>
-<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1"></a>fib_<span class="dv">300</span> =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>)</span>
-<span id="cb67-2"><a href="#cb67-2"></a>qtd_elementos =<span class="st"> </span><span class="kw">length</span>(fib_<span class="dv">300</span>)</span>
-<span id="cb67-3"><a href="#cb67-3"></a>soma =<span class="st"> </span>fib_<span class="dv">300</span>[qtd_elementos] <span class="op">+</span><span class="st"> </span>fib_<span class="dv">300</span>[qtd_elementos<span class="dv">-1</span>]</span>
-<span id="cb67-4"><a href="#cb67-4"></a></span>
-<span id="cb67-5"><a href="#cb67-5"></a><span class="cf">while</span>(soma <span class="op">&lt;</span><span class="st"> </span><span class="dv">300</span>){</span>
-<span id="cb67-6"><a href="#cb67-6"></a>  fib_<span class="dv">300</span> =<span class="st"> </span><span class="kw">c</span>(fib_<span class="dv">300</span>, soma)</span>
-<span id="cb67-7"><a href="#cb67-7"></a>  qtd_elementos =<span class="st"> </span><span class="kw">length</span>(fib_<span class="dv">300</span>)</span>
-<span id="cb67-8"><a href="#cb67-8"></a>  soma =<span class="st"> </span>fib_<span class="dv">300</span>[qtd_elementos] <span class="op">+</span><span class="st"> </span>fib_<span class="dv">300</span>[qtd_elementos<span class="dv">-1</span>]</span>
-<span id="cb67-9"><a href="#cb67-9"></a>}</span>
-<span id="cb67-10"><a href="#cb67-10"></a>fib_<span class="dv">300</span></span></code></pre></div>
-<pre><code>##  [1]   1   1   2   3   5   8  13  21  34  55  89 144 233</code></pre>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a><span class="kw">soma_vetor</span>(v1,v2)</span></code></pre></div>
+<pre><code>## [1]  5  1 -2  5  1 -1</code></pre>
 </div>
-<div id="c-6" class="section level2">
+<div id="c" class="section level2">
 <h2>c)</h2>
-<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1"></a>fib =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>)</span>
-<span id="cb69-2"><a href="#cb69-2"></a>soma =<span class="st"> </span><span class="dv">2</span></span>
-<span id="cb69-3"><a href="#cb69-3"></a>qtd =<span class="st"> </span><span class="dv">2</span></span>
-<span id="cb69-4"><a href="#cb69-4"></a></span>
-<span id="cb69-5"><a href="#cb69-5"></a><span class="cf">while</span>(soma <span class="op">&lt;</span><span class="st"> </span><span class="dv">1000000</span>){</span>
-<span id="cb69-6"><a href="#cb69-6"></a>  qtd =<span class="st"> </span>qtd <span class="op">+</span><span class="st"> </span><span class="dv">1</span></span>
-<span id="cb69-7"><a href="#cb69-7"></a>  fib =<span class="st"> </span><span class="kw">c</span>(fib[<span class="dv">2</span>], soma)</span>
-<span id="cb69-8"><a href="#cb69-8"></a>  qtd_elementos =<span class="st"> </span><span class="kw">length</span>(fib)</span>
-<span id="cb69-9"><a href="#cb69-9"></a>  soma =<span class="st"> </span><span class="dv">0</span></span>
-<span id="cb69-10"><a href="#cb69-10"></a>  <span class="cf">for</span>(numero <span class="cf">in</span> fib){</span>
-<span id="cb69-11"><a href="#cb69-11"></a>    soma =<span class="st"> </span>soma <span class="op">+</span><span class="st"> </span>numero</span>
-<span id="cb69-12"><a href="#cb69-12"></a>  }</span>
-<span id="cb69-13"><a href="#cb69-13"></a>}</span>
-<span id="cb69-14"><a href="#cb69-14"></a>qtd</span></code></pre></div>
-<pre><code>## [1] 30</code></pre>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a><span class="kw">subtrai_vetor</span>(v3, v1)</span></code></pre></div>
+<pre><code>## Error in subtrai_vetor(v3, v1): Vetores com dimensões diferentes!</code></pre>
+</div>
+<div id="d" class="section level2">
+<h2>d)</h2>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a><span class="kw">prod_interno</span>(v1,v2)</span></code></pre></div>
+<pre><code>## [1] -7</code></pre>
+</div>
+<div id="e" class="section level2">
+<h2>e)</h2>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a><span class="kw">prod_interno</span>(<span class="kw">multiplica_vet</span>(v1,alfa),<span class="kw">subtrai_vetor</span>(v2,v1))</span></code></pre></div>
+<pre><code>## [1] -200</code></pre>
+</div>
+<div id="f" class="section level2">
+<h2>f)</h2>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="kw">prod_interno</span>(<span class="kw">soma_vetor</span>(v1,v2),<span class="kw">subtrai_vetor</span>(v1,v2))</span></code></pre></div>
+<pre><code>## [1] 15</code></pre>
+</div>
+<div id="g" class="section level2">
+<h2>g)</h2>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a><span class="kw">ortogonais_vet</span>(v1,v2)</span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+</div>
+<div id="h" class="section level2">
+<h2>h)</h2>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a><span class="kw">prod_matriz</span>(M1,beta)</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]   -3   -9   -6
+## [2,]    3    0   -3</code></pre>
+</div>
+<div id="i" class="section level2">
+<h2>i)</h2>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1"></a><span class="kw">transposta</span>(M1)</span></code></pre></div>
+<pre><code>##      [,1] [,2]
+## [1,]    1   -1
+## [2,]    3    0
+## [3,]    2    1</code></pre>
+</div>
+<div id="j" class="section level2">
+<h2>j)</h2>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1"></a><span class="kw">simetrica</span>(M1)</span></code></pre></div>
+<pre><code>## [1] &quot;A matriz A deve ser quadrada!&quot;</code></pre>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1"></a><span class="kw">simetrica</span>(M4)</span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1"></a><span class="kw">simetrica</span>(M5)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+</div>
+<div id="k" class="section level2">
+<h2>k)</h2>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1"></a><span class="kw">mult_matriz_vet</span>(M1,v4)</span></code></pre></div>
+<pre><code>## [1] 5 1</code></pre>
+</div>
+<div id="l" class="section level2">
+<h2>l)</h2>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1"></a><span class="kw">soma_vetor</span>(<span class="kw">mult_matriz_vet</span>(M2,v4),v4)</span></code></pre></div>
+<pre><code>## [1] -2  1  5</code></pre>
+</div>
+<div id="m" class="section level2">
+<h2>m)</h2>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1"></a><span class="kw">mult_matriz</span>(M1,M2)</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]   -1    6    0
+## [2,]    1    9   -3</code></pre>
+</div>
+<div id="n" class="section level2">
+<h2>n)</h2>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1"></a><span class="kw">mult_matriz</span>(M2,M1)</span></code></pre></div>
+<pre><code>## [1] &quot;Dimensões incompatíveis!&quot;</code></pre>
+</div>
+<div id="o" class="section level2">
+<h2>o)</h2>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1"></a><span class="kw">mult_matriz</span>(<span class="kw">transposta</span>(M3),M2)</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    5   -5   11
+## [2,]  -11    1   -7</code></pre>
+</div>
+<div id="p" class="section level2">
+<h2>p)</h2>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1"></a><span class="kw">soma_matriz</span>(<span class="kw">mult_matriz</span>(M1,M3),M4)</span></code></pre></div>
+<pre><code>##      [,1] [,2]
+## [1,]    4   30
+## [2,]    0   -1</code></pre>
+</div>
+<div id="q" class="section level2">
+<h2>q)</h2>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1"></a><span class="kw">mult_matriz</span>(<span class="kw">mult_matriz</span>(M1,M2),M3)</span></code></pre></div>
+<pre><code>##      [,1] [,2]
+## [1,]  -15   59
+## [2,]  -24   94</code></pre>
+</div>
+<div id="r" class="section level2">
+<h2>r)</h2>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1"></a><span class="kw">subtrai_matriz</span>(<span class="kw">mult_matriz</span>(<span class="kw">mult_matriz</span>(M1,M2),M3), M4)</span></code></pre></div>
+<pre><code>##      [,1] [,2]
+## [1,]  -16   58
+## [2,]  -24   93</code></pre>
 </div>
 </div>
 </div>
