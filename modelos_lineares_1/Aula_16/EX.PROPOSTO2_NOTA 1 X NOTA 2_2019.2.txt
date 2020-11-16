@@ -1,0 +1,20 @@
+###############################################################################################
+# UNIVERSIDADE FEDEERAL FLUMINENSE (UFF)                                                      #
+# INSTITUTO DE MATEMÁTICA E ESTATÍSTICA (IME)                                                 #
+# DEPARTAMENTO DE ESTATÍSTICA (GET)                                                           #
+# AULA PRÁTICA DE MODELOS LINEARES I: ANÁLISE DOS RESÍDUOS DO MODELO DE RLS (MÉTODO GRÁFICO)  #
+# DATA: 13/09/2019 (6ª FEIRA)                                                                 #
+# PROF. DR. JOSÉ RODRIGO DE MORAES                                                            #
+###############################################################################################
+
+# EXERCÍCIO PROPOSTO 2 - ANÁLISE DOS RESÍDUOS:
+# PERGUNTA: EXISTE ALGUM TIPO DE VIOLAÇÃO DAS HIPÓTESES BÁSICAS DO MODELO?
+# ALUNOS COM MELHORES DESEMPENHOS NA 1ª AVALIAÇÃO DA DISCIPLINA TENDEM A APRESENTAR MELHORES DESEMPENHOS NA 2ª AVALIAÇÃO?
+# n=27 ALUNOS MATRICULADOS NUMA DETERMINADA DISCIPLINA
+
+# Nota na 1ª avaliação
+Nota1=c(45,55,55,55,55,65,65,65,65,65,65,75,75,75,75,75,75,85,85,85,85,85,85,95,95,95,95)
+
+# Nota na 2ª avaliação
+Nota2=c(52,54,63,60,62,57,72,77,80,61,75,62,77,91,71,89,70,89,93,97,74,80,66,94,97,83,95)
+

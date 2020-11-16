@@ -1,0 +1,105 @@
+---
+title: "Métodos Computacionais para Estatística II"
+date: <small>`r format(Sys.time(), '%d %B, %Y')`</small>
+author:
+output: 
+  revealjs::revealjs_presentation:
+        theme: solarized
+        transition: convex
+        slide_level: 2
+        center: True 
+        
+---
+
+
+## Alunos:
+<section>
+
+<span class="fragment fade-up">
+- Iasmyn Lugon
+<br>
+- Lucas Mattos
+<br>
+- Luiz Fernando
+<br>
+- Lyncoln Sousa
+<br>
+- Marcson Araújo
+</span>
+
+</section>
+
+#Sparklyr
+
+# O que é o Spark
+##
+
+>- Big data
+>- Cluster
+>- Apache Spark
+
+# SparkR x SparklyR
+# O que é Sparklyr
+##
+
+>- Instalar o pacote
+>- install.packages("sparklyr")
+>- Instalar o spark pelo pacote
+>- spark_install()
+>- Instalar o Java
+>- [https://www.java.com/pt_BR/download/](https://www.java.com/pt_BR/download/)
+
+
+# Conexão do spark com o R
+##
+
+>- Criar uma conexão
+>- Nome da fonte de dados = spark_connect(master = "Local de conexão do cluster")
+>- Adicionar dados na fonte de dados
+>- Nome da conexão = nome da fonte de dados %>% copy_to(data frame, "Nome do DF na fonte de dados")
+
+
+#Exemplo 
+##
+<section>
+Aplicação dos códigos : 
+```{r eval=FALSE}
+library(sparklyr)
+sc <- spark_connect(master = "local")
+flights <- sc %>% copy_to(nycflights13::flights, "teste")
+```
+>- ![](figuras/fig1.png)
+>- ![](figuras/fig2.png)
+</section>
+
+# Exemplo usando filter
+##
+<section>
+>- ![](figuras/fig3.png)
+>- ![](figuras/fig4.png)
+</section>
+
+# Exemplo utilizando o ggplot2
+##
+
+```{r eval = FALSE}
+library(ggplot2)
+df <- flights  %>% 
+  filter(month == 11 , day == 13) %>% 
+  collect()
+ggplot(df, aes(sample = dep_delay)) + 
+  stat_qq() + 
+  stat_qq_line(colour = "red")
+```
+>- <img src="figuras/fig5.png" width="500" height="400"/>
+
+
+
+</section>
+
+# Conclusão final
+##
+
+![](figuras/fig6.png)
+
+# OBRIGADO!
