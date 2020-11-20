@@ -77,7 +77,6 @@ pol_exp_delta_n = function(x,delta = 0.001){
   soma = 1
   for(i in 1:10){
     soma = soma + x^(i)/factorial(i)
-    i = i + 1
   }
   i = 11
   while(TRUE){
@@ -97,7 +96,7 @@ pol_exp_delta_n = function(x,delta = 0.001){
 data.frame("x" = c(1/2,7.3),
            "exp" = c(exp(1/2),exp(7.3)),
            "aprox_ex" = c(pol_exp_delta_n(1/2)[[1]],pol_exp_delta_n(7.3)[[1]]),
-           "intereções" = c(pol_exp_delta_n(1/2)[[2]],pol_exp_delta_n(7.3)[[2]]))
+           "interações" = c(pol_exp_delta_n(1/2)[[2]],pol_exp_delta_n(7.3)[[2]]))
 
 
 ```

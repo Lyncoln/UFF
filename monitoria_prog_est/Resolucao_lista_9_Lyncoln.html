@@ -1684,28 +1684,27 @@ $(document).ready(function () {
 <span id="cb14-3"><a href="#cb14-3"></a>  soma =<span class="st"> </span><span class="dv">1</span></span>
 <span id="cb14-4"><a href="#cb14-4"></a>  <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>){</span>
 <span id="cb14-5"><a href="#cb14-5"></a>    soma =<span class="st"> </span>soma <span class="op">+</span><span class="st"> </span>x<span class="op">^</span>(i)<span class="op">/</span><span class="kw">factorial</span>(i)</span>
-<span id="cb14-6"><a href="#cb14-6"></a>    i =<span class="st"> </span>i <span class="op">+</span><span class="st"> </span><span class="dv">1</span></span>
-<span id="cb14-7"><a href="#cb14-7"></a>  }</span>
-<span id="cb14-8"><a href="#cb14-8"></a>  i =<span class="st"> </span><span class="dv">11</span></span>
-<span id="cb14-9"><a href="#cb14-9"></a>  <span class="cf">while</span>(<span class="ot">TRUE</span>){</span>
-<span id="cb14-10"><a href="#cb14-10"></a>    incre =<span class="st"> </span>x<span class="op">^</span>(i)<span class="op">/</span><span class="kw">factorial</span>(i)</span>
-<span id="cb14-11"><a href="#cb14-11"></a>    </span>
-<span id="cb14-12"><a href="#cb14-12"></a>    <span class="cf">if</span>(<span class="kw">abs</span>(incre) <span class="op">&lt;</span><span class="st"> </span>delta){</span>
-<span id="cb14-13"><a href="#cb14-13"></a>      <span class="kw">return</span>(<span class="kw">list</span>(<span class="st">&quot;Soma&quot;</span> =<span class="st"> </span>soma,</span>
-<span id="cb14-14"><a href="#cb14-14"></a>                  <span class="st">&quot;Interações&quot;</span> =<span class="st"> </span>i))</span>
-<span id="cb14-15"><a href="#cb14-15"></a>    }<span class="cf">else</span>{</span>
-<span id="cb14-16"><a href="#cb14-16"></a>    soma =<span class="st"> </span>soma <span class="op">+</span><span class="st"> </span>incre</span>
-<span id="cb14-17"><a href="#cb14-17"></a>    }</span>
-<span id="cb14-18"><a href="#cb14-18"></a>    </span>
-<span id="cb14-19"><a href="#cb14-19"></a>    i =<span class="st"> </span>i <span class="op">+</span><span class="st"> </span><span class="dv">1</span></span>
-<span id="cb14-20"><a href="#cb14-20"></a>  }</span>
-<span id="cb14-21"><a href="#cb14-21"></a>}</span>
-<span id="cb14-22"><a href="#cb14-22"></a></span>
-<span id="cb14-23"><a href="#cb14-23"></a><span class="kw">data.frame</span>(<span class="st">&quot;x&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">2</span>,<span class="fl">7.3</span>),</span>
-<span id="cb14-24"><a href="#cb14-24"></a>           <span class="st">&quot;exp&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="kw">exp</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">2</span>),<span class="kw">exp</span>(<span class="fl">7.3</span>)),</span>
-<span id="cb14-25"><a href="#cb14-25"></a>           <span class="st">&quot;aprox_ex&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="kw">pol_exp_delta_n</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">2</span>)[[<span class="dv">1</span>]],<span class="kw">pol_exp_delta_n</span>(<span class="fl">7.3</span>)[[<span class="dv">1</span>]]),</span>
-<span id="cb14-26"><a href="#cb14-26"></a>           <span class="st">&quot;intereções&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="kw">pol_exp_delta_n</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">2</span>)[[<span class="dv">2</span>]],<span class="kw">pol_exp_delta_n</span>(<span class="fl">7.3</span>)[[<span class="dv">2</span>]]))</span></code></pre></div>
-<pre><code>##     x         exp    aprox_ex intereções
+<span id="cb14-6"><a href="#cb14-6"></a>  }</span>
+<span id="cb14-7"><a href="#cb14-7"></a>  i =<span class="st"> </span><span class="dv">11</span></span>
+<span id="cb14-8"><a href="#cb14-8"></a>  <span class="cf">while</span>(<span class="ot">TRUE</span>){</span>
+<span id="cb14-9"><a href="#cb14-9"></a>    incre =<span class="st"> </span>x<span class="op">^</span>(i)<span class="op">/</span><span class="kw">factorial</span>(i)</span>
+<span id="cb14-10"><a href="#cb14-10"></a>    </span>
+<span id="cb14-11"><a href="#cb14-11"></a>    <span class="cf">if</span>(<span class="kw">abs</span>(incre) <span class="op">&lt;</span><span class="st"> </span>delta){</span>
+<span id="cb14-12"><a href="#cb14-12"></a>      <span class="kw">return</span>(<span class="kw">list</span>(<span class="st">&quot;Soma&quot;</span> =<span class="st"> </span>soma,</span>
+<span id="cb14-13"><a href="#cb14-13"></a>                  <span class="st">&quot;Interações&quot;</span> =<span class="st"> </span>i))</span>
+<span id="cb14-14"><a href="#cb14-14"></a>    }<span class="cf">else</span>{</span>
+<span id="cb14-15"><a href="#cb14-15"></a>    soma =<span class="st"> </span>soma <span class="op">+</span><span class="st"> </span>incre</span>
+<span id="cb14-16"><a href="#cb14-16"></a>    }</span>
+<span id="cb14-17"><a href="#cb14-17"></a>    </span>
+<span id="cb14-18"><a href="#cb14-18"></a>    i =<span class="st"> </span>i <span class="op">+</span><span class="st"> </span><span class="dv">1</span></span>
+<span id="cb14-19"><a href="#cb14-19"></a>  }</span>
+<span id="cb14-20"><a href="#cb14-20"></a>}</span>
+<span id="cb14-21"><a href="#cb14-21"></a></span>
+<span id="cb14-22"><a href="#cb14-22"></a><span class="kw">data.frame</span>(<span class="st">&quot;x&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">2</span>,<span class="fl">7.3</span>),</span>
+<span id="cb14-23"><a href="#cb14-23"></a>           <span class="st">&quot;exp&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="kw">exp</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">2</span>),<span class="kw">exp</span>(<span class="fl">7.3</span>)),</span>
+<span id="cb14-24"><a href="#cb14-24"></a>           <span class="st">&quot;aprox_ex&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="kw">pol_exp_delta_n</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">2</span>)[[<span class="dv">1</span>]],<span class="kw">pol_exp_delta_n</span>(<span class="fl">7.3</span>)[[<span class="dv">1</span>]]),</span>
+<span id="cb14-25"><a href="#cb14-25"></a>           <span class="st">&quot;interações&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="kw">pol_exp_delta_n</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">2</span>)[[<span class="dv">2</span>]],<span class="kw">pol_exp_delta_n</span>(<span class="fl">7.3</span>)[[<span class="dv">2</span>]]))</span></code></pre></div>
+<pre><code>##     x         exp    aprox_ex interações
 ## 1 0.5    1.648721    1.648721         11
 ## 2 7.3 1480.299928 1480.298741         24</code></pre>
 </div>
