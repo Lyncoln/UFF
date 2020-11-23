@@ -22,7 +22,10 @@ BD = BD %>%
          Wh = Nh/sum(BD$Nh),
          wp = Wh*ph)
 
-attach(BD)
+
+Nh = BD$Nh
+nh = BD$nh
+ph = BD$ph
 
 wp_hat = sum(BD$wp); wp_hat
 var_wp_hat = (1/sum(Nh)^2) * sum(ifelse(is.nan(Nh*(Nh-nh)*(ph*(1-ph))/(nh-1)),
@@ -31,10 +34,10 @@ var_wp_hat = (1/sum(Nh)^2) * sum(ifelse(is.nan(Nh*(Nh-nh)*(ph*(1-ph))/(nh-1)),
 var_wp_hat
 
 
-li = wp_hat - qnorm(0.975,lower.tail = T)*sqrt(var_wp_hat)
-ls = wp_hat + qnorm(0.975,lower.tail = T)*sqrt(var_wp_hat)
+li = wp_hat - qnorm(0.95,lower.tail = T)*sqrt(var_wp_hat)
+ls = wp_hat + qnorm(0.95,lower.tail = T)*sqrt(var_wp_hat)
 paste0("(",round(li,3),";",round(ls,3),")")
-detach(BD)
+
 
 # Graficos
 BD_unite <- BD_n 
@@ -63,8 +66,10 @@ plot_grpfrq(BD_unite_noturno$Ano, BD_unite_noturno$Satisfeito,
 BD_t = BD %>%
   select(-Nh) %>% 
   left_join(N,by = c("Turno","Ano"))
-BD_t = BD_tt 
 
-attach(BD_t)
 
-total_chapeu = sum(Nh/nh * somah); total_chapeu
+
+
+total_chapeu = sum(BD_t$Nh/BD_t$nh * BD_t$somah); total_chapeu
+
+
