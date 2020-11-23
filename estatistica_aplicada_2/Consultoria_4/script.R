@@ -1,5 +1,5 @@
-library(dplyr);library(reshape2);library(tidyverse)
-
+require(dplyr); require(reshape2); require(tidyverse)
+require(sjPlot)
 
 BD_n = readxl::read_excel("AMOSTRA Satisfacao.xlsx")
 N = readxl::read_excel("N.xlsx")
@@ -20,16 +20,51 @@ BD = BD_2_n %>%
 BD = BD %>% 
   mutate(ph = somah/nh,
          Wh = Nh/sum(BD$Nh),
-         arroz = Wh*ph)
+         wp = Wh*ph)
 
 attach(BD)
 
-arrozal_chapeu = sum(BD$arroz);arrozal_chapeu
-inflacao_arrozal_chapeu = (1/sum(Nh)^2) * sum(ifelse(is.nan(Nh*(Nh-nh)*(ph*(1-ph))/(nh-1)),
-                                              0,
-                                              Nh*(Nh-nh)*(ph*(1-ph))/(nh-1)));inflacao_arrozal_chapeu
+wp_hat = sum(BD$wp); wp_hat
+var_wp_hat = (1/sum(Nh)^2) * sum(ifelse(is.nan(Nh*(Nh-nh)*(ph*(1-ph))/(nh-1)),
+                                        0,
+                                        Nh*(Nh-nh)*(ph*(1-ph))/(nh-1)))
+var_wp_hat
 
 
-li = arrozal_chapeu - qnorm(0.975,lower.tail = T)*sqrt(inflacao_arrozal_chapeu)
-ls = arrozal_chapeu + qnorm(0.975,lower.tail = T)*sqrt(inflacao_arrozal_chapeu)
+li = wp_hat - qnorm(0.975,lower.tail = T)*sqrt(var_wp_hat)
+ls = wp_hat + qnorm(0.975,lower.tail = T)*sqrt(var_wp_hat)
 paste0("(",round(li,3),";",round(ls,3),")")
+detach(BD)
+
+# Graficos
+BD_unite <- BD_n 
+BD_unite_noturno <- BD_n %>% filter(Turno == 'Noturno')
+BD_unite_diurno <- BD_n %>% filter(Turno == 'Diurno')
+
+plot_frq(BD_unite, Ano, title = "Teste", hjust = 0.2) + xlab('MUDAR')#+
+#facet_wrap(facets = Turno)#+ coord_flip()
+plot_frq(BD_unite_diurno, Ano, show.prc = FALSE) + xlab('Turno: Diurno')# + coord_flip()
+plot_frq(BD_unite_noturno, Ano, show.prc = FALSE) + xlab('Turno: Noturno')#+ coord_flip()
+
+
+plot_grpfrq(BD_unite_diurno$Ano, BD_unite_diurno$Satisfeito, 
+            show.grpcnt = F, show.prc = FALSE) + xlab('Turno: Diurno') +
+  scale_fill_manual(labels = c("Não", "Sim"), 
+                    values = c("lightblue", "steelblue"))
+plot_grpfrq(BD_unite_noturno$Ano, BD_unite_noturno$Satisfeito, 
+            show.grpcnt = F, show.prc = FALSE) + xlab('Turno: Noturno')+
+  scale_fill_manual(labels = c("Não", "Sim"), 
+                    values = c("lightblue", "steelblue"))
+
+
+
+# Total -------------------------------------------------------------------
+
+BD_t = BD %>%
+  select(-Nh) %>% 
+  left_join(N,by = c("Turno","Ano"))
+BD_t = BD_tt 
+
+attach(BD_t)
+
+total_chapeu = sum(Nh/nh * somah); total_chapeu
