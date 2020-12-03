@@ -8,6 +8,7 @@ output:
 
 
 ```{r setup, echo=TRUE, cache=FALSE, error = TRUE,warning=F}
+options(digits = 21)
 ```
 
 
@@ -172,6 +173,21 @@ f = function(x){exp(x) -1/x}
 
 ```{r}
 {
+  plot(0, xlim = c(0, 1), ylim = c(0, 4), type = "n")
+  grid()
+  curve(1/x, add = T)
+  curve(exp, add= T)
+}
+
+#Possui 1 raiz entre 0.5 e 0.8
+```
+
+
+```{r}
+
+#Observe também o gráfico da função:
+
+{
   plot(0,xlab="x",ylab="f(x)",xlim=c(-10,10),ylim=c(-2,2),type="n")
   grid()
   abline(h=0)
@@ -180,7 +196,7 @@ f = function(x){exp(x) -1/x}
 }
 
 a = 0.5 ; f(a)
-b = 2 ; f(b)
+b = 0.8 ; f(b)
 ```
 
 ## b)

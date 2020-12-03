@@ -8,6 +8,7 @@ output:
 
 
 ```{r setup, echo=TRUE, cache=FALSE, error = TRUE,warning=F}
+options(digits = 21)
 ```
 
 # 1)
@@ -49,7 +50,10 @@ curve(pol_exp(x,n=5),add=T,col="green")}
 pol_exp_delta = function(x,delta = 0.001){
   if(!is.numeric(x)) stop("x tem que ser real")
   soma = 1
-  i = 1
+  for(i in 1:10){
+    soma = soma + x^(i)/factorial(i)
+  }
+  i = 11
   while(TRUE){
     incre = x^(i)/factorial(i)
     
