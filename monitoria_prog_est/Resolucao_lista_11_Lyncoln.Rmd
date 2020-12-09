@@ -1,0 +1,265 @@
+---
+title: "Lista 11 Programação Estatística"
+author: "Lyncoln Sousa"
+output:
+  rmdformats::readthedown:
+    highlight: kate
+---
+
+
+```{r setup, echo=TRUE, cache=FALSE}
+options(digits = 21)
+```
+
+# 1)
+
+```{r}
+f = function(x){
+  if(!is.numeric(x)) stop("X não é um valor real")
+  return(1/(x^2 + 1))
+  }
+```
+
+## a)
+
+```{r}
+# x^2 + 1 =/= 0 
+# Isso é verdade para qualquer x Real
+```
+
+## b)
+```{r}
+DerivadaNumerica = function(x0,f,delta = 0.001){
+  h = 1
+  d1 = (f(x0+h) - f(x0-h))/(2*h)
+  while (TRUE) {
+    h = h/2
+    d2 = (f(x0+h) - f(x0-h))/(2*h)
+    if(abs(d1-d2) < delta) return(d2)
+    d1 = d2
+  }
+}
+DerivadaNumerica(10,f)
+```
+## c)
+
+```{r}
+DerivadaNumericaRec = function(x0,f,delta = 0.001, h = 1){
+  d1 = (f(x0+h) - f(x0-h))/(2*h)
+  h = h/2
+  d2 = (f(x0+h) - f(x0-h))/(2*h)
+  if(abs(d1 - d2) < delta) return(d2)
+  DerivadaNumericaRec(x0,f,delta,h)
+}
+DerivadaNumericaRec(10,f)
+```
+
+## d)
+
+### i
+```{r}
+data.frame("x0" = c(0,-1/5,1/3),
+           "Aprox f'(x0)" = c(DerivadaNumerica(0,f),DerivadaNumerica(-1/5,f),DerivadaNumerica(1/3,f)),
+           "Aprox Rec f'(x0)" = c(DerivadaNumericaRec(0,f),DerivadaNumericaRec(-1/5,f),DerivadaNumericaRec(1/3,f)))
+```
+
+### ii
+```{r}
+
+{plot(f,xlim = c(-2,2),ylim = c(-2,2))
+abline(h = 0,v = 0)}
+
+#y = ax + b
+#b = y - ax
+#Sabemos que a reta passa em (0,f(0)), então
+#b = f(0) - a*0 = f(0)
+#Então a equação da reta que passa em (0,f(0)) é y = a*x + f(0)
+plot(function(x){DerivadaNumerica(0,f)*x + f(0)},add = T, col = "red",xlim = c(-3,3))
+points(0,f(0),col = "red")
+
+#Sabemos que a reta passa em (-1/5,f(-1/5))
+#b = f(-1/5) - f'(-1/5)*(-1/5)
+#Então a equação da reta que passa em (-1/5,f(-1/5)) é 
+#y = ax + (f(-1/5)) - f'(-1/5)*(-1/5))
+plot(function(x){DerivadaNumerica(-1/5,f)*x + (f(-1/5) - DerivadaNumerica(-1/5,f)*(-1/5))},add = T, col = "blue",xlim = c(-3,3))
+points(-1/5,f(-1/5),col = "blue")
+
+#Sabemos que a reta passa em (1/3,f(1/3))
+#b = f(1/3) - f'(1/3)*(1/3)
+#Então a equação da reta que passa em (1/3,f(1/3)) é
+#y = ax + (f(1/3) - f'(1/3)*(1/3))
+plot(function(x){DerivadaNumerica(1/3,f)*x + (f(1/3) - DerivadaNumerica(1/3,f)*(1/3))},add = T, col = "pink",xlim = c(-3,3))
+points(1/3,f(1/3),col = "pink")
+
+```
+
+# 2)
+
+## a)
+```{r}
+# Temos uma função ln, sabemos que ln tem domínio somente para os reais maiores que 0, observe:
+
+plot(function(x){x^2+x-2},xlim = c(-4,3))
+abline(h = 0, v = 0)
+#Podemos fatorar a função em (x-1)(x+2). Temos raizes 1 e -2. Então, pelo gráfico, temos que para x < -2 ou x > 1 essa função será positiva
+points(-2,0,col = "red")
+points(1,0, col = "red")
+
+
+f = function(x){
+  if(!(x < -2 | x > 1)) return(FALSE) #Fora do domínio
+  else return(log(x^2 + x - 2))
+}
+```
+
+## b)
+
+```{r}
+DerivadaNumerica = function(x0,f,delta = 0.001){
+  h = 1
+  
+  
+  d1 = (f(x0+h) - f(x0-h))/(2*h)
+  while(!d1){
+    h = h/2
+    d1 = (f(x0+h) - f(x0-h))/(2*h)
+  }
+  
+  while (TRUE) {
+    h = h/2
+    d2 = (f(x0+h) - f(x0-h))/(2*h)
+    if(abs(d1-d2) < delta) return(d2)
+    d1 = d2
+  }
+}
+DerivadaNumerica(10,f)
+```
+
+## c)
+
+```{r}
+DerivadaNumericaRec = function(x0,f,delta = 0.001, h = 1){
+  d1 = (f(x0+h) - f(x0-h))/(2*h)
+  h = h/2
+  d2 = (f(x0+h) - f(x0-h))/(2*h)
+  if(abs(d1 - d2) < delta) return(d2)
+  DerivadaNumericaRec(x0,f,delta,h)
+}
+DerivadaNumericaRec(10,f)
+```
+
+## d)
+
+### i
+```{r}
+data.frame("x0" = c(3,-5/2,4/3),
+           "Aprox f'(x0)" = c(DerivadaNumerica(3,f),DerivadaNumerica(-5/2,f),DerivadaNumerica(4/3,f)),
+           "Aprox Rec f'(x0)" = c(DerivadaNumericaRec(3,f),DerivadaNumericaRec(-5/2,f),DerivadaNumericaRec(4/3,f)))
+```
+### ii
+```{r warning==FALSE}
+
+f1 = function(x){
+  log(x^2 + x - 2)
+}
+
+{plot(f1,xlim = c(-5,5),ylim = c(-3,3))
+abline(h = 0,v = 0)}
+
+#(3,f(3))
+plot(function(x){DerivadaNumerica(3,f)*x + (f(3) - DerivadaNumerica(3,f)*(3))},add = T, col = "red",xlim = c(-5,5))
+points(3,f(3),col = "red")
+
+#(-5/2,f(-5/2))
+plot(function(x){DerivadaNumerica(-5/2,f)*x + (f(-5/2) - DerivadaNumerica(-5/2,f)*(-5/2))},add = T, col = "blue",xlim = c(-5,5))
+points(-5/2,f(-5/2),col = "blue")
+
+#(4/3,f(4/3))
+plot(function(x){DerivadaNumerica(4/3,f)*x + (f(4/3) - DerivadaNumerica(4/3,f)*(4/3))},add = T, col = "pink",xlim = c(-5,5))
+points(4/3,f(4/3),col = "pink")
+```
+
+# 3)
+
+## a)
+```{r}
+#A função possui domínio em todos os Reais
+```
+
+## b)
+
+```{r}
+f = function(x){exp(-x/3)*(1+x/(x^2+1)) - 1}
+```
+
+## c)
+
+```{r}
+df = function(x0,delta = 0.001){
+  h = 1
+  d1 = (f(x0+h) - f(x0-h))/(2*h)
+  while (TRUE) {
+    h = h/2
+    d2 = (f(x0+h) - f(x0-h))/(2*h)
+    if(abs(d1-d2) < delta) return(d2)
+    d1 = d2
+  }
+}
+df(10)
+```
+
+## d)
+
+### i
+
+```{r warning = FALSE}
+plot(f,xlim=c(-3,5)); abline(h=0)
+plot(df,xlim=c(-3,5));abline(h=0)
+#(-1,0) e #(0,1)
+```
+
+### ii
+
+```{r}
+RaizBissecaoRec = function(a,b,f,e){
+  if(f(a)*f(b) >= 0) stop("Não existe raiz no intervalo a,b")
+  
+  m = (a+b)/2
+  
+  if(f(m) == 0 | abs(b-m) < e) return(m)
+  if(f(a)*f(m) < 0) return(RaizBissecaoRec(a,m,f,e))
+  
+  return(RaizBissecaoRec(m, b, f, e))
+}
+
+
+xmin= RaizBissecaoRec(-1,0,df,e = 0.001)
+
+
+plot(f,xlim=c(-3,5)); abline(h=0)
+points(xmin,f(xmin), col = "red")
+
+```
+
+
+### iii
+
+```{r}
+
+xmax= RaizBissecaoRec(0,1,df,e = 0.001)
+
+plot(f,xlim=c(-3,5)); abline(h=0)
+points(xmax,f(xmax), col = "red")
+```
+
+### iv
+
+```{r warning = FALSE}
+plot(df,xlim=c(-3,5))
+abline(h=0)
+segments(x0=xmin,y0=2,x1=xmin,y1=-2,lty=2)
+points(xmin,0,pch=19,cex=1.2)
+segments(x0=xmax,y0=1,x1=xmax,y1=-1,lty=2)
+points(xmax,0,pch=19,cex=1.2)
+```
+
